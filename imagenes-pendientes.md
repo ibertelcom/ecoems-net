@@ -57,3 +57,275 @@ Formato .webp, sin año ni fecha en la imagen ni en el nombre. Guardar en `src/i
 - Alt: Aspirante practica con un examen simulador del ECOEMS en su computadora
 - Descripción: Adolescente en su escritorio respondiendo preguntas en una laptop, con cuaderno y calculadora.
 - Prompt: Fotografía realista 3:2. Adolescente mexicano de 15 años en su escritorio de casa, concentrado, respondiendo un examen de opción múltiple en una laptop; al lado un cuaderno con operaciones y una calculadora. Luz de lámpara cálida. Pantalla sin texto legible, sin logotipos, sin años.
+
+## prepas-unam-estudiantes.webp
+- Tamaño: 1600 × 900 px
+- Dónde va: Hub · Prepas UNAM
+- Title: Prepas de la UNAM
+- Alt: Estudiantes de una prepa de la UNAM en el patio del plantel
+- Descripción: Estudiantes de bachillerato conversando en el patio de un plantel de la Escuela Nacional Preparatoria.
+- Prompt: Fotografía realista panorámica 16:9. Estudiantes de bachillerato conversando en el patio de un plantel de la Escuela Nacional Preparatoria. Ciudad de México, luz de mañana. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## cch-unam-estudiantes.webp
+- Tamaño: 1600 × 900 px
+- Dónde va: Hub · CCH UNAM
+- Title: CCH de la UNAM
+- Alt: Estudiantes de un CCH de la UNAM trabajando en equipo
+- Descripción: Estudiantes de bachillerato trabajando en equipo en una explanada con jardineras.
+- Prompt: Fotografía realista panorámica 16:9. Estudiantes de bachillerato trabajando en equipo en una explanada con jardineras. Ciudad de México, luz de mañana. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## vocacionales-ipn-taller.webp
+- Tamaño: 1600 × 900 px
+- Dónde va: Hub · Vocacionales IPN
+- Title: Vocacionales del IPN
+- Alt: Estudiantes de una vocacional del IPN en un taller técnico
+- Descripción: Estudiantes de bachillerato tecnológico con bata en un laboratorio o taller.
+- Prompt: Fotografía realista panorámica 16:9. Estudiantes de bachillerato tecnológico con bata en un laboratorio o taller. Ciudad de México, luz de mañana. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-1.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 1 (ENP 1)
+- Title: Prepa 1 (ENP 1), Xochimilco
+- Alt: Fachada de la Prepa 1 (ENP 1) de la UNAM en Xochimilco
+- Descripción: Fotografía de la entrada principal de la Prepa 1 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Xochimilco, inspirada en Escuela Nacional Preparatoria Plantel 1 "Gabino Barreda", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-2.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 2 (ENP 2)
+- Title: Prepa 2 (ENP 2), Iztacalco
+- Alt: Fachada de la Prepa 2 (ENP 2) de la UNAM en Iztacalco
+- Descripción: Fotografía de la entrada principal de la Prepa 2 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Iztacalco, inspirada en Escuela Nacional Preparatoria Plantel 2 "Erasmo Castellanos Quinto", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-3.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 3 (ENP 3)
+- Title: Prepa 3 (ENP 3), Gustavo A. Madero
+- Alt: Fachada de la Prepa 3 (ENP 3) de la UNAM en Gustavo A. Madero
+- Descripción: Fotografía de la entrada principal de la Prepa 3 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Gustavo A. Madero, inspirada en Escuela Nacional Preparatoria Plantel 3 "Justo Sierra", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-4.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 4 (ENP 4)
+- Title: Prepa 4 (ENP 4), Miguel Hidalgo
+- Alt: Fachada de la Prepa 4 (ENP 4) de la UNAM en Miguel Hidalgo
+- Descripción: Fotografía de la entrada principal de la Prepa 4 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Miguel Hidalgo, inspirada en Escuela Nacional Preparatoria Plantel 4 "Vidal Castañeda y Nájera", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-5.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 5 (ENP 5)
+- Title: Prepa 5 (ENP 5), Tlalpan
+- Alt: Fachada de la Prepa 5 (ENP 5) de la UNAM en Tlalpan
+- Descripción: Fotografía de la entrada principal de la Prepa 5 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Tlalpan, inspirada en Escuela Nacional Preparatoria Plantel 5 "José Vasconcelos", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-6.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 6 (ENP 6)
+- Title: Prepa 6 (ENP 6), Coyoacán
+- Alt: Fachada de la Prepa 6 (ENP 6) de la UNAM en Coyoacán
+- Descripción: Fotografía de la entrada principal de la Prepa 6 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Coyoacán, inspirada en Escuela Nacional Preparatoria Plantel 6 "Antonio Caso", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-7.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 7 (ENP 7)
+- Title: Prepa 7 (ENP 7), Venustiano Carranza
+- Alt: Fachada de la Prepa 7 (ENP 7) de la UNAM en Venustiano Carranza
+- Descripción: Fotografía de la entrada principal de la Prepa 7 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Venustiano Carranza, inspirada en Escuela Nacional Preparatoria Plantel 7 "Ezequiel A. Chávez", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-8.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 8 (ENP 8)
+- Title: Prepa 8 (ENP 8), Álvaro Obregón
+- Alt: Fachada de la Prepa 8 (ENP 8) de la UNAM en Álvaro Obregón
+- Descripción: Fotografía de la entrada principal de la Prepa 8 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Álvaro Obregón, inspirada en Escuela Nacional Preparatoria Plantel 8 "Miguel E. Schulz", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-prepa-9.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Prepa 9 (ENP 9)
+- Title: Prepa 9 (ENP 9), Gustavo A. Madero
+- Alt: Fachada de la Prepa 9 (ENP 9) de la UNAM en Gustavo A. Madero
+- Descripción: Fotografía de la entrada principal de la Prepa 9 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Gustavo A. Madero, inspirada en Escuela Nacional Preparatoria Plantel 9 "Pedro de Alba", con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-cch-azcapotzalco.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · CCH Azcapotzalco
+- Title: CCH Azcapotzalco, Azcapotzalco
+- Alt: Fachada del CCH Azcapotzalco (CCH Azcapotzalco) de la UNAM en Azcapotzalco
+- Descripción: Fotografía de la entrada principal del CCH Azcapotzalco con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Azcapotzalco, inspirada en Colegio de Ciencias y Humanidades Plantel Azcapotzalco, con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-cch-naucalpan.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · CCH Naucalpan
+- Title: CCH Naucalpan, Naucalpan de Juárez
+- Alt: Fachada del CCH Naucalpan (CCH Naucalpan) de la UNAM en Naucalpan de Juárez
+- Descripción: Fotografía de la entrada principal del CCH Naucalpan con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Naucalpan de Juárez, inspirada en Colegio de Ciencias y Humanidades Plantel Naucalpan, con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-cch-oriente.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · CCH Oriente
+- Title: CCH Oriente, Iztapalapa
+- Alt: Fachada del CCH Oriente (CCH Oriente) de la UNAM en Iztapalapa
+- Descripción: Fotografía de la entrada principal del CCH Oriente con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Iztapalapa, inspirada en Colegio de Ciencias y Humanidades Plantel Oriente, con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-cch-sur.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · CCH Sur
+- Title: CCH Sur, Coyoacán
+- Alt: Fachada del CCH Sur (CCH Sur) de la UNAM en Coyoacán
+- Descripción: Fotografía de la entrada principal del CCH Sur con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Coyoacán, inspirada en Colegio de Ciencias y Humanidades Plantel Sur, con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-cch-vallejo.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · CCH Vallejo
+- Title: CCH Vallejo, Gustavo A. Madero
+- Alt: Fachada del CCH Vallejo (CCH Vallejo) de la UNAM en Gustavo A. Madero
+- Descripción: Fotografía de la entrada principal del CCH Vallejo con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de la UNAM en Gustavo A. Madero, inspirada en Colegio de Ciencias y Humanidades Plantel Vallejo, con los colores institucionales azul y oro. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-1.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 1 (CECyT 1)
+- Title: Voca 1 (CECyT 1), Gustavo A. Madero
+- Alt: Fachada de la Voca 1 (CECyT 1) del IPN en Gustavo A. Madero
+- Descripción: Fotografía de la entrada principal de la Voca 1 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Gustavo A. Madero, inspirada en Centro de Estudios Científicos y Tecnológicos No. 1 "Gonzalo Vázquez Vela", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-cet-1.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · CET 1
+- Title: CET 1, Gustavo A. Madero
+- Alt: Fachada del CET 1 (CET 1) del IPN en Gustavo A. Madero
+- Descripción: Fotografía de la entrada principal del CET 1 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Gustavo A. Madero, inspirada en Centro de Estudios Tecnológicos No. 1 "Walter Cross Buchanan", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-2.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 2 (CECyT 2)
+- Title: Voca 2 (CECyT 2), Miguel Hidalgo
+- Alt: Fachada de la Voca 2 (CECyT 2) del IPN en Miguel Hidalgo
+- Descripción: Fotografía de la entrada principal de la Voca 2 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Miguel Hidalgo, inspirada en Centro de Estudios Científicos y Tecnológicos No. 2 "Miguel Bernard", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-3.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 3 (CECyT 3)
+- Title: Voca 3 (CECyT 3), Ecatepec de Morelos
+- Alt: Fachada de la Voca 3 (CECyT 3) del IPN en Ecatepec de Morelos
+- Descripción: Fotografía de la entrada principal de la Voca 3 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Ecatepec de Morelos, inspirada en Centro de Estudios Científicos y Tecnológicos No. 3 "Estanislao Ramírez Ruiz", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-4.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 4 (CECyT 4)
+- Title: Voca 4 (CECyT 4), Álvaro Obregón
+- Alt: Fachada de la Voca 4 (CECyT 4) del IPN en Álvaro Obregón
+- Descripción: Fotografía de la entrada principal de la Voca 4 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Álvaro Obregón, inspirada en Centro de Estudios Científicos y Tecnológicos No. 4 "Lázaro Cárdenas", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-5.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 5 (CECyT 5)
+- Title: Voca 5 (CECyT 5), Cuauhtémoc
+- Alt: Fachada de la Voca 5 (CECyT 5) del IPN en Cuauhtémoc
+- Descripción: Fotografía de la entrada principal de la Voca 5 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Cuauhtémoc, inspirada en Centro de Estudios Científicos y Tecnológicos No. 5 "Benito Juárez", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-6.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 6 (CECyT 6)
+- Title: Voca 6 (CECyT 6), Azcapotzalco
+- Alt: Fachada de la Voca 6 (CECyT 6) del IPN en Azcapotzalco
+- Descripción: Fotografía de la entrada principal de la Voca 6 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Azcapotzalco, inspirada en Centro de Estudios Científicos y Tecnológicos No. 6 "Miguel Othón de Mendizábal", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-7.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 7 (CECyT 7)
+- Title: Voca 7 (CECyT 7), Iztapalapa
+- Alt: Fachada de la Voca 7 (CECyT 7) del IPN en Iztapalapa
+- Descripción: Fotografía de la entrada principal de la Voca 7 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Iztapalapa, inspirada en Centro de Estudios Científicos y Tecnológicos No. 7 "Cuauhtémoc", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-8.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 8 (CECyT 8)
+- Title: Voca 8 (CECyT 8), Azcapotzalco
+- Alt: Fachada de la Voca 8 (CECyT 8) del IPN en Azcapotzalco
+- Descripción: Fotografía de la entrada principal de la Voca 8 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Azcapotzalco, inspirada en Centro de Estudios Científicos y Tecnológicos No. 8 "Narciso Bassols", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-9.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 9 (CECyT 9)
+- Title: Voca 9 (CECyT 9), Miguel Hidalgo
+- Alt: Fachada de la Voca 9 (CECyT 9) del IPN en Miguel Hidalgo
+- Descripción: Fotografía de la entrada principal de la Voca 9 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Miguel Hidalgo, inspirada en Centro de Estudios Científicos y Tecnológicos No. 9 "Juan de Dios Bátiz", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-10.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 10 (CECyT 10)
+- Title: Voca 10 (CECyT 10), Gustavo A. Madero
+- Alt: Fachada de la Voca 10 (CECyT 10) del IPN en Gustavo A. Madero
+- Descripción: Fotografía de la entrada principal de la Voca 10 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Gustavo A. Madero, inspirada en Centro de Estudios Científicos y Tecnológicos No. 10 "Carlos Vallejo Márquez", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-11.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 11 (CECyT 11)
+- Title: Voca 11 (CECyT 11), Miguel Hidalgo
+- Alt: Fachada de la Voca 11 (CECyT 11) del IPN en Miguel Hidalgo
+- Descripción: Fotografía de la entrada principal de la Voca 11 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Miguel Hidalgo, inspirada en Centro de Estudios Científicos y Tecnológicos No. 11 "Wilfrido Massieu", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-12.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 12 (CECyT 12)
+- Title: Voca 12 (CECyT 12), Cuauhtémoc
+- Alt: Fachada de la Voca 12 (CECyT 12) del IPN en Cuauhtémoc
+- Descripción: Fotografía de la entrada principal de la Voca 12 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Cuauhtémoc, inspirada en Centro de Estudios Científicos y Tecnológicos No. 12 "José María Morelos", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-13.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 13 (CECyT 13)
+- Title: Voca 13 (CECyT 13), Coyoacán
+- Alt: Fachada de la Voca 13 (CECyT 13) del IPN en Coyoacán
+- Descripción: Fotografía de la entrada principal de la Voca 13 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Coyoacán, inspirada en Centro de Estudios Científicos y Tecnológicos No. 13 "Ricardo Flores Magón", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-14.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 14 (CECyT 14)
+- Title: Voca 14 (CECyT 14), Venustiano Carranza
+- Alt: Fachada de la Voca 14 (CECyT 14) del IPN en Venustiano Carranza
+- Descripción: Fotografía de la entrada principal de la Voca 14 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Venustiano Carranza, inspirada en Centro de Estudios Científicos y Tecnológicos No. 14 "Luis Enrique Erro", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-15.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 15 (CECyT 15)
+- Title: Voca 15 (CECyT 15), Milpa Alta
+- Alt: Fachada de la Voca 15 (CECyT 15) del IPN en Milpa Alta
+- Descripción: Fotografía de la entrada principal de la Voca 15 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Milpa Alta, inspirada en Centro de Estudios Científicos y Tecnológicos No. 15 "Diódoro Antúnez Echegaray", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.
+
+## fachada-voca-19.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Escuela · Voca 19 (CECyT 19)
+- Title: Voca 19 (CECyT 19), Tecámac
+- Alt: Fachada de la Voca 19 (CECyT 19) del IPN en Tecámac
+- Descripción: Fotografía de la entrada principal de la Voca 19 con estudiantes llegando por la mañana.
+- Prompt: Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de el IPN en Tecámac, inspirada en Centro de Estudios Científicos y Tecnológicos No. 19 "Leona Vicario", con los colores institucionales guinda y blanco. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.

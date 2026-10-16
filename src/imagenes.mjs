@@ -80,3 +80,9 @@ export function imagen(id, { clase = "", prioridad = false, tamanos = "100vw" } 
   }
   return `<div class="img img-pendiente ${clase}" style="aspect-ratio:${ratio}" role="img" aria-label="${im.alt}" title="${im.title}" data-archivo="${im.archivo}"><span>${im.archivo}<small>${im.ancho}×${im.alto}</small></span></div>`;
 }
+
+// Registro de imágenes generadas por página (escuelas y hubs). Mismas reglas que el registro fijo.
+export function registrar(id, datos) {
+  if (!IMAGENES[id]) IMAGENES[id] = datos;
+  return id;
+}

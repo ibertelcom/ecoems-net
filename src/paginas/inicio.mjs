@@ -274,3 +274,7 @@ export function jsonld() {
     },
   ];
 }
+
+export function paginas() {
+  return [{ META, ACTUALIZADO, nombreCorto: "Portada ecoems.net", seccion: "", cuerpo, jsonld }];
+}

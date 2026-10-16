@@ -111,3 +111,58 @@
   // ---------- Anuncios: se activan solo cuando exista el código de AdSense ----------
   if (window.ECOEMS_ADS) document.querySelectorAll(".anuncio").forEach((a) => { a.hidden = false; a.dataset.activo = ""; });
 })();
+
+// ---------- Tabla de aciertos: ordenar y filtrar ----------
+(() => {
+  document.querySelectorAll("table[data-ordenable]").forEach((tabla) => {
+    const cuerpo = tabla.tBodies[0];
+    const ths = [...tabla.tHead.rows[0].cells];
+    tabla.tHead.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-col]");
+      if (!b) return;
+      const col = +b.dataset.col;
+      const th = ths[col];
+      const dir = th.getAttribute("aria-sort") === "descending" ? "ascending" : "descending";
+      ths.forEach((t) => t.removeAttribute("aria-sort"));
+      th.setAttribute("aria-sort", dir);
+      const val = (tr) => (col === 0 ? tr.cells[0].textContent.trim() : +tr.cells[col].dataset.v);
+      const filas = [...cuerpo.rows].sort((a, z) => {
+        const x = val(a), y = val(z);
+        const r = typeof x === "string" ? x.localeCompare(y, "es", { numeric: true }) : x - y;
+        return dir === "ascending" ? r : -r;
+      });
+      cuerpo.append(...filas);
+    });
+  });
+  const filtros = [...document.querySelectorAll(".filtro")];
+  filtros.forEach((f) =>
+    f.addEventListener("click", () => {
+      filtros.forEach((x) => x.setAttribute("aria-pressed", String(x === f)));
+      document.querySelectorAll(".tabla-aciertos tbody tr").forEach((tr) => {
+        tr.hidden = f.dataset.filtro !== "todas" && tr.dataset.linea !== f.dataset.filtro;
+      });
+    }),
+  );
+
+  // ---------- Buscador del índice de escuelas ----------
+  const buscar = document.getElementById("buscar-escuela");
+  if (buscar) {
+    const norm = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+    const sin = document.getElementById("sin-resultados");
+    buscar.addEventListener("input", () => {
+      const q = norm(buscar.value).replace(/\bvocacional\b/, "voca").replace(/\bpreparatoria\b/, "prepa");
+      let total = 0;
+      document.querySelectorAll("[data-grupo]").forEach((g) => {
+        let n = 0;
+        g.querySelectorAll("li[data-buscar]").forEach((li) => {
+          const ok = !q || q.split(/\s+/).every((p) => li.dataset.buscar.includes(p));
+          li.hidden = !ok;
+          if (ok) n++;
+        });
+        g.hidden = n === 0;
+        total += n;
+      });
+      sin.hidden = total > 0;
+    });
+  }
+})();
