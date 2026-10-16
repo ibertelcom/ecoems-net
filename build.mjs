@@ -1,14 +1,18 @@
 // Genera el sitio estático de ecoems.net en dist/ y una vista previa autocontenida en vista-previa/.
 import { mkdirSync, writeFileSync, readFileSync, rmSync, existsSync, cpSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { documento, SITIO } from "./src/plantilla.mjs";
 import { IMAGENES } from "./src/imagenes.mjs";
 import * as inicio from "./src/paginas/inicio.mjs";
 import * as aciertos from "./src/paginas/aciertos.mjs";
 import * as escuela from "./src/paginas/escuela.mjs";
+import * as proceso from "./src/paginas/proceso.mjs";
+import * as herramientas from "./src/paginas/herramientas.mjs";
 
-const PAGINAS = [inicio, aciertos, escuela].flatMap((m) => m.paginas());
+const PAGINAS = [inicio, proceso, aciertos, escuela, herramientas].flatMap((m) => m.paginas());
 const css = readFileSync(new URL("./src/estilos.css", import.meta.url), "utf8");
 const js = readFileSync(new URL("./src/app.js", import.meta.url), "utf8");
+const ver = createHash("sha1").update(css + js).digest("hex").slice(0, 8);
 const min = (t) => t.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\n\s+/g, "\n").replace(/\n{2,}/g, "\n");
 
 rmSync("dist", { recursive: true, force: true });
@@ -24,12 +28,22 @@ for (const p of PAGINAS) {
   const comun = { titulo: p.META.titulo, descripcion: p.META.descripcion, ruta: p.META.ruta, cuerpo: p.cuerpo(), jsonld: p.jsonld(), seccion: p.seccion };
   const destino = p.META.ruta === "/" ? "dist/index.html" : `dist${p.META.ruta}index.html`;
   mkdirSync(destino.replace(/index\.html$/, ""), { recursive: true });
-  writeFileSync(destino, documento({ ...comun, css: { href: "/estilos.css" }, js: { src: "/app.js" } }));
+  writeFileSync(destino, documento({ ...comun, css: { href: `/estilos.css?v=${ver}` }, js: { src: `/app.js?v=${ver}` } }));
   const nombre = p.META.ruta === "/" ? "inicio" : p.META.ruta.replace(/\//g, "-").replace(/^-|-$/g, "");
   writeFileSync(`vista-previa/${nombre}.html`, documento({ ...comun, css: { inline: css }, js: { inline: js }, fragmento: true, nombreCorto: p.nombreCorto }));
 }
 
 writeFileSync("dist/favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="1" y="1" width="38" height="38" rx="11" fill="#0B7A60"/><path d="M9 26h22" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="13" cy="26" r="3.6" fill="#fff"/><circle cx="20" cy="26" r="3.6" fill="#F4B400" stroke="#fff" stroke-width="2"/><circle cx="27" cy="26" r="3.6" fill="#fff"/><path d="M13 15h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"/></svg>`);
+writeFileSync("dist/.htaccess", readFileSync("src/htaccess.txt", "utf8"));
+if (existsSync("src/og-ecoems-net.png")) { mkdirSync("dist/img", { recursive: true }); cpSync("src/og-ecoems-net.png", "dist/img/og-ecoems-net.png"); }
+writeFileSync(
+  "dist/404.html",
+  documento({
+    titulo: "Página no encontrada | ecoems.net", descripcion: "Esta página no existe.", ruta: "/404.html", jsonld: [], seccion: "",
+    css: { href: `/estilos.css?v=${ver}` }, js: { src: `/app.js?v=${ver}` },
+    cuerpo: `<section class="cabecera-pagina"><div class="contenedor"><h1>No encontramos esta página</h1><p class="lead">Puede que la dirección haya cambiado. Prueba con la <a href="/">portada</a>, la <a href="/aciertos/">tabla de aciertos</a> o la <a href="/escuelas/">lista de escuelas</a>.</p></div></section>`,
+  }).replace('content="index, follow, max-image-preview:large"', 'content="noindex"'),
+);
 writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITIO.dominio}/sitemap.xml\n`);
 writeFileSync(
   "dist/sitemap.xml",

@@ -58,6 +58,70 @@ Formato .webp, sin año ni fecha en la imagen ni en el nombre. Guardar en `src/i
 - Descripción: Adolescente en su escritorio respondiendo preguntas en una laptop, con cuaderno y calculadora.
 - Prompt: Fotografía realista 3:2. Adolescente mexicano de 15 años en su escritorio de casa, concentrado, respondiendo un examen de opción múltiple en una laptop; al lado un cuaderno con operaciones y una calculadora. Luz de lámpara cálida. Pantalla sin texto legible, sin logotipos, sin años.
 
+## que-es-ecoems-aspirante.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · Qué es el ECOEMS
+- Title: Qué es el ECOEMS
+- Alt: Aspirante de secundaria leyendo sobre el examen ECOEMS en su computadora
+- Descripción: Una adolescente de tercero de secundaria lee con atención en una laptop en la mesa del comedor, con su mamá a un lado.
+- Prompt: Fotografía realista 3:2. Una adolescente de tercero de secundaria lee con atención en una laptop en la mesa del comedor, con su mamá a un lado. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
+## mi-derecho-mi-lugar-familia.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · Mi Derecho, Mi Lugar
+- Title: Mi Derecho, Mi Lugar
+- Alt: Familia revisando en la computadora el registro de Mi Derecho, Mi Lugar
+- Descripción: Mamá, papá e hijo de secundaria frente a una computadora en casa, revisando juntos una lista de escuelas.
+- Prompt: Fotografía realista 3:2. Mamá, papá e hijo de secundaria frente a una computadora en casa, revisando juntos una lista de escuelas. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
+## llave-mx-celular.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · Llave MX
+- Title: Llave MX para el ECOEMS
+- Alt: Mamá crea en el celular la Llave MX de su hijo para el registro del ECOEMS
+- Descripción: Mamá y su hijo adolescente sentados juntos; ella sostiene un celular y él tiene en la mano su comprobante de CURP impreso.
+- Prompt: Fotografía realista 3:2. Mamá y su hijo adolescente sentados juntos; ella sostiene un celular y él tiene en la mano su comprobante de CURP impreso. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
+## registro-comprobante.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · Registro paso a paso
+- Title: Registro de Mi Derecho, Mi Lugar
+- Alt: Papá revisa el comprobante de registro de Mi Derecho, Mi Lugar de su hija
+- Descripción: Papá revisando una hoja impresa con una lista ordenada de escuelas mientras su hija señala una de ellas.
+- Prompt: Fotografía realista 3:2. Papá revisando una hoja impresa con una lista ordenada de escuelas mientras su hija señala una de ellas. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
+## elegir-opciones-lista.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · Cómo elegir opciones
+- Title: Cómo elegir opciones
+- Alt: Aspirante ordena en una lista las escuelas que quiere para el ECOEMS
+- Descripción: Un adolescente con una libreta escribe una lista numerada mientras ve un mapa de la ciudad en la computadora.
+- Prompt: Fotografía realista 3:2. Un adolescente con una libreta escribe una lista numerada mientras ve un mapa de la ciudad en la computadora. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
+## examen-en-linea-casa.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · El día del examen
+- Title: Examen ECOEMS en línea
+- Alt: Aspirante presenta el examen ECOEMS en línea desde su casa con cámara encendida
+- Descripción: Adolescente en un escritorio ordenado frente a una laptop con cámara, cuarto bien iluminado y sin otras personas.
+- Prompt: Fotografía realista 3:2. Adolescente en un escritorio ordenado frente a una laptop con cámara, cuarto bien iluminado y sin otras personas. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
+## resultados-familia-celebra.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · Resultados
+- Title: Resultados del ECOEMS
+- Alt: Familia revisa en la computadora los resultados del ECOEMS y celebra
+- Descripción: Una familia frente a la computadora de casa; la hija sonríe y el papá le pone la mano en el hombro.
+- Prompt: Fotografía realista 3:2. Una familia frente a la computadora de casa; la hija sonríe y el papá le pone la mano en el hombro. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
+## no-quede-apoyo.webp
+- Tamaño: 1200 × 800 px
+- Dónde va: Proceso · Si no quedó
+- Title: Qué hacer si no quedó
+- Alt: Papá platica con su hijo después de revisar los resultados del ECOEMS
+- Descripción: Un papá y su hijo adolescente sentados en una banca de un parque conversando con calma.
+- Prompt: Fotografía realista 3:2. Un papá y su hijo adolescente sentados en una banca de un parque conversando con calma. Ciudad de México, ambiente cálido y natural. Sin texto legible, sin logotipos ni escudos oficiales, sin fechas ni años.
+
 ## prepas-unam-estudiantes.webp
 - Tamaño: 1600 × 900 px
 - Dónde va: Hub · Prepas UNAM
