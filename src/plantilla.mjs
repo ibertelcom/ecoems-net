@@ -1,5 +1,7 @@
 import { icono } from "./iconos.mjs";
 
+export const GA_ID = "G-NWDQM8PQJ6";
+
 export const SITIO = {
   dominio: "https://ecoems.net",
   nombre: "ecoems.net",
@@ -186,6 +188,8 @@ ${script}`;
 <meta property="og:url" content="${canonica}">
 <meta property="og:image" content="${SITIO.dominio}${og}">
 <meta name="twitter:card" content="summary_large_image">
+<script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","${GA_ID}");</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -287,3 +287,14 @@
   if (!z) return;
   z.addEventListener("change", () => document.querySelectorAll("[data-zona]").forEach((g) => { g.hidden = z.value && g.dataset.zona !== z.value; }));
 })();
+
+// ---------- Eventos de Analytics: uso de herramientas ----------
+(() => {
+  const ev = (n, p) => { try { window.gtag && gtag("event", n, p); } catch (e) {} };
+  const sel = document.getElementById("consulta-escuela");
+  sel?.addEventListener("change", () => ev("consulta_aciertos", { escuela: sel.value }));
+  let t; document.getElementById("calc-aciertos")?.addEventListener("input", (e) => { clearTimeout(t); t = setTimeout(() => ev("calculadora_uso", { aciertos: +e.target.value }), 1500); });
+  document.querySelectorAll("[data-comp]").forEach((s) => s.addEventListener("change", () => ev("comparador_uso", { escuela: s.value })));
+  document.getElementById("armar-agregar")?.addEventListener("click", () => ev("armar_opciones_agregar"));
+  document.getElementById("armar-copiar")?.addEventListener("click", () => ev("armar_opciones_copiar"));
+})();

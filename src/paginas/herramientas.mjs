@@ -230,14 +230,14 @@ function aviso() {
     migas: migas([["Inicio", "/"], ["Aviso de privacidad", ruta]]),
   };
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Versión del 15 de octubre de 2026." })}
+${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Versión del 17 de octubre de 2026." })}
 <section class="seccion"><div class="contenedor contenedor-angosto prosa">
   <h2>Responsable</h2>
   <p>Ibertelcom Digital (Victor Hugo Gutierrez Silva, persona física con actividad empresarial), con domicilio en Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Contacto: contacto@ecoems.app.</p>
   <h2>Qué datos usamos</h2>
   <p>ecoems.net es un sitio informativo. No te pedimos registro ni datos personales. Las herramientas (calculadora, comparador, armar opciones) funcionan en tu navegador; lo que escribes en ellas no se envía a nuestros servidores. "Armar mis opciones" guarda tu lista solo en tu propio navegador para que no la pierdas.</p>
   <h2>Cookies y servicios de terceros</h2>
-  <p>El servidor registra datos técnicos de cada visita (dirección IP, navegador, página) para seguridad y estadísticas. Si en el futuro mostramos anuncios de Google AdSense o usamos Google Analytics, esos servicios pueden usar cookies; lo indicaremos aquí y podrás administrarlas desde tu navegador o en la configuración de anuncios de Google.</p>
+  <p>El servidor registra datos técnicos de cada visita (dirección IP, navegador, página) para seguridad y estadísticas. Usamos Google Analytics para saber cuántas personas visitan el sitio y qué páginas les sirven; usa cookies y datos de navegación anónimos o agregados, y no lo usamos para identificarte. Puedes bloquear sus cookies desde tu navegador o con el complemento de inhabilitación de Google Analytics. Si en el futuro mostramos anuncios de Google AdSense, lo indicaremos aquí.</p>
   <h2>Enlaces a otros sitios</h2>
   <p>Enlazamos a sitios oficiales (miderechomilugar.gob.mx, llave.gob.mx, sitios de la UNAM y el IPN) y a ecoems.app y examenes.lat, que tienen sus propios avisos de privacidad.</p>
   <h2>Derechos ARCO y cambios</h2>
