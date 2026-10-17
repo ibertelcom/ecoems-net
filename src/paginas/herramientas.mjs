@@ -233,7 +233,7 @@ function aviso() {
 ${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Versión del 17 de octubre de 2026." })}
 <section class="seccion"><div class="contenedor contenedor-angosto prosa">
   <h2>Responsable</h2>
-  <p>Ibertelcom Digital (Victor Hugo Gutierrez Silva, persona física con actividad empresarial), con domicilio en Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Contacto: contacto@ecoems.app.</p>
+  <p>Ibertelcom Digital (Victor Hugo Gutierrez Silva, persona física con actividad empresarial), con domicilio en Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Contacto: contacto@ecoems.net.</p>
   <h2>Qué datos usamos</h2>
   <p>ecoems.net es un sitio informativo. No te pedimos registro ni datos personales. Las herramientas (calculadora, comparador, armar opciones) funcionan en tu navegador; lo que escribes en ellas no se envía a nuestros servidores. "Armar mis opciones" guarda tu lista solo en tu propio navegador para que no la pierdas.</p>
   <h2>Cookies y servicios de terceros</h2>
@@ -241,11 +241,91 @@ ${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Ve
   <h2>Enlaces a otros sitios</h2>
   <p>Enlazamos a sitios oficiales (miderechomilugar.gob.mx, llave.gob.mx, sitios de la UNAM y el IPN) y a ecoems.app y examenes.lat, que tienen sus propios avisos de privacidad.</p>
   <h2>Derechos ARCO y cambios</h2>
-  <p>Para ejercer tus derechos de acceso, rectificación, cancelación u oposición, escribe a contacto@ecoems.app. Si cambiamos este aviso, publicaremos aquí la nueva versión con su fecha.</p>
+  <p>Para ejercer tus derechos de acceso, rectificación, cancelación u oposición, escribe a contacto@ecoems.net. Si cambiamos este aviso, publicaremos aquí la nueva versión con su fecha.</p>
 </div></section>`;
   return hecha(ruta, d, cuerpo, []);
 }
 
+
+// ---------- Contacto (con quiénes somos, para confianza y AdSense) ----------
+function contacto() {
+  const ruta = "/contacto/";
+  const d = {
+    titulo: "Contacto y quiénes somos | ecoems.net",
+    descripcion: "Quién hace ecoems.net, cómo contactarnos y dónde resolver dudas oficiales del registro de Mi Derecho, Mi Lugar y el examen ECOEMS.",
+    nombreCorto: "Contacto ecoems.net",
+    seccion: "",
+    migas: migas([["Inicio", "/"], ["Contacto", ruta]]),
+  };
+  const faq = [
+    ["¿ecoems.net puede hacer mi registro o cambiar mis opciones?", "No. ecoems.net es una guía independiente. El registro, los cambios y los resultados solo se hacen en miderechomilugar.gob.mx."],
+    ["¿Dónde pregunto por un problema con mi registro o mi folio?", "En Educatel, de lunes a viernes de 8:00 a 20:00 h: 55 3601 7599 y 800 288 6688 (sin costo), o al correo contacto.miderechomilugar@sems.gob.mx."],
+    ["Encontré un dato equivocado en ecoems.net, ¿cómo lo reporto?", "Escríbenos a contacto@ecoems.net con la página y el dato. Revisamos contra la fuente oficial y, si corresponde, lo corregimos y actualizamos la fecha de la página."],
+  ];
+  const cuerpo = `
+${cabeceraPagina({ migasHtml: d.migas.html, h1: "Contacto", lead: "Escríbenos si encontraste un error, tienes una sugerencia o quieres colaborar. Para trámites del registro, abajo te decimos a dónde acudir." })}
+<section class="seccion"><div class="contenedor rejilla-media contacto">
+  <div class="prosa">
+    <h2>Escríbenos</h2>
+    <div class="tarjeta-contacto">
+      ${icono("correo", "ico camino-ico")}
+      <div>
+        <span>Correo de ecoems.net</span>
+        <b id="correo-contacto">contacto@ecoems.net</b>
+        <div class="acciones-escuela">
+          <a class="boton" href="mailto:contacto@ecoems.net?subject=Contacto%20desde%20ecoems.net">Escribir correo</a>
+          <button class="boton boton-secundario" type="button" id="copiar-correo">Copiar correo</button>
+        </div>
+        <small id="copiar-aviso" aria-live="polite"></small>
+      </div>
+    </div>
+    <p>Respondemos en un plazo de 2 a 3 días hábiles. Nos ayuda mucho que nos digas la página y el dato del que hablas.</p>
+    <h3>Para qué sí podemos ayudarte</h3>
+    <ul class="modalidades">
+      <li><b>Reportar un error</b> en aciertos, fechas o direcciones de escuelas.</li>
+      <li><b>Sugerencias</b> de herramientas o temas que te gustaría ver en el sitio.</li>
+      <li><b>Colaboraciones</b> con escuelas, orientadores o medios.</li>
+    </ul>
+  </div>
+  <div class="prosa">
+    <h2>Dudas del trámite oficial</h2>
+    <p class="pie-aviso aviso-claro">${icono("aviso")}<span><b>ecoems.net no es un sitio oficial</b> y no tiene acceso a tu registro, folio ni resultados.</span></p>
+    <p>Para cualquier problema con el registro, la Llave MX, el pago, la toma de fotografía o tus resultados, contacta directamente a Mi Derecho, Mi Lugar:</p>
+    <ul class="modalidades">
+      <li><b>Sitio oficial:</b> <a href="https://www.miderechomilugar.gob.mx/" rel="noopener" target="_blank">miderechomilugar.gob.mx</a></li>
+      <li><b>Educatel:</b> 55 3601 7599 y 800 288 6688 (sin costo), de lunes a viernes de 8:00 a 20:00 h.</li>
+      <li><b>Correo:</b> contacto.miderechomilugar@sems.gob.mx</li>
+    </ul>
+    <p>Antes de escribir, revisa si tu duda ya está en las <a href="/preguntas-frecuentes/">preguntas frecuentes</a>.</p>
+  </div>
+</div></section>
+<section class="seccion seccion-blanca" aria-labelledby="t-quienes"><div class="contenedor contenedor-angosto prosa">
+  <h2 id="t-quienes">Quiénes hacemos ecoems.net</h2>
+  <p>ecoems.net es un proyecto de <b>Ibertelcom Digital</b>, de Coacalco de Berriozábal, Estado de México. Nació de la experiencia de un papá que acompañó a su hijo en el proceso ECOEMS 2026 y se dio cuenta de lo difícil que era entender el proceso y encontrar los aciertos de cada escuela en un solo lugar.</p>
+  <p>Por eso este sitio reúne, en lenguaje sencillo, cómo funciona Mi Derecho, Mi Lugar, los aciertos oficiales de cada prepa, CCH y vocacional, y herramientas para decidir. Todos los datos los tomamos de fuentes oficiales y en cada página indicamos la fecha de actualización.</p>
+  <p>Somos el mismo equipo detrás de <a href="${utm(`${SITIO.lat}/`, "contacto")}">examenes.lat</a>, el portal de exámenes simuladores y guías de estudio para exámenes de admisión, y de <a href="${utm(SITIO.app, "contacto")}">ecoems.app</a>, la app para que papás y mamás sigan el avance de sus hijos rumbo al ECOEMS.</p>
+  <h3>Cómo cuidamos la información</h3>
+  <ul class="modalidades">
+    <li><b>Fuentes oficiales:</b> convocatoria e instructivo de Mi Derecho, Mi Lugar y resultados publicados del proceso de asignación.</li>
+    <li><b>Fechas verificadas:</b> si una fecha del año en curso no se ha publicado, lo decimos y mostramos la del año anterior como referencia.</li>
+    <li><b>Correcciones:</b> si nos reportas un error, lo revisamos y actualizamos la página.</li>
+  </ul>
+  <p class="actualizado">Responsable: Ibertelcom Digital (Victor Hugo Gutierrez Silva), Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Consulta nuestro <a href="/aviso-de-privacidad/">aviso de privacidad</a>.</p>
+</div></section>
+${faqBloque(faq, "Preguntas sobre el contacto")}`;
+  const org = {
+    "@context": "https://schema.org", "@type": "Organization", name: "ecoems.net", url: `${SITIO.dominio}/`,
+    email: "contacto@ecoems.net", logo: `${SITIO.dominio}/favicon.svg`,
+    parentOrganization: { "@type": "Organization", name: "Ibertelcom Digital", url: "https://ibertelcom.com" },
+    address: { "@type": "PostalAddress", streetAddress: "Arrayanes 7, Col. San Francisco", addressLocality: "Coacalco de Berriozábal", addressRegion: "Estado de México", postalCode: "55712", addressCountry: "MX" },
+    sameAs: [`${SITIO.lat}/`, SITIO.app],
+  };
+  const r = hecha(ruta, d, cuerpo, faq, [org]);
+  const base = r.jsonld;
+  r.jsonld = () => base().map((o) => (o["@type"] === "WebPage" ? { ...o, "@type": "ContactPage" } : o));
+  return r;
+}
+
 export function paginas() {
-  return [calculadora(), comparador(), armar(), mapa(), sinExamen(), aviso()];
+  return [calculadora(), comparador(), armar(), mapa(), sinExamen(), aviso(), contacto()];
 }

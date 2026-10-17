@@ -298,3 +298,15 @@
   document.getElementById("armar-agregar")?.addEventListener("click", () => ev("armar_opciones_agregar"));
   document.getElementById("armar-copiar")?.addEventListener("click", () => ev("armar_opciones_copiar"));
 })();
+
+// ---------- Contacto: copiar correo ----------
+(() => {
+  const b = document.getElementById("copiar-correo");
+  if (!b) return;
+  const aviso = document.getElementById("copiar-aviso");
+  b.addEventListener("click", async () => {
+    const c = document.getElementById("correo-contacto");
+    try { await navigator.clipboard.writeText(c.textContent.trim()); aviso.textContent = "Correo copiado."; }
+    catch (e) { const r = document.createRange(); r.selectNodeContents(c); getSelection().removeAllRanges(); getSelection().addRange(r); aviso.textContent = "Selecciona el correo y cópialo con Ctrl+C."; }
+  });
+})();

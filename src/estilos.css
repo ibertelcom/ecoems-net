@@ -650,3 +650,14 @@ p { margin: 0 0 1em; }
   .lista-opciones li { grid-template-columns: auto minmax(0, 1fr) auto; }
   .lo-btns { grid-column: 2 / -1; }
 }
+
+/* ================= Contacto ================= */
+.contacto { align-items: start; }
+.tarjeta-contacto { display: flex; gap: 16px; align-items: flex-start; padding: 22px; margin-bottom: 18px; border-radius: var(--radio-lg); background: var(--superficie); border: 1px solid var(--linea); box-shadow: var(--sombra); }
+.tarjeta-contacto > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.tarjeta-contacto span { color: var(--suave); font-size: .9rem; font-weight: 700; }
+.tarjeta-contacto b { font: 800 clamp(1.25rem, 1rem + 1vw, 1.6rem)/1.2 var(--f-titulo); overflow-wrap: anywhere; user-select: all; }
+.tarjeta-contacto .acciones-escuela { margin-top: 8px; }
+.tarjeta-contacto small { color: var(--verde-hover); font-weight: 700; min-height: 1.2em; }
+.aviso-claro { background: var(--superficie-2); color: var(--tinta); }
+.aviso-claro b { color: var(--tinta); }
