@@ -3,6 +3,7 @@ import { mkdirSync, writeFileSync, readFileSync, rmSync, existsSync, cpSync } fr
 import { createHash } from "node:crypto";
 import { documento, SITIO } from "./src/plantilla.mjs";
 import { IMAGENES } from "./src/imagenes.mjs";
+import { promptsImagenes } from "./src/prompts-imagenes.mjs";
 import * as inicio from "./src/paginas/inicio.mjs";
 import * as aciertos from "./src/paginas/aciertos.mjs";
 import * as escuela from "./src/paginas/escuela.mjs";
@@ -56,7 +57,7 @@ const md = [
   "",
   "Formato .webp, sin año ni fecha en la imagen ni en el nombre. Guardar en `src/img/` con el nombre exacto.",
   "",
-  ...Object.values(IMAGENES).flatMap((im) => [
+  ...promptsImagenes(IMAGENES).map((x) => ({ ...IMAGENES[x.id], prompt: x.prompt })).flatMap((im) => [
     `## ${im.archivo}`,
     `- Tamaño: ${im.ancho} × ${im.alto} px`,
     `- Dónde va: ${im.uso}`,
@@ -68,5 +69,6 @@ const md = [
   ]),
 ].join("\n");
 writeFileSync("imagenes-pendientes.md", md);
+writeFileSync("prompts-imagenes.json", JSON.stringify(promptsImagenes(IMAGENES), null, 1));
 
 console.log(`Listo: ${PAGINAS.length} página(s), ${Object.keys(IMAGENES).length} imágenes registradas.`);

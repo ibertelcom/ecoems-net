@@ -62,12 +62,12 @@ function pagina(e) {
   const c26 = cambio(e.a2025, e.a2026);
   const vecinas = parecidas(e, 4);
   const img = registrar(`fachada-${e.slug}`, {
-    archivo: `fachada-${e.slug}.webp`,
+    archivo: `${e.slug}-${e.institucion === "UNAM" ? "unam" : "ipn"}-ecoems.webp`,
     ancho: 1200, alto: 800,
-    alt: `Fachada ${del(e)} (${e.oficial}) ${e.institucion === "UNAM" ? "de la UNAM" : "del IPN"}${e.alcaldia ? ` en ${e.alcaldia}` : ""}`,
+    alt: `Ilustración ${del(e)} (${e.oficial}) ${e.institucion === "UNAM" ? "de la UNAM" : "del IPN"} con su escudo${e.alcaldia ? `, en ${e.alcaldia}` : ""}`,
     title: `${e.doble}${e.alcaldia ? `, ${e.alcaldia}` : ""}`,
-    descripcion: `Fotografía de la entrada principal ${del(e)} con estudiantes llegando por la mañana.`,
-    prompt: `Fotografía realista 3:2 de la entrada principal de un plantel de bachillerato público de ${e.institucion === "UNAM" ? "la UNAM" : "el IPN"} en ${e.alcaldia ?? "la Ciudad de México"}, inspirada en ${e.honorifico ?? e.doble}, con los colores institucionales ${e.institucion === "UNAM" ? "azul y oro" : "guinda y blanco"}. Estudiantes con mochila entrando por la mañana, cielo despejado. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.`,
+    descripcion: `Portada ilustrada ${del(e)} con su escudo, su nombre y estudiantes llegando por la mañana.`,
+    prompt: "",
     uso: `Escuela · ${e.doble}`,
   });
   const titulo = `${e.doble}: cuántos aciertos pide en el ECOEMS 2027 | ecoems.net`;

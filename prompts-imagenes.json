@@ -1,0 +1,443 @@
+[
+ {
+  "id": "portada-papa-e-hija-revisan-aciertos",
+  "archivo": "portada-papa-e-hija-revisan-aciertos.webp",
+  "ancho": 1200,
+  "alto": 1350,
+  "uso": "Portada · encabezado",
+  "alt": "Papá y su hija de secundaria revisan en el celular cuántos aciertos pide la prepa que quieren en el ECOEMS",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Sala de una casa de clase media en la Ciudad de México con luz cálida de tarde por la ventana. Un papá mexicano de unos 45 años y su hija de 14 años con suéter azul marino de secundaria están sentados juntos en un sillón mirando un celular; ella señala la pantalla y sonríe, él la escucha atento. En la pantalla del celular se lee arriba \"Aciertos por escuela\" y debajo una lista de tarjetas con los textos \"Prepa 6\", \"CCH Sur\" y \"Voca 9\", cada una con una barra de color. Sobre la mesa, cuadernos y una guía de estudio. Formato vertical 4:5, sujeto a la derecha para dejar aire a la izquierda. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "ruta-del-proceso-ecoems",
+  "archivo": "ruta-del-proceso-ecoems.webp",
+  "ancho": 1600,
+  "alto": 900,
+  "uso": "Portada · sección ¿Qué es el ECOEMS?",
+  "alt": "Estudiantes de secundaria camino al examen ECOEMS en la Ciudad de México",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Mapa estilo línea del metro de la Ciudad de México que cruza la imagen de izquierda a derecha con una línea gruesa verde y seis estaciones circulares blancas con borde verde, numeradas del 1 al 6. Debajo de cada estación una etiqueta corta: \"Llave MX y registro\", \"Elegir opciones\", \"Concluir registro\", \"Examen en línea\", \"Resultados\", \"Inscripción\". La sexta estación es más grande, en amarillo sol, con una pequeña bandera. Arriba, título grande: \"La ruta del ECOEMS\". Al fondo, siluetas suaves de edificios de la ciudad y un pequeño grupo de estudiantes con mochila caminando sobre la línea. Formato horizontal 16:9, fondo blanco cálido. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "herramienta-calculadora-aciertos",
+  "archivo": "herramienta-calculadora-aciertos.webp",
+  "ancho": 800,
+  "alto": 600,
+  "uso": "Portada · herramientas",
+  "alt": "Calculadora de aciertos del ECOEMS: escribe los aciertos de un simulacro y ve qué escuelas le alcanzan",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Un celular grande al centro muestra una barra de progreso horizontal verde y debajo tres tarjetas de escuela: la primera con palomita verde y la etiqueta \"Te alcanza\", la segunda con un círculo ámbar y la etiqueta \"Reto\", la tercera con una flecha vino y la etiqueta \"Lejos\". Junto al celular, una calculadora estilizada y destellos. Título arriba: \"Calculadora de aciertos\". Formato horizontal 4:3, fondo gris muy claro. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "herramienta-mapa-escuelas",
+  "archivo": "herramienta-mapa-escuelas.webp",
+  "ancho": 800,
+  "alto": 600,
+  "uso": "Portada · herramientas",
+  "alt": "Mapa de preparatorias de la UNAM y vocacionales del IPN en la Ciudad de México y el Estado de México",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Mapa urbano estilizado de la Ciudad de México y el Estado de México visto desde arriba: calles gris claro, un parque verde y un lago. Marcadores redondos en azul (prepas), ámbar (CCH) y vino (vocacionales) repartidos por la ciudad, y al centro un marcador más grande con el ícono de una casa y un círculo de distancia punteado. Leyenda pequeña abajo con tres puntos de color y los textos \"Prepas UNAM\", \"CCH UNAM\" y \"Vocacionales IPN\". Título arriba: \"Mapa de escuelas\". Sin nombres de calles. Formato horizontal 4:3. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "herramienta-comparador-escuelas",
+  "archivo": "herramienta-comparador-escuelas.webp",
+  "ancho": 800,
+  "alto": 600,
+  "uso": "Portada · herramientas",
+  "alt": "Comparador de escuelas del ECOEMS: aciertos y ubicación de dos o tres planteles lado a lado",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Dos tarjetas verticales lado a lado, cada una con un ícono de edificio escolar arriba; la izquierda con encabezado azul y la etiqueta \"Escuela A\", la derecha con encabezado vino y la etiqueta \"Escuela B\". Dentro de cada tarjeta tres barras horizontales de distinto largo y pequeños íconos de ubicación y de libro. Entre ambas tarjetas, una balanza dorada sutil y el símbolo \"VS\" en un círculo verde. Título arriba: \"Comparador de escuelas\". Formato horizontal 4:3, fondo claro. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "herramienta-armar-opciones",
+  "archivo": "herramienta-armar-opciones.webp",
+  "ancho": 800,
+  "alto": 600,
+  "uso": "Portada · herramientas",
+  "alt": "Lista para ordenar las opciones de escuela del registro Mi Derecho, Mi Lugar",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Una hoja o pantalla con cinco tarjetas apiladas en orden, numeradas \"1\", \"2\", \"3\", \"4\" y \"5\", cada una con un punto de color (azul, ámbar, vino, verde, azul) y pequeñas flechas para subir y bajar a la derecha. Una mano estilizada arrastra la tarjeta número 2 hacia arriba. En la esquina, un botón verde con el texto \"Copiar mi lista\". Título arriba: \"Arma tus opciones\". Formato horizontal 4:3, fondo claro. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "estudiar-simulador-examenes-lat",
+  "archivo": "estudiar-simulador-examenes-lat.webp",
+  "ancho": 960,
+  "alto": 640,
+  "uso": "Portada · ¿qué estudiar?",
+  "alt": "Aspirante practica con un examen simulador del ECOEMS en su computadora",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Adolescente mexicano de 15 años en su escritorio de casa, concentrado, respondiendo un examen de opción múltiple en una laptop; al lado un cuaderno con operaciones de matemáticas y una calculadora. Luz cálida de lámpara al atardecer. En la pantalla se lee arriba \"Examen simulacro ECOEMS\" y debajo una pregunta con cuatro opciones \"A\", \"B\", \"C\" y \"D\", con la opción \"B\" marcada en verde. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "que-es-ecoems-aspirante",
+  "archivo": "que-es-ecoems-aspirante.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Qué es el ECOEMS",
+  "alt": "Aspirante de secundaria leyendo sobre el examen ECOEMS en su computadora",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Una adolescente de tercero de secundaria con suéter de uniforme lee con atención en una laptop sobre la mesa del comedor; su mamá, sentada a un lado, mira la pantalla con una taza de café. En la pantalla se lee el título \"¿Qué es el ECOEMS?\" y debajo tres íconos sencillos: un libro, un reloj y un edificio escolar. Ambiente cálido de casa en la Ciudad de México, luz natural de mañana. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "mi-derecho-mi-lugar-familia",
+  "archivo": "mi-derecho-mi-lugar-familia.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Mi Derecho, Mi Lugar",
+  "alt": "Familia revisando en la computadora el registro de Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Mamá, papá e hijo de secundaria sentados frente a una computadora de escritorio en casa, revisando juntos una lista de escuelas; el hijo señala la pantalla y los papás asienten. En la pantalla se ve una lista con tarjetas de colores azul, ámbar y vino con los textos \"Prepa\", \"CCH\" y \"Voca\". Junto al teclado, una libreta con una lista numerada escrita a mano. Ambiente cálido, luz de tarde. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "llave-mx-celular",
+  "archivo": "llave-mx-celular.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Llave MX",
+  "alt": "Mamá crea en el celular la Llave MX de su hijo para el registro del ECOEMS",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Una mamá mexicana de unos 40 años y su hijo de 14 años sentados juntos en la mesa de la cocina; ella sostiene un celular y él tiene en la mano una hoja impresa con su CURP. En la pantalla del celular se lee \"Llave MX\" sobre un formulario sencillo con un candado verde. Expresión de concentración y calma, luz natural. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "registro-comprobante",
+  "archivo": "registro-comprobante.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Registro paso a paso",
+  "alt": "Papá revisa el comprobante de registro de Mi Derecho, Mi Lugar de su hija",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Un papá de unos 45 años revisa una hoja impresa titulada \"Comprobante de registro\" con una lista ordenada de escuelas numeradas, mientras su hija de 14 años señala uno de los renglones con el dedo. Están de pie junto a una impresora en casa; sobre la mesa, un fólder azul y una pluma. Luz natural de mañana. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "elegir-opciones-lista",
+  "archivo": "elegir-opciones-lista.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Cómo elegir opciones",
+  "alt": "Aspirante ordena en una lista las escuelas que quiere para el ECOEMS",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Un adolescente de 15 años escribe en una libreta una lista numerada del 1 al 5 mientras mira en la computadora un mapa de la ciudad con marcadores de colores azul, ámbar y vino. En la parte superior de la libreta se lee, escrito a mano, \"Mis opciones\". Escritorio ordenado, luz cálida de lámpara. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "examen-en-linea-casa",
+  "archivo": "examen-en-linea-casa.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · El día del examen",
+  "alt": "Aspirante presenta el examen ECOEMS en línea desde su casa con cámara encendida",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Una adolescente de 15 años sentada frente a una laptop con la cámara encendida en un escritorio despejado, en un cuarto bien iluminado y sin otras personas; solo hay una botella de agua y su identificación sobre la mesa. En la pantalla se lee \"Examen en línea\" y un reloj de cuenta regresiva sin números visibles. Expresión de concentración tranquila. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "resultados-familia-celebra",
+  "archivo": "resultados-familia-celebra.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Resultados",
+  "alt": "Familia revisa en la computadora los resultados del ECOEMS y celebra",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Una familia mexicana frente a la computadora de casa celebra: la hija de 15 años sonríe con los brazos arriba y el papá le pone la mano en el hombro; la mamá aplaude. En la pantalla se lee \"¡Resultados!\" con un escudo genérico de escuela y confeti de colores. Luz cálida, emoción auténtica. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "no-quede-apoyo",
+  "archivo": "no-quede-apoyo.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Si no quedó",
+  "alt": "Papá platica con su hijo después de revisar los resultados del ECOEMS",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Un papá y su hijo adolescente sentados en una banca de un parque de la Ciudad de México, conversando con calma; el papá le habla con una mano en la espalda y el hijo escucha con expresión serena. Al fondo, árboles y luz dorada de tarde. En la parte superior, con buen contraste y tipografía elegante, el texto \"Hay más caminos\". Formato horizontal 3:2, deja espacio limpio arriba para el texto. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "prepas-unam-estudiantes",
+  "archivo": "prepas-unam-estudiantes.webp",
+  "ancho": 1600,
+  "alto": 900,
+  "uso": "Hub · Prepas UNAM",
+  "alt": "Estudiantes de una prepa de la UNAM en el patio del plantel",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Estudiantes de bachillerato de 15 a 17 años conversando y riendo en el patio de un plantel de la Escuela Nacional Preparatoria, con arquitectura de concreto y jardineras, luz de mañana. En la esquina superior izquierda coloca el escudo oficial de la UNAM y junto a él, en letras blancas con sombra suave, el texto \"Prepas UNAM\" y debajo, más pequeño, \"Escuela Nacional Preparatoria\". Formato horizontal 16:9, deja la esquina superior izquierda despejada para el escudo y el texto. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "cch-unam-estudiantes",
+  "archivo": "cch-unam-estudiantes.webp",
+  "ancho": 1600,
+  "alto": 900,
+  "uso": "Hub · CCH UNAM",
+  "alt": "Estudiantes de un CCH de la UNAM trabajando en equipo",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Estudiantes de bachillerato de 15 a 17 años trabajando en equipo sobre una mesa en una explanada con jardineras y edificios bajos, ambiente relajado de mañana. En la esquina superior izquierda coloca el escudo oficial del Colegio de Ciencias y Humanidades de la UNAM y junto a él, en letras blancas con sombra suave, el texto \"CCH UNAM\" y debajo, más pequeño, \"Colegio de Ciencias y Humanidades\". Formato horizontal 16:9, deja la esquina superior izquierda despejada para el escudo y el texto. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "vocacionales-ipn-taller",
+  "archivo": "vocacionales-ipn-taller.webp",
+  "ancho": 1600,
+  "alto": 900,
+  "uso": "Hub · Vocacionales IPN",
+  "alt": "Estudiantes de una vocacional del IPN en un taller técnico",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Estudiantes de bachillerato tecnológico de 15 a 17 años con bata blanca trabajando en un taller o laboratorio: uno ajusta un circuito, otra observa un instrumento de medición. Detalles en color guinda. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional y junto a él, en letras blancas con sombra suave, el texto \"Vocacionales IPN\" y debajo, más pequeño, \"Centros de Estudios Científicos y Tecnológicos\". Formato horizontal 16:9, deja la esquina superior izquierda despejada para el escudo y el texto. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-1",
+  "archivo": "prepa-1-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 1 (ENP 1)",
+  "alt": "Ilustración de la Prepa 1 (ENP 1) de la UNAM con su escudo, en Xochimilco",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 1 (ENP 1): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Xochimilco, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 1\" y debajo, más pequeño: \"Gabino Barreda · Xochimilco\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-2",
+  "archivo": "prepa-2-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 2 (ENP 2)",
+  "alt": "Ilustración de la Prepa 2 (ENP 2) de la UNAM con su escudo, en Iztacalco",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 2 (ENP 2): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Iztacalco, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 2\" y debajo, más pequeño: \"Erasmo Castellanos Quinto · Iztacalco\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-3",
+  "archivo": "prepa-3-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 3 (ENP 3)",
+  "alt": "Ilustración de la Prepa 3 (ENP 3) de la UNAM con su escudo, en Gustavo A. Madero",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 3 (ENP 3): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Gustavo A. Madero, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 3\" y debajo, más pequeño: \"Justo Sierra · Gustavo A. Madero\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-4",
+  "archivo": "prepa-4-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 4 (ENP 4)",
+  "alt": "Ilustración de la Prepa 4 (ENP 4) de la UNAM con su escudo, en Miguel Hidalgo",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 4 (ENP 4): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Miguel Hidalgo, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 4\" y debajo, más pequeño: \"Vidal Castañeda y Nájera · Miguel Hidalgo\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-5",
+  "archivo": "prepa-5-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 5 (ENP 5)",
+  "alt": "Ilustración de la Prepa 5 (ENP 5) de la UNAM con su escudo, en Tlalpan",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 5 (ENP 5): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Tlalpan, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 5\" y debajo, más pequeño: \"José Vasconcelos · Tlalpan\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-6",
+  "archivo": "prepa-6-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 6 (ENP 6)",
+  "alt": "Ilustración de la Prepa 6 (ENP 6) de la UNAM con su escudo, en Coyoacán",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 6 (ENP 6): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Coyoacán, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 6\" y debajo, más pequeño: \"Antonio Caso · Coyoacán\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-7",
+  "archivo": "prepa-7-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 7 (ENP 7)",
+  "alt": "Ilustración de la Prepa 7 (ENP 7) de la UNAM con su escudo, en Venustiano Carranza",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 7 (ENP 7): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Venustiano Carranza, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 7\" y debajo, más pequeño: \"Ezequiel A. Chávez · Venustiano Carranza\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-8",
+  "archivo": "prepa-8-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 8 (ENP 8)",
+  "alt": "Ilustración de la Prepa 8 (ENP 8) de la UNAM con su escudo, en Álvaro Obregón",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 8 (ENP 8): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Álvaro Obregón, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 8\" y debajo, más pequeño: \"Miguel E. Schulz · Álvaro Obregón\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-prepa-9",
+  "archivo": "prepa-9-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Prepa 9 (ENP 9)",
+  "alt": "Ilustración de la Prepa 9 (ENP 9) de la UNAM con su escudo, en Gustavo A. Madero",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Prepa 9 (ENP 9): escena de un edificio de bachillerato universitario con fachada de concreto y ventanales, escalinata de entrada, árboles y estudiantes con mochila llegando por la mañana, en Gustavo A. Madero, con cielo despejado y luz de mañana. Franja de color azul #2457C5 y dorado en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo de la Escuela Nacional Preparatoria. Título grande en la parte superior: \"Prepa 9\" y debajo, más pequeño: \"Pedro de Alba · Gustavo A. Madero\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-cch-azcapotzalco",
+  "archivo": "cch-azcapotzalco-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · CCH Azcapotzalco",
+  "alt": "Ilustración del CCH Azcapotzalco (CCH Azcapotzalco) de la UNAM con su escudo, en Azcapotzalco",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de CCH Azcapotzalco: escena de edificios bajos de bachillerato con jardineras, una explanada amplia y estudiantes conversando en grupos, en Azcapotzalco, con cielo despejado y luz de mañana. Franja de color ámbar #E2A400 y azul en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo del Colegio de Ciencias y Humanidades. Título grande en la parte superior: \"CCH Azcapotzalco\" y debajo, más pequeño: \"Azcapotzalco\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-cch-naucalpan",
+  "archivo": "cch-naucalpan-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · CCH Naucalpan",
+  "alt": "Ilustración del CCH Naucalpan (CCH Naucalpan) de la UNAM con su escudo, en Naucalpan de Juárez",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de CCH Naucalpan: escena de edificios bajos de bachillerato con jardineras, una explanada amplia y estudiantes conversando en grupos, en Naucalpan de Juárez, con cielo despejado y luz de mañana. Franja de color ámbar #E2A400 y azul en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo del Colegio de Ciencias y Humanidades. Título grande en la parte superior: \"CCH Naucalpan\" y debajo, más pequeño: \"Naucalpan de Juárez\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-cch-oriente",
+  "archivo": "cch-oriente-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · CCH Oriente",
+  "alt": "Ilustración del CCH Oriente (CCH Oriente) de la UNAM con su escudo, en Iztapalapa",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de CCH Oriente: escena de edificios bajos de bachillerato con jardineras, una explanada amplia y estudiantes conversando en grupos, en Iztapalapa, con cielo despejado y luz de mañana. Franja de color ámbar #E2A400 y azul en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo del Colegio de Ciencias y Humanidades. Título grande en la parte superior: \"CCH Oriente\" y debajo, más pequeño: \"Iztapalapa\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-cch-sur",
+  "archivo": "cch-sur-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · CCH Sur",
+  "alt": "Ilustración del CCH Sur (CCH Sur) de la UNAM con su escudo, en Coyoacán",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de CCH Sur: escena de edificios bajos de bachillerato con jardineras, una explanada amplia y estudiantes conversando en grupos, en Coyoacán, con cielo despejado y luz de mañana. Franja de color ámbar #E2A400 y azul en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo del Colegio de Ciencias y Humanidades. Título grande en la parte superior: \"CCH Sur\" y debajo, más pequeño: \"Coyoacán\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-cch-vallejo",
+  "archivo": "cch-vallejo-unam-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · CCH Vallejo",
+  "alt": "Ilustración del CCH Vallejo (CCH Vallejo) de la UNAM con su escudo, en Gustavo A. Madero",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de CCH Vallejo: escena de edificios bajos de bachillerato con jardineras, una explanada amplia y estudiantes conversando en grupos, en Gustavo A. Madero, con cielo despejado y luz de mañana. Franja de color ámbar #E2A400 y azul en la parte inferior. En la esquina superior izquierda coloca el escudo oficial de la UNAM y, a su lado, el escudo del Colegio de Ciencias y Humanidades. Título grande en la parte superior: \"CCH Vallejo\" y debajo, más pequeño: \"Gustavo A. Madero\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-1",
+  "archivo": "voca-1-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 1 (CECyT 1)",
+  "alt": "Ilustración de la Voca 1 (CECyT 1) del IPN con su escudo, en Gustavo A. Madero",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 1 (CECyT 1): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: una laptop con código, un circuito eléctrico, un casco de obra y planos, en Gustavo A. Madero, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 1\" y debajo, más pequeño: \"Gonzalo Vázquez Vela · Gustavo A. Madero\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-cet-1",
+  "archivo": "cet-1-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · CET 1",
+  "alt": "Ilustración del CET 1 (CET 1) del IPN con su escudo, en Gustavo A. Madero",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de CET 1: escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un circuito eléctrico, un casco de obra y planos, un engrane, en Gustavo A. Madero, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"CET 1\" y debajo, más pequeño: \"Walter Cross Buchanan · Gustavo A. Madero\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-2",
+  "archivo": "voca-2-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 2 (CECyT 2)",
+  "alt": "Ilustración de la Voca 2 (CECyT 2) del IPN con su escudo, en Miguel Hidalgo",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 2 (CECyT 2): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un pequeño avión, una laptop con código, un engrane, en Miguel Hidalgo, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 2\" y debajo, más pequeño: \"Miguel Bernard · Miguel Hidalgo\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-3",
+  "archivo": "voca-3-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 3 (CECyT 3)",
+  "alt": "Ilustración de la Voca 3 (CECyT 3) del IPN con su escudo, en Ecatepec de Morelos",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 3 (CECyT 3): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un pequeño avión, una laptop con código, un circuito eléctrico, en Ecatepec de Morelos, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 3\" y debajo, más pequeño: \"Estanislao Ramírez Ruiz · Ecatepec de Morelos\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-4",
+  "archivo": "voca-4-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 4 (CECyT 4)",
+  "alt": "Ilustración de la Voca 4 (CECyT 4) del IPN con su escudo, en Álvaro Obregón",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 4 (CECyT 4): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un pequeño avión, un circuito eléctrico, un casco de obra y planos, en Álvaro Obregón, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 4\" y debajo, más pequeño: \"Lázaro Cárdenas · Álvaro Obregón\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-5",
+  "archivo": "voca-5-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 5 (CECyT 5)",
+  "alt": "Ilustración de la Voca 5 (CECyT 5) del IPN con su escudo, en Cuauhtémoc",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 5 (CECyT 5): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: una laptop con código, una gráfica de barras y una calculadora, en Cuauhtémoc, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 5\" y debajo, más pequeño: \"Benito Juárez · Cuauhtémoc\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-6",
+  "archivo": "voca-6-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 6 (CECyT 6)",
+  "alt": "Ilustración de la Voca 6 (CECyT 6) del IPN con su escudo, en Azcapotzalco",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 6 (CECyT 6): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un matraz de laboratorio, una hoja verde y un panel solar, en Azcapotzalco, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 6\" y debajo, más pequeño: \"Miguel Othón de Mendizábal · Azcapotzalco\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-7",
+  "archivo": "voca-7-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 7 (CECyT 7)",
+  "alt": "Ilustración de la Voca 7 (CECyT 7) del IPN con su escudo, en Iztapalapa",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 7 (CECyT 7): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un pequeño avión, un circuito eléctrico, un casco de obra y planos, en Iztapalapa, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 7\" y debajo, más pequeño: \"Cuauhtémoc · Iztapalapa\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-8",
+  "archivo": "voca-8-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 8 (CECyT 8)",
+  "alt": "Ilustración de la Voca 8 (CECyT 8) del IPN con su escudo, en Azcapotzalco",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 8 (CECyT 8): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: una laptop con código, un engrane, un matraz de laboratorio, en Azcapotzalco, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 8\" y debajo, más pequeño: \"Narciso Bassols · Azcapotzalco\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-9",
+  "archivo": "voca-9-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 9 (CECyT 9)",
+  "alt": "Ilustración de la Voca 9 (CECyT 9) del IPN con su escudo, en Miguel Hidalgo",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 9 (CECyT 9): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: una laptop con código, un engrane, en Miguel Hidalgo, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 9\" y debajo, más pequeño: \"Juan de Dios Bátiz · Miguel Hidalgo\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-10",
+  "archivo": "voca-10-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 10 (CECyT 10)",
+  "alt": "Ilustración de la Voca 10 (CECyT 10) del IPN con su escudo, en Gustavo A. Madero",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 10 (CECyT 10): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un circuito eléctrico, un engrane, una hoja verde y un panel solar, en Gustavo A. Madero, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 10\" y debajo, más pequeño: \"Carlos Vallejo Márquez · Gustavo A. Madero\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-11",
+  "archivo": "voca-11-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 11 (CECyT 11)",
+  "alt": "Ilustración de la Voca 11 (CECyT 11) del IPN con su escudo, en Miguel Hidalgo",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 11 (CECyT 11): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un circuito eléctrico, un casco de obra y planos, un engrane, en Miguel Hidalgo, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 11\" y debajo, más pequeño: \"Wilfrido Massieu · Miguel Hidalgo\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-12",
+  "archivo": "voca-12-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 12 (CECyT 12)",
+  "alt": "Ilustración de la Voca 12 (CECyT 12) del IPN con su escudo, en Cuauhtémoc",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 12 (CECyT 12): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: una laptop con código, una gráfica de barras y una calculadora, en Cuauhtémoc, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 12\" y debajo, más pequeño: \"José María Morelos · Cuauhtémoc\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-13",
+  "archivo": "voca-13-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 13 (CECyT 13)",
+  "alt": "Ilustración de la Voca 13 (CECyT 13) del IPN con su escudo, en Coyoacán",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 13 (CECyT 13): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: una laptop con código, una gráfica de barras y una calculadora, una maleta de viaje, en Coyoacán, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 13\" y debajo, más pequeño: \"Ricardo Flores Magón · Coyoacán\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-14",
+  "archivo": "voca-14-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 14 (CECyT 14)",
+  "alt": "Ilustración de la Voca 14 (CECyT 14) del IPN con su escudo, en Venustiano Carranza",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 14 (CECyT 14): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: una laptop con código, una gráfica de barras y una calculadora, en Venustiano Carranza, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 14\" y debajo, más pequeño: \"Luis Enrique Erro · Venustiano Carranza\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-15",
+  "archivo": "voca-15-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 15 (CECyT 15)",
+  "alt": "Ilustración de la Voca 15 (CECyT 15) del IPN con su escudo, en Milpa Alta",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 15 (CECyT 15): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un matraz de laboratorio, una hoja verde y un panel solar, en Milpa Alta, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 15\" y debajo, más pequeño: \"Diódoro Antúnez Echegaray · Milpa Alta\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fachada-voca-19",
+  "archivo": "voca-19-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Escuela · Voca 19 (CECyT 19)",
+  "alt": "Ilustración de la Voca 19 (CECyT 19) del IPN con su escudo, en Tecámac",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 19 (CECyT 19): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un pequeño avión, un casco de obra y planos, un matraz de laboratorio, en Tecámac, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 19\" y debajo, más pequeño: \"Leona Vicario · Tecámac\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ }
+]
