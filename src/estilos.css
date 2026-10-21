@@ -693,6 +693,11 @@ p { margin: 0 0 1em; }
 .cm-datos { margin: 4px 0 6px; color: var(--suave); font-size: .9rem; font-variant-numeric: tabular-nums; }
 .cm-datos b { color: var(--tinta); }
 .cm-razones { margin: 0; padding-left: 18px; display: grid; gap: 2px; font-size: .93rem; }
+.cm-links { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 8px; }
+.cm-links .te-ruta { margin-top: 0; }
+.cm-ficha, .mp-ficha { font-weight: 700; font-size: .92rem; color: var(--tinta); }
+.cm-ficha:hover, .mp-ficha:hover { color: var(--verde); }
+.mp-ficha { display: inline-block; margin: 4px 0 0 12px; font-size: .85rem; }
 .cm-avisos { display: grid; gap: 8px; }
 .cm-avisos p { margin: 0; padding: 12px 14px; border-radius: var(--radio); background: var(--superficie-2); font-size: .95rem; }
 .cm-acciones { flex-wrap: wrap; }
