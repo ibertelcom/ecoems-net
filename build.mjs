@@ -24,6 +24,7 @@ mkdirSync("vista-previa", { recursive: true });
 writeFileSync("dist/estilos.css", min(css));
 writeFileSync("dist/app.js", js);
 if (existsSync("src/img")) cpSync("src/img", "dist/img", { recursive: true });
+if (existsSync("src/vendor")) cpSync("src/vendor", "dist/vendor", { recursive: true });
 // Códigos postales de la ZMVM con coordenadas aproximadas (GeoNames, CC BY 4.0) para "Prepas cerca de mí".
 {
   const filas = ["parte1", "parte2", "parte3"].map((f) => readFileSync(`src/datos/cp/${f}.txt`, "utf8").trim()).join(";");

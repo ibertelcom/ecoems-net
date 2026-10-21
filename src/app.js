@@ -439,6 +439,128 @@
   buscarCp();
 })();
 
+// ---------- Mapa interactivo (Leaflet propio, se carga solo al acercarse al mapa) ----------
+(() => {
+  const caja = document.getElementById("mapa");
+  if (!caja) return;
+  const datos = JSON.parse(document.getElementById("datos-escuelas").textContent).filter((e) => e.g);
+  const $ = (id) => document.getElementById(id);
+  const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const LINEA = { enp: "Prepa UNAM", cch: "CCH UNAM", voca: "Vocacional IPN" };
+  const AREA = { "Ciencias Físico-Matemáticas": "Físico-Matemáticas", "Ciencias Médico-Biológicas": "Médico-Biológicas", "Ciencias Sociales y Administrativas": "Sociales y Administrativas" };
+  const color = (l) => getComputedStyle(document.documentElement).getPropertyValue(`--${l}`).trim() || "#2457C5";
+  const km = (a, b) => { const r = Math.PI / 180, x = (b[0] - a[0]) * r, y = (b[1] - a[1]) * r; const h = Math.sin(x / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(y / 2) ** 2; return 2 * 6371 * Math.asin(Math.sqrt(h)); };
+  const ruta = (e, casa) => `https://www.google.com/maps/dir/?api=1${casa ? `&origin=${casa[0]},${casa[1]}` : ""}&destination=${e.g[0]},${e.g[1]}`;
+  let L, mapa, capas = {}, casa = null, casaCapa = null, cps = null;
+
+  function cargar() {
+    return new Promise((ok, mal) => {
+      const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "/vendor/leaflet/leaflet.css"; document.head.appendChild(css);
+      const js = document.createElement("script"); js.src = "/vendor/leaflet/leaflet.js"; js.onload = ok; js.onerror = mal; document.head.appendChild(js);
+    });
+  }
+  function popup(e) {
+    const d = casa ? `<span>A ${km(casa, e.g).toFixed(1)} km de tu casa</span>` : "";
+    return `<div class="mp-pop"><small>${LINEA[e.l]}${e.l === "voca" && e.ar ? ` · ${AREA[e.ar] ?? esc(e.ar)}` : ""}</small><b>${esc(e.n)}</b><span>Aciertos 2026: <strong>${e.a[2]}</strong> · meta Tepo <strong>${e.m}</strong></span><span>${esc(e.z ?? "")}</span>${d}<span class="mp-pop-links"><a href="/escuelas/${e.s}/">Ver ficha</a><a href="${ruta(e, casa)}" target="_blank" rel="noopener">Cómo llegar ↗</a></span></div>`;
+  }
+  function visibles() {
+    const lineas = [...document.querySelectorAll(".mp-filtro input:checked")].map((i) => i.value);
+    const area = $("mp-area").value;
+    return datos.filter((e) => lineas.includes(e.l) && (e.l !== "voca" || !area || e.ar === area || !e.ar));
+  }
+  function filtrar() {
+    const v = new Set(visibles().map((e) => e.s));
+    for (const e of datos) { const m = capas[e.s]; if (v.has(e.s)) { if (!mapa.hasLayer(m)) m.addTo(mapa); } else if (mapa.hasLayer(m)) mapa.removeLayer(m); }
+    encuadrar();
+  }
+  function cercanas() {
+    const lista = $("mp-cerca");
+    if (!casa) { lista.innerHTML = ""; return null; }
+    const radio = +$("mp-radio").value;
+    const cerca = visibles().map((e) => ({ e, d: km(casa, e.g) })).sort((a, b) => a.d - b.d);
+    const dentro = cerca.filter((x) => x.d <= radio);
+    const mostrar = (dentro.length ? dentro : cerca.slice(0, 3)).slice(0, 8);
+    lista.innerHTML = (dentro.length ? "" : `<li class="vacia">No hay escuelas a menos de ${radio} km. Estas son las más cercanas:</li>`) + mostrar.map(({ e, d }) =>
+      `<li data-linea="${e.l}"><button type="button" data-ver="${e.s}"><b>${esc(e.c)}</b><span>${d.toFixed(1)} km · 2026: ${e.a[2]} · meta ${e.m}</span></button></li>`).join("");
+    if (casaCapa) casaCapa.circulo.setRadius(radio * 1000);
+    return { dentro: dentro.length, cerca };
+  }
+  function encuadrar() {
+    const r = cercanas();
+    if (!casaCapa || !r) return;
+    if (r.dentro) mapa.fitBounds(casaCapa.circulo.getBounds(), { padding: [20, 20] });
+    else mapa.fitBounds(L.latLngBounds([casa, ...r.cerca.slice(0, 3).map((x) => x.e.g)]), { padding: [30, 30] });
+  }
+  function ponerCasa(lat, lon, texto) {
+    casa = [lat, lon];
+    if (casaCapa) { casaCapa.punto.remove(); casaCapa.circulo.remove(); }
+    const radio = +$("mp-radio").value;
+    casaCapa = {
+      circulo: L.circle(casa, { radius: radio * 1000, color: color("verde"), weight: 1.5, fillOpacity: 0.06, interactive: false }).addTo(mapa),
+      punto: L.marker(casa, { icon: L.divIcon({ className: "mp-casa", html: "<span>Casa</span>", iconSize: [46, 24], iconAnchor: [23, 12] }), keyboard: false, title: texto }).addTo(mapa),
+    };
+    $("mp-donde").textContent = `Escuelas cerca de ${texto}:`;
+    for (const e of datos) capas[e.s].setPopupContent(popup(e));
+    encuadrar();
+  }
+  async function buscarCp() {
+    const cp = $("mp-cp").value.replace(/\D/g, "");
+    if (cp.length !== 5) return;
+    try {
+      if (!cps) { const j = await (await fetch("/datos/cp-zmvm.json")).json(); cps = new Map(j.c.split(";").map((f) => { const [c, la, lo, m] = f.split(","); return [c, [(+la + 18000) / 1000, (+lo - 101000) / 1000, j.m[+m]]]; })); }
+      const p = cps.get(cp);
+      if (!p) { $("mp-donde").textContent = `No encontramos el ${cp} en la zona metropolitana. Prueba con «Mi ubicación».`; return; }
+      ponerCasa(p[0], p[1], `${cp}, ${p[2]}`);
+    } catch (e) { $("mp-donde").textContent = "No pudimos cargar los códigos postales. Revisa tu conexión."; }
+  }
+  function ver(slug) {
+    const m = capas[slug]; if (!m) return;
+    if (!mapa.hasLayer(m)) m.addTo(mapa);
+    caja.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+    mapa.setView(m.getLatLng(), Math.max(mapa.getZoom(), 14));
+    m.openPopup();
+  }
+
+  async function iniciar() {
+    try { await cargar(); } catch (e) { caja.innerHTML = `<p class="mp-cargando">No se pudo cargar el mapa. Abajo tienes todas las escuelas por alcaldía.</p>`; return; }
+    L = window.L;
+    caja.innerHTML = "";
+    const oscuro = matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light";
+    mapa = L.map(caja, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
+    L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/${oscuro ? "dark_all" : "voyager"}/{z}/{x}/{y}{r}.png`, {
+      maxZoom: 19, subdomains: "abcd",
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
+    }).addTo(mapa);
+    for (const e of datos) {
+      capas[e.s] = L.circleMarker(e.g, { radius: 9, color: "#fff", weight: 2.5, fillColor: color(e.l), fillOpacity: 1 })
+        .bindPopup(popup(e), { maxWidth: 260 }).bindTooltip(e.c, { direction: "top", offset: [0, -8] }).addTo(mapa);
+    }
+    mapa.fitBounds(L.latLngBounds(datos.map((e) => e.g)), { padding: [24, 24] });
+    mapa.on("focus", () => mapa.scrollWheelZoom.enable());
+    mapa.on("blur", () => mapa.scrollWheelZoom.disable());
+    const leyenda = L.control({ position: "bottomleft" });
+    leyenda.onAdd = () => { const d = L.DomUtil.create("div", "mp-leyenda"); d.innerHTML = Object.entries(LINEA).map(([k, t]) => `<span><i style="background:${color(k)}"></i>${t}</span>`).join(""); return d; };
+    leyenda.addTo(mapa);
+    document.querySelectorAll(".mp-filtro input").forEach((i) => i.addEventListener("change", filtrar));
+    $("mp-area").addEventListener("change", filtrar);
+    $("mp-radio").addEventListener("change", encuadrar);
+    let t; $("mp-cp").addEventListener("input", () => { clearTimeout(t); t = setTimeout(buscarCp, 350); });
+    $("mp-gps").addEventListener("click", () => {
+      if (!navigator.geolocation) { $("mp-donde").textContent = "Tu navegador no permite compartir la ubicación. Usa tu código postal."; return; }
+      $("mp-donde").textContent = "Buscando tu ubicación…";
+      navigator.geolocation.getCurrentPosition((p) => ponerCasa(p.coords.latitude, p.coords.longitude, "tu ubicación"),
+        () => { $("mp-donde").textContent = "No pudimos obtener tu ubicación. Usa tu código postal."; }, { timeout: 10000, maximumAge: 600000 });
+    });
+    document.addEventListener("click", (ev) => { const b = ev.target.closest("[data-ver]"); if (b) ver(b.dataset.ver); });
+    try { window.gtag && gtag("event", "mapa_carga"); } catch (e) {}
+  }
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((en) => { if (en.some((x) => x.isIntersecting)) { io.disconnect(); iniciar(); } }, { rootMargin: "300px" });
+    io.observe(caja);
+  } else iniciar();
+})();
+
 // ---------- Escuelas por zona ----------
 (() => {
   const z = document.getElementById("zona");

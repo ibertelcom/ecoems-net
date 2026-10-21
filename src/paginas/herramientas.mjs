@@ -243,48 +243,91 @@ ${datosJson()}`;
   return hecha(ruta, d, cuerpo, [], [herramientaLd("Armar opciones ECOEMS", ruta, d.descripcion)]);
 }
 
-// ---------- Escuelas por zona (mapa) ----------
+// ---------- Mapa interactivo de escuelas ----------
 function mapa() {
   const ruta = "/mapa/";
   const d = {
-    titulo: "Mapa de prepas UNAM y vocacionales IPN por alcaldía | ecoems.net",
-    descripcion: "Las prepas, CCH y vocacionales del ECOEMS agrupadas por alcaldía o municipio, con dirección y cómo llegar. Para ver cuáles te convienen según distancia y aciertos, usa Prepas cerca de mí.",
-    nombreCorto: "Escuelas por zona",
+    titulo: "Mapa de prepas UNAM, CCH y vocacionales IPN del ECOEMS | ecoems.net",
+    descripcion: "Mapa interactivo con las 31 prepas, CCH y vocacionales de la UNAM y el IPN del ECOEMS. Escribe tu código postal para ver las más cercanas, sus aciertos y cómo llegar.",
+    nombreCorto: "Mapa de escuelas",
     migas: migas([["Inicio", "/"], ["Mapa de escuelas", ruta]]),
   };
   const zonas = [...new Set(ESCUELAS.map((e) => e.alcaldia).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
   const porZona = zonas.map((z) => [z, ESCUELAS.filter((e) => e.alcaldia === z)]);
+  const comoLlegar = (e) => `https://www.google.com/maps/dir/?api=1&destination=${e.coord ? `${e.coord[0]},${e.coord[1]}` : encodeURIComponent(`${e.honorifico ?? e.doble}, ${e.alcaldia}`)}`;
   const faq = [
-    ["¿Qué prepas de la UNAM hay cerca de mí?", "Usa el filtro por alcaldía o municipio para ver las escuelas de tu zona. Si quieres que te digamos cuáles te convienen según tu código postal, sus aciertos y lo que quiere estudiar, usa la herramienta Prepas cerca de mí."],
+    ["¿Dónde están las prepas de la UNAM y las vocacionales del IPN?", `Las ${ESCUELAS.length} escuelas que asignan lugar con el examen ECOEMS están en la Ciudad de México y en ${ESCUELAS.filter((e) => e.entidad === "Estado de México").length} municipios del Estado de México. En el mapa cada punto es una escuela: azul para las prepas de la UNAM, ámbar para los CCH y vino para las vocacionales del IPN.`],
+    ["¿Cómo veo las escuelas más cercanas a mi casa?", "Escribe tu código postal o toca «Usar mi ubicación». El mapa marca tu casa, dibuja un círculo con la distancia que elijas y te lista las escuelas más cercanas con sus aciertos y el botón «Cómo llegar»."],
     ["¿Qué escuelas del ECOEMS hay en el Estado de México?", `${ESCUELAS.filter((e) => e.entidad === "Estado de México").map((e) => `${e.doble} (${e.alcaldia})`).join(", ")}. El resto de las escuelas de la UNAM y el IPN están en la Ciudad de México.`],
+    ["¿Mi ubicación se guarda?", "No. Tu código postal o tu ubicación solo se usan en tu navegador para medir distancias; no se envían a ecoems.net ni se guardan."],
   ];
+  const ldMapa = {
+    "@context": "https://schema.org", "@type": "ItemList", name: "Escuelas del ECOEMS en el mapa", numberOfItems: ESCUELAS.length,
+    itemListElement: ESCUELAS.map((e, i) => ({
+      "@type": "ListItem", position: i + 1,
+      item: { "@type": "HighSchool", name: e.honorifico ?? e.doble, alternateName: e.comun, url: `${SITIO.dominio}/escuelas/${e.slug}/`, ...(e.coord ? { geo: { "@type": "GeoCoordinates", latitude: e.coord[0], longitude: e.coord[1] } } : {}), address: { "@type": "PostalAddress", addressLocality: e.alcaldia, addressRegion: e.entidad === "CDMX" ? "Ciudad de México" : e.entidad, addressCountry: "MX" } },
+    })),
+  };
+  const filtro = (v, t) => `<label class="mp-filtro" data-linea="${v}"><input type="checkbox" value="${v}" checked><span>${t}</span></label>`;
   const cuerpo = `
 ${cabeceraPagina({
   migasHtml: d.migas.html,
-  h1: "Prepas, CCH y vocacionales por alcaldía",
-  lead: `Las ${ESCUELAS.length} escuelas de la UNAM y el IPN agrupadas por alcaldía o municipio. Elige tu zona y traza la ruta desde tu casa. ¿Quieres saber cuáles te convienen? Prueba <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>.`,
-  extra: `<div class="buscador-escuelas"><label for="zona">Alcaldía o municipio</label><select id="zona" class="select-grande"><option value="">Todas las zonas</option>${zonas.map((z) => `<option>${z}</option>`).join("")}</select></div>`,
+  h1: "Mapa de prepas, CCH y vocacionales del ECOEMS",
+  lead: `Las ${ESCUELAS.length} escuelas de la UNAM y el IPN en un mapa. Escribe tu código postal para ver cuáles te quedan más cerca, con sus aciertos y la ruta desde tu casa.`,
 })}
-<section class="seccion" aria-label="Escuelas por zona">
+<section class="seccion herramienta-seccion" aria-label="Mapa interactivo">
   <div class="contenedor">
+    <div class="mp-barra">
+      <div class="mp-filtros" role="group" aria-label="Tipo de escuela">${filtro("enp", "Prepas UNAM")}${filtro("cch", "CCH UNAM")}${filtro("voca", "Vocacionales IPN")}</div>
+      <select id="mp-area" class="select-grande" aria-label="Área de las vocacionales">
+        <option value="">Vocas: todas las áreas</option>
+        <option value="Ciencias Físico-Matemáticas">Físico-Matemáticas</option>
+        <option value="Ciencias Médico-Biológicas">Médico-Biológicas</option>
+        <option value="Ciencias Sociales y Administrativas">Sociales y Administrativas</option>
+      </select>
+    </div>
+    <div class="mp">
+      <div class="mp-mapa-caja">
+        <div id="mapa" class="mp-mapa" role="region" aria-label="Mapa de escuelas del ECOEMS"><p class="mp-cargando">Cargando el mapa…</p></div>
+        <noscript><p class="mp-cargando">Activa JavaScript para ver el mapa. Abajo tienes todas las escuelas por alcaldía.</p></noscript>
+      </div>
+      <aside class="mp-panel" aria-label="Escuelas cercanas">
+        <label for="mp-cp">Tu código postal</label>
+        <div class="calc-fila"><input id="mp-cp" class="cm-cp" type="text" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="07300" autocomplete="postal-code"><button class="boton boton-secundario" type="button" id="mp-gps">${icono("mapa", "ico")}Mi ubicación</button></div>
+        <label for="mp-radio">Distancia</label>
+        <select id="mp-radio" class="select-grande"><option value="5">5 km</option><option value="10" selected>10 km</option><option value="15">15 km</option><option value="20">20 km</option></select>
+        <p class="calc-ayuda" id="mp-donde" aria-live="polite">Escribe tu código postal para ver las escuelas más cercanas.</p>
+        <ol class="mp-cerca" id="mp-cerca"></ol>
+        <a class="boton boton-bloque" href="/prepas-cerca-de-mi/">¿Cuál le conviene? Arma su lista</a>
+      </aside>
+    </div>
+    <p class="nota-tabla">${icono("aviso", "ico")}<span>Ubicación de planteles de OpenStreetMap y códigos postales de GeoNames; las distancias son aproximadas, en línea recta. Tu código postal o ubicación no se envían ni se guardan. Tres planteles tienen ubicación aproximada (Voca 6, Voca 11 y Voca 19); confirma la dirección en su sitio oficial.</span></p>
+  </div>
+</section>
+<section class="seccion" aria-labelledby="t-por-zona">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <h2 id="t-por-zona">Escuelas por alcaldía o municipio</h2>
+      <div class="buscador-escuelas"><label for="zona">Alcaldía o municipio</label><select id="zona" class="select-grande"><option value="">Todas las zonas</option>${zonas.map((z) => `<option>${z}</option>`).join("")}</select></div>
+    </div>
     ${porZona.map(([z, es]) => `
     <div class="grupo-escuelas" data-zona="${z}">
-      <div class="grupo-cabeza"><h2>${z}</h2><span>${es.length} ${es.length === 1 ? "escuela" : "escuelas"} · ${es[0].entidad === "CDMX" ? "Ciudad de México" : es[0].entidad}</span></div>
+      <div class="grupo-cabeza"><h3>${z}</h3><span>${es.length} ${es.length === 1 ? "escuela" : "escuelas"} · ${es[0].entidad === "CDMX" ? "Ciudad de México" : es[0].entidad}</span></div>
       <ul class="tarjetas-escuela">${es.map((e) => `
         <li><div class="tarjeta-escuela tarjeta-zona" data-linea="${e.linea}">
           <span class="te-linea">${GRUPOS.find((g) => g.clave === e.linea).titulo}</span>
           <a href="/escuelas/${e.slug}/"><b>${e.doble}</b></a>
           ${e.direccion ? `<span class="te-hon">${e.direccion}</span>` : ""}
           <span class="te-cifras"><span><i>2026</i>${e.a2026}</span><span class="te-meta"><i>Meta</i>${e.meta}</span></span>
-          <a class="te-ruta" href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${e.honorifico ?? e.doble}, ${e.direccionVerificada && e.direccion ? e.direccion + ", " : ""}${e.alcaldia}`)}" rel="noopener" target="_blank">${icono("mapa", "ico")}Cómo llegar</a>
+          <span class="te-acciones"><button class="te-ver" type="button" data-ver="${e.slug}">Ver en el mapa</button><a class="te-ruta" href="${comoLlegar(e)}" rel="noopener" target="_blank">${icono("mapa", "ico")}Cómo llegar</a></span>
         </div></li>`).join("")}
       </ul>
     </div>`).join("")}
-    <p class="nota-ruta">${icono("mapa", "ico")}<span>Estamos preparando el mapa interactivo con todas las escuelas del proceso, incluidas las opciones sin examen. Mientras tanto, usa “Cómo llegar” para ver la ruta desde tu casa.</span></p>
   </div>
 </section>
-${faqBloque(faq, "Preguntas sobre las escuelas por zona")}`;
-  return hecha(ruta, d, cuerpo, faq);
+${faqBloque(faq, "Preguntas sobre el mapa de escuelas")}
+${datosJson()}`;
+  return hecha(ruta, d, cuerpo, faq, [ldMapa]);
 }
 
 // ---------- Escuelas sin examen ----------
@@ -334,14 +377,14 @@ function aviso() {
     migas: migas([["Inicio", "/"], ["Aviso de privacidad", ruta]]),
   };
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Versión del 17 de octubre de 2026." })}
+${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Versión del 21 de octubre de 2026." })}
 <section class="seccion"><div class="contenedor contenedor-angosto prosa">
   <h2>Responsable</h2>
   <p>Ibertelcom Digital (Victor Hugo Gutierrez Silva, persona física con actividad empresarial), con domicilio en Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Contacto: contacto@ecoems.net.</p>
   <h2>Qué datos usamos</h2>
   <p>ecoems.net es un sitio informativo. No te pedimos registro ni datos personales. Las herramientas (calculadora, comparador, armar opciones) funcionan en tu navegador; lo que escribes en ellas no se envía a nuestros servidores. "Armar mis opciones" guarda tu lista solo en tu propio navegador para que no la pierdas.</p>
   <h2>Cookies y servicios de terceros</h2>
-  <p>El servidor registra datos técnicos de cada visita (dirección IP, navegador, página) para seguridad y estadísticas. Usamos Google Analytics para saber cuántas personas visitan el sitio y qué páginas les sirven; usa cookies y datos de navegación anónimos o agregados, y no lo usamos para identificarte. Puedes bloquear sus cookies desde tu navegador o con el complemento de inhabilitación de Google Analytics. Si en el futuro mostramos anuncios de Google AdSense, lo indicaremos aquí.</p>
+  <p>El servidor registra datos técnicos de cada visita (dirección IP, navegador, página) para seguridad y estadísticas. Usamos Google Analytics para saber cuántas personas visitan el sitio y qué páginas les sirven; usa cookies y datos de navegación anónimos o agregados, y no lo usamos para identificarte. Puedes bloquear sus cookies desde tu navegador o con el complemento de inhabilitación de Google Analytics. El mapa de escuelas descarga sus imágenes de CARTO, que recibe la dirección IP de tu navegador como cualquier servidor web. El código postal o la ubicación que escribas en el mapa y en Prepas cerca de mí se usan solo dentro de tu navegador para medir distancias: no se envían a ecoems.net ni se guardan. Si en el futuro mostramos anuncios de Google AdSense, lo indicaremos aquí.</p>
   <h2>Enlaces a otros sitios</h2>
   <p>Enlazamos a sitios oficiales (miderechomilugar.gob.mx, llave.gob.mx, sitios de la UNAM y el IPN) y a ecoems.app y examenes.lat, que tienen sus propios avisos de privacidad.</p>
   <h2>Derechos ARCO y cambios</h2>
