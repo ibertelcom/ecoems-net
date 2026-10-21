@@ -281,6 +281,164 @@
   }
 })();
 
+// ---------- Prepas cerca de mí: ¿qué escuela te conviene? ----------
+(() => {
+  const form = document.getElementById("cm-form");
+  if (!form) return;
+  const datos = JSON.parse(document.getElementById("datos-escuelas").textContent);
+  const $ = (id) => document.getElementById(id);
+  const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const AREA = { ing: "Ciencias Físico-Matemáticas", salud: "Ciencias Médico-Biológicas", soc: "Ciencias Sociales y Administrativas" };
+  const AREA_CORTA = { "Ciencias Físico-Matemáticas": "Físico-Matemáticas", "Ciencias Médico-Biológicas": "Médico-Biológicas", "Ciencias Sociales y Administrativas": "Sociales y Administrativas" };
+  const CUPO = { arriesgado: { reto: 4, orilla: 4, alcanza: 2 }, equilibrado: { reto: 2, orilla: 5, alcanza: 3 }, seguro: { reto: 1, orilla: 4, alcanza: 5 } };
+  const ETQ = { reto: "Reto", orilla: "Alcanzable", alcanza: "Segura" };
+  const RETO_MAX = 8;
+  let casa = null; // { lat, lon, texto, aprox }
+  let cps = null;
+  let lista = [];
+
+  const km = (a, b) => {
+    const r = Math.PI / 180, dla = (b[0] - a[0]) * r, dlo = (b[1] - a[1]) * r;
+    const h = Math.sin(dla / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dlo / 2) ** 2;
+    return 2 * 6371 * Math.asin(Math.sqrt(h));
+  };
+  const valor = (n) => form.querySelector(`input[name="${n}"]:checked`)?.value;
+  const aciertos = () => Math.max(0, Math.min(128, $("cm-nosabe").checked ? +$("cm-nivel").value : Math.round(+$("cm-aciertos").value || 0)));
+
+  async function cargarCps() {
+    if (cps) return cps;
+    const r = await fetch("/datos/cp-zmvm.json");
+    const j = await r.json();
+    cps = new Map(j.c.split(";").map((f) => { const [cp, la, lo, m, q] = f.split(","); return [cp, { lat: (+la + 18000) / 1000, lon: (+lo - 101000) / 1000, mun: j.m[+m], aprox: q === "0" }]; }));
+    return cps;
+  }
+  async function buscarCp() {
+    const cp = $("cm-cp").value.replace(/\D/g, "");
+    const donde = $("cm-donde");
+    if (cp.length !== 5) { casa = null; donde.textContent = "Escribe los 5 dígitos de tu código postal."; pintar(); return; }
+    try {
+      const m = await cargarCps();
+      const p = m.get(cp);
+      if (!p) { casa = null; donde.textContent = `No encontramos el ${cp} en la Ciudad de México ni en los municipios conurbados. Prueba con «Usar mi ubicación».`; }
+      else { casa = { lat: p.lat, lon: p.lon, texto: `${cp}, ${p.mun}`, aprox: p.aprox }; donde.textContent = `Tu zona: ${casa.texto}${p.aprox ? " (ubicación aproximada)" : ""}.`; }
+    } catch (e) { casa = null; donde.textContent = "No pudimos cargar los códigos postales. Revisa tu conexión o usa tu ubicación."; }
+    pintar();
+  }
+
+  function calcular() {
+    const A = aciertos();
+    const area = valor("cm-area");
+    const estilo = valor("cm-estilo");
+    const maxKm = +$("cm-dist").value;
+    const quiereUnam = $("cm-unam").checked, quiereIpn = $("cm-ipn").checked;
+    const avisos = [];
+    let fueraDist = 0, fueraArea = 0, lejos = 0;
+    const cands = [];
+    for (const e of datos) {
+      if (e.i === "UNAM" && !quiereUnam) continue;
+      if (e.i === "IPN") {
+        if (!quiereIpn) continue;
+        if (area === "hum") { fueraArea++; continue; }
+        if (AREA[area] && e.ar && e.ar !== AREA[area]) { fueraArea++; continue; }
+      }
+      const dist = casa && e.g ? km([casa.lat, casa.lon], e.g) : null;
+      if (maxKm && dist !== null && dist > maxKm) { fueraDist++; continue; }
+      const t = A >= e.m ? "alcanza" : A >= e.a[2] ? "orilla" : A >= e.a[2] - RETO_MAX ? "reto" : null;
+      if (!t) { lejos++; continue; }
+      cands.push({ ...e, t, dist });
+    }
+    // Más cerca primero dentro de cada grupo; a igual distancia, la más pedida.
+    const porCercania = (x, y) => (x.dist ?? 0) - (y.dist ?? 0) || y.a[2] - x.a[2];
+    const cupo = { ...CUPO[estilo] };
+    const usados = { UNAM: 0, IPN: 0 };
+    const elegido = [];
+    const tomar = (t, n) => {
+      for (const e of cands.filter((c) => c.t === t && !elegido.includes(c)).sort(porCercania)) {
+        if (n <= 0 || elegido.length >= 10) break;
+        if (usados[e.i] >= 5) continue;
+        elegido.push(e); usados[e.i]++; n--;
+      }
+      return n;
+    };
+    // Si falta de un grupo, el cupo pasa al grupo más seguro.
+    let sobra = tomar("reto", cupo.reto);
+    sobra = tomar("orilla", cupo.orilla + sobra);
+    sobra = tomar("alcanza", cupo.alcanza + sobra);
+    if (sobra > 0) tomar("orilla", sobra);
+    const ORDEN = { reto: 0, orilla: 1, alcanza: 2 };
+    elegido.sort((x, y) => ORDEN[x.t] - ORDEN[y.t] || y.a[2] - x.a[2]);
+
+    if (!elegido.some((e) => e.t === "alcanza")) avisos.push(`Ninguna escuela de la lista es segura con ${A} aciertos. Agrega opciones con menos demanda, amplía la distancia o considera la <a href="/modalidades/">modalidad 3</a>, que suma escuelas <a href="/escuelas/sin-examen/">sin examen</a>.`);
+    if (area === "hum" && quiereIpn) avisos.push("Para humanidades, arte o derecho el IPN no tiene vocacionales de esa área, por eso solo te sugerimos escuelas de la UNAM.");
+    else if (AREA[area] && fueraArea) avisos.push(`Dejamos fuera ${fueraArea} vocacionales que no son del área ${AREA_CORTA[AREA[area]]}: en el IPN el área se elige desde la voca.`);
+    if (area === "nose" && elegido.some((e) => e.i === "IPN")) avisos.push("Si elige una vocacional, revisa su área: en el IPN define el tipo de carreras para las que se prepara. Si aún no sabe qué estudiar, la UNAM le da más tiempo para decidir.");
+    if (fueraDist) avisos.push(`${fueraDist} escuelas quedaron fuera por estar a más de ${maxKm} km${elegido.length < 6 ? ". Si la lista es corta, amplía la distancia" : ""}.`);
+    if (lejos && elegido.length < 4) avisos.push(`Hay ${lejos} escuelas a las que hoy le faltan más de ${RETO_MAX} aciertos. Con práctica puede acercarse: <a href="/calculadora/">usa la calculadora</a> para ver cuántos le faltan.`);
+    if (!casa) avisos.push("Escribe tu código postal para ordenar por cercanía y descartar las escuelas lejanas.");
+    return { A, area, elegido, avisos };
+  }
+
+  function razones(e, A, area) {
+    const r = [];
+    const pl = (n, t) => `${n} ${t}${n === 1 ? "" : "s"}`;
+    if (e.t === "alcanza") r.push(A === e.m ? `Llega justo a la meta Tepo (${e.m}).` : `Le sobran ${pl(A - e.m, "acierto")} sobre la meta Tepo (${e.m}).`);
+    else if (e.t === "orilla") r.push(`${A === e.a[2] ? "Iguala" : "Pasa"} los ${e.a[2]} aciertos que pidió en 2026; le ${e.m - A === 1 ? "falta" : "faltan"} ${pl(e.m - A, "acierto")} para la meta Tepo.`);
+    else r.push(`Le ${e.a[2] - A === 1 ? "falta" : "faltan"} ${pl(e.a[2] - A, "acierto")} para los ${e.a[2]} que pidió en 2026.`);
+    if (e.dist !== null) r.push(`A ${e.dist.toFixed(1)} km de tu casa${e.z ? `, en ${esc(e.z)}` : ""}.`);
+    else if (e.z) r.push(`En ${esc(e.z)}.`);
+    if (e.l === "voca") r.push(`${e.ar ? `Área ${AREA_CORTA[e.ar] ?? esc(e.ar)}` : "Área por confirmar"}${e.ca?.length ? `. Carreras técnicas: ${e.ca.map(esc).join(", ")}` : ""}.`);
+    else if (area === "nose" || area === "hum" || AREA[area]) r.push("Bachillerato general UNAM: la carrera se elige al final, con pase reglamentado.");
+    if (e.a[2] - e.a[1] >= 3) r.push(`Ojo: subió ${e.a[2] - e.a[1]} aciertos de 2025 a 2026.`);
+    return r;
+  }
+
+  function pintar() {
+    const { A, area, elegido, avisos } = calcular();
+    lista = elegido;
+    const n = { reto: 0, orilla: 0, alcanza: 0 };
+    elegido.forEach((e) => n[e.t]++);
+    $("cm-resumen").innerHTML = `<b>${elegido.length}</b><span>escuelas sugeridas${casa ? ` cerca de ${esc(casa.texto)}` : ""}</span><p>Con <b>${A}</b> aciertos: ${n.reto} reto, ${n.orilla} alcanzables y ${n.alcanza} seguras. Regístralas en este orden.</p>`;
+    $("cm-lista").innerHTML = elegido.length ? elegido.map((e, i) => {
+      const destino = e.g ? `${e.g[0]},${e.g[1]}` : encodeURIComponent(e.n);
+      const ruta = `https://www.google.com/maps/dir/?api=1${casa ? `&origin=${casa.lat},${casa.lon}` : ""}&destination=${destino}`;
+      return `<li data-linea="${e.l}"><span class="lo-num">${i + 1}</span><div class="cm-item"><div class="cm-item-cab"><a href="/escuelas/${e.s}/">${esc(e.n)}</a><span class="lo-etq" data-tipo="${e.t}">${ETQ[e.t]}</span></div>
+        <p class="cm-datos">Aciertos 2024 · 2025 · 2026: <b>${e.a.join(" · ")}</b> · meta Tepo <b>${e.m}</b></p>
+        <ul class="cm-razones">${razones(e, A, area).map((t) => `<li>${t}</li>`).join("")}</ul>
+        <a class="te-ruta" href="${ruta}" target="_blank" rel="noopener">Cómo llegar ↗</a></div></li>`;
+    }).join("") : `<li class="vacia">No encontramos escuelas con esos filtros. Amplía la distancia, activa la UNAM y el IPN o revisa sus aciertos.</li>`;
+    $("cm-avisos").innerHTML = avisos.map((a) => `<p>${a}</p>`).join("");
+    const texto = `Mis opciones ECOEMS (${A} aciertos)\n` + elegido.map((e, i) => `${i + 1}. ${e.n} – ${ETQ[e.t]}`).join("\n") + "\nArmada en https://ecoems.net/prepas-cerca-de-mi/";
+    $("cm-wa").href = `https://wa.me/?text=${encodeURIComponent(texto)}`;
+    $("cm-copiar").dataset.texto = texto;
+    $("cm-armar").toggleAttribute("aria-disabled", !elegido.length);
+  }
+
+  let tCp;
+  $("cm-cp").addEventListener("input", () => { clearTimeout(tCp); tCp = setTimeout(buscarCp, 350); });
+  $("cm-nosabe").addEventListener("change", () => { $("cm-nivel").hidden = !$("cm-nosabe").checked; $("cm-aciertos").disabled = $("cm-nosabe").checked; pintar(); });
+  form.addEventListener("input", (ev) => { if (ev.target.id !== "cm-cp") pintar(); });
+  form.addEventListener("change", (ev) => { if (ev.target.id !== "cm-cp") pintar(); });
+  form.addEventListener("submit", (ev) => ev.preventDefault());
+  $("cm-gps").addEventListener("click", () => {
+    const donde = $("cm-donde");
+    if (!navigator.geolocation) { donde.textContent = "Tu navegador no permite compartir la ubicación. Usa tu código postal."; return; }
+    donde.textContent = "Buscando tu ubicación…";
+    navigator.geolocation.getCurrentPosition(
+      (p) => { casa = { lat: p.coords.latitude, lon: p.coords.longitude, texto: "tu ubicación", gps: true }; donde.textContent = "Usando tu ubicación actual. No la guardamos ni la enviamos a ningún lado."; pintar(); },
+      () => { donde.textContent = "No pudimos obtener tu ubicación. Revisa el permiso del navegador o usa tu código postal."; },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 },
+    );
+  });
+  $("cm-armar").addEventListener("click", () => { try { localStorage.setItem("ecoems-opciones", JSON.stringify(lista.map((e) => e.s))); } catch (e) {} });
+  $("cm-copiar").addEventListener("click", async () => {
+    const aviso = $("cm-aviso-accion");
+    try { await navigator.clipboard.writeText($("cm-copiar").dataset.texto); aviso.textContent = "Lista copiada."; }
+    catch (e) { const r = document.createRange(); r.selectNodeContents($("cm-lista")); getSelection().removeAllRanges(); getSelection().addRange(r); aviso.textContent = "Selecciona la lista y cópiala con Ctrl+C."; }
+  });
+  pintar();
+  buscarCp();
+})();
+
 // ---------- Escuelas por zona ----------
 (() => {
   const z = document.getElementById("zona");
@@ -297,6 +455,9 @@
   document.querySelectorAll("[data-comp]").forEach((s) => s.addEventListener("change", () => ev("comparador_uso", { escuela: s.value })));
   document.getElementById("armar-agregar")?.addEventListener("click", () => ev("armar_opciones_agregar"));
   document.getElementById("armar-copiar")?.addEventListener("click", () => ev("armar_opciones_copiar"));
+  let tc; document.getElementById("cm-form")?.addEventListener("change", () => { clearTimeout(tc); tc = setTimeout(() => ev("prepas_cerca_uso", { area: document.querySelector('input[name="cm-area"]:checked')?.value, estilo: document.querySelector('input[name="cm-estilo"]:checked')?.value }), 1500); });
+  document.getElementById("cm-armar")?.addEventListener("click", () => ev("prepas_cerca_armar"));
+  document.getElementById("cm-wa")?.addEventListener("click", () => ev("prepas_cerca_whatsapp"));
 })();
 
 // ---------- Contacto: copiar correo ----------
