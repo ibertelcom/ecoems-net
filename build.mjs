@@ -25,11 +25,14 @@ writeFileSync("dist/estilos.css", min(css));
 writeFileSync("dist/app.js", js);
 if (existsSync("src/img")) cpSync("src/img", "dist/img", { recursive: true });
 
+const imgsDePagina = {};
 for (const p of PAGINAS) {
   const comun = { titulo: p.META.titulo, descripcion: p.META.descripcion, ruta: p.META.ruta, cuerpo: p.cuerpo(), jsonld: p.jsonld(), seccion: p.seccion };
   const destino = p.META.ruta === "/" ? "dist/index.html" : `dist${p.META.ruta}index.html`;
   mkdirSync(destino.replace(/index\.html$/, ""), { recursive: true });
-  writeFileSync(destino, documento({ ...comun, css: { href: `/estilos.css?v=${ver}` }, js: { src: `/app.js?v=${ver}` } }));
+  const html = documento({ ...comun, css: { href: `/estilos.css?v=${ver}` }, js: { src: `/app.js?v=${ver}` } });
+  writeFileSync(destino, html);
+  imgsDePagina[p.META.ruta] = [...new Set([...html.matchAll(/<img [^>]*src="\/img\/([^"]+\.webp)"/g)].map((m) => m[1]))];
   const nombre = p.META.ruta === "/" ? "inicio" : p.META.ruta.replace(/\//g, "-").replace(/^-|-$/g, "");
   writeFileSync(`vista-previa/${nombre}.html`, documento({ ...comun, css: { inline: css }, js: { inline: js }, fragmento: true, nombreCorto: p.nombreCorto }));
 }
@@ -48,7 +51,7 @@ writeFileSync(
 writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITIO.dominio}/sitemap.xml\n`);
 writeFileSync(
   "dist/sitemap.xml",
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${PAGINAS.map((p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${p.ACTUALIZADO?.iso ?? new Date().toISOString().slice(0, 10)}</lastmod></url>`).join("\n")}\n</urlset>\n`,
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${PAGINAS.map((p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${p.ACTUALIZADO?.iso ?? new Date().toISOString().slice(0, 10)}</lastmod>${(imgsDePagina[p.META.ruta] ?? []).map((f) => `<image:image><image:loc>${SITIO.dominio}/img/${f}</image:loc></image:image>`).join("")}</url>`).join("\n")}\n</urlset>\n`,
 );
 
 // Listado de imágenes para que Victor las genere.

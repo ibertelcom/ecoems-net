@@ -49,7 +49,7 @@ export function faqLd(preguntas) {
   };
 }
 
-export function paginaLd({ titulo, ruta, descripcion, tipo = "WebPage" }) {
+export function paginaLd({ titulo, ruta, descripcion, tipo = "WebPage", imagen = null }) {
   return {
     "@context": "https://schema.org",
     "@type": tipo,
@@ -59,6 +59,7 @@ export function paginaLd({ titulo, ruta, descripcion, tipo = "WebPage" }) {
     inLanguage: "es-MX",
     dateModified: ACTUALIZADO.iso,
     isPartOf: { "@type": "WebSite", name: "ecoems.net", url: `${SITIO.dominio}/` },
+    ...(imagen ? { primaryImageOfPage: { "@type": "ImageObject", url: `${SITIO.dominio}/img/${imagen.archivo}`, width: imagen.ancho, height: imagen.alto, caption: imagen.alt } } : {}),
   };
 }
 

@@ -1,7 +1,7 @@
 // Una página por escuela: /escuelas/<slug>/
 import { ESCUELAS, PREGUNTAS_EXAMEN, MARGEN_TEPO, grupoDe, parecidas } from "../datos.mjs";
 import { icono } from "../iconos.mjs";
-import { imagen, registrar } from "../imagenes.mjs";
+import { imagen, registrar, IMAGENES } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
 import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, cambio, ACTUALIZADO } from "../componentes.mjs";
 
@@ -167,6 +167,7 @@ ${faqBloque(preg, `Preguntas sobre ${articulo(e)} ${e.comun}`)}`;
     parentOrganization: { "@type": "CollegeOrUniversity", name: e.institucion === "UNAM" ? "Universidad Nacional Autónoma de México" : "Instituto Politécnico Nacional" },
     ...(e.direccionVerificada && e.direccion ? { address: { "@type": "PostalAddress", streetAddress: e.direccion, addressLocality: e.alcaldia, addressRegion: e.entidad === "CDMX" ? "Ciudad de México" : e.entidad, addressCountry: "MX" } } : {}),
     ...(e.sitio ? { sameAs: [e.sitio] } : {}),
+    image: `${SITIO.dominio}/img/${IMAGENES[img].archivo}`,
   };
 
   return {
@@ -175,7 +176,7 @@ ${faqBloque(preg, `Preguntas sobre ${articulo(e)} ${e.comun}`)}`;
     nombreCorto: `Aciertos ${e.comun}`,
     seccion: "escuelas",
     cuerpo: () => cuerpo,
-    jsonld: () => [paginaLd({ titulo, ruta, descripcion }), m.ld, school, faqLd(preg)],
+    jsonld: () => [paginaLd({ titulo, ruta, descripcion, imagen: IMAGENES[img] }), m.ld, school, faqLd(preg)],
   };
 }
 
