@@ -158,7 +158,7 @@ const PAGINAS = [
         <li><b>INEA:</b> está acreditando la secundaria en el INEA.</li></ul>
         <p>Para quedar asignado se necesita el certificado de secundaria y cumplir los requisitos de cada institución; en la UNAM y el IPN, además, promedio mínimo de 7.0.</p>`],
       ["Cómo se asigna el lugar", `<p><b>En las escuelas sin examen</b> cuenta el orden en que pusiste las opciones en tu comprobante de registro y los lugares que tiene cada escuela.</p>
-        <p><b>En la UNAM y el IPN</b> cuentan los aciertos del examen, el orden de tus opciones y los lugares disponibles. Por eso el orden importa tanto: si alcanzas tu primera opción, ahí quedas; si no, se revisa la segunda, y así. <a href="/como-elegir-opciones/">Cómo ordenar las opciones</a>.</p>
+        <p><b>En la UNAM y el IPN</b> cuentan los aciertos del examen, el orden de tus opciones y los lugares disponibles. Por eso el orden importa tanto: si alcanzas tu primera opción, ahí quedas; si no, se revisa la segunda, y así. <a href="/como-elegir-opciones/">Cómo ordenar las opciones</a> o arma tu lista con <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>.</p>
         <p>El resultado se publica en la Gaceta Electrónica de Resultados. En 2026 salió el 18 de agosto.</p>`],
       ["Los pasos, en orden", `<ol class="pasos-lista">
         <li><a href="/llave-mx/">Crear la Llave MX</a> del aspirante.</li>
@@ -301,7 +301,7 @@ const PAGINAS = [
         <li><b>Distancia y transporte.</b> Tres años de trayecto diario pesan. Revisa la ubicación en la página de cada escuela.</li>
         <li><b>Tipo de bachillerato.</b> Prepa y CCH dan pase reglamentado a la UNAM; la vocacional da carrera técnica y orienta al IPN.</li>
         <li><b>Turno</b> y ambiente de la escuela: vale la pena visitarla.</li></ul>
-        <p>Compara escuelas en la <a href="/escuelas/">lista de escuelas</a> y prueba la <a href="/calculadora/">calculadora de aciertos</a>.</p>`],
+        <p>Compara escuelas en la <a href="/escuelas/">lista de escuelas</a>, prueba la <a href="/calculadora/">calculadora de aciertos</a> o deja que <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a> te arme la lista ordenada según sus aciertos, tu código postal y lo que quiere estudiar.</p>`],
     ],
     faq: [
       ["¿Conviene poner primero una escuela muy difícil?", "Sí, si de verdad la quiere. Si no alcanza, se revisa la siguiente opción sin perder nada."],

@@ -64,8 +64,9 @@ export const MENU = [
     intro: "Calcula, ubica y compara antes de llenar el registro.",
     columnas: [
       [
+        ["mapa", "/prepas-cerca-de-mi/", "Prepas cerca de mí", "¿Qué escuela le conviene?"],
         ["calculadora", "/calculadora/", "Calculadora de aciertos", "¿Qué escuelas le alcanzan?"],
-        ["mapa", "/mapa/", "Mapa de escuelas", "Prepas cerca de tu casa"],
+        ["escuela", "/mapa/", "Escuelas por alcaldía", "Prepas, CCH y vocas por zona"],
       ],
       [
         ["comparar", "/comparador/", "Comparador", "Dos o tres escuelas lado a lado"],

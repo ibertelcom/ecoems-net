@@ -6,7 +6,7 @@ import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "
 
 const datosJson = () =>
   `<script type="application/json" id="datos-escuelas">${JSON.stringify(
-    ESCUELAS.map((e) => ({ s: e.slug, n: e.doble, c: e.comun, l: e.linea, i: e.institucion, a: [e.a2024, e.a2025, e.a2026], m: e.meta, z: e.alcaldia, ent: e.entidad, ar: e.area, d: e.direccion })),
+    ESCUELAS.map((e) => ({ s: e.slug, n: e.doble, c: e.comun, l: e.linea, i: e.institucion, a: [e.a2024, e.a2025, e.a2026], m: e.meta, z: e.alcaldia, ent: e.entidad, ar: e.area, d: e.direccion, g: e.coord, ca: e.carreras.slice(0, 4) })),
   )}</script>`;
 
 const opcionesSelect = (sel = "") =>
@@ -74,13 +74,117 @@ ${cabeceraPagina({ migasHtml: d.migas.html, h1: "Calculadora de aciertos del ECO
       <div class="calc-grupo" data-tipo="orilla"><h2>${icono("aviso", "ico")}En la orilla</h2><p>Llega a los aciertos de 2026, pero no a la meta.</p><ul id="lista-orilla"></ul></div>
       <div class="calc-grupo" data-tipo="reto"><h2>${icono("aciertos", "ico")}Retadoras</h2><p>Todavía le faltan aciertos.</p><ul id="lista-reto"></ul></div>
     </div>
-    <p class="nota-tabla">${icono("aviso", "ico")}<span>Es una referencia, no una garantía. Los aciertos de cada escuela cambian cada año. Datos: aciertos mínimos de asignación 2026; <a href="/aciertos/">ver tabla completa</a>.</span></p>
+    <p class="nota-tabla">${icono("aviso", "ico")}<span>Es una referencia, no una garantía. Los aciertos de cada escuela cambian cada año. Datos: aciertos mínimos de asignación 2026; <a href="/aciertos/">ver tabla completa</a>. ¿Quieres filtrar por cercanía y por lo que quiere estudiar? Usa <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>.</span></p>
   </div>
 </section>
 ${app("calculadora")}
 ${faqBloque(faq, "Preguntas sobre la calculadora")}
 ${datosJson()}`;
   return hecha(ruta, d, cuerpo, faq, [herramientaLd("Calculadora de aciertos ECOEMS", ruta, d.descripcion)]);
+}
+
+// ---------- Prepas cerca de mí: ¿qué escuela te conviene? ----------
+function cercaDeMi() {
+  const ruta = "/prepas-cerca-de-mi/";
+  const d = {
+    titulo: "Prepas cerca de mí: ¿qué escuela te conviene en el ECOEMS? | ecoems.net",
+    descripcion: "Encuentra las prepas, CCH y vocacionales públicas cerca de tu ubicación que le convienen a tu hijo según sus aciertos y lo que quiere estudiar. Te damos la lista ordenada para el registro.",
+    nombreCorto: "Prepas cerca de mí",
+    migas: migas([["Inicio", "/"], ["Prepas cerca de mí", ruta]]),
+  };
+  const faq = [
+    ["¿Cómo encuentro prepas públicas cerca de mi ubicación?", "Escribe tu código postal o toca «Usar mi ubicación» y elige cuántos kilómetros puede viajar. La herramienta mide la distancia en línea recta a las 31 escuelas de la UNAM y el IPN que asignan lugar con el examen ECOEMS y te muestra solo las que quedan dentro de ese rango."],
+    ["Si quiero estudiar medicina, ¿qué prepa me conviene?", "En la UNAM puede ser cualquier prepa o CCH: la carrera se decide al final del bachillerato y el pase reglamentado depende del promedio. En el IPN conviene una vocacional del área Médico-Biológica, como la Voca 6 o la Voca 15, porque su plan de estudios y su carrera técnica van hacia la salud. Medicina es de las carreras más pedidas, así que el promedio pesa mucho."],
+    ["¿Las vocacionales del IPN tienen pase directo a la universidad?", "No. En el IPN no existe el pase directo: quien termina una vocacional presenta el examen de admisión de nivel superior como cualquier aspirante, eligiendo un área y dos carreras de esa misma área. Elegir una voca del área que le interesa sí ayuda, porque estudia los temas y la carrera técnica de esa área."],
+    ["¿Cómo funciona el pase reglamentado de la UNAM?", "Quien termina la prepa o el CCH de la UNAM en cuatro años o menos con promedio mínimo de 7 tiene derecho al pase reglamentado; con promedio de 9 o más en tres años tiene además preferencia en carrera y plantel. No es automático: la UNAM asigna según promedio, cupo y demanda de cada carrera."],
+    ["¿En qué orden pongo las escuelas en el registro?", "De la que más quiere a la que menos. El sistema asigna la primera opción de la lista a la que le alcanzan sus aciertos y ya no revisa las de abajo. Por eso la lista que te damos empieza con las retadoras, sigue con las alcanzables y termina con las seguras."],
+    ["¿La distancia es exacta?", "Es aproximada: se mide en línea recta desde el centro de tu código postal (o desde tu ubicación si la compartes) hasta el plantel. El tiempo real depende del transporte; en cada escuela tienes un botón «Cómo llegar» que abre la ruta en Google Maps."],
+  ];
+  const radio = (name, v, t, checked, sub = "") => `<label class="cm-op"><input type="radio" name="${name}" value="${v}"${checked ? " checked" : ""}><span><b>${t}</b>${sub ? `<small>${sub}</small>` : ""}</span></label>`;
+  const cuerpo = `
+${cabeceraPagina({ migasHtml: d.migas.html, h1: "Prepas cerca de mí: ¿qué escuela le conviene?", lead: "Contesta cuatro preguntas y te armamos la lista de prepas, CCH y vocacionales públicas cerca de tu casa, en el orden en que conviene registrarlas en Mi Derecho, Mi Lugar." })}
+<section class="seccion herramienta-seccion" aria-label="Buscador de escuelas">
+  <div class="contenedor cm">
+    <form class="cm-form" id="cm-form" novalidate>
+      <fieldset class="cm-paso">
+        <legend><span class="cm-n">1</span>¿Cuántos aciertos saca hoy?</legend>
+        <div class="calc-fila"><input id="cm-aciertos" type="number" inputmode="numeric" min="0" max="128" value="95" aria-describedby="cm-ac-ayuda"><span class="calc-de">de 128</span></div>
+        <label class="cm-check"><input type="checkbox" id="cm-nosabe"> Aún no sé sus aciertos</label>
+        <select id="cm-nivel" class="select-grande" hidden aria-label="Nivel aproximado">
+          <option value="65">Le cuesta trabajo (menos de 70)</option>
+          <option value="80" selected>Regular (entre 70 y 90)</option>
+          <option value="95">Bien (entre 90 y 100)</option>
+          <option value="108">Muy bien (más de 100)</option>
+        </select>
+        <p class="calc-ayuda" id="cm-ac-ayuda">Usa su último simulacro completo. ¿No tiene uno? Haz el <a href="${utm(SITIO.app, "prepas-cerca")}">diagnóstico gratis de ecoems.app</a>.</p>
+      </fieldset>
+      <fieldset class="cm-paso">
+        <legend><span class="cm-n">2</span>¿Qué le gustaría estudiar después?</legend>
+        <div class="cm-ops">
+          ${radio("cm-area", "ing", "Ingeniería y tecnología", false, "Físico-Matemáticas")}
+          ${radio("cm-area", "salud", "Salud y biología", false, "Médico-Biológicas")}
+          ${radio("cm-area", "soc", "Negocios y administración", false, "Sociales y Administrativas")}
+          ${radio("cm-area", "hum", "Humanidades, arte o derecho", false)}
+          ${radio("cm-area", "nose", "Aún no lo sabe", true)}
+        </div>
+      </fieldset>
+      <fieldset class="cm-paso">
+        <legend><span class="cm-n">3</span>¿Dónde viven?</legend>
+        <div class="calc-fila"><input id="cm-cp" class="cm-cp" type="text" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" value="07300" aria-label="Código postal" autocomplete="postal-code"><button class="boton boton-secundario" type="button" id="cm-gps">${icono("mapa", "ico")}Usar mi ubicación</button></div>
+        <p class="calc-ayuda" id="cm-donde" aria-live="polite">Ejemplo: 07300, Gustavo A. Madero.</p>
+        <label for="cm-dist">¿Hasta qué distancia puede viajar?</label>
+        <select id="cm-dist" class="select-grande">
+          <option value="5">Hasta 5 km</option><option value="10">Hasta 10 km</option><option value="15" selected>Hasta 15 km</option><option value="20">Hasta 20 km</option><option value="30">Hasta 30 km</option><option value="0">Sin límite</option>
+        </select>
+      </fieldset>
+      <fieldset class="cm-paso">
+        <legend><span class="cm-n">4</span>¿Qué tan seguro quiere ir?</legend>
+        <div class="cm-ops cm-ops-3">
+          ${radio("cm-estilo", "arriesgado", "Arriesgado", false, "Más escuelas reto")}
+          ${radio("cm-estilo", "equilibrado", "Equilibrado", true, "Reto, alcanzables y seguras")}
+          ${radio("cm-estilo", "seguro", "Seguro", false, "Más escuelas seguras")}
+        </div>
+        <div class="cm-inst"><label class="cm-check"><input type="checkbox" id="cm-unam" checked> UNAM</label><label class="cm-check"><input type="checkbox" id="cm-ipn" checked> IPN</label></div>
+      </fieldset>
+    </form>
+    <div class="cm-res" id="cm-res" aria-live="polite">
+      <div class="cm-resumen" id="cm-resumen"></div>
+      <ol class="cm-lista" id="cm-lista"></ol>
+      <div class="cm-avisos" id="cm-avisos"></div>
+      <div class="acciones-escuela cm-acciones">
+        <a class="boton" id="cm-armar" href="/armar-opciones/">${icono("opciones", "ico")}Pasar a Armar mis opciones</a>
+        <a class="boton boton-secundario" id="cm-wa" href="https://wa.me/" target="_blank" rel="noopener">Compartir por WhatsApp</a>
+        <button class="boton boton-secundario" type="button" id="cm-copiar">${icono("registro", "ico")}Copiar lista</button>
+      </div>
+      <p class="calc-ayuda" id="cm-aviso-accion" aria-live="polite"></p>
+    </div>
+  </div>
+  <div class="contenedor"><p class="nota-tabla">${icono("aviso", "ico")}<span>Es una guía para planear, no una garantía de lugar. Usa los aciertos mínimos de asignación 2026 y la meta Tepo (2026 + ${MARGEN_TEPO}). Distancias aproximadas en línea recta; códigos postales con datos de <a href="https://www.geonames.org/" rel="noopener" target="_blank">GeoNames</a> y ubicación de planteles de <a href="https://www.openstreetmap.org/" rel="noopener" target="_blank">OpenStreetMap</a>. El registro oficial se hace solo en <a href="https://www.miderechomilugar.gob.mx/" rel="noopener" target="_blank">miderechomilugar.gob.mx</a>.</span></p></div>
+</section>
+
+<section class="seccion" aria-labelledby="t-unam-ipn">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-unam-ipn">UNAM o IPN: qué cambia según lo que quiere estudiar</h2>
+    <p>Elegir entre una prepa o CCH de la UNAM y una vocacional del IPN no es solo cuestión de aciertos o de cercanía. Cada institución define en un momento distinto el camino hacia la carrera.</p>
+    <h3>En la UNAM la carrera se decide al final</h3>
+    <p>En las prepas (ENP) y los CCH todos llevan el mismo bachillerato general. En la prepa, el alumno elige un área en sexto año; en el CCH, sus materias optativas en quinto y sexto semestre. Al terminar puede pedir cualquier licenciatura de la UNAM con el <b>pase reglamentado</b>: necesita terminar en cuatro años o menos con promedio mínimo de 7, y con 9 o más en tres años tiene preferencia. No es automático: la UNAM asigna según promedio y cupo, así que las carreras más pedidas, como Medicina, exigen promedios altos.</p>
+    <p>Por eso, si tu hijo <b>aún no sabe qué estudiar</b>, la UNAM le da más tiempo para decidir.</p>
+    <h3>En el IPN el área se elige desde la vocacional</h3>
+    <p>Cada vocacional pertenece a un área: <b>Físico-Matemáticas</b> (ingenierías y tecnología), <b>Médico-Biológicas</b> (salud, química y biología) o <b>Sociales y Administrativas</b> (contaduría, administración, comercio). Además del bachillerato, el alumno sale con una <b>carrera técnica</b> de esa área.</p>
+    <p>En el IPN <b>no hay pase directo</b>: al terminar la voca presenta el examen de nivel superior como cualquier aspirante, eligiendo un área y dos carreras de esa misma área. Elegir una voca del área que le interesa le da ventaja, porque llega preparado en esos temas y con experiencia técnica. Por eso la herramienta solo te sugiere vocacionales del área que elegiste.</p>
+    <h3>Cómo arma la lista esta herramienta</h3>
+    <ul>
+      <li><b>Reto:</b> le faltan hasta 8 aciertos para lo que pidió la escuela en 2026.</li>
+      <li><b>Alcanzable:</b> llega a los aciertos de 2026, pero todavía no a la meta Tepo.</li>
+      <li><b>Segura:</b> llega a la meta Tepo (aciertos 2026 + ${MARGEN_TEPO}) o más.</li>
+    </ul>
+    <p>Respeta el límite de hasta 5 escuelas de la UNAM y 5 del IPN, descarta las que quedan fuera de la distancia que elegiste y ordena la lista de la más pedida a la menos pedida, que es como conviene registrarla. Luego puedes moverla a tu gusto en <a href="/armar-opciones/">Armar mis opciones</a> o revisar cada escuela en la <a href="/aciertos/">tabla de aciertos</a>.</p>
+  </div>
+</section>
+${app("prepas-cerca")}
+${faqBloque(faq, "Preguntas sobre las prepas cerca de mí")}
+${datosJson()}`;
+  return hecha(ruta, d, cuerpo, faq, [herramientaLd("Prepas cerca de mí: ¿qué escuela te conviene?", ruta, d.descripcion)]);
 }
 
 // ---------- Comparador ----------
@@ -144,21 +248,21 @@ function mapa() {
   const ruta = "/mapa/";
   const d = {
     titulo: "Mapa de prepas UNAM y vocacionales IPN por alcaldía | ecoems.net",
-    descripcion: "Encuentra las prepas, CCH y vocacionales del ECOEMS cerca de tu casa: escuelas de la UNAM y el IPN por alcaldía o municipio, con dirección y cómo llegar.",
+    descripcion: "Las prepas, CCH y vocacionales del ECOEMS agrupadas por alcaldía o municipio, con dirección y cómo llegar. Para ver cuáles te convienen según distancia y aciertos, usa Prepas cerca de mí.",
     nombreCorto: "Escuelas por zona",
     migas: migas([["Inicio", "/"], ["Mapa de escuelas", ruta]]),
   };
   const zonas = [...new Set(ESCUELAS.map((e) => e.alcaldia).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
   const porZona = zonas.map((z) => [z, ESCUELAS.filter((e) => e.alcaldia === z)]);
   const faq = [
-    ["¿Qué prepas de la UNAM hay cerca de mí?", "Usa el filtro por alcaldía o municipio: verás las prepas, CCH y vocacionales de esa zona con sus aciertos y el botón para trazar la ruta desde tu casa."],
+    ["¿Qué prepas de la UNAM hay cerca de mí?", "Usa el filtro por alcaldía o municipio para ver las escuelas de tu zona. Si quieres que te digamos cuáles te convienen según tu código postal, sus aciertos y lo que quiere estudiar, usa la herramienta Prepas cerca de mí."],
     ["¿Qué escuelas del ECOEMS hay en el Estado de México?", `${ESCUELAS.filter((e) => e.entidad === "Estado de México").map((e) => `${e.doble} (${e.alcaldia})`).join(", ")}. El resto de las escuelas de la UNAM y el IPN están en la Ciudad de México.`],
   ];
   const cuerpo = `
 ${cabeceraPagina({
   migasHtml: d.migas.html,
-  h1: "Prepas, CCH y vocacionales cerca de tu casa",
-  lead: `Las ${ESCUELAS.length} escuelas de la UNAM y el IPN agrupadas por alcaldía o municipio. Elige tu zona y traza la ruta desde tu casa.`,
+  h1: "Prepas, CCH y vocacionales por alcaldía",
+  lead: `Las ${ESCUELAS.length} escuelas de la UNAM y el IPN agrupadas por alcaldía o municipio. Elige tu zona y traza la ruta desde tu casa. ¿Quieres saber cuáles te convienen? Prueba <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>.`,
   extra: `<div class="buscador-escuelas"><label for="zona">Alcaldía o municipio</label><select id="zona" class="select-grande"><option value="">Todas las zonas</option>${zonas.map((z) => `<option>${z}</option>`).join("")}</select></div>`,
 })}
 <section class="seccion" aria-label="Escuelas por zona">
@@ -327,5 +431,5 @@ ${faqBloque(faq, "Preguntas sobre el contacto")}`;
 }
 
 export function paginas() {
-  return [calculadora(), comparador(), armar(), mapa(), sinExamen(), aviso(), contacto()];
+  return [cercaDeMi(), calculadora(), comparador(), armar(), mapa(), sinExamen(), aviso(), contacto()];
 }

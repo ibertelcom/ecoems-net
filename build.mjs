@@ -24,6 +24,13 @@ mkdirSync("vista-previa", { recursive: true });
 writeFileSync("dist/estilos.css", min(css));
 writeFileSync("dist/app.js", js);
 if (existsSync("src/img")) cpSync("src/img", "dist/img", { recursive: true });
+// Códigos postales de la ZMVM con coordenadas aproximadas (GeoNames, CC BY 4.0) para "Prepas cerca de mí".
+{
+  const filas = ["parte1", "parte2", "parte3"].map((f) => readFileSync(`src/datos/cp/${f}.txt`, "utf8").trim()).join(";");
+  const municipios = readFileSync("src/datos/cp/municipios.txt", "utf8").trim().split(";").map((x) => { const [e, n] = x.split("|"); return `${n}, ${e === "09" ? "CDMX" : "Edomex"}`; });
+  mkdirSync("dist/datos", { recursive: true });
+  writeFileSync("dist/datos/cp-zmvm.json", JSON.stringify({ fuente: "GeoNames (CC BY 4.0), coordenadas aproximadas", m: municipios, c: filas }));
+}
 
 const imgsDePagina = {};
 for (const p of PAGINAS) {

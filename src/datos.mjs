@@ -3,6 +3,7 @@
 import { readFileSync } from "node:fs";
 
 const crudo = JSON.parse(readFileSync(new URL("./datos/escuelas-cortes.json", import.meta.url), "utf8"));
+const COORD = JSON.parse(readFileSync(new URL("./datos/coordenadas.json", import.meta.url), "utf8"));
 const info = Object.fromEntries(JSON.parse(readFileSync(new URL("./datos/escuelas-info.json", import.meta.url), "utf8")).map((i) => [i.oficial, i]));
 
 // Dirección que se publica: completa solo si la fuente es oficial (confianza alta); si hay datos en conflicto,
@@ -63,6 +64,7 @@ export const ESCUELAS = crudo
       carreras: info[e.nombre]?.carreras_tecnicas ?? [],
       sitio: info[e.nombre]?.sitio_oficial ?? null,
       fuente: info[e.nombre]?.fuente ?? null,
+      coord: COORD[slug(comun)] ?? null,
     };
   })
   .sort((a, b) => {

@@ -163,6 +163,7 @@ function herramientas() {
       <h2 id="t-herr">Herramientas para decidir antes del registro</h2>
       <p>Lo que ninguna tabla en PDF te dice: si le alcanza, qué le queda cerca y en qué orden poner las escuelas.</p>
     </div>
+    <a class="herramienta-destacada" href="/prepas-cerca-de-mi/">${icono("mapa", "ico")}<span><b>Prepas cerca de mí: ¿cuál le conviene?</b><span>Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ordenada para el registro.</span></span><em>Probar ahora →</em></a>
     <ul class="herramientas">
       ${h
         .map(
