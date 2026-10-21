@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ecoems.net/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/que-es-ecoems/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/mi-derecho-mi-lugar/</loc><lastmod>2026-10-15</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://ecoems.net/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/portada-papa-e-hija-revisan-aciertos.webp</image:loc></image:image><image:image><image:loc>https://ecoems.net/img/ruta-del-proceso-ecoems.webp</image:loc></image:image><image:image><image:loc>https://ecoems.net/img/herramienta-calculadora-aciertos.webp</image:loc></image:image><image:image><image:loc>https://ecoems.net/img/herramienta-mapa-escuelas.webp</image:loc></image:image><image:image><image:loc>https://ecoems.net/img/herramienta-comparador-escuelas.webp</image:loc></image:image><image:image><image:loc>https://ecoems.net/img/herramienta-armar-opciones.webp</image:loc></image:image><image:image><image:loc>https://ecoems.net/img/estudiar-simulador-examenes-lat.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/que-es-ecoems/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/que-es-ecoems-aspirante.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/mi-derecho-mi-lugar/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/mi-derecho-mi-lugar-familia.webp</image:loc></image:image></url>
   <url><loc>https://ecoems.net/fechas/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/llave-mx/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/registro/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://ecoems.net/llave-mx/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/llave-mx-celular.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/registro/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/registro-comprobante.webp</image:loc></image:image></url>
   <url><loc>https://ecoems.net/modalidades/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/como-elegir-opciones/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://ecoems.net/como-elegir-opciones/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/elegir-opciones-lista.webp</image:loc></image:image></url>
   <url><loc>https://ecoems.net/correo/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/examen/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/resultados/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/no-quede/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://ecoems.net/examen/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/examen-en-linea-casa.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/resultados/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/resultados-familia-celebra.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/no-quede/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/no-quede-apoyo.webp</image:loc></image:image></url>
   <url><loc>https://ecoems.net/preguntas-frecuentes/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://ecoems.net/aciertos/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://ecoems.net/escuelas/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepas-unam/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/cch-unam/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/vocacionales-ipn/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-1/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-2/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-3/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-4/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-5/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-6/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-7/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-8/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/prepa-9/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/cch-azcapotzalco/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/cch-naucalpan/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/cch-oriente/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/cch-sur/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/cch-vallejo/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-1/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/cet-1/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-2/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-3/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-4/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-5/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-6/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-7/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-8/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-9/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-10/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-11/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-12/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-13/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-14/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-15/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://ecoems.net/escuelas/voca-19/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://ecoems.net/escuelas/prepas-unam/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepas-unam-estudiantes.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/cch-unam/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/cch-unam-estudiantes.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/vocacionales-ipn/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/vocacionales-ipn-taller.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-1/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-1-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-2/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-2-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-3/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-3-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-4/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-4-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-5/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-5-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-6/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-6-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-7/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-7-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-8/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-8-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/prepa-9/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/prepa-9-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/cch-azcapotzalco/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/cch-azcapotzalco-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/cch-naucalpan/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/cch-naucalpan-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/cch-oriente/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/cch-oriente-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/cch-sur/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/cch-sur-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/cch-vallejo/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/cch-vallejo-unam-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-1/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-1-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/cet-1/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/cet-1-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-2/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-2-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-3/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-3-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-4/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-4-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-5/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-5-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-6/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-6-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-7/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-7-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-8/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-8-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-9/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-9-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-10/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-10-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-11/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-11-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-12/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-12-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-13/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-13-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-14/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-14-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-15/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-15-ipn-ecoems.webp</image:loc></image:image></url>
+  <url><loc>https://ecoems.net/escuelas/voca-19/</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://ecoems.net/img/voca-19-ipn-ecoems.webp</image:loc></image:image></url>
   <url><loc>https://ecoems.net/calculadora/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://ecoems.net/comparador/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://ecoems.net/armar-opciones/</loc><lastmod>2026-10-15</lastmod></url>
