@@ -269,6 +269,7 @@ cursor: pointer; white-space: nowrap; transition: background-color .15s, border-
 .camino span span { color: var(--suave); font-size: .95rem; line-height: 1.45; }
 .camino-ico { width: 40px; height: 40px; padding: 9px; border-radius: 12px; background: var(--verde-claro); color: var(--verde); }
 .camino-ext { color: var(--suave); margin-top: 4px; }
+.camino .camino-sitio { display: block; margin-top: 4px; color: var(--verde); font-size: .8rem; font-weight: 700; letter-spacing: .02em; }
 .camino:hover { border-color: var(--verde); color: var(--tinta); transform: translateX(4px); }
 .seccion-faq { background: var(--superficie); border-top: 1px solid var(--linea); }
 .faq { display: grid; gap: 10px; margin-top: 24px; }
