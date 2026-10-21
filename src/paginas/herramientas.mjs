@@ -301,7 +301,7 @@ ${cabeceraPagina({
         <a class="boton boton-bloque" href="/prepas-cerca-de-mi/">¿Cuál le conviene? Arma su lista</a>
       </aside>
     </div>
-    <p class="nota-tabla">${icono("aviso", "ico")}<span>Ubicación de planteles de OpenStreetMap y códigos postales de GeoNames; las distancias son aproximadas, en línea recta. Tu código postal o ubicación no se envían ni se guardan. Tres planteles tienen ubicación aproximada (Voca 6, Voca 11 y Voca 19); confirma la dirección en su sitio oficial.</span></p>
+    <p class="nota-tabla">${icono("aviso", "ico")}<span>Ubicación de planteles de OpenStreetMap y códigos postales de GeoNames; las distancias son aproximadas, en línea recta. Tu código postal o ubicación no se envían ni se guardan. Dos planteles tienen ubicación aproximada (Voca 11 y Voca 19); confirma la dirección en su sitio oficial.</span></p>
   </div>
 </section>
 <section class="seccion" aria-labelledby="t-por-zona">
