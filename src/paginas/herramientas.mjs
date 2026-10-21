@@ -53,7 +53,7 @@ function calculadora() {
     ["¿De dónde saco sus aciertos?", "De un simulacro completo reciente. Si el simulacro tiene menos de 128 preguntas, la calculadora puede convertir el resultado a la escala de 128."],
   ];
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Calculadora de aciertos del ECOEMS", lead: "Escribe cuántos aciertos sacó tu hijo o hija en su último simulacro y mira, escuela por escuela, si le alcanza para la UNAM y el IPN." })}
+${cabeceraPagina({ img: "herramienta-calculadora-aciertos", migasHtml: d.migas.html, h1: "Calculadora de aciertos del ECOEMS", lead: "Escribe cuántos aciertos sacó tu hijo o hija en su último simulacro y mira, escuela por escuela, si le alcanza para la UNAM y el IPN." })}
 <section class="seccion herramienta-seccion" aria-label="Calculadora">
   <div class="contenedor">
     <form class="calc" id="calc" novalidate>
@@ -102,7 +102,7 @@ function cercaDeMi() {
   ];
   const radio = (name, v, t, checked, sub = "") => `<label class="cm-op"><input type="radio" name="${name}" value="${v}"${checked ? " checked" : ""}><span><b>${t}</b>${sub ? `<small>${sub}</small>` : ""}</span></label>`;
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Prepas cerca de mí: ¿qué escuela le conviene?", lead: "Contesta cuatro preguntas y te armamos la lista de prepas, CCH y vocacionales públicas cerca de tu casa, en el orden en que conviene registrarlas en Mi Derecho, Mi Lugar." })}
+${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: "Prepas cerca de mí: ¿qué escuela le conviene?", lead: "Contesta cuatro preguntas y te armamos la lista de prepas, CCH y vocacionales públicas cerca de tu casa, en el orden en que conviene registrarlas en Mi Derecho, Mi Lugar." })}
 <section class="seccion herramienta-seccion" aria-label="Buscador de escuelas">
   <div class="contenedor cm">
     <form class="cm-form" id="cm-form" novalidate>
@@ -198,7 +198,7 @@ function comparador() {
   };
   const sel = (i, v) => `<label class="comp-sel"><span>Escuela ${i}</span><select id="comp-${i}" data-comp><option value="">Elige una escuela</option>${opcionesSelect(v)}</select></label>`;
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Comparador de escuelas del ECOEMS", lead: "Pon hasta tres escuelas lado a lado para decidir el orden de las opciones. Empezamos con un ejemplo; cámbialo por las que te interesan." })}
+${cabeceraPagina({ img: "herramienta-comparador-escuelas", migasHtml: d.migas.html, h1: "Comparador de escuelas del ECOEMS", lead: "Pon hasta tres escuelas lado a lado para decidir el orden de las opciones. Empezamos con un ejemplo; cámbialo por las que te interesan." })}
 <section class="seccion herramienta-seccion" aria-label="Comparador">
   <div class="contenedor">
     <div class="comp-selects">${sel(1, "prepa-6")}${sel(2, "cch-sur")}${sel(3, "voca-9")}</div>
@@ -220,7 +220,7 @@ function armar() {
     migas: migas([["Inicio", "/"], ["Armar mis opciones", ruta]]),
   };
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Arma y ordena tus opciones del ECOEMS", lead: "Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas de la que más quiere a la que menos y revisa si la lista tiene escuelas seguras." })}
+${cabeceraPagina({ img: "herramienta-armar-opciones", migasHtml: d.migas.html, h1: "Arma y ordena tus opciones del ECOEMS", lead: "Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas de la que más quiere a la que menos y revisa si la lista tiene escuelas seguras." })}
 <section class="seccion herramienta-seccion" aria-label="Armar opciones">
   <div class="contenedor armar">
     <div class="armar-panel">
@@ -271,6 +271,7 @@ function mapa() {
   const filtro = (v, t) => `<label class="mp-filtro" data-linea="${v}"><input type="checkbox" value="${v}" checked><span>${t}</span></label>`;
   const cuerpo = `
 ${cabeceraPagina({
+  img: "herramienta-mapa-escuelas",
   migasHtml: d.migas.html,
   h1: "Mapa de prepas, CCH y vocacionales del ECOEMS",
   lead: `Las ${ESCUELAS.length} escuelas de la UNAM y el IPN en un mapa. Escribe tu código postal para ver cuáles te quedan más cerca, con sus aciertos y la ruta desde tu casa.`,
@@ -356,7 +357,7 @@ function sinExamen() {
     ["¿Puedo combinar escuelas sin examen con la UNAM?", "Sí, en la modalidad 3: de 5 a 10 opciones sin examen más hasta 5 de la UNAM y 5 del IPN."],
   ];
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Escuelas sin examen en Mi Derecho, Mi Lugar", lead: "Las opciones de bachillerato que asignan lugar sin presentar el ECOEMS, y cómo combinarlas con la UNAM y el IPN." })}
+${cabeceraPagina({ img: "escuelas-sin-examen-bachillerato", migasHtml: d.migas.html, h1: "Escuelas sin examen en Mi Derecho, Mi Lugar", lead: "Las opciones de bachillerato que asignan lugar sin presentar el ECOEMS, y cómo combinarlas con la UNAM y el IPN." })}
 <section class="seccion"><div class="contenedor">
   <div class="encabezado-seccion"><h2>Instituciones que asignan sin examen</h2><p>Según la convocatoria 2026, estas instituciones asignan por el orden de tus opciones y los lugares disponibles. Se eligen en la <a href="/modalidades/">modalidad 1 o la 3</a>.</p></div>
   <ul class="tarjetas-escuela">${subs.map(([s, n, t]) => `<li><div class="tarjeta-escuela" data-linea="sin"><span class="te-linea">${n}</span><b>${s}</b><span class="te-hon">${t}</span></div></li>`).join("")}</ul>
@@ -410,7 +411,7 @@ function contacto() {
     ["Encontré un dato equivocado en ecoems.net, ¿cómo lo reporto?", "Escríbenos a contacto@ecoems.net con la página y el dato. Revisamos contra la fuente oficial y, si corresponde, lo corregimos y actualizamos la fecha de la página."],
   ];
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Contacto", lead: "Escríbenos si encontraste un error, tienes una sugerencia o quieres colaborar. Para trámites del registro, abajo te decimos a dónde acudir." })}
+${cabeceraPagina({ img: "contacto-ecoems-net", migasHtml: d.migas.html, h1: "Contacto", lead: "Escríbenos si encontraste un error, tienes una sugerencia o quieres colaborar. Para trámites del registro, abajo te decimos a dónde acudir." })}
 <section class="seccion"><div class="contenedor rejilla-media contacto">
   <div class="prosa">
     <h2>Escríbenos</h2>

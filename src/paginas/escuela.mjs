@@ -80,6 +80,7 @@ function pagina(e) {
 
   const cuerpo = `
 ${cabeceraPagina({
+  img,
   migasHtml: m.html,
   linea: e.linea,
   h1: `¿Cuántos aciertos pide ${articulo(e)} ${e.doble}?`,
@@ -106,8 +107,7 @@ ${cabeceraPagina({
 </section>
 
 <section class="seccion seccion-blanca" aria-labelledby="t-escuela">
-  <div class="contenedor rejilla-media rejilla-invertida">
-    <figure class="figura">${imagen(img, { tamanos: "(min-width: 960px) 45vw, 100vw" })}</figure>
+  <div class="contenedor contenedor-angosto">
     <div class="prosa">
       <h2 id="t-escuela">Cómo es ${articulo(e)} ${e.comun} y dónde está</h2>
       <p>${LINEA_TEXTO[e.linea](e)}</p>

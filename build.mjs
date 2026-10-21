@@ -35,7 +35,11 @@ if (existsSync("src/vendor")) cpSync("src/vendor", "dist/vendor", { recursive: t
 
 const imgsDePagina = {};
 for (const p of PAGINAS) {
-  const comun = { titulo: p.META.titulo, descripcion: p.META.descripcion, ruta: p.META.ruta, cuerpo: p.cuerpo(), jsonld: p.jsonld(), seccion: p.seccion };
+  const cuerpoHtml = p.cuerpo();
+  // Imagen para compartir (Open Graph): la del hero de la página si ya existe su versión JPG.
+  const heroM = /class="cabecera-fig"><img [^>]*src="\/img\/([^"]+)\.webp"/.exec(cuerpoHtml) ?? (p.META.ruta === "/" ? [null, "portada-papa-e-hija-revisan-aciertos"] : null);
+  const og = heroM && existsSync(`src/img/og/${heroM[1]}.jpg`) ? `/img/og/${heroM[1]}.jpg` : undefined;
+  const comun = { titulo: p.META.titulo, descripcion: p.META.descripcion, ruta: p.META.ruta, cuerpo: cuerpoHtml, jsonld: p.jsonld(), seccion: p.seccion, og };
   const destino = p.META.ruta === "/" ? "dist/index.html" : `dist${p.META.ruta}index.html`;
   mkdirSync(destino.replace(/index\.html$/, ""), { recursive: true });
   const html = documento({ ...comun, css: { href: `/estilos.css?v=${ver}` }, js: { src: `/app.js?v=${ver}` } });

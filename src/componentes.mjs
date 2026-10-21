@@ -1,3 +1,4 @@
+import { imagen } from "./imagenes.mjs";
 import { icono } from "./iconos.mjs";
 import { SITIO } from "./plantilla.mjs";
 
@@ -16,14 +17,27 @@ export function migas(items) {
   return { html, ld };
 }
 
-export function cabeceraPagina({ migasHtml, h1, lead, linea = "", extra = "" }) {
-  return `
-<section class="cabecera-pagina"${linea ? ` data-linea="${linea}"` : ""}>
-  <div class="contenedor">
-    ${migasHtml}
+export function cabeceraPagina({ migasHtml, h1, lead, linea = "", extra = "", img = null }) {
+  const texto = `${migasHtml}
     <h1>${h1}</h1>
     ${lead ? `<p class="lead">${lead}</p>` : ""}
-    ${extra}
+    ${extra}`;
+  if (!img) {
+    return `
+<section class="cabecera-pagina"${linea ? ` data-linea="${linea}"` : ""}>
+  <div class="contenedor">
+    ${texto}
+  </div>
+</section>`;
+  }
+  // Imagen principal de la página: a la izquierda en escritorio, debajo del texto en el celular.
+  return `
+<section class="cabecera-pagina cabecera-con-img"${linea ? ` data-linea="${linea}"` : ""}>
+  <div class="contenedor cabecera-rejilla">
+    <div class="cabecera-texto">
+    ${texto}
+    </div>
+    <figure class="cabecera-fig">${imagen(img, { prioridad: true, tamanos: "(min-width: 960px) 40vw, 100vw" })}</figure>
   </div>
 </section>`;
 }

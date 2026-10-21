@@ -102,6 +102,7 @@ function paginaAciertos() {
   ];
   const cuerpo = `
 ${cabeceraPagina({
+  img: "aciertos-por-escuela-ecoems",
   migasHtml: m.html,
   h1: "Cuántos aciertos pide cada escuela en el ECOEMS",
   lead: `Tabla con los aciertos de 2024, 2025 y 2026 de las ${ESCUELAS.length} prepas, CCH y vocacionales de la UNAM y el IPN, y la meta Tepo sugerida para el ECOEMS 2027. Ordénala por año o filtra por tipo de escuela.`,
@@ -194,7 +195,7 @@ function paginaHub(g) {
       `No. Las escuelas ${g.clave === "voca" ? "del IPN" : "de la UNAM"} asignan lugar solo por aciertos en el ECOEMS. Hay que registrarse en la modalidad 2 o 3 de Mi Derecho, Mi Lugar.`],
   ];
   const cuerpo = `
-${cabeceraPagina({ migasHtml: m.html, linea: g.clave, h1: h.h1, lead: h.lead })}
+${cabeceraPagina({ migasHtml: m.html, linea: g.clave, h1: h.h1, lead: h.lead, img })}
 <section class="seccion" aria-labelledby="t-planteles">
   <div class="contenedor">
     <div class="encabezado-seccion">
@@ -214,13 +215,12 @@ ${cabeceraPagina({ migasHtml: m.html, linea: g.clave, h1: h.h1, lead: h.lead })}
   </div>
 </section>
 <section class="seccion seccion-blanca" aria-labelledby="t-que-es-linea">
-  <div class="contenedor rejilla-media">
+  <div class="contenedor contenedor-angosto">
     <div class="prosa">
       <h2 id="t-que-es-linea">Qué son ${g.clave === "cch" ? "los CCH" : g.clave === "enp" ? "las prepas de la UNAM" : "las vocacionales del IPN"}</h2>
       <p>${h.intro}</p>
       <p>Compara con <a href="${g.clave === "voca" ? HUB.enp : HUB.voca}">${g.clave === "voca" ? "las prepas de la UNAM" : "las vocacionales del IPN"}</a> o revisa la <a href="/aciertos/">tabla de aciertos de las ${ESCUELAS.length} escuelas</a>.</p>
     </div>
-    <figure class="figura">${imagen(img, { tamanos: "(min-width: 960px) 45vw, 100vw" })}</figure>
   </div>
 </section>
 <section class="seccion seccion-estudiar" aria-labelledby="t-alcanza">
@@ -245,6 +245,7 @@ function paginaEscuelas() {
   const m = migas([["Inicio", "/"], ["Escuelas", ruta]]);
   const cuerpo = `
 ${cabeceraPagina({
+  img: "escuelas-unam-ipn-ecoems",
   migasHtml: m.html,
   h1: "Escuelas del ECOEMS: prepas, CCH y vocacionales",
   lead: `Las ${ESCUELAS.length} escuelas de la UNAM y del IPN que asignan lugar por aciertos en el examen. Busca por nombre, número o alcaldía.`,

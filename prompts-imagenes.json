@@ -63,6 +63,60 @@
   "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Adolescente mexicano de 15 años en su escritorio de casa, concentrado, respondiendo un examen de opción múltiple en una laptop; al lado un cuaderno con operaciones de matemáticas y una calculadora. Luz cálida de lámpara al atardecer. En la pantalla se lee arriba \"Examen simulacro ECOEMS\" y debajo una pregunta con cuatro opciones \"A\", \"B\", \"C\" y \"D\", con la opción \"B\" marcada en verde. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
  },
  {
+  "id": "aciertos-por-escuela-ecoems",
+  "archivo": "aciertos-por-escuela-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Hero · Aciertos por escuela",
+  "alt": "Tablero con los aciertos que pide cada prepa de la UNAM, CCH y vocacional del IPN en el ECOEMS",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Tablero de salidas de una estación de metro, moderno y limpio, con renglones de escuelas: los renglones tienen el texto \"Prepa\", \"CCH\" y \"Voca\" y a la derecha una barra horizontal de distinto largo en azul, ámbar y vino. Arriba del tablero, título grande: \"Aciertos por escuela\". A un lado, un pequeño personaje de papá con su hijo mirando el tablero. Formato horizontal 3:2, fondo claro. No pongas números en las barras ni en el tablero. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "escuelas-unam-ipn-ecoems",
+  "archivo": "escuelas-unam-ipn-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Hero · Todas las escuelas",
+  "alt": "Las 31 prepas, CCH y vocacionales de la UNAM y el IPN que asignan lugar con el examen ECOEMS",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Vista aérea estilizada de la Ciudad de México con muchos edificios escolares pequeños: unos con techo azul, otros ámbar y otros vino, unidos por una línea de metro verde que recorre la ciudad. En la esquina superior izquierda coloca el escudo oficial de la UNAM y junto a él el escudo oficial del Instituto Politécnico Nacional. Título grande: \"31 escuelas UNAM e IPN\". Formato horizontal 3:2, deja la parte superior despejada para escudos y título. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "prepas-cerca-de-mi-mapa",
+  "archivo": "prepas-cerca-de-mi-mapa.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Hero · Prepas cerca de mí",
+  "alt": "Mamá y su hijo buscan en el celular las prepas cerca de su casa para el ECOEMS",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Banqueta de una colonia de la Ciudad de México por la tarde, con casas de colores y árboles. Una mamá de unos 40 años y su hijo de 15 años con mochila miran juntos un celular. En la pantalla se ve un mapa con un marcador verde de casa en el centro y varios puntos de colores azul, ámbar y vino alrededor, y arriba el texto \"Prepas cerca de mí\". Expresión de interés y confianza. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "escuelas-sin-examen-bachillerato",
+  "archivo": "escuelas-sin-examen-bachillerato.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Hero · Escuelas sin examen",
+  "alt": "Estudiantes llegan a un bachillerato público que asigna lugar sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Entrada de un bachillerato público genérico de la Ciudad de México o del Estado de México, edificio de dos pisos con jardineras, por la mañana. Estudiantes de 15 años con mochila y uniforme sencillo entran platicando. En una lona sobre la entrada se lee \"Inscripciones abiertas\". Sin escudos ni nombres de instituciones reales. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "preguntas-frecuentes-ecoems",
+  "archivo": "preguntas-frecuentes-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Hero · Preguntas frecuentes",
+  "alt": "Papá e hijo resuelven sus dudas sobre el examen ECOEMS y el registro de Mi Derecho, Mi Lugar",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Un papá y su hijo adolescente sentados en una mesa con una laptop y una libreta, rodeados de globos de diálogo flotantes con los textos \"¿Cuándo es el examen?\", \"¿Cuántos aciertos necesito?\", \"¿Qué es la Llave MX?\" y \"¿Cuándo salen los resultados?\". Algunos globos tienen una palomita verde de pregunta resuelta. Formato horizontal 3:2, fondo claro. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "contacto-ecoems-net",
+  "archivo": "contacto-ecoems-net.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Hero · Contacto",
+  "alt": "Escribe a ecoems.net al correo contacto@ecoems.net",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Una laptop abierta sobre un escritorio con una taza de café y una planta. En la pantalla, un correo nuevo con el campo \"Para:\" que dice \"contacto@ecoems.net\" y un botón verde \"Enviar\". Sobre la laptop flota un sobre de carta con un pequeño logotipo de línea de metro verde con tres estaciones. Formato horizontal 3:2, fondo claro. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
   "id": "que-es-ecoems-aspirante",
   "archivo": "que-es-ecoems-aspirante.webp",
   "ancho": 1200,
@@ -79,6 +133,15 @@
   "uso": "Proceso · Mi Derecho, Mi Lugar",
   "alt": "Familia revisando en la computadora el registro de Mi Derecho, Mi Lugar",
   "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Mamá, papá e hijo de secundaria sentados frente a una computadora de escritorio en casa, revisando juntos una lista de escuelas; el hijo señala la pantalla y los papás asienten. En la pantalla se ve una lista con tarjetas de colores azul, ámbar y vino con los textos \"Prepa\", \"CCH\" y \"Voca\". Junto al teclado, una libreta con una lista numerada escrita a mano. Ambiente cálido, luz de tarde. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "fechas-calendario-ecoems",
+  "archivo": "fechas-calendario-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Fechas y calendario",
+  "alt": "Mamá e hijo marcan en un calendario las fechas del registro, el examen ECOEMS y los resultados",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Cocina o comedor de una casa en la Ciudad de México con luz natural de mañana. Una mamá de unos 40 años y su hijo de 14 años, de pie frente a un calendario grande de pared, marcan con plumón verde algunos días. Sobre el calendario hay notas adhesivas de colores con los textos \"Registro\", \"Examen\" y \"Resultados\". El hijo sostiene un celular y la mamá señala una nota. Formato horizontal 3:2. No escribas números de días, meses ni años en el calendario; deja los recuadros sin números legibles. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
  },
  {
   "id": "llave-mx-celular",
@@ -99,6 +162,15 @@
   "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Un papá de unos 45 años revisa una hoja impresa titulada \"Comprobante de registro\" con una lista ordenada de escuelas numeradas, mientras su hija de 14 años señala uno de los renglones con el dedo. Están de pie junto a una impresora en casa; sobre la mesa, un fólder azul y una pluma. Luz natural de mañana. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
  },
  {
+  "id": "modalidades-ecoems-con-sin-examen",
+  "archivo": "modalidades-ecoems-con-sin-examen.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Modalidades",
+  "alt": "Tres caminos para elegir modalidad en Mi Derecho, Mi Lugar: sin examen, con examen o ambas",
+  "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Estación de metro estilizada de la que salen tres vías en abanico hacia tres edificios escolares distintos. Cada vía lleva un letrero: la de la izquierda en verde con el texto \"Sin examen\", la del centro en azul con el texto \"Con examen\" y la de la derecha en amarillo con el texto \"Ambas\". Un estudiante con mochila, de espaldas, mira las tres opciones desde el andén. Título arriba: \"Modalidades del registro\". Formato horizontal 3:2, fondo claro. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
   "id": "elegir-opciones-lista",
   "archivo": "elegir-opciones-lista.webp",
   "ancho": 1200,
@@ -106,6 +178,15 @@
   "uso": "Proceso · Cómo elegir opciones",
   "alt": "Aspirante ordena en una lista las escuelas que quiere para el ECOEMS",
   "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Un adolescente de 15 años escribe en una libreta una lista numerada del 1 al 5 mientras mira en la computadora un mapa de la ciudad con marcadores de colores azul, ámbar y vino. En la parte superior de la libreta se lee, escrito a mano, \"Mis opciones\". Escritorio ordenado, luz cálida de lámpara. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "correo-registro-mi-derecho-mi-lugar",
+  "archivo": "correo-registro-mi-derecho-mi-lugar.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Proceso · Correo del registro",
+  "alt": "Papá revisa en el celular los correos del registro de Mi Derecho, Mi Lugar de su hija",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Un papá de unos 45 años y su hija de 14 años sentados en un sillón revisan juntos un celular. En la pantalla se ve una bandeja de entrada con tres correos y los asuntos \"Registro recibido\", \"Tu folio\" y \"Aviso importante\"; el primero tiene una palomita verde. Ella señala la pantalla y él toma nota en una libreta. Luz cálida de tarde. Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
  },
  {
   "id": "examen-en-linea-casa",

@@ -74,18 +74,17 @@ function pagina(d) {
     .map(
       ([h2, html], i) => `
 <section class="seccion${i % 2 ? " seccion-blanca" : ""}" aria-labelledby="t-${d.slug}-${i}">
-  <div class="contenedor${i === 0 && img ? " rejilla-media" : " contenedor-angosto"}">
+  <div class="contenedor contenedor-angosto">
     <div class="prosa">
       <h2 id="t-${d.slug}-${i}">${h2}</h2>
       ${html}
     </div>
-    ${i === 0 && img ? `<figure class="figura">${imagen(img, { tamanos: "(min-width: 960px) 45vw, 100vw" })}</figure>` : ""}
   </div>
 </section>`,
     )
     .join("");
   const cuerpo = `
-${cabeceraPagina({ migasHtml: m.html, h1: d.h1, lead: d.lead, extra: miniRuta(d.slug) })}
+${cabeceraPagina({ migasHtml: m.html, h1: d.h1, lead: d.lead, extra: miniRuta(d.slug), img })}
 ${secciones}
 ${anteriorSiguiente(d.slug)}
 ${d.sinCaminos ? "" : caminos(`proceso-${d.slug}`)}
@@ -177,6 +176,7 @@ const PAGINAS = [
   },
   {
     slug: "fechas", miga: "Fechas y calendario", nombreCorto: "Fechas ECOEMS",
+    img: { id: "fechas-calendario-ecoems", alt: "Mamá e hijo marcan en un calendario las fechas del registro, el examen ECOEMS y los resultados", title: "Fechas y calendario del ECOEMS", desc: "Mamá e hijo de secundaria frente a un calendario de pared marcando con plumón las etapas del proceso." },
     titulo: "Fechas ECOEMS 2027: registro, examen y resultados | ecoems.net",
     descripcion: "Calendario del ECOEMS y Mi Derecho, Mi Lugar: cuándo es el registro, el examen y los resultados. Fechas 2026 como referencia mientras sale la convocatoria 2027.",
     h1: "Fechas del ECOEMS: cuándo es el registro, el examen y los resultados",
@@ -260,6 +260,7 @@ const PAGINAS = [
   },
   {
     slug: "modalidades", miga: "Modalidades", nombreCorto: "Modalidades ECOEMS",
+    img: { id: "modalidades-ecoems-con-sin-examen", alt: "Tres caminos para elegir modalidad en Mi Derecho, Mi Lugar: sin examen, con examen o ambas", title: "Modalidades de Mi Derecho, Mi Lugar", desc: "Ilustración de tres caminos que salen de una misma estación hacia tres tipos de bachillerato." },
     titulo: "Modalidades ECOEMS: modalidad 1, 2 y 3 de Mi Derecho, Mi Lugar | ecoems.net",
     descripcion: "Diferencias entre la modalidad 1, 2 y 3 de Mi Derecho, Mi Lugar: cuántas opciones se eligen, quién presenta el examen ECOEMS y qué pasa si no alcanza lugar.",
     h1: "Modalidades de Mi Derecho, Mi Lugar: ¿1, 2 o 3?",
@@ -311,6 +312,7 @@ const PAGINAS = [
   },
   {
     slug: "correo", miga: "Correo del registro", nombreCorto: "Correo Mi Derecho, Mi Lugar",
+    img: { id: "correo-registro-mi-derecho-mi-lugar", alt: "Papá revisa en el celular los correos del registro de Mi Derecho, Mi Lugar de su hija", title: "Correo del registro ECOEMS", desc: "Papá y su hija revisan en el celular la bandeja de entrada con los avisos del registro." },
     titulo: "Correo de Mi Derecho, Mi Lugar: avisos y cómo no perderlos | ecoems.net",
     descripcion: "Qué correo usar en el registro de Mi Derecho, Mi Lugar (ECOEMS), qué avisos llegan, qué hacer si no llegan y el contacto oficial de Educatel.",
     h1: "El correo del registro de Mi Derecho, Mi Lugar",
@@ -416,7 +418,7 @@ function paginaFaq(paginas) {
   const grupos = paginas.map((d) => [d.miga, d.slug, d.faq]);
   const todas = grupos.flatMap(([, , f]) => f);
   const cuerpo = `
-${cabeceraPagina({ migasHtml: m.html, h1: "Preguntas frecuentes del ECOEMS", lead: "Todas las dudas del proceso en un solo lugar, ordenadas por parada. Cada tema tiene su página con más detalle." })}
+${cabeceraPagina({ img: "preguntas-frecuentes-ecoems", migasHtml: m.html, h1: "Preguntas frecuentes del ECOEMS", lead: "Todas las dudas del proceso en un solo lugar, ordenadas por parada. Cada tema tiene su página con más detalle." })}
 <section class="seccion"><div class="contenedor contenedor-angosto">
   ${grupos.map(([t, s, f]) => `
   <div class="faq-grupo">
