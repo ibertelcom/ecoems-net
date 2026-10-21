@@ -139,7 +139,7 @@ export function pie() {
     </div>
     ${col("El proceso", [["/que-es-ecoems/", "Qué es el ECOEMS"], ["/mi-derecho-mi-lugar/", "Mi Derecho, Mi Lugar"], ["/fechas/", "Fechas"], ["/registro/", "Registro"], ["/examen/", "El examen"], ["/resultados/", "Resultados"]])}
     ${col("Escuelas", [["/aciertos/", "Aciertos por escuela"], ["/escuelas/prepas-unam/", "Prepas UNAM"], ["/escuelas/cch-unam/", "CCH UNAM"], ["/escuelas/vocacionales-ipn/", "Vocacionales IPN"], ["/escuelas/sin-examen/", "Sin examen"]])}
-    ${col("Para estudiar", [[utm(`${SITIO.lat}/mx/comipems/`, "pie"), "Simulador y guía ECOEMS"], [utm(SITIO.app, "pie"), "Diagnóstico de 64 preguntas"], [utm(`${SITIO.lat}/noticias/mx/convocatorias/convocatoria-ecoems/`, "pie"), "Convocatoria y noticias"]])}
+    ${col("Para estudiar", [[utm(`${SITIO.lat}/mx/comipems/`, "pie"), "Examen simulacro ECOEMS gratis"], [utm(`${SITIO.lat}/mx/guias/comipems-ecoems/`, "pie"), "Guía ECOEMS con temario"], [utm(SITIO.app, "pie"), "Diagnóstico ECOEMS gratis"], [utm(`${SITIO.lat}/noticias/mx/convocatorias/convocatoria-ecoems/`, "pie"), "Convocatoria ECOEMS 2027"]])}
   </div>
   <div class="pie-legal">
     <p>© ${anio} ecoems.net · Ibertelcom Digital</p>

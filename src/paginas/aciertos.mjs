@@ -1,5 +1,6 @@
 // Pilar /aciertos/ (tabla completa) + hubs por línea + índice /escuelas/
 import { ESCUELAS, GRUPOS, RESUMEN, PREGUNTAS_EXAMEN, MARGEN_TEPO } from "../datos.mjs";
+import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { imagen, registrar } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
@@ -62,20 +63,8 @@ function dataset(ruta, nombre, descripcion) {
   };
 }
 
-function caminos(campana) {
-  return `
-    <div class="caminos">
-      <a class="camino" href="${utm(SITIO.app, campana)}">
-        ${icono("diagnostico", "ico camino-ico")}
-        <span><b>Diagnóstico de 64 preguntas en ecoems.app</b><span>Ve sus aciertos estimados contra la escuela que eligieron y cuántos le faltan.</span></span>
-        ${icono("externo", "ico camino-ext")}
-      </a>
-      <a class="camino" href="${utm(`${SITIO.lat}/mx/comipems/`, campana)}">
-        ${icono("libro", "ico camino-ico")}
-        <span><b>Simulador y guía ECOEMS en examenes.lat</b><span>Exámenes simulacro gratis por materia para practicar en casa.</span></span>
-        ${icono("externo", "ico camino-ext")}
-      </a>
-    </div>`;
+function caminos(ruta, campana) {
+  return caminosExternos(ruta, campana);
 }
 
 // ---------- /aciertos/ ----------
@@ -136,7 +125,7 @@ ${cabeceraPagina({
   <div class="contenedor contenedor-angosto">
     <h2 id="t-alcanza">¿Cuántos aciertos lleva tu hijo o hija hoy?</h2>
     <p>La tabla te dice a dónde hay que llegar. Para saber dónde está ahora, empieza gratis:</p>
-    ${caminos("aciertos")}
+    ${caminos("/aciertos/", "aciertos")}
   </div>
 </section>
 <div class="anuncio" data-anuncio="aciertos-1" hidden></div>
@@ -228,7 +217,7 @@ ${cabeceraPagina({ migasHtml: m.html, linea: g.clave, h1: h.h1, lead: h.lead, im
 <section class="seccion seccion-estudiar" aria-labelledby="t-alcanza">
   <div class="contenedor contenedor-angosto">
     <h2 id="t-alcanza">¿Le alcanza para ${g.clave === "cch" ? "un CCH" : g.clave === "enp" ? "una prepa de la UNAM" : "una vocacional"}?</h2>
-    ${caminos(`hub-${g.clave}`)}
+    ${caminos(ruta, `hub-${g.clave}`)}
   </div>
 </section>
 ${faqBloque(preg, `Preguntas sobre ${g.titulo}`)}`;

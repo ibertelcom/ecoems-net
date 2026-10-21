@@ -1,5 +1,6 @@
 // Herramientas (calculadora, comparador, armar opciones, escuelas por zona), escuelas sin examen y aviso de privacidad.
 import { ESCUELAS, GRUPOS, PREGUNTAS_EXAMEN, MARGEN_TEPO } from "../datos.mjs";
+import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
 import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "../componentes.mjs";
@@ -17,10 +18,7 @@ function app(campana) {
 <section class="seccion seccion-estudiar" aria-labelledby="t-app-${campana}">
   <div class="contenedor contenedor-angosto">
     <h2 id="t-app-${campana}">¿No sabes cuántos aciertos lleva?</h2>
-    <div class="caminos">
-      <a class="camino" href="${utm(SITIO.app, campana)}">${icono("diagnostico", "ico camino-ico")}<span><b>Diagnóstico de 64 preguntas en ecoems.app</b><span>La mitad exacta del examen, con la misma proporción por materia. Te da sus aciertos estimados en una sola sesión.</span></span>${icono("externo", "ico camino-ext")}</a>
-      <a class="camino" href="${utm(`${SITIO.lat}/mx/comipems/`, campana)}">${icono("libro", "ico camino-ico")}<span><b>Simulador ECOEMS gratis en examenes.lat</b><span>Exámenes simulacro por materia para practicar en casa.</span></span>${icono("externo", "ico camino-ext")}</a>
-    </div>
+    ${caminosExternos(`/${campana}/`, campana)}
   </div>
 </section>`;
 }
@@ -116,7 +114,7 @@ ${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: 
           <option value="95">Bien (entre 90 y 100)</option>
           <option value="108">Muy bien (más de 100)</option>
         </select>
-        <p class="calc-ayuda" id="cm-ac-ayuda">Usa su último simulacro completo. ¿No tiene uno? Haz el <a href="${utm(SITIO.app, "prepas-cerca")}">diagnóstico gratis de ecoems.app</a>.</p>
+        <p class="calc-ayuda" id="cm-ac-ayuda">Usa su último simulacro completo. ¿No tiene uno? Haz el <a href="${utm(SITIO.app, "prepas-cerca")}">diagnóstico ECOEMS gratis</a> de ecoems.app.</p>
       </fieldset>
       <fieldset class="cm-paso">
         <legend><span class="cm-n">2</span>¿Qué le gustaría estudiar después?</legend>
@@ -363,6 +361,12 @@ ${cabeceraPagina({ img: "escuelas-sin-examen-bachillerato", migasHtml: d.migas.h
   <ul class="tarjetas-escuela">${subs.map(([s, n, t]) => `<li><div class="tarjeta-escuela" data-linea="sin"><span class="te-linea">${n}</span><b>${s}</b><span class="te-hon">${t}</span></div></li>`).join("")}</ul>
   <p class="nota-ruta">${icono("mapa", "ico")}<span>Estamos reuniendo el catálogo de planteles sin examen para sumarlos al <a href="/mapa/">mapa de escuelas</a>. El catálogo oficial está en <a href="https://www.miderechomilugar.gob.mx/" rel="noopener" target="_blank">miderechomilugar.gob.mx</a>.</span></p>
 </div></section>
+<section class="seccion seccion-estudiar" aria-labelledby="t-sin-externos">
+  <div class="contenedor contenedor-angosto">
+    <h2 id="t-sin-externos">Para el bachillerato que elija</h2>
+    ${caminosExternos("/escuelas/sin-examen/", "sin-examen")}
+  </div>
+</section>
 ${faqBloque(faq, "Preguntas sobre escuelas sin examen")}`;
   return hecha(ruta, d, cuerpo, faq);
 }

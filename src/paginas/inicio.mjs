@@ -1,4 +1,5 @@
 import { ESCUELAS, GRUPOS, RESUMEN, PREGUNTAS_EXAMEN, MARGEN_TEPO } from "../datos.mjs";
+import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { imagen } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
@@ -189,18 +190,7 @@ function estudiar() {
     <div class="prosa">
       <h2 id="t-estudiar">¿Le alcanza? ¿Qué le falta estudiar?</h2>
       <p>Saber los aciertos de la escuela es la mitad. La otra mitad es saber dónde está tu hijo o hija hoy. Para eso hay dos caminos, los dos gratis para empezar:</p>
-      <div class="caminos">
-        <a class="camino" href="${utm(SITIO.app, "portada-estudiar")}">
-          ${icono("diagnostico", "ico camino-ico")}
-          <span><b>Diagnóstico de 64 preguntas en ecoems.app</b><span>La mitad exacta del examen, con la misma proporción por materia. Al terminar ves sus aciertos estimados contra la escuela que eligieron.</span></span>
-          ${icono("externo", "ico camino-ext")}
-        </a>
-        <a class="camino" href="${utm(`${SITIO.lat}/mx/comipems/`, "portada-estudiar")}">
-          ${icono("libro", "ico camino-ico")}
-          <span><b>Simulador y guía ECOEMS en examenes.lat</b><span>Exámenes simulacro gratis por materia y la guía de estudio del temario oficial para practicar en casa.</span></span>
-          ${icono("externo", "ico camino-ext")}
-        </a>
-      </div>
+      ${caminosExternos("/", "portada-estudiar")}
     </div>
   </div>
 </section>`;

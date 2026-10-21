@@ -2,6 +2,7 @@
 // Fuentes: Convocatoria Mi Derecho, Mi Lugar 2026 (miderechomilugar.gob.mx) e instructivo IPN-UNAM 2026.
 // Las fechas 2027 no se han publicado: se muestran las de 2026 como referencia.
 import { ESCUELAS, GRUPOS, RESUMEN, PREGUNTAS_EXAMEN, MARGEN_TEPO } from "../datos.mjs";
+import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { imagen, registrar } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
@@ -64,15 +65,13 @@ function anteriorSiguiente(slug) {
 </nav>`;
 }
 
-function caminos(campana) {
+function caminos(slug) {
+  const titulos = { "preguntas-frecuentes": "Para estudiar y estar al día", "mi-derecho-mi-lugar": "Para estar al día con el proceso", fechas: "Para no perder ninguna fecha", "llave-mx": "Para estar al día con el proceso", registro: "Antes y después del registro", correo: "Para no perder ningún aviso", examen: "Para practicar el examen", resultados: "Después de los resultados", "no-quede": "Para el siguiente paso", "que-es-ecoems": "Para empezar a estudiar" };
   return `
-<section class="seccion seccion-estudiar" aria-labelledby="t-estudiar-${campana}">
+<section class="seccion seccion-estudiar" aria-labelledby="t-estudiar-${slug}">
   <div class="contenedor contenedor-angosto">
-    <h2 id="t-estudiar-${campana}">Mientras tanto: ¿cómo va con el estudio?</h2>
-    <div class="caminos">
-      <a class="camino" href="${utm(SITIO.app, campana)}">${icono("diagnostico", "ico camino-ico")}<span><b>Diagnóstico de 64 preguntas en ecoems.app</b><span>La mitad exacta del examen, con la misma proporción por materia. Ves sus aciertos estimados contra la escuela que eligieron.</span></span>${icono("externo", "ico camino-ext")}</a>
-      <a class="camino" href="${utm(`${SITIO.lat}/mx/comipems/`, campana)}">${icono("libro", "ico camino-ico")}<span><b>Simulador y guía ECOEMS en examenes.lat</b><span>Exámenes simulacro gratis por materia y la guía del temario oficial.</span></span>${icono("externo", "ico camino-ext")}</a>
-    </div>
+    <h2 id="t-estudiar-${slug}">${titulos[slug] ?? "Mientras tanto: ¿cómo va con el estudio?"}</h2>
+    ${caminosExternos(`/${slug}/`, `proceso-${slug}`)}
   </div>
 </section>`;
 }
@@ -106,7 +105,7 @@ ${cabeceraPagina({ migasHtml: m.html, h1: d.h1, lead: d.lead, img })}
 ${secciones}
 ${d.cta ? ctaHerramientas(d.cta) : ""}
 ${anteriorSiguiente(d.slug)}
-${d.sinCaminos ? "" : caminos(`proceso-${d.slug}`)}
+${d.sinCaminos ? "" : caminos(d.slug)}
 <div class="anuncio" data-anuncio="proceso-${d.slug}" hidden></div>
 ${d.faq?.length ? faqBloque(d.faq, d.faqTitulo ?? "Preguntas frecuentes") : ""}`;
   return {
@@ -206,7 +205,7 @@ const PAGINAS = [
         ${CALENDARIO_2026.map(([f, q, h]) => `<tr><th scope="row">${f}</th><td><a href="${h}">${q}</a></td></tr>`).join("")}
         </tbody></table></div>
         <p class="fuente">Fuente: Convocatoria Mi Derecho, Mi Lugar 2026 e instructivo IPN-UNAM 2026, publicados en ${of()}.</p>`],
-      ["¿Cuándo sale la convocatoria 2027?", `<p>Todavía no hay fecha oficial. En 2026 los materiales informativos y el registro abrieron el <b>17 de marzo</b>, así que es razonable esperar la convocatoria 2027 a inicios de año. Las noticias de la convocatoria las publicamos en <a href="${utm(CONVOCATORIA_LAT, "fechas")}">examenes.lat</a>.</p>
+      ["¿Cuándo sale la convocatoria 2027?", `<p>Todavía no hay fecha oficial. En 2026 los materiales informativos y el registro abrieron el <b>17 de marzo</b>, así que es razonable esperar la convocatoria 2027 a inicios de año. En cuanto salga publicamos la <a href="${utm(CONVOCATORIA_LAT, "fechas")}">convocatoria ECOEMS 2027</a> en examenes.lat.</p>
         <p>Si tu hijo o hija está en tercero de secundaria, el mejor uso de los meses antes del registro es estudiar y decidir qué escuelas quiere: revisa los <a href="/aciertos/">aciertos de cada escuela</a> y prueba la <a href="/calculadora/">calculadora</a>.</p>`],
       ["Las fechas que no se pueden pasar", `<ul class="modalidades">
         <li><b>Cierre del registro.</b> Sin registro no hay lugar en el proceso ordinario.</li>
@@ -380,7 +379,7 @@ const PAGINAS = [
         <li><b>Computadora conectada a la corriente</b> e internet estable; si se puede, cable en lugar de wifi.</li>
         <li><b>Celular fuera de alcance</b> y otras ventanas cerradas antes de empezar.</li>
         <li><b>Conectarse con tiempo</b>, antes de su horario.</li></ul>`],
-      ["¿Cómo practicar el examen?", `<p>Lo que más ayuda es practicar con exámenes del mismo tamaño y tipo. En <a href="${utm(`${SITIO.lat}/mx/comipems/`, "examen")}">examenes.lat</a> hay simuladores gratis por materia, y en <a href="${utm(SITIO.app, "examen")}">ecoems.app</a> un diagnóstico de 64 preguntas, la mitad exacta del examen, que estima sus aciertos.</p>`],
+      ["¿Cómo practicar el examen?", `<p>Lo que más ayuda es practicar con exámenes del mismo tamaño y tipo. En examenes.lat hay un <a href="${utm(`${SITIO.lat}/mx/comipems/`, "examen")}">examen simulacro ECOEMS gratis</a> por materia, y en ecoems.app el <a href="${utm(SITIO.app, "examen")}">diagnóstico ECOEMS gratis</a>: 64 preguntas, la mitad exacta del examen, que estima sus aciertos.</p>`],
     ],
     faq: [
       ["¿El examen ECOEMS es en línea?", "Sí. En 2026 se presentó en línea desde casa, en computadora de escritorio o laptop, con cámara y micrófono encendidos."],
@@ -422,7 +421,7 @@ const PAGINAS = [
         <p><b>Modalidad 2:</b> si no alcanzó lugar, puede registrarse en el <b>periodo extemporáneo</b> y elegir una escuela sin examen con lugares disponibles. En 2026 fue del <b>19 al 26 de agosto</b>.</p>`],
       ["Lugares disponibles después del proceso", `<p>Según la convocatoria 2026, las instituciones que todavía tengan lugares después del <b>26 de agosto</b> los ofrecen por sus propios procedimientos. Vale la pena revisar los sitios de COLBACH, CONALEP, DGETI, IEMS y las demás opciones sin examen cerca de casa.</p>
         <p>Si no fue asignado por una causa administrativa ajena a él, la Gaceta indica las fechas para resolverlo. El proceso cerró el 28 de agosto de 2026.</p>`],
-      ["Para intentarlo de nuevo", `<p>Un egresado puede volver a registrarse al año siguiente. Si esa es la decisión, el año sirve para estudiar con calma: el <a href="${utm(SITIO.app, "no-quede")}">diagnóstico de ecoems.app</a> le dice qué materias reforzar y en <a href="${utm(`${SITIO.lat}/mx/comipems/`, "no-quede")}">examenes.lat</a> hay simuladores gratis.</p>`],
+      ["Para intentarlo de nuevo", `<p>Un egresado puede volver a registrarse al año siguiente. Si esa es la decisión, el año sirve para estudiar con calma: el <a href="${utm(SITIO.app, "no-quede")}">diagnóstico ECOEMS gratis</a> de ecoems.app le dice qué materias reforzar y en <a href="${utm(`${SITIO.lat}/mx/comipems/`, "no-quede")}">examenes.lat</a> hay simuladores gratis.</p>`],
     ],
     faq: [
       ["¿Qué pasa si no quedé en la UNAM ni en el IPN?", "En modalidad 3 se asigna una opción sin examen de tu lista. En modalidad 2 puedes registrarte en el periodo extemporáneo y elegir una escuela sin examen con lugares."],
@@ -450,7 +449,8 @@ ${cabeceraPagina({ img: "preguntas-frecuentes-ecoems", migasHtml: m.html, h1: "P
     <p><a class="enlace-fuerte" href="/${s}/">Leer la guía de ${t.toLowerCase()} ${icono("flecha", "ico")}</a></p>
   </div>`).join("")}
   <p class="actualizado">Actualizado el <time datetime="${ACTUALIZADO.iso}">${ACTUALIZADO.texto}</time>. ecoems.net no es un sitio oficial; el registro y los resultados se hacen solo en ${of()}.</p>
-</div></section>`;
+</div></section>
+${caminos("preguntas-frecuentes")}`;
   return {
     META: { ruta, titulo, descripcion }, ACTUALIZADO, nombreCorto: "Preguntas ECOEMS", seccion: "",
     cuerpo: () => cuerpo,
