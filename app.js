@@ -404,7 +404,7 @@
       return `<li data-linea="${e.l}"><span class="lo-num">${i + 1}</span><div class="cm-item"><div class="cm-item-cab"><a href="/escuelas/${e.s}/">${esc(e.n)}</a><span class="lo-etq" data-tipo="${e.t}">${ETQ[e.t]}</span></div>
         <p class="cm-datos">Aciertos 2024 · 2025 · 2026: <b>${e.a.join(" · ")}</b> · meta Tepo <b>${e.m}</b></p>
         <ul class="cm-razones">${razones(e, A, area).map((t) => `<li>${t}</li>`).join("")}</ul>
-        <a class="te-ruta" href="${ruta}" target="_blank" rel="noopener">Cómo llegar ↗</a></div></li>`;
+        <span class="cm-links"><a class="cm-ficha" href="/escuelas/${e.s}/">Ver ficha de la escuela →</a><a class="te-ruta" href="${ruta}" target="_blank" rel="noopener">Cómo llegar ↗</a></span></div></li>`;
     }).join("") : `<li class="vacia">No encontramos escuelas con esos filtros. Amplía la distancia, activa la UNAM y el IPN o revisa sus aciertos.</li>`;
     $("cm-avisos").innerHTML = avisos.map((a) => `<p>${a}</p>`).join("");
     const texto = `Mis opciones ECOEMS (${A} aciertos)\n` + elegido.map((e, i) => `${i + 1}. ${e.n} – ${ETQ[e.t]}`).join("\n") + "\nArmada en https://ecoems.net/prepas-cerca-de-mi/";
@@ -481,7 +481,7 @@
     const dentro = cerca.filter((x) => x.d <= radio);
     const mostrar = (dentro.length ? dentro : cerca.slice(0, 3)).slice(0, 8);
     lista.innerHTML = (dentro.length ? "" : `<li class="vacia">No hay escuelas a menos de ${radio} km. Estas son las más cercanas:</li>`) + mostrar.map(({ e, d }) =>
-      `<li data-linea="${e.l}"><button type="button" data-ver="${e.s}"><b>${esc(e.c)}</b><span>${d.toFixed(1)} km · 2026: ${e.a[2]} · meta ${e.m}</span></button></li>`).join("");
+      `<li data-linea="${e.l}"><button type="button" data-ver="${e.s}"><b>${esc(e.c)}</b><span>${d.toFixed(1)} km · 2026: ${e.a[2]} · meta ${e.m}</span></button><a class="mp-ficha" href="/escuelas/${e.s}/">Ver ficha →</a></li>`).join("");
     if (casaCapa) casaCapa.circulo.setRadius(radio * 1000);
     return { dentro: dentro.length, cerca };
   }
