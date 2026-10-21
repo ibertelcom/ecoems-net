@@ -750,6 +750,7 @@ p { margin: 0 0 1em; }
 .mp-pop-links { display: flex; gap: 12px; margin-top: 4px; }
 .mp-pop-links a { color: #075C48; font-weight: 700; }
 .leaflet-container { font-family: var(--f-texto); }
+.mp-oscuro .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); }
 .leaflet-container a.leaflet-popup-close-button { color: #4E5B70; }
 .te-acciones { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 6px; }
 .te-acciones .te-ruta { margin-top: 0; }
