@@ -527,10 +527,11 @@
     caja.innerHTML = "";
     const oscuro = matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light";
     mapa = L.map(caja, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
-    L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/${oscuro ? "dark_all" : "voyager"}/{z}/{x}/{y}{r}.png`, {
-      maxZoom: 19, subdomains: "abcd",
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>',
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
     }).addTo(mapa);
+    if (oscuro) caja.classList.add("mp-oscuro");
     for (const e of datos) {
       capas[e.s] = L.circleMarker(e.g, { radius: 9, color: "#fff", weight: 2.5, fillColor: color(e.l), fillOpacity: 1 })
         .bindPopup(popup(e), { maxWidth: 260 }).bindTooltip(e.c, { direction: "top", offset: [0, -8] }).addTo(mapa);
