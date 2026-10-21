@@ -100,7 +100,7 @@ ${cabeceraPagina({
       <h2 id="t-aciertos-escuela">Aciertos ${del(e)} en los últimos tres años</h2>
       <p>${Art(e)} ${e.doble} pidió <b>${e.a2026} aciertos en 2026</b>. Es el puntaje con el que entró el último alumno asignado; cualquiera con más aciertos que eligió esta escuela antes que otra también alcanzó lugar.</p>
       <p>De 2024 a 2025 los aciertos ${c25.d === 0 ? "no cambiaron" : `fueron ${c25.texto} (${e.a2024} → ${e.a2025})`}, y de 2025 a 2026 ${c26.d === 0 ? "se quedaron igual" : `fueron ${c26.texto} (${e.a2025} → ${e.a2026})`}. Por eso conviene apuntar a la <b>meta Tepo de ${e.meta} aciertos</b> para el ECOEMS 2027, y no al número exacto del año pasado.</p>
-      <p>En todo el proceso, ${articulo(e)} ${e.comun} quedó en el <b>lugar ${e.lugar} de ${ESCUELAS.length}</b> escuelas de la UNAM y el IPN por aciertos pedidos. <a href="/aciertos/">Ver la tabla completa de aciertos</a>.</p>
+      <p>En todo el proceso, ${articulo(e)} ${e.comun} quedó en el <b>lugar ${e.lugar} de ${ESCUELAS.length}</b> escuelas de la UNAM y el IPN por aciertos pedidos. Revisa <a href="/aciertos/">cuántos aciertos pide cada escuela del ECOEMS</a>.</p>
     </div>
     <figure class="figura figura-grafica" data-linea="${e.linea}">${grafica(e)}<figcaption>Aciertos mínimos de asignación por año y meta sugerida para 2027.</figcaption></figure>
   </div>
@@ -127,12 +127,12 @@ ${cabeceraPagina({
     </div>
     <ul class="tarjetas-escuela">
       ${vecinas.map((v) => `
-      <li><a class="tarjeta-escuela" href="/escuelas/${v.slug}/" data-linea="${v.linea}">
+      <li><div class="tarjeta-escuela tarjeta-enlace" data-linea="${v.linea}">
         <span class="te-linea">${grupoDe(v).titulo}</span>
-        <b>${v.doble}</b>
+        <b><a class="te-enlace" href="/escuelas/${v.slug}/">${v.doble}</a></b>
         <span class="te-cifras"><span><i>2026</i>${v.a2026}</span><span class="te-meta"><i>Meta</i>${v.meta}</span></span>
         <span class="te-lugar">${v.alcaldia ?? ""}</span>
-      </a></li>`).join("")}
+      </div></li>`).join("")}
     </ul>
   </div>
 </section>

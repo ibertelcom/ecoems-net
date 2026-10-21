@@ -204,14 +204,16 @@ ${cabeceraPagina({ migasHtml: m.html, linea: g.clave, h1: h.h1, lead: h.lead, im
     </div>
     <ul class="tarjetas-escuela tarjetas-hub">
       ${[...g.escuelas].sort((a, b) => b.a2026 - a.a2026).map((e) => `
-      <li><a class="tarjeta-escuela" href="/escuelas/${e.slug}/" data-linea="${e.linea}">
+      <li><div class="tarjeta-escuela tarjeta-enlace" data-linea="${e.linea}">
         <span class="te-linea">${e.alcaldia ?? ""}</span>
-        <b>${e.doble}</b>
+        <b><a class="te-enlace" href="/escuelas/${e.slug}/">${e.doble}</a></b>
         ${e.honorifico ? `<span class="te-hon">${e.honorifico.replace(/^[^"]*"/, "“").replace(/"$/, "”")}</span>` : ""}
         <span class="te-cifras"><span><i>2024</i>${e.a2024}</span><span><i>2025</i>${e.a2025}</span><span><i>2026</i>${e.a2026}</span><span class="te-meta"><i>Meta</i>${e.meta}</span></span>
         ${e.area ? `<span class="te-lugar">${e.area}</span>` : ""}
-      </a></li>`).join("")}
+      </div></li>`).join("")}
     </ul>
+    <h3 class="preguntas-escuela-titulo">Cuántos aciertos pide cada ${g.clave === "voca" ? "vocacional del IPN" : g.clave === "cch" ? "CCH de la UNAM" : "prepa de la UNAM"}</h3>
+    <ul class="preguntas-escuela">${[...g.escuelas].map((e) => `<li><a href="/escuelas/${e.slug}/">¿Cuántos aciertos pide ${/^(CCH|CET)/.test(e.comun) ? "el" : "la"} ${e.comun}?</a></li>`).join("")}</ul>
   </div>
 </section>
 <section class="seccion seccion-blanca" aria-labelledby="t-que-es-linea">
@@ -258,11 +260,11 @@ ${cabeceraPagina({
       <div class="grupo-cabeza" data-linea="${g.clave}"><h2>${g.titulo}</h2><a href="${HUB[g.clave]}">Ver ${g.titulo}</a></div>
       <ul class="tarjetas-escuela">
         ${g.escuelas.map((e) => `
-        <li data-buscar="${[e.comun, e.oficial, e.honorifico ?? "", e.alcaldia ?? ""].join(" ").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()}"><a class="tarjeta-escuela" href="/escuelas/${e.slug}/" data-linea="${e.linea}">
+        <li data-buscar="${[e.comun, e.oficial, e.honorifico ?? "", e.alcaldia ?? ""].join(" ").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()}"><div class="tarjeta-escuela tarjeta-enlace" data-linea="${e.linea}">
           <span class="te-linea">${e.alcaldia ?? ""}</span>
-          <b>${e.doble}</b>
+          <b><a class="te-enlace" href="/escuelas/${e.slug}/">${e.doble}</a></b>
           <span class="te-cifras"><span><i>2026</i>${e.a2026}</span><span class="te-meta"><i>Meta</i>${e.meta}</span></span>
-        </a></li>`).join("")}
+        </div></li>`).join("")}
       </ul>
     </div>`).join("")}
     <p class="sin-resultados" id="sin-resultados" hidden>No encontramos esa escuela entre las de la UNAM y el IPN. Revisa el nombre o busca por alcaldía.</p>

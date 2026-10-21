@@ -29,25 +29,26 @@ function ctaHerramientas([titulo, claves]) {
 const aviso2027 = `<p class="nota-ruta">${icono("calendario", "ico")}<span>La convocatoria 2027 aún no se publica. Las fechas de esta página son las de <b>2026</b>, como referencia; las actualizamos en cuanto salga la oficial.</span></p>`;
 
 // Orden de la ruta (para la mini ruta y los botones anterior/siguiente)
+// [slug, etiqueta corta de la mini ruta, nombre completo con la palabra clave (para títulos y anterior/siguiente)]
 const RUTA = [
-  ["que-es-ecoems", "Qué es"],
-  ["mi-derecho-mi-lugar", "Mi Derecho, Mi Lugar"],
-  ["fechas", "Fechas"],
-  ["llave-mx", "Llave MX"],
-  ["registro", "Registro"],
-  ["modalidades", "Modalidades"],
-  ["como-elegir-opciones", "Elegir opciones"],
-  ["correo", "Correo"],
-  ["examen", "Examen"],
-  ["resultados", "Resultados"],
-  ["no-quede", "Si no quedó"],
+  ["que-es-ecoems", "Qué es", "Qué es el ECOEMS"],
+  ["mi-derecho-mi-lugar", "Mi Derecho, Mi Lugar", "Mi Derecho, Mi Lugar"],
+  ["fechas", "Fechas", "Fechas del ECOEMS"],
+  ["llave-mx", "Llave MX", "Llave MX para Mi Derecho, Mi Lugar"],
+  ["registro", "Registro", "Registro de Mi Derecho, Mi Lugar"],
+  ["modalidades", "Modalidades", "Modalidades con y sin examen"],
+  ["como-elegir-opciones", "Elegir opciones", "Cómo elegir y ordenar las opciones"],
+  ["correo", "Correo", "Correo de Mi Derecho, Mi Lugar"],
+  ["examen", "Examen", "Examen ECOEMS en línea"],
+  ["resultados", "Resultados", "Resultados del ECOEMS"],
+  ["no-quede", "Si no quedó", "Qué hacer si no quedó en el ECOEMS"],
 ];
 
 function miniRuta(slug) {
   const i = RUTA.findIndex(([s]) => s === slug);
   if (i < 0) return "";
   return `<ol class="mini-ruta" aria-label="Paradas del proceso">${RUTA.map(
-    ([s, t], j) => `<li${j === i ? ' aria-current="step"' : j < i ? ' class="pasada"' : ""}><a href="/${s}/"><span class="mr-punto"></span><span class="mr-texto">${t}</span></a></li>`,
+    ([s, t, k], j) => `<li${j === i ? ' aria-current="step"' : j < i ? ' class="pasada"' : ""}><a href="/${s}/" title="${k}"><span class="mr-punto"></span><span class="mr-texto">${t}</span></a></li>`,
   ).join("")}</ol>`;
 }
 
@@ -58,8 +59,8 @@ function anteriorSiguiente(slug) {
   const s = RUTA[i + 1];
   return `
 <nav class="paradas-nav contenedor" aria-label="Siguiente paso">
-  ${a ? `<a class="pn pn-ant" href="/${a[0]}/"><small>Parada anterior</small><b>${a[1]}</b></a>` : "<span></span>"}
-  ${s ? `<a class="pn pn-sig" href="/${s[0]}/"><small>Siguiente parada</small><b>${s[1]}</b></a>` : `<a class="pn pn-sig" href="/aciertos/"><small>Ahora revisa</small><b>Aciertos por escuela</b></a>`}
+  ${a ? `<a class="pn pn-ant" href="/${a[0]}/"><small>Parada anterior</small><b>${a[2]}</b></a>` : "<span></span>"}
+  ${s ? `<a class="pn pn-sig" href="/${s[0]}/"><small>Siguiente parada</small><b>${s[2]}</b></a>` : `<a class="pn pn-sig" href="/aciertos/"><small>Ahora revisa</small><b>Cuántos aciertos pide cada escuela</b></a>`}
 </nav>`;
 }
 
@@ -78,7 +79,7 @@ function caminos(campana) {
 
 function pagina(d) {
   const ruta = `/${d.slug}/`;
-  const m = migas([["Inicio", "/"], ["El proceso", "/mi-derecho-mi-lugar/"], [d.miga, ruta]].filter((x, i, arr) => !(d.slug === "mi-derecho-mi-lugar" && i === 1)));
+  const m = migas([["Inicio", "/"], ["Mi Derecho, Mi Lugar", "/mi-derecho-mi-lugar/"], [d.miga, ruta]].filter((x, i, arr) => !(d.slug === "mi-derecho-mi-lugar" && i === 1)));
   const img = d.img
     ? registrar(d.img.id, {
         archivo: `${d.img.id}.webp`, ancho: 1200, alto: 800, alt: d.img.alt, title: d.img.title, descripcion: d.img.desc,

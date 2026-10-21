@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { documento, SITIO } from "./src/plantilla.mjs";
 import { IMAGENES } from "./src/imagenes.mjs";
 import { promptsImagenes } from "./src/prompts-imagenes.mjs";
+import { relacionadas } from "./src/relacionadas.mjs";
 import * as inicio from "./src/paginas/inicio.mjs";
 import * as aciertos from "./src/paginas/aciertos.mjs";
 import * as escuela from "./src/paginas/escuela.mjs";
@@ -35,7 +36,11 @@ if (existsSync("src/vendor")) cpSync("src/vendor", "dist/vendor", { recursive: t
 
 const imgsDePagina = {};
 for (const p of PAGINAS) {
-  const cuerpoHtml = p.cuerpo();
+  // Enlaces relacionados con anchor de palabra clave, antes de las preguntas frecuentes (o al final).
+  const rel = relacionadas(p.META.ruta);
+  const crudo = p.cuerpo();
+  const iFaq = crudo.indexOf('<section class="seccion seccion-faq"');
+  const cuerpoHtml = !rel ? crudo : iFaq >= 0 ? crudo.slice(0, iFaq) + rel + "\n" + crudo.slice(iFaq) : crudo + rel;
   // Imagen para compartir (Open Graph): la del hero de la página si ya existe su versión JPG.
   const heroM = /class="cabecera-fig"><img [^>]*src="\/img\/([^"]+)\.webp"/.exec(cuerpoHtml) ?? (p.META.ruta === "/" ? [null, "portada-papa-e-hija-revisan-aciertos"] : null);
   const og = heroM && existsSync(`src/img/og/${heroM[1]}.jpg`) ? `/img/og/${heroM[1]}.jpg` : undefined;
