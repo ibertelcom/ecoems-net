@@ -1,8 +1,9 @@
 // Genera la página de prompts (artifact) a partir de prompts-imagenes.json.
 import { readFileSync, writeFileSync } from "node:fs";
-const L = JSON.parse(readFileSync("prompts-imagenes.json", "utf8"));
+const SOLO = (process.argv[3] || "").split(",").filter(Boolean);
+const L = JSON.parse(readFileSync("prompts-imagenes.json", "utf8")).filter((x) => !SOLO.length || SOLO.includes(x.id));
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const grupos = [
+const grupos = SOLO.length ? [["Imágenes nuevas para el hero", () => true]] : [
   ["Portada", (x) => x.uso.startsWith("Portada")],
   ["Pasos del proceso", (x) => x.uso.startsWith("Proceso")],
   ["Hubs de escuelas", (x) => x.uso.startsWith("Hub")],
@@ -25,7 +26,7 @@ const secciones = grupos.map(([t, f]) => {
 </li>`;
   }).join("")}</ol></section>`;
 }).join("");
-const html = `<title>Prompts imágenes ecoems.net</title>
+const html = `<title>${SOLO.length ? "Imágenes hero ecoems.net" : "Prompts imágenes ecoems.net"}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
@@ -72,7 +73,7 @@ h1 span{color:var(--verde)}
 <div class="envoltura">
 <header class="intro">
 <h1>Imágenes de <span>ecoems.net</span></h1>
-<p>${L.length} prompts listos para ChatGPT, uno por imagen y en el orden del sitio. Copia el prompt, pégalo en un chat nuevo y guarda la imagen con el nombre de archivo que aparece arriba de cada uno.</p>
+<p>${L.length} prompts listos para ChatGPT, uno por imagen${SOLO.length ? ", para las páginas que todavía no tenían imagen" : " y en el orden del sitio"}. Copia el prompt, pégalo en un chat nuevo y guarda la imagen con el nombre de archivo que aparece arriba de cada uno.</p>
 <div class="progreso"><span id="cuenta">0 de ${L.length} hechas</span><div class="barra" aria-hidden="true"><i id="avance"></i></div></div>
 </header>
 <section class="reglas" aria-labelledby="t-reglas">
@@ -89,7 +90,7 @@ ${secciones}
 </div>
 <script>
 (function(){
-  var K="ecoems-prompts-hechas",hechas={};
+  var K="ecoems-prompts-hechas${SOLO.length ? "-hero" : ""}",hechas={};
   try{hechas=JSON.parse(localStorage.getItem(K)||"{}")}catch(e){}
   var total=${L.length};
   function pinta(){var n=0;document.querySelectorAll(".hecha input").forEach(function(c){var id=c.id.slice(2);c.checked=!!hechas[id];c.closest(".item").classList.toggle("lista-ok",c.checked);if(c.checked)n++});document.getElementById("cuenta").textContent=n+" de "+total+" hechas";document.getElementById("avance").style.width=(n/total*100)+"%"}
