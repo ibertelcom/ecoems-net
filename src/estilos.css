@@ -524,8 +524,13 @@ p { margin: 0 0 1em; }
 
 /* ================= Páginas del proceso ================= */
 /* Mini ruta: la línea de metro con la parada actual */
-.mini-ruta { list-style: none; margin: 28px 0 0; padding: 0 0 4px; display: flex; overflow-x: auto; scrollbar-width: thin; }
-.mini-ruta li { position: relative; flex: 1 0 auto; min-width: 92px; }
+.ruta-banda { background: var(--superficie); border-bottom: 1px solid var(--linea); padding-block: 22px 18px; }
+.mini-ruta { list-style: none; margin: 0; padding: 0 0 4px; display: flex; }
+.mini-ruta li { position: relative; flex: 1 1 0; min-width: 0; }
+@media (max-width: 959px) {
+  .mini-ruta { overflow-x: auto; scrollbar-width: thin; }
+  .mini-ruta li { flex: 1 0 auto; min-width: 92px; }
+}
 .mini-ruta li::before { content: ""; position: absolute; left: 0; right: 0; top: 9px; height: 5px; background: var(--linea); }
 .mini-ruta li:first-child::before { left: 50%; }
 .mini-ruta li:last-child::before { right: 50%; }

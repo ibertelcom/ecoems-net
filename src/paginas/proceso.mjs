@@ -47,7 +47,7 @@ const RUTA = [
 function miniRuta(slug) {
   const i = RUTA.findIndex(([s]) => s === slug);
   if (i < 0) return "";
-  return `<ol class="mini-ruta" aria-label="Paradas del proceso">${RUTA.map(
+  return `<ol class="mini-ruta">${RUTA.map(
     ([s, t, k], j) => `<li${j === i ? ' aria-current="step"' : j < i ? ' class="pasada"' : ""}><a href="/${s}/" title="${k}"><span class="mr-punto"></span><span class="mr-texto">${t}</span></a></li>`,
   ).join("")}</ol>`;
 }
@@ -101,7 +101,8 @@ function pagina(d) {
     )
     .join("");
   const cuerpo = `
-${cabeceraPagina({ migasHtml: m.html, h1: d.h1, lead: d.lead, extra: miniRuta(d.slug), img })}
+${cabeceraPagina({ migasHtml: m.html, h1: d.h1, lead: d.lead, img })}
+<nav class="ruta-banda" aria-label="Paradas del proceso Mi Derecho, Mi Lugar"><div class="contenedor">${miniRuta(d.slug)}</div></nav>
 ${secciones}
 ${d.cta ? ctaHerramientas(d.cta) : ""}
 ${anteriorSiguiente(d.slug)}
