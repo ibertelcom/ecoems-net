@@ -594,3 +594,11 @@
     catch (e) { const r = document.createRange(); r.selectNodeContents(c); getSelection().removeAllRanges(); getSelection().addRange(r); aviso.textContent = "Selecciona el correo y cópialo con Ctrl+C."; }
   });
 })();
+
+// ---------- Mini ruta: en el celular, centrar la parada actual ----------
+(() => {
+  const r = document.querySelector(".mini-ruta");
+  const c = r?.querySelector("[aria-current]");
+  if (!r || !c || r.scrollWidth <= r.clientWidth) return;
+  r.scrollLeft = c.offsetLeft - r.clientWidth / 2 + c.offsetWidth / 2;
+})();
