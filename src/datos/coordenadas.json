@@ -1,5 +1,5 @@
 {
-  "_fuente": "OpenStreetMap (Nominatim), consultado el 21-oct-2026. p=1 punto del plantel en OSM; p=0 aproximado por calle o colonia.",
+  "_fuente": "OpenStreetMap (Nominatim), consultado el 21-oct-2026. p=1 punto exacto (OSM o Google Maps de Victor: Voca 6, 11 y 19, 21-oct-2026).",
   "prepa-1": [19.27138, -99.12202, 1],
   "prepa-2": [19.38408, -99.09927, 1],
   "prepa-3": [19.48112, -99.09470, 1],
@@ -24,11 +24,11 @@
   "voca-8": [19.48709, -99.17497, 1],
   "voca-9": [19.45383, -99.17530, 1],
   "voca-10": [19.45433, -99.08030, 1],
-  "voca-11": [19.45300, -99.16860, 0],
+  "voca-11": [19.45399, -99.16564, 1],
   "voca-12": [19.46249, -99.15188, 1],
   "voca-13": [19.34037, -99.12907, 1],
   "voca-14": [19.44705, -99.11503, 1],
   "voca-15": [19.22201, -98.99621, 1],
-  "voca-19": [19.65901, -99.02292, 0],
+  "voca-19": [19.63350, -99.04197, 1],
   "cet-1": [19.45485, -99.06140, 1]
 }
