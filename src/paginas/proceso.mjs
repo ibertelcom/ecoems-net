@@ -10,6 +10,22 @@ import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "
 const OFICIAL = "https://www.miderechomilugar.gob.mx/";
 const CONVOCATORIA_LAT = `${SITIO.lat}/noticias/mx/convocatorias/convocatoria-ecoems/`;
 const of = (t = "miderechomilugar.gob.mx") => `<a href="${OFICIAL}" rel="noopener" target="_blank">${t}</a>`;
+// Bloque de botones hacia las herramientas que ayudan con el paso.
+const HERR = {
+  armar: ["/armar-opciones/", "opciones", "Arma y ordena tus opciones", "Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas y revisa si tu lista tiene retadoras, alcanzables y seguras."],
+  cerca: ["/prepas-cerca-de-mi/", "mapa", "Prepas cerca de mí", "Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ya ordenada."],
+  calc: ["/calculadora/", "calculadora", "Calculadora de aciertos", "Escribe sus aciertos y ve qué escuelas le alcanzan con margen, cuáles están en la orilla y cuáles son reto."],
+};
+function ctaHerramientas([titulo, claves]) {
+  return `
+<section class="seccion seccion-estudiar" aria-labelledby="t-cta-herr">
+  <div class="contenedor contenedor-angosto">
+    <h2 id="t-cta-herr">${titulo}</h2>
+    <div class="caminos">${claves.map((k) => { const [href, ic, t, d] = HERR[k]; return `<a class="camino" href="${href}">${icono(ic, "ico camino-ico")}<span><b>${t}</b><span>${d}</span></span>${icono("flecha", "ico camino-ext")}</a>`; }).join("")}</div>
+  </div>
+</section>`;
+}
+
 const aviso2027 = `<p class="nota-ruta">${icono("calendario", "ico")}<span>La convocatoria 2027 aún no se publica. Las fechas de esta página son las de <b>2026</b>, como referencia; las actualizamos en cuanto salga la oficial.</span></p>`;
 
 // Orden de la ruta (para la mini ruta y los botones anterior/siguiente)
@@ -86,6 +102,7 @@ function pagina(d) {
   const cuerpo = `
 ${cabeceraPagina({ migasHtml: m.html, h1: d.h1, lead: d.lead, extra: miniRuta(d.slug), img })}
 ${secciones}
+${d.cta ? ctaHerramientas(d.cta) : ""}
 ${anteriorSiguiente(d.slug)}
 ${d.sinCaminos ? "" : caminos(`proceso-${d.slug}`)}
 <div class="anuncio" data-anuncio="proceso-${d.slug}" hidden></div>
@@ -251,6 +268,7 @@ const PAGINAS = [
         <p><b>Conclusión del registro para examen y pago.</b> En 2026 fue del 18 al 22 de mayo. Sin este paso no se puede presentar el examen.</p>
         <p>Después viene el <a href="/examen/">examen en línea</a>.</p>`],
     ],
+    cta: ["Antes de registrarte, arma tu lista", ["armar", "cerca"]],
     faq: [
       ["¿Qué documentos necesito para el registro?", "Llave MX del aspirante, CURP, domicilio, teléfono y correo. Si ya terminó la secundaria y su certificado no aparece en el sistema, el archivo electrónico del certificado."],
       ["¿Qué es el comprobante de registro?", "El documento que descargas al final del registro con el orden de tus opciones. Es la base para la asignación en las escuelas sin examen."],
@@ -276,6 +294,7 @@ const PAGINAS = [
       ["¿Cuál conviene?", `<p>Si tu hijo o hija quiere la UNAM o el IPN, la <b>modalidad 3</b> suele ser la opción más segura, porque combina las escuelas que quiere con un respaldo sin examen. La modalidad 2 tiene sentido solo si están dispuestos a buscar lugar en el periodo extemporáneo.</p>
         <p>Para escoger las escuelas con examen, revisa los <a href="/aciertos/">aciertos de cada una</a> y <a href="/como-elegir-opciones/">cómo ordenarlas</a>.</p>`],
     ],
+    cta: ["¿Ya sabes qué escuelas poner?", ["cerca", "armar"]],
     faq: [
       ["¿En qué modalidad se presenta el examen ECOEMS?", "En la modalidad 2 y en la 3. En la modalidad 1 no hay examen."],
       ["¿Cuántas opciones puedo elegir?", "Modalidad 1: de 5 a 10. Modalidad 2: hasta 5 del IPN y 5 de la UNAM. Modalidad 3: de 5 a 10 sin examen más hasta 5 del IPN y 5 de la UNAM, máximo 20."],
@@ -297,13 +316,15 @@ const PAGINAS = [
           <li><b>Retadoras:</b> piden más aciertos de los que lleva. Van primero, si de verdad las quiere.</li>
           <li><b>Alcanzables:</b> piden más o menos lo que lleva, con la meta Tepo (aciertos 2026 + ${MARGEN_TEPO}) como referencia.</li>
           <li><b>Seguras:</b> piden varios aciertos menos. Van al final de las opciones con examen.</li></ul>
-        <p>En la modalidad 3, después van las opciones sin examen, también en orden de preferencia.</p>`],
+        <p>En la modalidad 3, después van las opciones sin examen, también en orden de preferencia.</p>
+        <p><a class="boton" href="/armar-opciones/">Arma y ordena tus opciones</a></p>`],
       ["Más cosas que pesar además de los aciertos", `<ul class="modalidades">
         <li><b>Distancia y transporte.</b> Tres años de trayecto diario pesan. Revisa la ubicación en la página de cada escuela.</li>
         <li><b>Tipo de bachillerato.</b> Prepa y CCH dan pase reglamentado a la UNAM; la vocacional da carrera técnica y orienta al IPN.</li>
         <li><b>Turno</b> y ambiente de la escuela: vale la pena visitarla.</li></ul>
         <p>Compara escuelas en la <a href="/escuelas/">lista de escuelas</a>, prueba la <a href="/calculadora/">calculadora de aciertos</a> o deja que <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a> te arme la lista ordenada según sus aciertos, tu código postal y lo que quiere estudiar.</p>`],
     ],
+    cta: ["Arma tu lista con nuestras herramientas", ["armar", "cerca", "calc"]],
     faq: [
       ["¿Conviene poner primero una escuela muy difícil?", "Sí, si de verdad la quiere. Si no alcanza, se revisa la siguiente opción sin perder nada."],
       ["¿Cuántas escuelas con examen conviene poner?", "Las que de verdad aceptaría, hasta 5 de la UNAM y 5 del IPN. Incluye al menos una o dos seguras para sus aciertos."],
