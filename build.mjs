@@ -65,6 +65,9 @@ writeFileSync(
     cuerpo: `<section class="cabecera-pagina"><div class="contenedor"><h1>No encontramos esta página</h1><p class="lead">Puede que la dirección haya cambiado. Prueba con la <a href="/">portada</a>, la <a href="/aciertos/">tabla de aciertos</a> o la <a href="/escuelas/">lista de escuelas</a>.</p></div></section>`,
   }).replace('content="index, follow, max-image-preview:large"', 'content="noindex"'),
 );
+// IndexNow (Bing, Yandex, Seznam…): archivo de clave en la raíz.
+export const INDEXNOW_KEY = "6573ccf8a71e37569db6b94154a2a6e4";
+writeFileSync(`dist/${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITIO.dominio}/sitemap.xml\n`);
 writeFileSync(
   "dist/sitemap.xml",
