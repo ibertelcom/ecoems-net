@@ -53,7 +53,7 @@ const punto = (p, principal = 0) => [p.coord[0], p.coord[1], p.nombre, p.url, SI
 function chips(esp, n = 99) {
   if (!esp.length) return "";
   const v = esp.slice(0, n);
-  return `<ul class="chips">${v.map((e) => `<li>${e.nombre}</li>`).join("")}${esp.length > n ? `<li class="chip-mas">+${esp.length - n}</li>` : ""}</ul>`;
+  return `<ul class="chips">${v.map((e) => `<li>${typeof e === "string" ? e : e.nombre}</li>`).join("")}${esp.length > n ? `<li class="chip-mas">+${esp.length - n}</li>` : ""}</ul>`;
 }
 
 // ---------- Ficha de plantel ----------
@@ -297,7 +297,7 @@ ${cabeceraPagina({
       const es = lista.filter((p) => p.municipio === z);
       return `
     <div class="grupo-escuelas" data-zona="${z}">
-      <div class="grupo-cabeza"><h3>${s.corto} en ${z}</h3><span>${pl(es.length, "plantel", "planteles")} · ${es[0].entidad === "CDMX" ? "Ciudad de México" : "Estado de México"}</span></div>
+      <div class="grupo-cabeza" data-linea="sin"><h3>${s.corto} en ${z}</h3><span>${pl(es.length, "plantel", "planteles")} · ${es[0].entidad === "CDMX" ? "Ciudad de México" : "Estado de México"}</span></div>
       <ul class="tarjetas-escuela">${es.map(tarjeta).join("")}
       </ul>
     </div>`;
