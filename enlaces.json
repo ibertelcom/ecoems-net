@@ -1,0 +1,5430 @@
+{
+ "filas": [
+  {
+   "r": "/",
+   "entrantes": 56,
+   "salientes": 44,
+   "anchors": [
+    [
+     "Inicio",
+     56
+    ]
+   ]
+  },
+  {
+   "r": "/aciertos/",
+   "entrantes": 47,
+   "salientes": 37,
+   "anchors": [
+    [
+     "cuántos aciertos pide cada escuela del ECOEMS",
+     31
+    ],
+    [
+     "Cuántos aciertos pide el IPN",
+     18
+    ],
+    [
+     "Cuántos aciertos pide la UNAM",
+     17
+    ],
+    [
+     "Cuántos aciertos pide cada escuela",
+     3
+    ],
+    [
+     "tabla de aciertos de las 31 escuelas",
+     3
+    ],
+    [
+     "Cuántos aciertos pide la UNAM y el IPN",
+     2
+    ],
+    [
+     "tabla de aciertos",
+     2
+    ],
+    [
+     "ver tabla completa",
+     1
+    ],
+    [
+     "Tabla de aciertos del ECOEMS",
+     1
+    ],
+    [
+     "aciertos 2026 de cada escuela",
+     1
+    ],
+    [
+     "aciertos de cada escuela",
+     1
+    ],
+    [
+     "Ver la tabla 2024, 2025 y 2026 de las 31 escuelas",
+     1
+    ],
+    [
+     "aciertos de cada una",
+     1
+    ],
+    [
+     "Aciertos que pide cada escuela",
+     1
+    ],
+    [
+     "Ahora revisa Cuántos aciertos pide cada escuela",
+     1
+    ],
+    [
+     "Ver los aciertos de cada escuela",
+     1
+    ],
+    [
+     "Aciertos que pidió cada escuela",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/armar-opciones/",
+   "entrantes": 7,
+   "salientes": 6,
+   "anchors": [
+    [
+     "Arma y ordena tus opciones",
+     3
+    ],
+    [
+     "Arma y ordena tus opciones Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas y revisa si tu lista tiene retadoras, alcanzables y seguras.",
+     3
+    ],
+    [
+     "Armar mis opciones Ordena las escuelas en retadoras, alcanzables y seguras, y descarga la lista para el registro.",
+     1
+    ],
+    [
+     "Pasar a Armar mis opciones",
+     1
+    ],
+    [
+     "Armar mis opciones",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/aviso-de-privacidad/",
+   "entrantes": 1,
+   "salientes": 1,
+   "anchors": [
+    [
+     "aviso de privacidad",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/calculadora/",
+   "entrantes": 7,
+   "salientes": 4,
+   "anchors": [
+    [
+     "Calculadora de aciertos",
+     3
+    ],
+    [
+     "calculadora de aciertos",
+     2
+    ],
+    [
+     "Calculadora de aciertos Escribe sus aciertos y ve qué escuelas le alcanzan con margen, cuáles están en la orilla y cuáles son reto.",
+     1
+    ],
+    [
+     "Calculadora de aciertos del ECOEMS",
+     1
+    ],
+    [
+     "calculadora",
+     1
+    ],
+    [
+     "Calculadora de aciertos Escribe los aciertos de su último simulacro y ve qué escuelas le alcanzan, cuáles están en la orilla y cuáles necesitan más estudio.",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/como-elegir-opciones/",
+   "entrantes": 13,
+   "salientes": 18,
+   "anchors": [
+    [
+     "Elegir opciones",
+     10
+    ],
+    [
+     "cómo elegir opciones",
+     1
+    ],
+    [
+     "Cómo elegir y ordenar las opciones",
+     1
+    ],
+    [
+     "Parada anterior Cómo elegir y ordenar las opciones",
+     1
+    ],
+    [
+     "Elección de modalidad y orden de opciones",
+     1
+    ],
+    [
+     "2 Elegir opciones Se elige la modalidad y se ordenan las escuelas, de la más deseada a la menos. Durante el registro",
+     1
+    ],
+    [
+     "Cómo ordenar las opciones",
+     1
+    ],
+    [
+     "ordenar las escuelas",
+     1
+    ],
+    [
+     "cómo ordenarlas",
+     1
+    ],
+    [
+     "Siguiente parada Cómo elegir y ordenar las opciones",
+     1
+    ],
+    [
+     "Cómo ordenar las opciones del ECOEMS",
+     1
+    ],
+    [
+     "Leer la guía de cómo elegir opciones",
+     1
+    ],
+    [
+     "Cómo elegir y ordenar las opciones del ECOEMS",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/comparador/",
+   "entrantes": 37,
+   "salientes": 4,
+   "anchors": [
+    [
+     "Comparador de escuelas",
+     5
+    ],
+    [
+     "Compara CCH Azcapotzalco con otras escuelas",
+     1
+    ],
+    [
+     "Compara CCH Naucalpan con otras escuelas",
+     1
+    ],
+    [
+     "Compara CCH Oriente con otras escuelas",
+     1
+    ],
+    [
+     "Compara CCH Sur con otras escuelas",
+     1
+    ],
+    [
+     "Compara CCH Vallejo con otras escuelas",
+     1
+    ],
+    [
+     "Compara CET 1 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 1 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 2 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 3 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 4 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 5 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 6 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 7 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 8 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Prepa 9 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 1 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 10 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 11 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 12 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 13 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 14 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 15 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 19 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 2 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 3 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 4 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 5 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 6 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 7 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 8 con otras escuelas",
+     1
+    ],
+    [
+     "Compara Voca 9 con otras escuelas",
+     1
+    ],
+    [
+     "Comparador de escuelas Pon dos o tres escuelas lado a lado: aciertos de tres años, ubicación y tipo de bachillerato.",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/contacto/",
+   "entrantes": 0,
+   "salientes": 3,
+   "anchors": []
+  },
+  {
+   "r": "/correo/",
+   "entrantes": 11,
+   "salientes": 11,
+   "anchors": [
+    [
+     "Correo",
+     10
+    ],
+    [
+     "Correo de Mi Derecho, Mi Lugar",
+     2
+    ],
+    [
+     "Siguiente parada Correo de Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "Parada anterior Correo de Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "qué correo conviene usar",
+     1
+    ],
+    [
+     "Leer la guía de correo del registro",
+     1
+    ],
+    [
+     "Correo del registro",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/",
+   "entrantes": 37,
+   "salientes": 39,
+   "anchors": [
+    [
+     "Escuelas",
+     35
+    ],
+    [
+     "lista de escuelas",
+     1
+    ],
+    [
+     "Listado de escuelas del ECOEMS",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/cch-azcapotzalco/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "CCH Azcapotzalco",
+     8
+    ],
+    [
+     "¿Cuántos aciertos pide el CCH Azcapotzalco?",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/cch-naucalpan/",
+   "entrantes": 10,
+   "salientes": 10,
+   "anchors": [
+    [
+     "CCH Naucalpan",
+     10
+    ],
+    [
+     "¿Cuántos aciertos pide el CCH Naucalpan?",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/cch-oriente/",
+   "entrantes": 10,
+   "salientes": 10,
+   "anchors": [
+    [
+     "CCH Oriente",
+     10
+    ],
+    [
+     "¿Cuántos aciertos pide el CCH Oriente?",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/cch-sur/",
+   "entrantes": 10,
+   "salientes": 10,
+   "anchors": [
+    [
+     "CCH Sur",
+     10
+    ],
+    [
+     "¿Cuántos aciertos pide el CCH Sur?",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/cch-unam/",
+   "entrantes": 10,
+   "salientes": 11,
+   "anchors": [
+    [
+     "CCH UNAM",
+     13
+    ],
+    [
+     "CCH UNAM 85–97 aciertos en 2026 · 5 escuelas",
+     1
+    ],
+    [
+     "Ver CCH UNAM",
+     1
+    ],
+    [
+     "CCH",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/cch-vallejo/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "CCH Vallejo",
+     9
+    ],
+    [
+     "¿Cuántos aciertos pide el CCH Vallejo?",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/cet-1/",
+   "entrantes": 5,
+   "salientes": 10,
+   "anchors": [
+    [
+     "CET 1",
+     5
+    ],
+    [
+     "¿Cuántos aciertos pide el CET 1?",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-1/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 1 (ENP 1)",
+     7
+    ],
+    [
+     "Prepa 1",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 1?",
+     1
+    ],
+    [
+     "Prepa 1 ENP 1",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-2/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 2 (ENP 2)",
+     7
+    ],
+    [
+     "Prepa 2",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 2?",
+     1
+    ],
+    [
+     "Prepa 2 ENP 2",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-3/",
+   "entrantes": 11,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 3 (ENP 3)",
+     9
+    ],
+    [
+     "Prepa 3",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 3?",
+     1
+    ],
+    [
+     "Prepa 3 ENP 3",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-4/",
+   "entrantes": 10,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 4 (ENP 4)",
+     8
+    ],
+    [
+     "Prepa 4",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 4?",
+     1
+    ],
+    [
+     "Prepa 4 ENP 4",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-5/",
+   "entrantes": 10,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 5 (ENP 5)",
+     8
+    ],
+    [
+     "Prepa 5",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 5?",
+     1
+    ],
+    [
+     "Prepa 5 ENP 5",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-6/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 6 (ENP 6)",
+     7
+    ],
+    [
+     "Prepa 6",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 6?",
+     1
+    ],
+    [
+     "Prepa 6 ENP 6",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-7/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 7 (ENP 7)",
+     6
+    ],
+    [
+     "Prepa 7",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 7?",
+     1
+    ],
+    [
+     "Prepa 7 ENP 7",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-8/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 8 (ENP 8)",
+     6
+    ],
+    [
+     "Prepa 8",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 8?",
+     1
+    ],
+    [
+     "Prepa 8 ENP 8",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepa-9/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Prepa 9 (ENP 9)",
+     7
+    ],
+    [
+     "Prepa 9",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Prepa 9?",
+     1
+    ],
+    [
+     "Prepa 9 ENP 9",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/prepas-unam/",
+   "entrantes": 14,
+   "salientes": 15,
+   "anchors": [
+    [
+     "Prepas UNAM",
+     21
+    ],
+    [
+     "Prepas UNAM 95–114 aciertos en 2026 · 9 escuelas",
+     1
+    ],
+    [
+     "Ver Prepas UNAM",
+     1
+    ],
+    [
+     "las prepas de la UNAM",
+     1
+    ],
+    [
+     "prepas de la UNAM",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/sin-examen/",
+   "entrantes": 5,
+   "salientes": 6,
+   "anchors": [
+    [
+     "Prepas sin examen",
+     3
+    ],
+    [
+     "Prepas sin examen de admisión",
+     1
+    ],
+    [
+     "Escuelas sin examen",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-1/",
+   "entrantes": 11,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 1 (CECyT 1)",
+     9
+    ],
+    [
+     "Voca 1",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 1?",
+     1
+    ],
+    [
+     "Voca 1 CECyT 1",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-10/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 10 (CECyT 10)",
+     7
+    ],
+    [
+     "Voca 10",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 10?",
+     1
+    ],
+    [
+     "Voca 10 CECyT 10",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-11/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 11 (CECyT 11)",
+     6
+    ],
+    [
+     "Voca 11",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 11?",
+     1
+    ],
+    [
+     "Voca 11 CECyT 11",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-12/",
+   "entrantes": 11,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 12 (CECyT 12)",
+     9
+    ],
+    [
+     "Voca 12",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 12?",
+     1
+    ],
+    [
+     "Voca 12 CECyT 12",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-13/",
+   "entrantes": 10,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 13 (CECyT 13)",
+     8
+    ],
+    [
+     "Voca 13",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 13?",
+     1
+    ],
+    [
+     "Voca 13 CECyT 13",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-14/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 14 (CECyT 14)",
+     6
+    ],
+    [
+     "Voca 14",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 14?",
+     1
+    ],
+    [
+     "Voca 14 CECyT 14",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-15/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 15 (CECyT 15)",
+     7
+    ],
+    [
+     "Voca 15",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 15?",
+     1
+    ],
+    [
+     "Voca 15 CECyT 15",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-19/",
+   "entrantes": 11,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 19 (CECyT 19)",
+     9
+    ],
+    [
+     "Voca 19",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 19?",
+     1
+    ],
+    [
+     "Voca 19 CECyT 19",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-2/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 2 (CECyT 2)",
+     7
+    ],
+    [
+     "Voca 2",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 2?",
+     1
+    ],
+    [
+     "Voca 2 CECyT 2",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-3/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 3 (CECyT 3)",
+     7
+    ],
+    [
+     "Voca 3",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 3?",
+     1
+    ],
+    [
+     "Voca 3 CECyT 3",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-4/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 4 (CECyT 4)",
+     7
+    ],
+    [
+     "Voca 4",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 4?",
+     1
+    ],
+    [
+     "Voca 4 CECyT 4",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-5/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 5 (CECyT 5)",
+     7
+    ],
+    [
+     "Voca 5",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 5?",
+     1
+    ],
+    [
+     "Voca 5 CECyT 5",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-6/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 6 (CECyT 6)",
+     6
+    ],
+    [
+     "Voca 6",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 6?",
+     1
+    ],
+    [
+     "Voca 6 CECyT 6",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-7/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 7 (CECyT 7)",
+     6
+    ],
+    [
+     "Voca 7",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 7?",
+     1
+    ],
+    [
+     "Voca 7 CECyT 7",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-8/",
+   "entrantes": 9,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 8 (CECyT 8)",
+     7
+    ],
+    [
+     "Voca 8",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 8?",
+     1
+    ],
+    [
+     "Voca 8 CECyT 8",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/voca-9/",
+   "entrantes": 8,
+   "salientes": 10,
+   "anchors": [
+    [
+     "Voca 9 (CECyT 9)",
+     6
+    ],
+    [
+     "Voca 9",
+     1
+    ],
+    [
+     "¿Cuántos aciertos pide la Voca 9?",
+     1
+    ],
+    [
+     "Voca 9 CECyT 9",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/escuelas/vocacionales-ipn/",
+   "entrantes": 22,
+   "salientes": 23,
+   "anchors": [
+    [
+     "Vocacionales IPN",
+     37
+    ],
+    [
+     "las vocacionales del IPN",
+     2
+    ],
+    [
+     "Vocacionales IPN 75–102 aciertos en 2026 · 17 escuelas",
+     1
+    ],
+    [
+     "Ver Vocacionales IPN",
+     1
+    ],
+    [
+     "vocacionales del IPN",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/examen/",
+   "entrantes": 12,
+   "salientes": 13,
+   "anchors": [
+    [
+     "Examen",
+     10
+    ],
+    [
+     "Examen ECOEMS en línea",
+     2
+    ],
+    [
+     "examen en línea",
+     2
+    ],
+    [
+     "Siguiente parada Examen ECOEMS en línea",
+     1
+    ],
+    [
+     "Toma de fotografía presencial (solo quien va por UNAM o IPN)",
+     1
+    ],
+    [
+     "Simulador oficial para probar el equipo",
+     1
+    ],
+    [
+     "4 Examen en línea 128 preguntas. Antes hay un simulador oficial para probar el equipo. 2026: del 20 al 28 de junio",
+     1
+    ],
+    [
+     "Leer la guía de el día del examen",
+     1
+    ],
+    [
+     "Cómo es el examen ECOEMS en línea",
+     1
+    ],
+    [
+     "Parada anterior Examen ECOEMS en línea",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/fechas/",
+   "entrantes": 12,
+   "salientes": 14,
+   "anchors": [
+    [
+     "Fechas",
+     10
+    ],
+    [
+     "Cuándo es el examen ECOEMS",
+     2
+    ],
+    [
+     "Fechas del ECOEMS",
+     2
+    ],
+    [
+     "Ver el calendario completo",
+     1
+    ],
+    [
+     "Parada anterior Fechas del ECOEMS",
+     1
+    ],
+    [
+     "calendario",
+     1
+    ],
+    [
+     "Siguiente parada Fechas del ECOEMS",
+     1
+    ],
+    [
+     "Leer la guía de fechas y calendario",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/llave-mx/",
+   "entrantes": 11,
+   "salientes": 11,
+   "anchors": [
+    [
+     "Llave MX",
+     13
+    ],
+    [
+     "Siguiente parada Llave MX para Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "Crear la Llave MX",
+     1
+    ],
+    [
+     "Leer la guía de llave mx",
+     1
+    ],
+    [
+     "Parada anterior Llave MX para Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "Llave MX para Mi Derecho, Mi Lugar",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/mapa/",
+   "entrantes": 7,
+   "salientes": 35,
+   "anchors": [
+    [
+     "Mapa de prepas UNAM y vocacionales IPN",
+     2
+    ],
+    [
+     "mapa de escuelas",
+     2
+    ],
+    [
+     "Mapa de escuelas",
+     1
+    ],
+    [
+     "Mapa de prepas y CCH",
+     1
+    ],
+    [
+     "Mapa de prepas, CCH y vocacionales",
+     1
+    ],
+    [
+     "Mapa de escuelas Ubica las prepas, CCH y vocacionales cerca de tu casa y calcula cuánto tardaría en llegar.",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/mi-derecho-mi-lugar/",
+   "entrantes": 11,
+   "salientes": 14,
+   "anchors": [
+    [
+     "Mi Derecho, Mi Lugar",
+     21
+    ],
+    [
+     "Parada anterior Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "Leer la guía de mi derecho, mi lugar",
+     1
+    ],
+    [
+     "Siguiente parada Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "Cómo funciona Mi Derecho, Mi Lugar",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/modalidades/",
+   "entrantes": 14,
+   "salientes": 15,
+   "anchors": [
+    [
+     "Modalidades",
+     10
+    ],
+    [
+     "qué modalidad conviene",
+     1
+    ],
+    [
+     "Parada anterior Modalidades con y sin examen",
+     1
+    ],
+    [
+     "Modalidad con examen, sin examen o ambas",
+     1
+    ],
+    [
+     "modalidad 1 o la 3",
+     1
+    ],
+    [
+     "Modalidad 1 y modalidad 3",
+     1
+    ],
+    [
+     "Cómo elegir la modalidad que le conviene",
+     1
+    ],
+    [
+     "Elegir la modalidad",
+     1
+    ],
+    [
+     "Modalidades con examen y sin examen",
+     1
+    ],
+    [
+     "Leer la guía de modalidades",
+     1
+    ],
+    [
+     "1, 2 o 3",
+     1
+    ],
+    [
+     "Siguiente parada Modalidades con y sin examen",
+     1
+    ],
+    [
+     "Modalidades del registro",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/no-quede/",
+   "entrantes": 13,
+   "salientes": 14,
+   "anchors": [
+    [
+     "Si no quedó",
+     10
+    ],
+    [
+     "Qué hacer si no quedó",
+     2
+    ],
+    [
+     "Registro extemporáneo para opciones sin examen",
+     1
+    ],
+    [
+     "Lugares disponibles por procedimiento de cada institución",
+     1
+    ],
+    [
+     "6 Inscripción o plan B Inscribirse en la escuela asignada o buscar lugares libres. 2026: finales de agosto",
+     1
+    ],
+    [
+     "buscar plan B",
+     1
+    ],
+    [
+     "Leer la guía de si no quedó",
+     1
+    ],
+    [
+     "Ver qué hacer",
+     1
+    ],
+    [
+     "Siguiente parada Qué hacer si no quedó en el ECOEMS",
+     1
+    ],
+    [
+     "Qué hacer si no quedó en el ECOEMS",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/preguntas-frecuentes/",
+   "entrantes": 4,
+   "salientes": 13,
+   "anchors": [
+    [
+     "Preguntas frecuentes del ECOEMS",
+     2
+    ],
+    [
+     "preguntas frecuentes",
+     1
+    ],
+    [
+     "Preguntas frecuentes de Mi Derecho, Mi Lugar",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/prepas-cerca-de-mi/",
+   "entrantes": 44,
+   "salientes": 7,
+   "anchors": [
+    [
+     "Prepas cerca de mí",
+     40
+    ],
+    [
+     "Prepas cerca de mí Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ya ordenada.",
+     3
+    ],
+    [
+     "Prepas UNAM cerca de mí",
+     1
+    ],
+    [
+     "Vocacionales cerca de mí",
+     1
+    ],
+    [
+     "Prepas cerca de mí: ¿cuál le conviene? Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ordenada para el registro. Probar ahora →",
+     1
+    ],
+    [
+     "¿Cuál le conviene? Arma su lista",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/que-es-ecoems/",
+   "entrantes": 11,
+   "salientes": 17,
+   "anchors": [
+    [
+     "Qué es",
+     10
+    ],
+    [
+     "examen ECOEMS",
+     1
+    ],
+    [
+     "Parada anterior Qué es el ECOEMS",
+     1
+    ],
+    [
+     "Leer la guía de qué es el ecoems",
+     1
+    ],
+    [
+     "Qué es el ECOEMS",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/registro/",
+   "entrantes": 12,
+   "salientes": 13,
+   "anchors": [
+    [
+     "Registro",
+     10
+    ],
+    [
+     "Registro de Mi Derecho, Mi Lugar",
+     4
+    ],
+    [
+     "Registro en línea en Mi Derecho, Mi Lugar, con Llave MX",
+     1
+    ],
+    [
+     "Conclusión del registro para examen y pago del derecho",
+     1
+    ],
+    [
+     "1 Llave MX y registro Se crea la Llave MX y se llena el registro en miderechomilugar.gob.mx. 2026: del 17 de marzo al 14 de abril",
+     1
+    ],
+    [
+     "3 Concluir registro y pagar Quien va por UNAM o IPN termina su registro para examen y paga el derecho. 2026: del 18 al 22 de mayo",
+     1
+    ],
+    [
+     "registro paso a paso",
+     1
+    ],
+    [
+     "Siguiente parada Registro de Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "Registro de Mi Derecho, Mi Lugar paso a paso",
+     1
+    ],
+    [
+     "Hacer el registro",
+     1
+    ],
+    [
+     "Parada anterior Registro de Mi Derecho, Mi Lugar",
+     1
+    ],
+    [
+     "Leer la guía de registro paso a paso",
+     1
+    ]
+   ]
+  },
+  {
+   "r": "/resultados/",
+   "entrantes": 12,
+   "salientes": 12,
+   "anchors": [
+    [
+     "Resultados",
+     10
+    ],
+    [
+     "Resultados del ECOEMS",
+     5
+    ],
+    [
+     "Cómo consultarlo",
+     1
+    ],
+    [
+     "Siguiente parada Resultados del ECOEMS",
+     1
+    ],
+    [
+     "Gaceta Electrónica de Resultados",
+     1
+    ],
+    [
+     "Cierre del proceso",
+     1
+    ],
+    [
+     "5 Resultados Se publica la escuela asignada a cada aspirante y sus aciertos. 2026: 18 de agosto",
+     1
+    ],
+    [
+     "Consultar el resultado",
+     1
+    ],
+    [
+     "Parada anterior Resultados del ECOEMS",
+     1
+    ],
+    [
+     "Leer la guía de resultados",
+     1
+    ]
+   ]
+  }
+ ],
+ "sal": {
+  "/aciertos/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11"
+   ],
+   [
+    "/escuelas/cet-1/",
+    "CET 1"
+   ],
+   [
+    "/calculadora/",
+    "calculadora de aciertos"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM 95–114 aciertos en 2026 · 9 escuelas"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM 85–97 aciertos en 2026 · 5 escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN 75–102 aciertos en 2026 · 17 escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/calculadora/",
+    "Calculadora de aciertos"
+   ],
+   [
+    "/comparador/",
+    "Comparador de escuelas"
+   ]
+  ],
+  "/armar-opciones/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "cómo elegir opciones"
+   ],
+   [
+    "/modalidades/",
+    "qué modalidad conviene"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Cómo elegir y ordenar las opciones"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Comparador de escuelas"
+   ],
+   [
+    "/calculadora/",
+    "Calculadora de aciertos"
+   ]
+  ],
+  "/aviso-de-privacidad/": [
+   [
+    "/",
+    "Inicio"
+   ]
+  ],
+  "/calculadora/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/aciertos/",
+    "ver tabla completa"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/armar-opciones/",
+    "Arma y ordena tus opciones"
+   ],
+   [
+    "/aciertos/",
+    "Tabla de aciertos del ECOEMS"
+   ]
+  ],
+  "/como-elegir-opciones/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/aciertos/",
+    "aciertos 2026 de cada escuela"
+   ],
+   [
+    "/armar-opciones/",
+    "Arma y ordena tus opciones"
+   ],
+   [
+    "/escuelas/",
+    "lista de escuelas"
+   ],
+   [
+    "/calculadora/",
+    "calculadora de aciertos"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/armar-opciones/",
+    "Arma y ordena tus opciones Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas y revisa si tu lista tiene retadoras, alcanzables y seguras."
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ya ordenada."
+   ],
+   [
+    "/calculadora/",
+    "Calculadora de aciertos Escribe sus aciertos y ve qué escuelas le alcanzan con margen, cuáles están en la orilla y cuáles son reto."
+   ],
+   [
+    "/modalidades/",
+    "Parada anterior Modalidades con y sin examen"
+   ],
+   [
+    "/correo/",
+    "Siguiente parada Correo de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM y el IPN"
+   ],
+   [
+    "/comparador/",
+    "Comparador de escuelas"
+   ],
+   [
+    "/modalidades/",
+    "Modalidad con examen, sin examen o ambas"
+   ],
+   [
+    "/mapa/",
+    "Mapa de prepas UNAM y vocacionales IPN"
+   ]
+  ],
+  "/comparador/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide cada escuela"
+   ],
+   [
+    "/mapa/",
+    "Mapa de escuelas"
+   ],
+   [
+    "/armar-opciones/",
+    "Arma y ordena tus opciones"
+   ]
+  ],
+  "/contacto/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/preguntas-frecuentes/",
+    "preguntas frecuentes"
+   ],
+   [
+    "/aviso-de-privacidad/",
+    "aviso de privacidad"
+   ]
+  ],
+  "/correo/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/resultados/",
+    "Cómo consultarlo"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Parada anterior Cómo elegir y ordenar las opciones"
+   ],
+   [
+    "/examen/",
+    "Siguiente parada Examen ECOEMS en línea"
+   ],
+   [
+    "/registro/",
+    "Registro de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/resultados/",
+    "Resultados del ECOEMS"
+   ]
+  ],
+  "/escuelas/cch-azcapotzalco/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7 (CECyT 7)"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 (CECyT 5)"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara CCH Azcapotzalco con otras escuelas"
+   ]
+  ],
+  "/escuelas/cch-naucalpan/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 (CECyT 3)"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 (CECyT 15)"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 (CECyT 2)"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara CCH Naucalpan con otras escuelas"
+   ]
+  ],
+  "/escuelas/cch-oriente/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara CCH Oriente con otras escuelas"
+   ]
+  ],
+  "/escuelas/cch-sur/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8 (ENP 8)"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara CCH Sur con otras escuelas"
+   ]
+  ],
+  "/escuelas/cch-unam/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "¿Cuántos aciertos pide el CCH Azcapotzalco?"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "¿Cuántos aciertos pide el CCH Naucalpan?"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "¿Cuántos aciertos pide el CCH Oriente?"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "¿Cuántos aciertos pide el CCH Sur?"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "¿Cuántos aciertos pide el CCH Vallejo?"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "las vocacionales del IPN"
+   ],
+   [
+    "/aciertos/",
+    "tabla de aciertos de las 31 escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/mapa/",
+    "Mapa de prepas y CCH"
+   ]
+  ],
+  "/escuelas/cch-vallejo/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara CCH Vallejo con otras escuelas"
+   ]
+  ],
+  "/escuelas/cet-1/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11 (CECyT 11)"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 (CECyT 8)"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 (CECyT 10)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara CET 1 con otras escuelas"
+   ]
+  ],
+  "/escuelas/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Ver Prepas UNAM"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 (ENP 1)"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 (ENP 2)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 (ENP 6)"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7 (ENP 7)"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8 (ENP 8)"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 (ENP 9)"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "Ver CCH UNAM"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Ver Vocacionales IPN"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/cet-1/",
+    "CET 1"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 (CECyT 2)"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 (CECyT 3)"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 (CECyT 4)"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 (CECyT 5)"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6 (CECyT 6)"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7 (CECyT 7)"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 (CECyT 8)"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9 (CECyT 9)"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 (CECyT 10)"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11 (CECyT 11)"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14 (CECyT 14)"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 (CECyT 15)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/mapa/",
+    "mapa de escuelas"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide cada escuela"
+   ],
+   [
+    "/mapa/",
+    "Mapa de prepas, CCH y vocacionales"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/escuelas/sin-examen/",
+    "Prepas sin examen"
+   ]
+  ],
+  "/escuelas/prepa-1/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9 (CECyT 9)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7 (ENP 7)"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 1 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-2/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 (ENP 9)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 (ENP 6)"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 2 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-3/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 (ENP 2)"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 (ENP 1)"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 (ENP 9)"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 3 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-4/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 4 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-5/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 (ENP 2)"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 (ENP 1)"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 (ENP 9)"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 5 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-6/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 (ENP 9)"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 (ENP 2)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 6 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-7/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9 (CECyT 9)"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8 (ENP 8)"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 (ENP 1)"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 7 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-8/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7 (ENP 7)"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9 (CECyT 9)"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 8 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepa-9/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 (ENP 2)"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 (ENP 6)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Prepa 9 con otras escuelas"
+   ]
+  ],
+  "/escuelas/prepas-unam/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 (ENP 6)"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 (ENP 9)"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 (ENP 2)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 (ENP 1)"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7 (ENP 7)"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8 (ENP 8)"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "¿Cuántos aciertos pide la Prepa 1?"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "¿Cuántos aciertos pide la Prepa 2?"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "¿Cuántos aciertos pide la Prepa 3?"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "¿Cuántos aciertos pide la Prepa 4?"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "¿Cuántos aciertos pide la Prepa 5?"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "¿Cuántos aciertos pide la Prepa 6?"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "¿Cuántos aciertos pide la Prepa 7?"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "¿Cuántos aciertos pide la Prepa 8?"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "¿Cuántos aciertos pide la Prepa 9?"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "las vocacionales del IPN"
+   ],
+   [
+    "/aciertos/",
+    "tabla de aciertos de las 31 escuelas"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas UNAM cerca de mí"
+   ]
+  ],
+  "/escuelas/sin-examen/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/modalidades/",
+    "modalidad 1 o la 3"
+   ],
+   [
+    "/mapa/",
+    "mapa de escuelas"
+   ],
+   [
+    "/modalidades/",
+    "Modalidad 1 y modalidad 3"
+   ],
+   [
+    "/no-quede/",
+    "Qué hacer si no quedó"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ]
+  ],
+  "/escuelas/voca-1/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 (CECyT 2)"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 (CECyT 4)"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 (CECyT 3)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 1 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-10/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 (CECyT 8)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11 (CECyT 11)"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 10 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-11/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 (CECyT 8)"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 (CECyT 10)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 11 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-12/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14 (CECyT 14)"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 (CECyT 4)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 12 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-13/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 13 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-14/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 (CECyT 4)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 14 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-15/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6 (CECyT 6)"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 (CECyT 5)"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 (CECyT 3)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 15 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-19/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14 (CECyT 14)"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 (CECyT 8)"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 (CECyT 10)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 19 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-2/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 (CECyT 4)"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 (CECyT 3)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 2 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-3/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 (CECyT 15)"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 (CECyT 2)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 3 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-4/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 (CECyT 2)"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14 (CECyT 14)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 4 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-5/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6 (CECyT 6)"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7 (CECyT 7)"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 (CECyT 15)"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 5 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-6/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 (CECyT 5)"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 (CECyT 15)"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7 (CECyT 7)"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 6 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-7/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 (CECyT 5)"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6 (CECyT 6)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 7 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-8/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 (CECyT 10)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11 (CECyT 11)"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 8 con otras escuelas"
+   ]
+  ],
+  "/escuelas/voca-9/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "cuántos aciertos pide cada escuela del ECOEMS"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7 (ENP 7)"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 (ENP 1)"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8 (ENP 8)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "Vocacionales IPN"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/comparador/",
+    "Compara Voca 9 con otras escuelas"
+   ]
+  ],
+  "/escuelas/vocacionales-ipn/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/escuelas/",
+    "Escuelas"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9 (CECyT 9)"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7 (CECyT 7)"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 (CECyT 5)"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6 (CECyT 6)"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 (CECyT 15)"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 (CECyT 3)"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 (CECyT 2)"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 (CECyT 4)"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14 (CECyT 14)"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 (CECyT 8)"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 (CECyT 10)"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11 (CECyT 11)"
+   ],
+   [
+    "/escuelas/cet-1/",
+    "CET 1"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "¿Cuántos aciertos pide la Voca 1?"
+   ],
+   [
+    "/escuelas/cet-1/",
+    "¿Cuántos aciertos pide el CET 1?"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "¿Cuántos aciertos pide la Voca 2?"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "¿Cuántos aciertos pide la Voca 3?"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "¿Cuántos aciertos pide la Voca 4?"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "¿Cuántos aciertos pide la Voca 5?"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "¿Cuántos aciertos pide la Voca 6?"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "¿Cuántos aciertos pide la Voca 7?"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "¿Cuántos aciertos pide la Voca 8?"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "¿Cuántos aciertos pide la Voca 9?"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "¿Cuántos aciertos pide la Voca 10?"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "¿Cuántos aciertos pide la Voca 11?"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "¿Cuántos aciertos pide la Voca 12?"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "¿Cuántos aciertos pide la Voca 13?"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "¿Cuántos aciertos pide la Voca 14?"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "¿Cuántos aciertos pide la Voca 15?"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "¿Cuántos aciertos pide la Voca 19?"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "las prepas de la UNAM"
+   ],
+   [
+    "/aciertos/",
+    "tabla de aciertos de las 31 escuelas"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "Prepas UNAM"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH UNAM"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide el IPN"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Vocacionales cerca de mí"
+   ]
+  ],
+  "/examen/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/correo/",
+    "Parada anterior Correo de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/resultados/",
+    "Siguiente parada Resultados del ECOEMS"
+   ],
+   [
+    "/fechas/",
+    "Cuándo es el examen ECOEMS"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide cada escuela"
+   ],
+   [
+    "/calculadora/",
+    "Calculadora de aciertos del ECOEMS"
+   ],
+   [
+    "/resultados/",
+    "Resultados del ECOEMS"
+   ]
+  ],
+  "/fechas/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/registro/",
+    "Registro en línea en Mi Derecho, Mi Lugar, con Llave MX"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elección de modalidad y orden de opciones"
+   ],
+   [
+    "/examen/",
+    "Toma de fotografía presencial (solo quien va por UNAM o IPN)"
+   ],
+   [
+    "/registro/",
+    "Conclusión del registro para examen y pago del derecho"
+   ],
+   [
+    "/examen/",
+    "Simulador oficial para probar el equipo"
+   ],
+   [
+    "/examen/",
+    "Examen ECOEMS en línea"
+   ],
+   [
+    "/resultados/",
+    "Gaceta Electrónica de Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Registro extemporáneo para opciones sin examen"
+   ],
+   [
+    "/no-quede/",
+    "Lugares disponibles por procedimiento de cada institución"
+   ],
+   [
+    "/resultados/",
+    "Cierre del proceso"
+   ],
+   [
+    "/aciertos/",
+    "aciertos de cada escuela"
+   ],
+   [
+    "/calculadora/",
+    "calculadora"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Parada anterior Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/llave-mx/",
+    "Siguiente parada Llave MX para Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/registro/",
+    "Registro de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/examen/",
+    "Examen ECOEMS en línea"
+   ],
+   [
+    "/resultados/",
+    "Resultados del ECOEMS"
+   ],
+   [
+    "/preguntas-frecuentes/",
+    "Preguntas frecuentes del ECOEMS"
+   ]
+  ],
+  "/": [
+   [
+    "/registro/",
+    "1 Llave MX y registro Se crea la Llave MX y se llena el registro en miderechomilugar.gob.mx. 2026: del 17 de marzo al 14 de abril"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "2 Elegir opciones Se elige la modalidad y se ordenan las escuelas, de la más deseada a la menos. Durante el registro"
+   ],
+   [
+    "/registro/",
+    "3 Concluir registro y pagar Quien va por UNAM o IPN termina su registro para examen y paga el derecho. 2026: del 18 al 22 de mayo"
+   ],
+   [
+    "/examen/",
+    "4 Examen en línea 128 preguntas. Antes hay un simulador oficial para probar el equipo. 2026: del 20 al 28 de junio"
+   ],
+   [
+    "/resultados/",
+    "5 Resultados Se publica la escuela asignada a cada aspirante y sus aciertos. 2026: 18 de agosto"
+   ],
+   [
+    "/no-quede/",
+    "6 Inscripción o plan B Inscribirse en la escuela asignada o buscar lugares libres. 2026: finales de agosto"
+   ],
+   [
+    "/fechas/",
+    "Ver el calendario completo"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 (ENP 6)"
+   ],
+   [
+    "/aciertos/",
+    "Ver la tabla 2024, 2025 y 2026 de las 31 escuelas"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 ENP 1"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 ENP 2"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 ENP 3"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 ENP 4"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 ENP 5"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 ENP 6"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7 ENP 7"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8 ENP 8"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 ENP 9"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 CECyT 1"
+   ],
+   [
+    "/escuelas/cet-1/",
+    "CET 1"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 CECyT 2"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 CECyT 3"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 CECyT 4"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 CECyT 5"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6 CECyT 6"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7 CECyT 7"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 CECyT 8"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9 CECyT 9"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 CECyT 10"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11 CECyT 11"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 CECyT 12"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 CECyT 13"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14 CECyT 14"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 CECyT 15"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 CECyT 19"
+   ],
+   [
+    "/modalidades/",
+    "Cómo elegir la modalidad que le conviene"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí: ¿cuál le conviene? Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ordenada para el registro. Probar ahora →"
+   ],
+   [
+    "/calculadora/",
+    "Calculadora de aciertos Escribe los aciertos de su último simulacro y ve qué escuelas le alcanzan, cuáles están en la orilla y cuáles necesitan más estudio."
+   ],
+   [
+    "/mapa/",
+    "Mapa de escuelas Ubica las prepas, CCH y vocacionales cerca de tu casa y calcula cuánto tardaría en llegar."
+   ],
+   [
+    "/comparador/",
+    "Comparador de escuelas Pon dos o tres escuelas lado a lado: aciertos de tres años, ubicación y tipo de bachillerato."
+   ],
+   [
+    "/armar-opciones/",
+    "Armar mis opciones Ordena las escuelas en retadoras, alcanzables y seguras, y descarga la lista para el registro."
+   ]
+  ],
+  "/llave-mx/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/correo/",
+    "qué correo conviene usar"
+   ],
+   [
+    "/registro/",
+    "registro paso a paso"
+   ],
+   [
+    "/fechas/",
+    "Parada anterior Fechas del ECOEMS"
+   ],
+   [
+    "/registro/",
+    "Siguiente parada Registro de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/registro/",
+    "Registro de Mi Derecho, Mi Lugar paso a paso"
+   ],
+   [
+    "/correo/",
+    "Correo de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas del ECOEMS"
+   ]
+  ],
+  "/mapa/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "¿Cuál le conviene? Arma su lista"
+   ],
+   [
+    "/escuelas/prepa-8/",
+    "Prepa 8 (ENP 8)"
+   ],
+   [
+    "/escuelas/voca-4/",
+    "Voca 4 (CECyT 4)"
+   ],
+   [
+    "/escuelas/cch-azcapotzalco/",
+    "CCH Azcapotzalco"
+   ],
+   [
+    "/escuelas/voca-6/",
+    "Voca 6 (CECyT 6)"
+   ],
+   [
+    "/escuelas/voca-8/",
+    "Voca 8 (CECyT 8)"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 (ENP 6)"
+   ],
+   [
+    "/escuelas/cch-sur/",
+    "CCH Sur"
+   ],
+   [
+    "/escuelas/voca-13/",
+    "Voca 13 (CECyT 13)"
+   ],
+   [
+    "/escuelas/voca-5/",
+    "Voca 5 (CECyT 5)"
+   ],
+   [
+    "/escuelas/voca-12/",
+    "Voca 12 (CECyT 12)"
+   ],
+   [
+    "/escuelas/voca-3/",
+    "Voca 3 (CECyT 3)"
+   ],
+   [
+    "/escuelas/prepa-3/",
+    "Prepa 3 (ENP 3)"
+   ],
+   [
+    "/escuelas/prepa-9/",
+    "Prepa 9 (ENP 9)"
+   ],
+   [
+    "/escuelas/cch-vallejo/",
+    "CCH Vallejo"
+   ],
+   [
+    "/escuelas/voca-1/",
+    "Voca 1 (CECyT 1)"
+   ],
+   [
+    "/escuelas/cet-1/",
+    "CET 1"
+   ],
+   [
+    "/escuelas/voca-10/",
+    "Voca 10 (CECyT 10)"
+   ],
+   [
+    "/escuelas/prepa-2/",
+    "Prepa 2 (ENP 2)"
+   ],
+   [
+    "/escuelas/cch-oriente/",
+    "CCH Oriente"
+   ],
+   [
+    "/escuelas/voca-7/",
+    "Voca 7 (CECyT 7)"
+   ],
+   [
+    "/escuelas/prepa-4/",
+    "Prepa 4 (ENP 4)"
+   ],
+   [
+    "/escuelas/voca-2/",
+    "Voca 2 (CECyT 2)"
+   ],
+   [
+    "/escuelas/voca-9/",
+    "Voca 9 (CECyT 9)"
+   ],
+   [
+    "/escuelas/voca-11/",
+    "Voca 11 (CECyT 11)"
+   ],
+   [
+    "/escuelas/voca-15/",
+    "Voca 15 (CECyT 15)"
+   ],
+   [
+    "/escuelas/cch-naucalpan/",
+    "CCH Naucalpan"
+   ],
+   [
+    "/escuelas/voca-19/",
+    "Voca 19 (CECyT 19)"
+   ],
+   [
+    "/escuelas/prepa-5/",
+    "Prepa 5 (ENP 5)"
+   ],
+   [
+    "/escuelas/prepa-7/",
+    "Prepa 7 (ENP 7)"
+   ],
+   [
+    "/escuelas/voca-14/",
+    "Voca 14 (CECyT 14)"
+   ],
+   [
+    "/escuelas/prepa-1/",
+    "Prepa 1 (ENP 1)"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/escuelas/",
+    "Listado de escuelas del ECOEMS"
+   ],
+   [
+    "/comparador/",
+    "Comparador de escuelas"
+   ]
+  ],
+  "/mi-derecho-mi-lugar/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/que-es-ecoems/",
+    "examen ECOEMS"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Cómo ordenar las opciones"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ],
+   [
+    "/llave-mx/",
+    "Crear la Llave MX"
+   ],
+   [
+    "/registro/",
+    "Hacer el registro"
+   ],
+   [
+    "/modalidades/",
+    "Elegir la modalidad"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "ordenar las escuelas"
+   ],
+   [
+    "/examen/",
+    "examen en línea"
+   ],
+   [
+    "/resultados/",
+    "Consultar el resultado"
+   ],
+   [
+    "/no-quede/",
+    "buscar plan B"
+   ],
+   [
+    "/fechas/",
+    "calendario"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Parada anterior Qué es el ECOEMS"
+   ],
+   [
+    "/fechas/",
+    "Siguiente parada Fechas del ECOEMS"
+   ],
+   [
+    "/registro/",
+    "Registro de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades con examen y sin examen"
+   ],
+   [
+    "/escuelas/sin-examen/",
+    "Prepas sin examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados del ECOEMS"
+   ],
+   [
+    "/preguntas-frecuentes/",
+    "Preguntas frecuentes de Mi Derecho, Mi Lugar"
+   ]
+  ],
+  "/modalidades/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/no-quede/",
+    "Qué hacer si no quedó"
+   ],
+   [
+    "/aciertos/",
+    "aciertos de cada una"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "cómo ordenarlas"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ya ordenada."
+   ],
+   [
+    "/armar-opciones/",
+    "Arma y ordena tus opciones Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas y revisa si tu lista tiene retadoras, alcanzables y seguras."
+   ],
+   [
+    "/registro/",
+    "Parada anterior Registro de Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Siguiente parada Cómo elegir y ordenar las opciones"
+   ],
+   [
+    "/escuelas/sin-examen/",
+    "Prepas sin examen de admisión"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Cómo ordenar las opciones del ECOEMS"
+   ],
+   [
+    "/aciertos/",
+    "Aciertos que pide cada escuela"
+   ]
+  ],
+  "/no-quede/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/resultados/",
+    "Parada anterior Resultados del ECOEMS"
+   ],
+   [
+    "/aciertos/",
+    "Ahora revisa Cuántos aciertos pide cada escuela"
+   ],
+   [
+    "/escuelas/sin-examen/",
+    "Escuelas sin examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados del ECOEMS"
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí"
+   ]
+  ],
+  "/preguntas-frecuentes/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Leer la guía de qué es el ecoems"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Leer la guía de mi derecho, mi lugar"
+   ],
+   [
+    "/fechas/",
+    "Leer la guía de fechas y calendario"
+   ],
+   [
+    "/llave-mx/",
+    "Leer la guía de llave mx"
+   ],
+   [
+    "/registro/",
+    "Leer la guía de registro paso a paso"
+   ],
+   [
+    "/modalidades/",
+    "Leer la guía de modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Leer la guía de cómo elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Leer la guía de correo del registro"
+   ],
+   [
+    "/examen/",
+    "Leer la guía de el día del examen"
+   ],
+   [
+    "/resultados/",
+    "Leer la guía de resultados"
+   ],
+   [
+    "/no-quede/",
+    "Leer la guía de si no quedó"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es el ECOEMS"
+   ],
+   [
+    "/fechas/",
+    "Fechas del ECOEMS"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM"
+   ],
+   [
+    "/registro/",
+    "Registro de Mi Derecho, Mi Lugar"
+   ]
+  ],
+  "/prepas-cerca-de-mi/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/armar-opciones/",
+    "Pasar a Armar mis opciones"
+   ],
+   [
+    "/armar-opciones/",
+    "Armar mis opciones"
+   ],
+   [
+    "/aciertos/",
+    "tabla de aciertos"
+   ],
+   [
+    "/mapa/",
+    "Mapa de prepas UNAM y vocacionales IPN"
+   ],
+   [
+    "/escuelas/sin-examen/",
+    "Prepas sin examen"
+   ],
+   [
+    "/comparador/",
+    "Comparador de escuelas"
+   ],
+   [
+    "/calculadora/",
+    "Calculadora de aciertos"
+   ]
+  ],
+  "/que-es-ecoems/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/escuelas/prepas-unam/",
+    "prepas de la UNAM"
+   ],
+   [
+    "/escuelas/cch-unam/",
+    "CCH"
+   ],
+   [
+    "/escuelas/vocacionales-ipn/",
+    "vocacionales del IPN"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/escuelas/prepa-6/",
+    "Prepa 6 (ENP 6)"
+   ],
+   [
+    "/aciertos/",
+    "Ver los aciertos de cada escuela"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Siguiente parada Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Cómo funciona Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Cuándo es el examen ECOEMS"
+   ],
+   [
+    "/examen/",
+    "Cómo es el examen ECOEMS en línea"
+   ],
+   [
+    "/aciertos/",
+    "Cuántos aciertos pide la UNAM y el IPN"
+   ],
+   [
+    "/preguntas-frecuentes/",
+    "Preguntas frecuentes del ECOEMS"
+   ]
+  ],
+  "/registro/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/resultados/",
+    "Resultados"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/modalidades/",
+    "1, 2 o 3"
+   ],
+   [
+    "/examen/",
+    "examen en línea"
+   ],
+   [
+    "/armar-opciones/",
+    "Arma y ordena tus opciones Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas y revisa si tu lista tiene retadoras, alcanzables y seguras."
+   ],
+   [
+    "/prepas-cerca-de-mi/",
+    "Prepas cerca de mí Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ya ordenada."
+   ],
+   [
+    "/llave-mx/",
+    "Parada anterior Llave MX para Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/modalidades/",
+    "Siguiente parada Modalidades con y sin examen"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX para Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/correo/",
+    "Correo del registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades del registro"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Cómo elegir y ordenar las opciones del ECOEMS"
+   ]
+  ],
+  "/resultados/": [
+   [
+    "/",
+    "Inicio"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/que-es-ecoems/",
+    "Qué es"
+   ],
+   [
+    "/mi-derecho-mi-lugar/",
+    "Mi Derecho, Mi Lugar"
+   ],
+   [
+    "/fechas/",
+    "Fechas"
+   ],
+   [
+    "/llave-mx/",
+    "Llave MX"
+   ],
+   [
+    "/registro/",
+    "Registro"
+   ],
+   [
+    "/modalidades/",
+    "Modalidades"
+   ],
+   [
+    "/como-elegir-opciones/",
+    "Elegir opciones"
+   ],
+   [
+    "/correo/",
+    "Correo"
+   ],
+   [
+    "/examen/",
+    "Examen"
+   ],
+   [
+    "/no-quede/",
+    "Si no quedó"
+   ],
+   [
+    "/aciertos/",
+    "tabla de aciertos"
+   ],
+   [
+    "/no-quede/",
+    "Ver qué hacer"
+   ],
+   [
+    "/examen/",
+    "Parada anterior Examen ECOEMS en línea"
+   ],
+   [
+    "/no-quede/",
+    "Siguiente parada Qué hacer si no quedó en el ECOEMS"
+   ],
+   [
+    "/no-quede/",
+    "Qué hacer si no quedó en el ECOEMS"
+   ],
+   [
+    "/aciertos/",
+    "Aciertos que pidió cada escuela"
+   ],
+   [
+    "/correo/",
+    "Correo de Mi Derecho, Mi Lugar"
+   ]
+  ]
+ }
+}

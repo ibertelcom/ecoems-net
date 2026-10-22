@@ -1,8 +1,9 @@
 // Enlaces hacia examenes.lat (estudiar, convocatoria, becas) y ecoems.app (diagnóstico y curso).
 // Cada página enlaza a la página PROFUNDA que responde su siguiente paso, con el anchor de la palabra clave
 // de la página destino. Sin nofollow: son sitios del mismo dueño y queremos pasar autoridad.
-// No se enlaza a examenes.lat/mx/comipems/aciertos/ ni /mx/comipems/mi-derecho-mi-lugar/ porque compiten
-// con /aciertos/ y /mi-derecho-mi-lugar/ de ecoems.net.
+// 21-oct-2026: examenes.lat/mx/comipems/mi-derecho-mi-lugar/ redirige (301) a ecoems.net y
+// examenes.lat/mx/comipems/aciertos/ se reenfocó a "Puntaje ECOEMS: percentil y cómo subir tus aciertos".
+// ecoems.net se queda con "cuántos aciertos pide cada escuela"; examenes.lat, con el percentil y el estudio.
 import { SITIO, utm } from "./plantilla.mjs";
 import { icono } from "./iconos.mjs";
 
@@ -14,6 +15,7 @@ export const DESTINOS = {
   convocatoria: [`${L}/noticias/mx/convocatorias/convocatoria-ecoems/`, "calendario", "Convocatoria ECOEMS 2027", "examenes.lat", "Te avisamos en cuanto se publique: fechas, requisitos y registro oficiales."],
   resultados: [`${L}/noticias/mx/resultados/ecoems/`, "resultados", "Resultados ECOEMS: noticias del día", "examenes.lat", "Cuándo se publican, cómo consultarlos y qué hacer después."],
   beca: [`${L}/mx/becas/benito-juarez/`, "apoyo", "Beca Benito Juárez para bachillerato", "examenes.lat", "El apoyo para todos los alumnos de prepa pública: monto, requisitos y pagos."],
+  percentil: [`${L}/mx/comipems/aciertos/`, "resultados", "Percentil ECOEMS: qué tan bueno es tu puntaje", "examenes.lat", "Qué porcentaje de aspirantes superas con tus aciertos y cómo subirlos."],
   habmat: [`${L}/mx/comipems/habilidad-matematica/`, "calculadora", "Simulador de habilidad matemática ECOEMS", "examenes.lat", "Series, problemas razonados y figuras, como vienen en el examen."],
   habverbal: [`${L}/mx/comipems/habilidad-verbal/`, "libro", "Simulador de habilidad verbal ECOEMS", "examenes.lat", "Comprensión de lectura, sinónimos y analogías como en el examen."],
   mate: [`${L}/mx/comipems/matematicas/`, "calculadora", "Simulador de matemáticas ECOEMS", "examenes.lat", "Aritmética, álgebra y geometría con el temario oficial."],
@@ -32,14 +34,14 @@ export const POR_PAGINA = {
   "/como-elegir-opciones/": ["diag", "simulador"],
   "/correo/": ["convocatoria", "simulador"],
   "/examen/": ["simulador", "habmat", "habverbal", "guia"],
-  "/resultados/": ["resultados", "beca"],
+  "/resultados/": ["resultados", "percentil", "beca"],
   "/no-quede/": ["beca", "simulador"],
-  "/aciertos/": ["diag", "simulador", "mate"],
+  "/aciertos/": ["diag", "percentil", "simulador"],
   "/escuelas/prepas-unam/": ["diag", "simulador", "guia"],
   "/escuelas/cch-unam/": ["diag", "simulador", "guia"],
   "/escuelas/vocacionales-ipn/": ["diag", "simulador", "habmat"],
   "/escuelas/sin-examen/": ["beca", "convocatoria"],
-  "/calculadora/": ["diag", "simulador"],
+  "/calculadora/": ["diag", "percentil", "simulador"],
   "/prepas-cerca-de-mi/": ["diag", "simulador"],
   "/comparador/": ["diag", "simulador"],
   "/armar-opciones/": ["diag", "simulador"],
