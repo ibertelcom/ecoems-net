@@ -728,3 +728,30 @@ height: 50px; padding: 0 14px; border: 1.5px solid var(--borde-control); border-
 .tarjeta-contacto small { color: var(--verde-hover); font-weight: 700; min-height: 1.2em; }
 .aviso-claro { background: var(--superficie-2); color: var(--tinta); }
 .aviso-claro b { color: var(--tinta); }
+.cabecera-pagina[data-linea="sin"] { --c: var(--verde); }
+.tarjeta-escuela[data-linea="sin"] .chips { margin: 2px 0 0; gap: 6px; }
+.tarjeta-escuela[data-linea="sin"] .chips li { padding: 3px 9px; font-size: .8rem; }
+.chips .chip-mas { background: var(--verde-claro); color: var(--tinta); font-weight: 700; }
+.te-dir { font-size: .88rem; color: var(--suave); }
+.te-clave { font-size: .85rem; color: var(--suave); }
+.te-ficha { font-weight: 700; font-size: .92rem; color: var(--tinta); }
+.te-ficha:hover { color: var(--verde); }
+.tarjeta-zona b a, .tarjeta-zona > a { color: var(--tinta); text-decoration: none; }
+li[id] { scroll-margin-top: 90px; }
+li[id]:target .tarjeta-escuela { border-color: var(--verde); box-shadow: 0 0 0 3px var(--verde-claro); }
+.tabla-simple { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.tabla-simple caption { text-align: left; font-weight: 700; padding: 12px 14px 4px; }
+.tabla-simple th, .tabla-simple td { text-align: left; padding: 9px 14px; border-top: 1px solid var(--linea); }
+.tabla-simple thead th { font-size: .85rem; color: var(--suave); border-top: 0; }
+.tabla-simple code, .te-clave code { font: 600 .9rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--superficie-2); padding: 2px 6px; border-radius: 6px; }
+.mini-mapa { height: clamp(300px, 46vh, 440px); border-radius: var(--radio-lg); border: 1px solid var(--linea); background: var(--superficie-2); overflow: hidden; z-index: 0; min-width: 0; }
+.mp-filtro[data-linea="sin"] { --l: var(--verde); }
+.mp-cerca li[data-linea="sin"] { --l: var(--verde); }
+.cm-sin { margin-top: 28px; }
+.cm-sin h3 { margin: 0 0 6px; }
+.cm-sin > p { margin: 0 0 12px; color: var(--suave); }
+.cm-sin-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.cm-sin-lista li { padding: 12px 14px; border: 1px solid var(--linea); border-left: 4px solid var(--verde); border-radius: 12px; background: var(--superficie); display: grid; gap: 2px; }
+.cm-sin-lista small { color: var(--suave); font-size: .85rem; }
+.mega-in:has(.mega-col:nth-of-type(3)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grupo-cabeza[data-linea="sin"] { --c: var(--verde); }
