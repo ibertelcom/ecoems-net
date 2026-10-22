@@ -1,6 +1,7 @@
 # ecoems.net · Hostinger (Apache/LiteSpeed)
 Options -Indexes
 DirectoryIndex index.html
+AddType application/manifest+json .webmanifest
 
 RewriteEngine On
 # https y sin www
