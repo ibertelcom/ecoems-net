@@ -568,8 +568,8 @@
       capas[e.s] = L.circleMarker(e.g, { radius: 9, color: "#fff", weight: 2.5, fillColor: color(e.l), fillOpacity: 1 })
         .bindPopup(popup(e), { maxWidth: 260 }).bindTooltip(e.c, { direction: "top", offset: [0, -8] }).addTo(mapa);
     }
-    for (const e of datos) if (e.l !== "sin") capas[e.s].bringToFront();
     mapa.fitBounds(L.latLngBounds(datos.filter((e) => e.l !== "sin").map((e) => e.g)), { padding: [24, 24] });
+    for (const e of datos) if (e.l !== "sin") capas[e.s].bringToFront();
     mapa.on("focus", () => mapa.scrollWheelZoom.enable());
     mapa.on("blur", () => mapa.scrollWheelZoom.disable());
     const leyenda = L.control({ position: "bottomleft" });
