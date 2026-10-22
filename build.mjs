@@ -54,6 +54,9 @@ for (const p of PAGINAS) {
   writeFileSync(`vista-previa/${nombre}.html`, documento({ ...comun, css: { inline: css }, js: { inline: js }, fragmento: true, nombreCorto: p.nombreCorto }));
 }
 
+// Favicons para Google (múltiplo de 48 px), navegadores e iOS.
+cpSync("src/favicon", "dist", { recursive: true });
+writeFileSync("dist/site.webmanifest", JSON.stringify({ name: "ecoems.net", short_name: "ecoems.net", icons: [{ src: "/favicon-192x192.png", sizes: "192x192", type: "image/png" }, { src: "/favicon-512x512.png", sizes: "512x512", type: "image/png" }], theme_color: "#0B7A60", background_color: "#ffffff", display: "browser" }));
 writeFileSync("dist/favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="1" y="1" width="38" height="38" rx="11" fill="#0B7A60"/><path d="M9 26h22" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="13" cy="26" r="3.6" fill="#fff"/><circle cx="20" cy="26" r="3.6" fill="#F4B400" stroke="#fff" stroke-width="2"/><circle cx="27" cy="26" r="3.6" fill="#fff"/><path d="M13 15h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"/></svg>`);
 writeFileSync("dist/.htaccess", readFileSync("src/htaccess.txt", "utf8"));
 if (existsSync("src/og-ecoems-net.png")) { mkdirSync("dist/img", { recursive: true }); cpSync("src/og-ecoems-net.png", "dist/img/og-ecoems-net.png"); }
