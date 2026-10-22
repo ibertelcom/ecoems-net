@@ -1,4 +1,6 @@
 // Pilar /aciertos/ (tabla completa) + hubs por línea + índice /escuelas/
+import { SISTEMAS, POR_SISTEMA } from "../sinexamen.mjs";
+import { SISTEMAS_ORDEN } from "./sinexamen.mjs";
 import { ESCUELAS, GRUPOS, RESUMEN, PREGUNTAS_EXAMEN, MARGEN_TEPO } from "../datos.mjs";
 import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
@@ -240,7 +242,7 @@ ${cabeceraPagina({
   migasHtml: m.html,
   h1: "Escuelas del ECOEMS: prepas, CCH y vocacionales",
   lead: `Las ${ESCUELAS.length} escuelas de la UNAM y del IPN que asignan lugar por aciertos en el examen. Busca por nombre, número o alcaldía.`,
-  extra: `<div class="buscador-escuelas"><label for="buscar-escuela">Buscar escuela</label><span class="consulta-campo">${icono("buscar", "ico consulta-ico")}<input id="buscar-escuela" type="search" placeholder="Prepa 6, CCH Sur, Voca 9, Coyoacán…" autocomplete="off"></span></div>`,
+  extra: `<div class="buscador-escuelas"><label for="buscar-escuela">Buscar escuela</label><span class="consulta-campo">${icono("buscar", "ico consulta-ico")}<input id="buscar-escuela" type="search" placeholder="Prepa 6, CCH Sur, Voca 9, CONALEP, Coyoacán…" autocomplete="off"></span></div>`,
 })}
 <section class="seccion" aria-label="Listado de escuelas">
   <div class="contenedor">
@@ -256,8 +258,13 @@ ${cabeceraPagina({
         </div></li>`).join("")}
       </ul>
     </div>`).join("")}
-    <p class="sin-resultados" id="sin-resultados" hidden>No encontramos esa escuela entre las de la UNAM y el IPN. Revisa el nombre o busca por alcaldía.</p>
-    <p class="nota-ruta">${icono("sin_examen", "ico")}<span>¿Buscas opciones sin examen (COLBACH, CONALEP, DGETI, IEMS y otras)? Esas escuelas asignan por orden de opciones; las sumaremos al <a href="/mapa/">mapa de escuelas</a>.</span></p>
+    <p class="sin-resultados" id="sin-resultados" hidden>No encontramos esa escuela. Revisa el nombre o busca por alcaldía.</p>
+    <div class="grupo-escuelas" data-grupo>
+      <div class="grupo-cabeza" data-linea="sin"><h2>Escuelas sin examen</h2><a href="/escuelas/sin-examen/">Ver las 521 escuelas sin examen</a></div>
+      <ul class="tarjetas-escuela">${SISTEMAS_ORDEN.map((k) => `
+        <li data-buscar="${[SISTEMAS[k].nombre, SISTEMAS[k].siglas, SISTEMAS[k].largo ?? "", "sin examen", ...POR_SISTEMA[k].map((p) => `${p.nombre} ${p.municipio}`)].join(" ").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()}"><div class="tarjeta-escuela tarjeta-enlace" data-linea="sin"><span class="te-linea">${POR_SISTEMA[k].length} planteles</span><b><a class="te-enlace" href="${SISTEMAS[k].ruta}">${SISTEMAS[k].nombre}</a></b></div></li>`).join("")}
+      </ul>
+    </div>
   </div>
 </section>`;
   return {

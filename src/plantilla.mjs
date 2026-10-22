@@ -56,6 +56,11 @@ export const MENU = [
         ["escuela", "/escuelas/cch-unam/", "CCH UNAM", "Los 5 planteles"],
         ["escuela", "/escuelas/vocacionales-ipn/", "Vocacionales IPN", "CECyT y CET 1"],
       ],
+      [
+        ["sin_examen", "/escuelas/conalep/", "CONALEP", "Planteles y carreras, sin examen"],
+        ["sin_examen", "/escuelas/colegio-de-bachilleres/", "Colegio de Bachilleres", "Los 20 planteles"],
+        ["sin_examen", "/escuelas/cetis-cbtis/", "CETIS y CBTIS", "Bachillerato tecnológico"],
+      ],
     ],
   },
   {
@@ -138,7 +143,7 @@ export function pie() {
       <p class="pie-aviso">${icono("aviso")}<span><b>No somos un sitio oficial.</b> El registro, las fechas y la asignación se hacen solo en <a href="https://www.miderechomilugar.gob.mx/" rel="noopener" target="_blank">miderechomilugar.gob.mx</a>.</span></p>
     </div>
     ${col("El proceso", [["/que-es-ecoems/", "Qué es el ECOEMS"], ["/mi-derecho-mi-lugar/", "Mi Derecho, Mi Lugar"], ["/fechas/", "Fechas"], ["/registro/", "Registro"], ["/examen/", "El examen"], ["/resultados/", "Resultados"]])}
-    ${col("Escuelas", [["/aciertos/", "Aciertos por escuela"], ["/escuelas/prepas-unam/", "Prepas UNAM"], ["/escuelas/cch-unam/", "CCH UNAM"], ["/escuelas/vocacionales-ipn/", "Vocacionales IPN"], ["/escuelas/sin-examen/", "Sin examen"]])}
+    ${col("Escuelas", [["/aciertos/", "Aciertos por escuela"], ["/escuelas/prepas-unam/", "Prepas UNAM"], ["/escuelas/cch-unam/", "CCH UNAM"], ["/escuelas/vocacionales-ipn/", "Vocacionales IPN"], ["/escuelas/sin-examen/", "Prepas sin examen"], ["/escuelas/conalep/", "CONALEP"], ["/escuelas/colegio-de-bachilleres/", "Colegio de Bachilleres"], ["/escuelas/cetis-cbtis/", "CETIS y CBTIS"], ["/escuelas/iems/", "IEMS"]])}
     ${col("Para estudiar", [[utm(`${SITIO.lat}/mx/comipems/`, "pie"), "Examen simulacro ECOEMS gratis"], [utm(`${SITIO.lat}/mx/guias/comipems-ecoems/`, "pie"), "Guía ECOEMS con temario"], [utm(SITIO.app, "pie"), "Diagnóstico ECOEMS gratis"], [utm(`${SITIO.lat}/noticias/mx/convocatorias/convocatoria-ecoems/`, "pie"), "Convocatoria ECOEMS 2027"]])}
   </div>
   <div class="pie-legal">

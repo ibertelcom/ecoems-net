@@ -5,6 +5,8 @@ import { icono } from "../iconos.mjs";
 import { imagen, registrar, IMAGENES } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
 import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, cambio, ACTUALIZADO } from "../componentes.mjs";
+import { cercanas } from "../sinexamen.mjs";
+import { miniMapa } from "./sinexamen.mjs";
 
 const HUB = { enp: "/escuelas/prepas-unam/", cch: "/escuelas/cch-unam/", voca: "/escuelas/vocacionales-ipn/" };
 
@@ -62,6 +64,8 @@ function pagina(e) {
   const c25 = cambio(e.a2024, e.a2025);
   const c26 = cambio(e.a2025, e.a2026);
   const vecinas = parecidas(e, 4);
+  const cerca = e.coord ? cercanas(e.coord, ruta, 6) : [];
+  const cercaSin = e.coord ? cercanas(e.coord, ruta, 4, (x) => !x.examen) : [];
   const img = registrar(`fachada-${e.slug}`, {
     archivo: `${e.slug}-${e.institucion === "UNAM" ? "unam" : "ipn"}-ecoems.webp`,
     ancho: 1200, alto: 800,
@@ -117,6 +121,7 @@ ${cabeceraPagina({
       <p class="direccion">${icono("mapa", "ico")}<span>${e.direccion ? `${e.direccion}, ` : ""}${e.alcaldia ?? ""}${e.entidad ? `, ${e.entidad === "CDMX" ? "Ciudad de México" : e.entidad}` : ""}.${e.direccionVerificada ? "" : " Confirma el número exacto en el sitio oficial del plantel."}</span></p>
       <p class="acciones-escuela"><a class="boton boton-secundario" href="${mapa}" rel="noopener" target="_blank">${icono("mapa", "ico")}Cómo llegar</a>${e.sitio ? `<a class="boton boton-secundario" href="${e.sitio}" rel="noopener" target="_blank">${icono("externo", "ico")}Sitio oficial</a>` : ""}</p>
     </div>
+    ${e.coord ? miniMapa([[e.coord[0], e.coord[1], e.doble, ruta, g.titulo, 1, e.linea], ...cerca.map((x) => [x.coord[0], x.coord[1], x.nombre, x.url, x.tipo, 0, x.linea])], `Mapa ${del(e)} y escuelas cercanas`) : ""}
   </div>
 </section>
 
@@ -137,6 +142,22 @@ ${cabeceraPagina({
     </ul>
   </div>
 </section>
+
+${cercaSin.length ? `<section class="seccion seccion-blanca" aria-labelledby="t-sin-cerca">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <h2 id="t-sin-cerca">Escuelas sin examen cerca ${del(e)}</h2>
+      <p>Si eligen la modalidad 3, conviene sumar opciones sin examen cercanas por si no alcanza lugar con sus aciertos. Estas son las más próximas.</p>
+    </div>
+    <ul class="tarjetas-escuela">${cercaSin.map((x) => `
+      <li><div class="tarjeta-escuela tarjeta-enlace" data-linea="sin">
+        <span class="te-linea">${x.tipo} · sin examen</span>
+        <b><a class="te-enlace" href="${x.url}">${x.nombre}</a></b>
+        <span class="te-lugar">A ${x.d.toFixed(1)} km</span>
+      </div></li>`).join("")}
+    </ul>
+  </div>
+</section>` : ""}
 
 <section class="seccion seccion-estudiar" aria-labelledby="t-alcanza">
   <div class="contenedor contenedor-angosto">

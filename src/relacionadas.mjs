@@ -3,6 +3,7 @@
 // cuántos aciertos pide la UNAM 1.9K, prepas UNAM 1.6K, cuántos aciertos pide la prepa 6 1.3K,
 // examen ECOEMS 1.3K, vocacionales IPN 1K, registro Mi Derecho Mi Lugar 1K, resultados ECOEMS 880, prepas sin examen 720.
 import { ESCUELAS, GRUPOS } from "./datos.mjs";
+import { SISTEMAS, PLANTELES } from "./sinexamen.mjs";
 
 const HUB = { enp: "/escuelas/prepas-unam/", cch: "/escuelas/cch-unam/", voca: "/escuelas/vocacionales-ipn/" };
 
@@ -108,6 +109,9 @@ const MAPA = {
     ["/prepas-cerca-de-mi/", "vocacionales cerca de mí", "filtradas por el área que quiere estudiar."],
   ],
   "/escuelas/sin-examen/": [
+    ["/escuelas/conalep/", "CONALEP CDMX y Edomex", "planteles y carreras de profesional técnico."],
+    ["/escuelas/colegio-de-bachilleres/", "Colegio de Bachilleres", "los 20 planteles con dirección y mapa."],
+    ["/escuelas/cetis-cbtis/", "CETIS y CBTIS", "bachillerato tecnológico de la DGETI."],
     ["/modalidades/", "modalidad 1 y modalidad 3", "cómo combinar opciones con y sin examen."],
     ["/no-quede/", "qué hacer si no quedó", "lugares disponibles después de los resultados."],
     ["/prepas-cerca-de-mi/", "prepas cerca de mí", "las de la UNAM y el IPN cerca de tu casa."],
@@ -154,8 +158,30 @@ function deEscuela(ruta) {
   ];
 }
 
+// Escuelas sin examen: página de la institución y fichas de plantel.
+function deSinExamen(ruta) {
+  const sis = Object.entries(SISTEMAS).find(([k, s]) => s.ruta === ruta && k !== "uaemex");
+  if (sis) {
+    return [
+      ["/escuelas/sin-examen/", "prepas sin examen en CDMX y Edomex", "las 13 instituciones que no piden examen."],
+      ["/prepas-cerca-de-mi/", "prepas cerca de mí", "con y sin examen, según tu código postal."],
+      ["/modalidades/", "modalidad 1 y modalidad 3", "cómo elegir escuelas sin examen en el registro."],
+      ["/mapa/", "mapa de escuelas", "todas las escuelas del proceso en un mapa."],
+    ];
+  }
+  const p = PLANTELES.find((x) => x.ficha && x.url === ruta);
+  if (!p) return null;
+  const s = SISTEMAS[p.sis];
+  return [
+    [s.ruta, `${s.corto} en CDMX y Edomex`, `todos los planteles${p.esp.length ? " y sus carreras" : ""}.`],
+    ["/escuelas/sin-examen/", "prepas sin examen", "las demás instituciones que no piden examen."],
+    ["/prepas-cerca-de-mi/", "prepas cerca de mí", `otras escuelas cerca de ${p.comun}.`],
+    ["/modalidades/", "modalidades con examen y sin examen", "cómo combinarla con la UNAM y el IPN."],
+  ];
+}
+
 export function relacionadas(ruta) {
-  const lista = MAPA[ruta] ?? deEscuela(ruta);
+  const lista = MAPA[ruta] ?? deEscuela(ruta) ?? deSinExamen(ruta);
   if (!lista) return "";
   return `
 <section class="seccion seccion-relacionadas" aria-labelledby="t-relacionadas">

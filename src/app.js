@@ -407,10 +407,28 @@
         <span class="cm-links"><a class="cm-ficha" href="/escuelas/${e.s}/">Ver ficha de la escuela →</a><a class="te-ruta" href="${ruta}" target="_blank" rel="noopener">Cómo llegar ↗</a></span></div></li>`;
     }).join("") : `<li class="vacia">No encontramos escuelas con esos filtros. Amplía la distancia, activa la UNAM y el IPN o revisa sus aciertos.</li>`;
     $("cm-avisos").innerHTML = avisos.map((a) => `<p>${a}</p>`).join("");
+    pintarSin();
     const texto = `Mis opciones ECOEMS (${A} aciertos)\n` + elegido.map((e, i) => `${i + 1}. ${e.n} – ${ETQ[e.t]}`).join("\n") + "\nArmada en https://ecoems.net/prepas-cerca-de-mi/";
     $("cm-wa").href = `https://wa.me/?text=${encodeURIComponent(texto)}`;
     $("cm-copiar").dataset.texto = texto;
     $("cm-armar").toggleAttribute("aria-disabled", !elegido.length);
+  }
+
+  // Escuelas sin examen más cercanas (catálogo oficial de Mi Derecho, Mi Lugar), para la modalidad 3.
+  let sin = null;
+  async function pintarSin() {
+    const caja = $("cm-sin");
+    if (!caja) return;
+    if (!casa) { caja.hidden = true; return; }
+    try { if (!sin) { const j = await (await fetch("/datos/sin-examen.json")).json(); sin = j.p.map(([sis, n, la, lo, url, z, ca]) => ({ n, g: [la, lo], url, z, ca, tipo: j.s[sis][0], tec: /conalep|dgeti|cecytem|cbt|cbta/.test(sis) })); } } catch (e) { caja.hidden = true; return; }
+    const area = valor("cm-area");
+    const maxKm = +$("cm-dist").value || 99;
+    let cerca = sin.map((e) => ({ ...e, d: km([casa.lat, casa.lon], e.g) })).filter((e) => e.d <= maxKm).sort((a, b) => a.d - b.d);
+    // Si quiere ingeniería, salud o negocios, primero las que dan carrera técnica.
+    if (["ing", "salud", "soc"].includes(area)) cerca = [...cerca.filter((e) => e.tec).slice(0, 4), ...cerca.filter((e) => !e.tec).slice(0, 2)].sort((a, b) => a.d - b.d);
+    cerca = cerca.slice(0, 6);
+    caja.hidden = !cerca.length;
+    $("cm-sin-lista").innerHTML = cerca.map((e) => `<li><a href="${esc(e.url)}"><b>${esc(e.n)}</b></a><small>${esc(e.tipo)} · ${e.d.toFixed(1)} km · ${esc(e.z)}</small>${e.ca ? `<small>Carreras: ${esc(e.ca)}</small>` : ""}</li>`).join("");
   }
 
   let tCp;
@@ -446,9 +464,10 @@
   const datos = JSON.parse(document.getElementById("datos-escuelas").textContent).filter((e) => e.g);
   const $ = (id) => document.getElementById(id);
   const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-  const LINEA = { enp: "Prepa UNAM", cch: "CCH UNAM", voca: "Vocacional IPN" };
+  const LINEA = { enp: "Prepa UNAM", cch: "CCH UNAM", voca: "Vocacional IPN", sin: "Sin examen" };
   const AREA = { "Ciencias Físico-Matemáticas": "Físico-Matemáticas", "Ciencias Médico-Biológicas": "Médico-Biológicas", "Ciencias Sociales y Administrativas": "Sociales y Administrativas" };
-  const color = (l) => getComputedStyle(document.documentElement).getPropertyValue(`--${l}`).trim() || "#2457C5";
+  const color = (l) => getComputedStyle(document.documentElement).getPropertyValue(`--${l === "sin" ? "verde" : l}`).trim() || "#2457C5";
+  const ficha = (e) => e.url ?? `/escuelas/${e.s}/`;
   const km = (a, b) => { const r = Math.PI / 180, x = (b[0] - a[0]) * r, y = (b[1] - a[1]) * r; const h = Math.sin(x / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(y / 2) ** 2; return 2 * 6371 * Math.asin(Math.sqrt(h)); };
   const ruta = (e, casa) => `https://www.google.com/maps/dir/?api=1${casa ? `&origin=${casa[0]},${casa[1]}` : ""}&destination=${e.g[0]},${e.g[1]}`;
   let L, mapa, capas = {}, casa = null, casaCapa = null, cps = null;
@@ -461,12 +480,14 @@
   }
   function popup(e) {
     const d = casa ? `<span>A ${km(casa, e.g).toFixed(1)} km de tu casa</span>` : "";
+    if (e.l === "sin") return `<div class="mp-pop"><small>${esc(e.tipo)} · sin examen</small><b>${esc(e.n)}</b>${e.ca ? `<span>${esc(e.ca)}</span>` : ""}<span>${esc(e.z ?? "")}</span>${d}<span class="mp-pop-links"><a href="${esc(e.url)}">Ver escuela</a><a href="${ruta(e, casa)}" target="_blank" rel="noopener">Cómo llegar ↗</a></span></div>`;
     return `<div class="mp-pop"><small>${LINEA[e.l]}${e.l === "voca" && e.ar ? ` · ${AREA[e.ar] ?? esc(e.ar)}` : ""}</small><b>${esc(e.n)}</b><span>Aciertos 2026: <strong>${e.a[2]}</strong> · meta Tepo <strong>${e.m}</strong></span><span>${esc(e.z ?? "")}</span>${d}<span class="mp-pop-links"><a href="/escuelas/${e.s}/">Ver ficha</a><a href="${ruta(e, casa)}" target="_blank" rel="noopener">Cómo llegar ↗</a></span></div>`;
   }
   function visibles() {
     const lineas = [...document.querySelectorAll(".mp-filtro input:checked")].map((i) => i.value);
     const area = $("mp-area").value;
-    return datos.filter((e) => lineas.includes(e.l) && (e.l !== "voca" || !area || e.ar === area || !e.ar));
+    const sis = $("mp-sis") ? $("mp-sis").value : "";
+    return datos.filter((e) => lineas.includes(e.l) && (e.l !== "voca" || !area || e.ar === area || !e.ar) && (e.l !== "sin" || !sis || e.sis === sis));
   }
   function filtrar() {
     const v = new Set(visibles().map((e) => e.s));
@@ -481,7 +502,7 @@
     const dentro = cerca.filter((x) => x.d <= radio);
     const mostrar = (dentro.length ? dentro : cerca.slice(0, 3)).slice(0, 8);
     lista.innerHTML = (dentro.length ? "" : `<li class="vacia">No hay escuelas a menos de ${radio} km. Estas son las más cercanas:</li>`) + mostrar.map(({ e, d }) =>
-      `<li data-linea="${e.l}"><button type="button" data-ver="${e.s}"><b>${esc(e.c)}</b><span>${d.toFixed(1)} km · 2026: ${e.a[2]} · meta ${e.m}</span></button><a class="mp-ficha" href="/escuelas/${e.s}/">Ver ficha →</a></li>`).join("");
+      `<li data-linea="${e.l}"><button type="button" data-ver="${e.s}"><b>${esc(e.c)}</b><span>${d.toFixed(1)} km · ${e.l === "sin" ? `${esc(e.tipo)} · sin examen` : `2026: ${e.a[2]} · meta ${e.m}`}</span></button><a class="mp-ficha" href="${esc(ficha(e))}">${e.l === "sin" ? "Ver escuela" : "Ver ficha"} →</a></li>`).join("");
     if (casaCapa) casaCapa.circulo.setRadius(radio * 1000);
     return { dentro: dentro.length, cerca };
   }
@@ -532,11 +553,23 @@
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
     }).addTo(mapa);
     if (oscuro) caja.classList.add("mp-oscuro");
+    // Escuelas sin examen (catálogo oficial de Mi Derecho, Mi Lugar): se agregan como una capa más.
+    try {
+      const j = await (await fetch("/datos/sin-examen.json")).json();
+      j.p.forEach(([sis, n, la, lo, url, z, ca], i) => datos.push({ s: `x${i}`, l: "sin", n, c: n, g: [la, lo], z, url, sis, tipo: j.s[sis][0], ca }));
+    } catch (e) {}
+    const lienzo = L.canvas({ padding: 0.3 });
     for (const e of datos) {
+      if (e.l === "sin") {
+        capas[e.s] = L.circleMarker(e.g, { renderer: lienzo, radius: 6, color: "#fff", weight: 1.5, fillColor: color("sin"), fillOpacity: .95 })
+          .bindPopup(popup(e), { maxWidth: 260 }).bindTooltip(e.c, { direction: "top", offset: [0, -6] }).addTo(mapa);
+        continue;
+      }
       capas[e.s] = L.circleMarker(e.g, { radius: 9, color: "#fff", weight: 2.5, fillColor: color(e.l), fillOpacity: 1 })
         .bindPopup(popup(e), { maxWidth: 260 }).bindTooltip(e.c, { direction: "top", offset: [0, -8] }).addTo(mapa);
     }
-    mapa.fitBounds(L.latLngBounds(datos.map((e) => e.g)), { padding: [24, 24] });
+    for (const e of datos) if (e.l !== "sin") capas[e.s].bringToFront();
+    mapa.fitBounds(L.latLngBounds(datos.filter((e) => e.l !== "sin").map((e) => e.g)), { padding: [24, 24] });
     mapa.on("focus", () => mapa.scrollWheelZoom.enable());
     mapa.on("blur", () => mapa.scrollWheelZoom.disable());
     const leyenda = L.control({ position: "bottomleft" });
@@ -544,6 +577,8 @@
     leyenda.addTo(mapa);
     document.querySelectorAll(".mp-filtro input").forEach((i) => i.addEventListener("change", filtrar));
     $("mp-area").addEventListener("change", filtrar);
+    if ($("mp-sis")) $("mp-sis").addEventListener("change", filtrar);
+    filtrar();
     $("mp-radio").addEventListener("change", encuadrar);
     let t; $("mp-cp").addEventListener("input", () => { clearTimeout(t); t = setTimeout(buscarCp, 350); });
     $("mp-gps").addEventListener("click", () => {
@@ -560,6 +595,46 @@
     const io = new IntersectionObserver((en) => { if (en.some((x) => x.isIntersecting)) { io.disconnect(); iniciar(); } }, { rootMargin: "300px" });
     io.observe(caja);
   } else iniciar();
+})();
+
+// ---------- Mapas pequeños (fichas y páginas de cada institución) ----------
+(() => {
+  const cajas = document.querySelectorAll(".mini-mapa");
+  if (!cajas.length) return;
+  const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const color = (l) => getComputedStyle(document.documentElement).getPropertyValue(`--${l === "sin" ? "verde" : l}`).trim() || "#0B7A60";
+  let carga = null;
+  const leaflet = () => carga ?? (carga = new Promise((ok, mal) => {
+    if (window.L) return ok();
+    const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "/vendor/leaflet/leaflet.css"; document.head.appendChild(css);
+    const js = document.createElement("script"); js.src = "/vendor/leaflet/leaflet.js"; js.onload = ok; js.onerror = mal; document.head.appendChild(js);
+  }));
+  async function pintar(caja) {
+    try { await leaflet(); } catch (e) { caja.innerHTML = '<p class="mp-cargando">No se pudo cargar el mapa.</p>'; return; }
+    const L = window.L;
+    const puntos = JSON.parse(caja.dataset.puntos);
+    caja.innerHTML = "";
+    const mapa = L.map(caja, { scrollWheelZoom: false, preferCanvas: puntos.length > 60 });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(mapa);
+    if (matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light") caja.classList.add("mp-oscuro");
+    const capas = [];
+    for (const [la, lo, n, url, tipo, principal, linea] of puntos) {
+      const c = L.circleMarker([la, lo], { radius: principal ? 11 : puntos.length > 60 ? 6 : 8, color: "#fff", weight: principal ? 3 : 2, fillColor: color(linea), fillOpacity: 1 })
+        .bindPopup(`<div class="mp-pop"><small>${esc(tipo)}</small><b>${esc(n)}</b><span class="mp-pop-links">${principal ? "" : `<a href="${esc(url)}">Ver escuela</a>`}<a href="https://www.google.com/maps/dir/?api=1&destination=${la},${lo}" target="_blank" rel="noopener">Cómo llegar ↗</a></span></div>`, { maxWidth: 260 })
+        .addTo(mapa);
+      if (!principal) c.bindTooltip(esc(n), { direction: "top", offset: [0, -6] });
+      capas.push(c);
+    }
+    const princ = puntos.find((p) => p[5]);
+    if (princ) { mapa.fitBounds(L.latLngBounds(puntos.map((p) => [p[0], p[1]])), { padding: [28, 28], maxZoom: 15 }); capas[puntos.indexOf(princ)].bringToFront(); }
+    else mapa.fitBounds(L.latLngBounds(puntos.map((p) => [p[0], p[1]])), { padding: [20, 20], maxZoom: 15 });
+    mapa.on("focus", () => mapa.scrollWheelZoom.enable());
+    mapa.on("blur", () => mapa.scrollWheelZoom.disable());
+  }
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { io.unobserve(x.target); pintar(x.target); } }), { rootMargin: "250px" });
+    cajas.forEach((c) => io.observe(c));
+  } else cajas.forEach(pintar);
 })();
 
 // ---------- Escuelas por zona ----------

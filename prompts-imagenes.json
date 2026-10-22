@@ -520,5 +520,104 @@
   "uso": "Escuela · Voca 19 (CECyT 19)",
   "alt": "Ilustración de la Voca 19 (CECyT 19) del IPN con su escudo, en Tecámac",
   "prompt": "Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Portada ilustrada (no fotografía) de Voca 19 (CECyT 19): escena de un edificio de bachillerato tecnológico con detalles guinda, estudiantes con bata o mochila entrando, y flotando de forma sutil alrededor íconos de sus carreras técnicas: un pequeño avión, un casco de obra y planos, un matraz de laboratorio, en Tecámac, con cielo despejado y luz de mañana. Franja de color vino #8C1D40 y blanco en la parte inferior. En la esquina superior izquierda coloca el escudo oficial del Instituto Politécnico Nacional. Título grande en la parte superior: \"Voca 19\" y debajo, más pequeño: \"Leona Vicario · Tecámac\". Formato horizontal 3:2, deja la parte superior despejada para escudos y textos. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos."
+ },
+ {
+  "id": "sin-conalep",
+  "archivo": "conalep-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · CONALEP",
+  "alt": "CONALEP: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Fachada estilizada de un plantel técnico con talleres visibles por las ventanas (un brazo robótico, un motor, una computadora). Estudiantes con bata y casco de seguridad caminan a la entrada. En una lona sobre la entrada se lee \"CONALEP\" y debajo \"Profesional técnico bachiller\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-bachilleres",
+  "archivo": "colegio-de-bachilleres-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · Colegio de Bachilleres",
+  "alt": "Colegio de Bachilleres: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Edificio escolar de varios pisos con jardines, estudiantes de 15 años platicando en la explanada con mochilas. Sobre la entrada se lee \"Colegio de Bachilleres\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-dgeti",
+  "archivo": "cetis-cbtis-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · CETIS y CBTIS (DGETI)",
+  "alt": "CETIS y CBTIS (DGETI): planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Laboratorio de un bachillerato tecnológico: estudiantes con bata trabajando en computadoras, un tablero eléctrico y una impresora 3D. En la pared un letrero con los textos \"CETIS\" y \"CBTIS\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-iems",
+  "archivo": "iems-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · IEMS",
+  "alt": "IEMS: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Preparatoria pública de la Ciudad de México con murales coloridos, un grupo pequeño de estudiantes con su tutora en un salón luminoso. En la pared se lee \"IEMS\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-cecytem",
+  "archivo": "cecytem-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · CECyTEM",
+  "alt": "CECyTEM: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Estudiantes de bachillerato tecnológico del Estado de México programando y armando un circuito en un taller. En un letrero se lee \"CECyTEM\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-cobaem",
+  "archivo": "cobaem-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · COBAEM",
+  "alt": "COBAEM: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Explanada de un bachillerato del Estado de México con árboles y estudiantes saliendo de clase. Sobre la entrada se lee \"COBAEM\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-epo",
+  "archivo": "preparatorias-oficiales-edomex-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · Preparatorias Oficiales del Estado de México",
+  "alt": "Preparatorias Oficiales del Estado de México: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Preparatoria pública del Estado de México: edificio de dos pisos, cancha y estudiantes con uniforme. Sobre la entrada se lee \"Escuela Preparatoria Oficial\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-cbt",
+  "archivo": "cbt-edomex-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · CBT del Estado de México",
+  "alt": "CBT del Estado de México: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Taller de un Centro de Bachillerato Tecnológico del Estado de México con estudiantes en mesas de dibujo y computadoras. En un letrero se lee \"CBT\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-tbc",
+  "archivo": "telebachillerato-comunitario-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · Telebachillerato Comunitario",
+  "alt": "Telebachillerato Comunitario: planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Escuela pequeña en una colonia del Estado de México, un salón con pocos alumnos viendo una clase en pantalla con su maestra. En la pared se lee \"Telebachillerato Comunitario\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-ceb",
+  "archivo": "ceb-dgb-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · Centros de Estudios de Bachillerato (DGB)",
+  "alt": "Centros de Estudios de Bachillerato (DGB): planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Bachillerato público con salones alrededor de un patio, estudiantes leyendo en bancas. Sobre la entrada se lee \"Centro de Estudios de Bachillerato\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
+ },
+ {
+  "id": "sin-cbta",
+  "archivo": "cbta-sin-examen-ecoems.webp",
+  "ancho": 1200,
+  "alto": 800,
+  "uso": "Sin examen · CBTA y Centro del Mar (DGETAyCM)",
+  "alt": "CBTA y Centro del Mar (DGETAyCM): planteles sin examen en Mi Derecho, Mi Lugar",
+  "prompt": "Fotografía realista y natural, estilo editorial, personas mexicanas con rasgos y ropa auténticos, sin aspecto de banco de imágenes. Bachillerato agropecuario: estudiantes con overol en un invernadero y junto a colmenas, al fondo un edificio escolar. En un letrero se lee \"CBTA\". Formato horizontal 3:2. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas; no agregues ningún otro texto, ni años, ni fechas."
  }
 ]

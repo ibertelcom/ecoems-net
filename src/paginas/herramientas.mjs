@@ -4,6 +4,8 @@ import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
 import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "../componentes.mjs";
+import { SISTEMAS, POR_SISTEMA, PLANTELES } from "../sinexamen.mjs";
+import { miniMapa, SISTEMAS_ORDEN } from "./sinexamen.mjs";
 
 const datosJson = () =>
   `<script type="application/json" id="datos-escuelas">${JSON.stringify(
@@ -91,7 +93,7 @@ function cercaDeMi() {
     migas: migas([["Inicio", "/"], ["Prepas cerca de mí", ruta]]),
   };
   const faq = [
-    ["¿Cómo encuentro prepas públicas cerca de mi ubicación?", "Escribe tu código postal o toca «Usar mi ubicación» y elige cuántos kilómetros puede viajar. La herramienta mide la distancia en línea recta a las 31 escuelas de la UNAM y el IPN que asignan lugar con el examen ECOEMS y te muestra solo las que quedan dentro de ese rango."],
+    ["¿Cómo encuentro prepas públicas cerca de mi ubicación?", "Escribe tu código postal o toca «Usar mi ubicación» y elige cuántos kilómetros puede viajar. La herramienta mide la distancia en línea recta a las 31 escuelas de la UNAM y el IPN que asignan lugar con el examen ECOEMS y te muestra solo las que quedan dentro de ese rango. Abajo de la lista te mostramos también las escuelas sin examen más cercanas (CONALEP, Colegio de Bachilleres, CETIS, CBTIS, IEMS y otras)."],
     ["Si quiero estudiar medicina, ¿qué prepa me conviene?", "En la UNAM puede ser cualquier prepa o CCH: la carrera se decide al final del bachillerato y el pase reglamentado depende del promedio. En el IPN conviene una vocacional del área Médico-Biológica, como la Voca 6 o la Voca 15, porque su plan de estudios y su carrera técnica van hacia la salud. Medicina es de las carreras más pedidas, así que el promedio pesa mucho."],
     ["¿Las vocacionales del IPN tienen pase directo a la universidad?", "No. En el IPN no existe el pase directo: quien termina una vocacional presenta el examen de admisión de nivel superior como cualquier aspirante, eligiendo un área y dos carreras de esa misma área. Elegir una voca del área que le interesa sí ayuda, porque estudia los temas y la carrera técnica de esa área."],
     ["¿Cómo funciona el pase reglamentado de la UNAM?", "Quien termina la prepa o el CCH de la UNAM en cuatro años o menos con promedio mínimo de 7 tiene derecho al pase reglamentado; con promedio de 9 o más en tres años tiene además preferencia en carrera y plantel. No es automático: la UNAM asigna según promedio, cupo y demanda de cada carrera."],
@@ -149,6 +151,12 @@ ${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: 
       <div class="cm-resumen" id="cm-resumen"></div>
       <ol class="cm-lista" id="cm-lista"></ol>
       <div class="cm-avisos" id="cm-avisos"></div>
+      <div class="cm-sin" id="cm-sin" hidden>
+        <h3>Escuelas sin examen cerca de tu casa</h3>
+        <p>Para la <a href="/modalidades/">modalidad 3</a>: si no alcanza lugar en la UNAM o el IPN, sigue con estas. No piden aciertos.</p>
+        <ol class="cm-sin-lista" id="cm-sin-lista"></ol>
+        <a class="te-ficha" href="/escuelas/sin-examen/">Ver todas las escuelas sin examen →</a>
+      </div>
       <div class="acciones-escuela cm-acciones">
         <a class="boton" id="cm-armar" href="/armar-opciones/">${icono("opciones", "ico")}Pasar a Armar mis opciones</a>
         <a class="boton boton-secundario" id="cm-wa" href="https://wa.me/" target="_blank" rel="noopener">Compartir por WhatsApp</a>
@@ -245,8 +253,8 @@ ${datosJson()}`;
 function mapa() {
   const ruta = "/mapa/";
   const d = {
-    titulo: "Mapa de prepas UNAM, CCH y vocacionales IPN del ECOEMS | ecoems.net",
-    descripcion: "Mapa interactivo con las 31 prepas, CCH y vocacionales de la UNAM y el IPN del ECOEMS. Escribe tu código postal para ver las más cercanas, sus aciertos y cómo llegar.",
+    titulo: "Mapa de prepas UNAM, vocacionales IPN y prepas sin examen | ecoems.net",
+    descripcion: "Mapa interactivo con las 31 prepas, CCH y vocacionales de la UNAM y el IPN y las 521 escuelas sin examen de Mi Derecho, Mi Lugar. Escribe tu código postal y ve las más cercanas.",
     nombreCorto: "Mapa de escuelas",
     migas: migas([["Inicio", "/"], ["Mapa de escuelas", ruta]]),
   };
@@ -271,13 +279,14 @@ function mapa() {
 ${cabeceraPagina({
   img: "herramienta-mapa-escuelas",
   migasHtml: d.migas.html,
-  h1: "Mapa de prepas, CCH y vocacionales del ECOEMS",
-  lead: `Las ${ESCUELAS.length} escuelas de la UNAM y el IPN en un mapa. Escribe tu código postal para ver cuáles te quedan más cerca, con sus aciertos y la ruta desde tu casa.`,
+  h1: "Mapa de prepas, CCH, vocacionales y escuelas sin examen",
+  lead: `Las ${ESCUELAS.length} escuelas de la UNAM y el IPN y las ${PLANTELES.length} escuelas sin examen de Mi Derecho, Mi Lugar en un mapa. Escribe tu código postal para ver cuáles te quedan más cerca y la ruta desde tu casa.`,
 })}
 <section class="seccion herramienta-seccion" aria-label="Mapa interactivo">
   <div class="contenedor">
     <div class="mp-barra">
-      <div class="mp-filtros" role="group" aria-label="Tipo de escuela">${filtro("enp", "Prepas UNAM")}${filtro("cch", "CCH UNAM")}${filtro("voca", "Vocacionales IPN")}</div>
+      <div class="mp-filtros" role="group" aria-label="Tipo de escuela">${filtro("enp", "Prepas UNAM")}${filtro("cch", "CCH UNAM")}${filtro("voca", "Vocacionales IPN")}${filtro("sin", "Sin examen")}</div>
+      <select id="mp-sis" class="select-grande" aria-label="Institución sin examen"><option value="">Sin examen: todas</option>${SISTEMAS_ORDEN.map((k) => `<option value="${k}">${SISTEMAS[k].corto}</option>`).join("")}<option value="uaemex">UAEMéx Texcoco</option></select>
       <select id="mp-area" class="select-grande" aria-label="Área de las vocacionales">
         <option value="">Vocas: todas las áreas</option>
         <option value="Ciencias Físico-Matemáticas">Físico-Matemáticas</option>
@@ -300,7 +309,7 @@ ${cabeceraPagina({
         <a class="boton boton-bloque" href="/prepas-cerca-de-mi/">¿Cuál le conviene? Arma su lista</a>
       </aside>
     </div>
-    <p class="nota-tabla">${icono("aviso", "ico")}<span>Ubicación de planteles de OpenStreetMap y códigos postales de GeoNames; las distancias son aproximadas, en línea recta. Tu código postal o ubicación no se envían ni se guardan.</span></p>
+    <p class="nota-tabla">${icono("aviso", "ico")}<span>Ubicación de la UNAM y el IPN de OpenStreetMap; escuelas sin examen del buscador oficial de Mi Derecho, Mi Lugar; códigos postales de GeoNames; las distancias son aproximadas, en línea recta. Tu código postal o ubicación no se envían ni se guardan.</span></p>
   </div>
 </section>
 <section class="seccion" aria-labelledby="t-por-zona">
@@ -332,35 +341,46 @@ ${datosJson()}`;
 // ---------- Escuelas sin examen ----------
 function sinExamen() {
   const ruta = "/escuelas/sin-examen/";
+  const total = PLANTELES.length;
   const d = {
-    titulo: "Escuelas sin examen en Mi Derecho, Mi Lugar (modalidad 1) | ecoems.net",
-    descripcion: "Qué prepas no piden examen en Mi Derecho, Mi Lugar: COLBACH, CONALEP, DGB, DGETAyCM, DGETI, IEMS, SECTI y UAEMéx Texcoco. Cómo se asigna el lugar sin examen.",
+    titulo: "Prepas sin examen en CDMX y Edomex: las 521 opciones | ecoems.net",
+    descripcion: `Las ${total} prepas sin examen de Mi Derecho, Mi Lugar: CONALEP, Colegio de Bachilleres, CETIS, CBTIS, IEMS, CECyTEM, COBAEM, Preparatorias Oficiales y más, con mapa y cómo entrar.`,
     nombreCorto: "Escuelas sin examen",
     seccion: "escuelas",
     migas: migas([["Inicio", "/"], ["Escuelas", "/escuelas/"], ["Sin examen", ruta]]),
   };
-  const subs = [
-    ["COLBACH", "Colegio de Bachilleres", "Bachillerato general con capacitación para el trabajo."],
-    ["CONALEP", "Colegio Nacional de Educación Profesional Técnica", "Bachillerato con carrera de profesional técnico."],
-    ["DGB", "Dirección General de Bachillerato", "Planteles de bachillerato general de la SEP."],
-    ["DGETAyCM", "Educación Tecnológica Agropecuaria y Ciencias del Mar", "Bachilleratos tecnológicos agropecuarios."],
-    ["DGETI", "Educación Tecnológica Industrial y de Servicios", "CETIS y CBTIS: bachillerato tecnológico con carrera técnica."],
-    ["IEMS", "Instituto de Educación Media Superior de la CDMX", "Preparatorias del gobierno de la Ciudad de México."],
-    ["SECTI", "Secretaría de Educación, Ciencia, Tecnología e Innovación de la CDMX", "Opciones de bachillerato de la Ciudad de México."],
-    ["UAEMéx", "Plantel Texcoco de la Universidad Autónoma del Estado de México", "Lugares asignados dentro del proceso."],
-  ];
+  const cdmx = PLANTELES.filter((p) => p.entidad === "CDMX").length;
+  const uaem = POR_SISTEMA.uaemex[0];
   const faq = [
-    ["¿Qué prepas no piden examen?", "En Mi Derecho, Mi Lugar asignan sin examen COLBACH, CONALEP, DGB, DGETAyCM, DGETI, IEMS, SECTI y los lugares del plantel Texcoco de la UAEMéx."],
+    ["¿Qué prepas no piden examen?", `En Mi Derecho, Mi Lugar asignan lugar sin examen ${total} planteles de 13 instituciones: CONALEP (Ciudad de México y Estado de México), Colegio de Bachilleres, CETIS y CBTIS (DGETI), IEMS, CECyTEM, COBAEM, Preparatorias Oficiales del Estado de México, CBT, Telebachillerato Comunitario, Centros de Estudios de Bachillerato (DGB), CBTA y Centro del Mar (DGETAyCM) y el Plantel Texcoco de la UAEMéx.`],
     ["¿Cómo se asigna el lugar sin examen?", "Por el orden de las opciones en el comprobante de registro y los lugares disponibles de cada escuela."],
     ["¿Puedo combinar escuelas sin examen con la UNAM?", "Sí, en la modalidad 3: de 5 a 10 opciones sin examen más hasta 5 de la UNAM y 5 del IPN."],
+    ["¿Cómo encuentro prepas sin examen cerca de mí?", "Usa el mapa de esta página o <a href=\"/prepas-cerca-de-mi/\">Prepas cerca de mí</a>: con tu código postal te muestra las escuelas sin examen más cercanas, junto con las de la UNAM y el IPN."],
   ];
   const cuerpo = `
-${cabeceraPagina({ img: "escuelas-sin-examen-bachillerato", migasHtml: d.migas.html, h1: "Escuelas sin examen en Mi Derecho, Mi Lugar", lead: "Las opciones de bachillerato que asignan lugar sin presentar el ECOEMS, y cómo combinarlas con la UNAM y el IPN." })}
-<section class="seccion"><div class="contenedor">
-  <div class="encabezado-seccion"><h2>Instituciones que asignan sin examen</h2><p>Según la convocatoria 2026, estas instituciones asignan por el orden de tus opciones y los lugares disponibles. Se eligen en la <a href="/modalidades/">modalidad 1 o la 3</a>.</p></div>
-  <ul class="tarjetas-escuela">${subs.map(([s, n, t]) => `<li><div class="tarjeta-escuela" data-linea="sin"><span class="te-linea">${n}</span><b>${s}</b><span class="te-hon">${t}</span></div></li>`).join("")}</ul>
-  <p class="nota-ruta">${icono("mapa", "ico")}<span>Estamos reuniendo el catálogo de planteles sin examen para sumarlos al <a href="/mapa/">mapa de escuelas</a>. El catálogo oficial está en <a href="https://www.miderechomilugar.gob.mx/" rel="noopener" target="_blank">miderechomilugar.gob.mx</a>.</span></p>
-</div></section>
+${cabeceraPagina({ img: "escuelas-sin-examen-bachillerato", migasHtml: d.migas.html, h1: "Prepas sin examen en Mi Derecho, Mi Lugar", lead: `Las ${total} escuelas que asignan lugar sin presentar el ECOEMS, por institución, en el mapa y con cómo combinarlas con la UNAM y el IPN.`,
+  extra: `<div class="ficha"><div class="ficha-cifra ficha-meta"><span>Escuelas sin examen</span><b>${total}</b><small>proceso 2026</small></div><div class="ficha-cifra"><span>Instituciones</span><b>13</b><small>federales y estatales</small></div><div class="ficha-cifra"><span>CDMX</span><b>${cdmx}</b><small>planteles</small></div><div class="ficha-cifra"><span>Edomex</span><b>${total - cdmx}</b><small>planteles</small></div></div>` })}
+<section class="seccion" aria-labelledby="t-inst-sin">
+  <div class="contenedor">
+    <div class="encabezado-seccion"><h2 id="t-inst-sin">Instituciones que asignan sin examen</h2><p>Según el buscador oficial de 2026, estas instituciones asignan por el orden de tus opciones y los lugares disponibles. Se eligen en la <a href="/modalidades/">modalidad 1 o la 3</a>.</p></div>
+    <ul class="tarjetas-escuela">${SISTEMAS_ORDEN.map((k) => { const s = SISTEMAS[k]; const n = POR_SISTEMA[k].length; return `<li><div class="tarjeta-escuela tarjeta-enlace" data-linea="sin"><span class="te-linea">${s.largo ?? s.siglas}</span><b><a class="te-enlace" href="${s.ruta}">${s.nombre}</a></b><span class="te-hon">${n} ${n === 1 ? "plantel" : "planteles"} · ${s.tipo === "general" ? "bachillerato general" : s.tipo === "tecnico" ? "profesional técnico" : "bachillerato tecnológico"}</span></div></li>`; }).join("")}
+      <li id="${uaem.slug}"><div class="tarjeta-escuela" data-linea="sin"><span class="te-linea">Universidad Autónoma del Estado de México</span><b>${uaem.nombre}</b><span class="te-hon">1 plantel · ${uaem.dirLimpia}, ${uaem.municipio}</span></div></li>
+    </ul>
+  </div>
+</section>
+<section class="seccion seccion-blanca" aria-labelledby="t-mapa-sin">
+  <div class="contenedor">
+    <div class="encabezado-seccion"><h2 id="t-mapa-sin">Mapa de las ${total} prepas sin examen</h2><p>Cada punto es un plantel. Para buscar por tu código postal usa el <a href="/mapa/">mapa de escuelas</a> o <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>.</p></div>
+    ${miniMapa(PLANTELES.map((p) => [p.coord[0], p.coord[1], p.nombre, p.url, SISTEMAS[p.sis].corto, 0, "sin"]), "Mapa de las escuelas sin examen")}
+  </div>
+</section>
+<section class="seccion" aria-labelledby="t-sin-como">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-sin-como">Cómo combinar escuelas sin examen con la UNAM y el IPN</h2>
+    <p>En la <b>modalidad 1</b> eliges solo escuelas sin examen y no presentas el ECOEMS. En la <b>modalidad 3</b> presentas el examen para tus opciones de la UNAM y el IPN y además pones escuelas sin examen: si no alcanza lugar en las de examen, el sistema sigue con las sin examen de tu lista. Es la forma más segura de no quedarse sin escuela.</p>
+    <p>Para elegir, mira lo que quiere estudiar: el <a href="/escuelas/conalep/">CONALEP</a>, los <a href="/escuelas/cetis-cbtis/">CETIS y CBTIS</a>, el <a href="/escuelas/cecytem/">CECyTEM</a> y los <a href="/escuelas/cbt-edomex/">CBT</a> dan una carrera técnica; el <a href="/escuelas/colegio-de-bachilleres/">Colegio de Bachilleres</a>, el <a href="/escuelas/iems/">IEMS</a>, el <a href="/escuelas/cobaem/">COBAEM</a> y las <a href="/escuelas/preparatorias-oficiales-edomex/">Preparatorias Oficiales</a> son bachillerato general.</p>
+  </div>
+</section>
 <section class="seccion seccion-estudiar" aria-labelledby="t-sin-externos">
   <div class="contenedor contenedor-angosto">
     <h2 id="t-sin-externos">Para el bachillerato que elija</h2>
@@ -371,7 +391,6 @@ ${faqBloque(faq, "Preguntas sobre escuelas sin examen")}`;
   return hecha(ruta, d, cuerpo, faq);
 }
 
-// ---------- Aviso de privacidad ----------
 function aviso() {
   const ruta = "/aviso-de-privacidad/";
   const d = {

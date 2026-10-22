@@ -10,8 +10,10 @@ import * as aciertos from "./src/paginas/aciertos.mjs";
 import * as escuela from "./src/paginas/escuela.mjs";
 import * as proceso from "./src/paginas/proceso.mjs";
 import * as herramientas from "./src/paginas/herramientas.mjs";
+import * as sinexamen from "./src/paginas/sinexamen.mjs";
+import { datosMapaSin } from "./src/sinexamen.mjs";
 
-const PAGINAS = [inicio, proceso, aciertos, escuela, herramientas].flatMap((m) => m.paginas());
+const PAGINAS = [inicio, proceso, aciertos, escuela, herramientas, sinexamen].flatMap((m) => m.paginas());
 const css = readFileSync(new URL("./src/estilos.css", import.meta.url), "utf8");
 const js = readFileSync(new URL("./src/app.js", import.meta.url), "utf8");
 const ver = createHash("sha1").update(css + js).digest("hex").slice(0, 8);
@@ -31,6 +33,7 @@ if (existsSync("src/vendor")) cpSync("src/vendor", "dist/vendor", { recursive: t
   const filas = ["parte1", "parte2", "parte3"].map((f) => readFileSync(`src/datos/cp/${f}.txt`, "utf8").trim()).join(";");
   const municipios = readFileSync("src/datos/cp/municipios.txt", "utf8").trim().split(";").map((x) => { const [e, n] = x.split("|"); return `${n}, ${e === "09" ? "CDMX" : "Edomex"}`; });
   mkdirSync("dist/datos", { recursive: true });
+  writeFileSync("dist/datos/sin-examen.json", JSON.stringify(datosMapaSin()));
   writeFileSync("dist/datos/cp-zmvm.json", JSON.stringify({ fuente: "GeoNames (CC BY 4.0), coordenadas aproximadas", m: municipios, c: filas }));
 }
 

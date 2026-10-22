@@ -1,0 +1,421 @@
+#I CONALEP|SECTI CONALEP|DGETI|SECTI PO|SECTI CBT|IEMS|SECTI TELEBACHILLERATO|DGETAyCM|SECTI COBAEM|DGB|SECTI CECYTEM|COLEGIO DE BACHILLERES|UAEMéx
+#M VENUSTIANO CARRANZA|IZTAPALAPA|ECATEPEC DE MORELOS|GUSTAVO A. MADERO|MIGUEL HIDALGO|LA MAGDALENA CONTRERAS|CHALCO|TECÁMAC|ÁLVARO OBREGÓN|AZCAPOTZALCO|IZTACALCO|CUAUHTÉMOC|NICOLÁS ROMERO|NEZAHUALCÓYOTL|XOCHIMILCO|CHICOLOAPAN|CHIMALHUACÁN|TULTITLÁN|TLALNEPANTLA DE BAZ|TLÁHUAC|TEXCOCO|MILPA ALTA|HUIXQUILUCAN|VALLE DE CHALCO SOLIDARIDAD|TLALPAN|IXTAPALUCA|ATIZAPÁN DE ZARAGOZA|LA PAZ|COACALCO DE BERRIOZÁBAL|CUAUTITLÁN IZCALLI|TULTEPEC|ACOLMAN|CUAUTITLÁN|TEPOTZOTLÁN|BENITO JUÁREZ|CUAJIMALPA DE MORELOS|COYOACÁN|NAUCALPAN DE JUÁREZ
+#E C1303 Asistente directivo
+#E C1328 Refrigeración y climatización
+#E S1306 Contabilidad
+#E C1322 Optometría
+#E C1327 Química industrial
+#E D4357 Electromovilidad
+#E C1316 Informática
+#E C1317 Soporte y mantenimiento de equipo de cómputo
+#E C1307 Control de calidad
+#E D4373 Programación
+#E S4077 Técnico en manufactura asistida por computadora
+#E D4306 Contabilidad
+#E S4035 Técnico en instrumentación dental
+#E S4066 Técnico en diseño asistido por computadora
+#E D4360 Gestión e innovación turística
+#E D4346 Arquitectura
+#E D4380 Servicios de hospedaje
+#E D4396 Soporte y gestión de tecnologías informáticas
+#E D4345 Administración de recursos humanos
+#E D4386 E Commerce
+#E D4368 Ofimática
+#E D4394 Urbanismo y desarrollo sostenible
+#E C1330 Telecomunicaciones
+#E D4366 Mecánica industrial
+#E D4385 Producción digital y experiencias inmersivas
+#E C1333 Seguridad e higiene y protección civil
+#E D4377 Refrigeración y aire acondicionado (Sólo se oferta en el turno matutino)
+#E E0000 Modalidad escolarizada
+#E D4393 Sistemas de software embebido
+#E D4347 Ciberseguridad
+#E D4370 Producción de prendas de vestir (Sólo se oferta en el turno matutino)
+#E D4382 Trabajo social
+#E D4389 Nanotecnología y ciencia de materiales
+#E D4352 Diseño de modas
+#E D4363 Laboratorista clínico
+#E S4046 Técnico en informática
+#E D4335 Mecatrónica
+#E S4076 Técnico en mecatrónica
+#E D4358 Electrónica
+#E D4349 Comercio internacional y aduanas
+#E A3103 Técnico en ofimática
+#E S4069 Técnico en turismo
+#E S4079 Técnico en biotecnología en alimentos
+#E S1316 Informática
+#E S1317 Soporte y mantenimiento de equipo de cómputo
+#E S1335 Mecatrónica
+#E S1305 Construcción
+#E S4071 Técnico en mercadotecnia
+#E S1315 Industria del vestido
+#E S1330 Telecomunicaciones
+#E S1328 Refrigeración y climatización
+#E S1308 Conservación del medio ambiente
+#E S1327 Química industrial
+#E S5087 Técnico en programación
+#E S1322 Optometría
+#E S5021 Técnico en laboratorista químico
+#E S4070 Técnico en gastronomía
+#E S1320 Máquinas herramienta
+#E S4039 Técnico en contabilidad
+#E S4083 Técnico en servicios bancarios
+#E S5086 Técnico en logística
+#E S5027 Técnico en producción industrial
+#E S4081 Técnico en puericultura
+#E S5097 Técnico en inteligencia artificial
+#E S5106 Técnico en soporte y gestión de tecnologías informáticas
+#E S4036 Técnico en administración
+#E S5348 Técnico en ciencia de datos e información
+#E S5105 Técnico en comercio internacional y aduanas
+#E S5091 Técnico en ventas
+#E S5094 Técnico en animación digital
+#E C1320 Máquinas herramienta
+#E S5096 Técnico en comercio exterior
+#E S5090 Técnico en procesos de gestión administrativa
+#E S5015 Técnico en electricidad
+#E D4356 Electricidad
+#E S1343 Ciencia de datos e inteligencia artificial
+#E S5009 Técnico en construcción
+#E C1306 Contabilidad
+#E S1301 Administración
+#E C1312 Mantenimiento de sistemas electrónicos
+#E A3098 Técnico agropecuario
+#E A3100 Técnico en agroindustrias alimentarias
+#E D4361 Inteligencia artificial
+#E A3347 Ciberseguridad
+#E A3390 Sistema de producción agrícola
+#E S1302 Alimentos y bebidas
+#E A3369 Preparación de alimentos y bebidas
+#E A3365 Logística
+#E B0000 Inicio septiembre de 2026
+#E S5022 Técnico en mantenimiento industrial
+#E S5013 Técnico en diseño gráfico digital
+#E D4364 Laboratorista químico
+#E D4353 Diseño decorativo
+#E C1315 Industria del vestido
+#E C1304 Mantenimiento automotriz
+#E C1301 Administración
+#E C1334 Expresión gráfica digital
+#E C1343 Ciencia de datos e inteligencia artificial
+#E C1313 Enfermería general
+#E C1337 Escenotecnia
+#E S4053 Técnico laboratorista químico
+#E C1318 Mantenimiento de motores y planeadores
+#E C1310 Electricidad industrial
+#E D4375 Puericultura
+#E D4369 Preparación de alimentos y bebidas
+#E D4359 Gericultura
+#E D4351 Dietética
+#E D4304 Mantenimiento automotriz
+#E C1311 Electromecánica industrial
+#E D4378 Robótica y automatización
+#E D4365 Logística
+#E S5016 Técnico en electrónica
+#E D4381 Sistemas de impresión: serigrafía y offset
+#E D4354 Diseño gráfico digital
+#E D4387 Inteligencia de negocios
+#E S5085 Técnico en desarrollo organizacional
+#E S1336 Autotrónica
+#E D4350 Cosmetología
+#E D4313 Enfermería general
+#E C1335 Mecatrónica
+#E S1342 Turismo
+#E S1313 Enfermería general
+#E S1311 Electromecánica industrial
+#E A3102 Técnico en biotecnología
+#E A3384 Vida saludable
+#E A3391 Sistema de producción pecuaria
+#E A3380 Servicios de hospedaje
+#E A3101 Técnico en apicultura
+#E A3372 Producción industrial de alimentos
+#E A3087 Técnico en programación
+#E A3099 Técnico en administración de recursos humanos
+#E A3088 Técnico en soporte y mantenimiento de equipo de cómputo
+#E C1331 Terapia respiratoria
+#E C1342 Turismo
+#E C1305 Construcción
+#E C1336 Autotrónica
+#E A3345 Administración de recursos humanos
+#E C1302 Alimentos y bebidas
+#E S1310 Electricidad industrial
+#E C1332 Laministería y recubrimiento de las aeronaves
+#E S1339 Enfermería comunitaria
+#E C1329 Sistemas electrónicos de aviación
+#E D4379 Secretariado ejecutivo bilingüe
+#E D4355 Diseño industrial
+#E D4372 Producción industrial de alimentos
+#E D4305 Construcción
+#E D4383 Transformación de plásticos
+#E D4376 Radiología e imagen
+#E D4330 Telecomunicaciones
+#E D4374 Prótesis y asistente dental
+#E D4367 Medios de comunicación
+#E A3344 Acuacultura
+#E S1340 Motores a diesel
+#E D4371 Producción industrial
+#E S1325 Producción y transformación de productos acuícolas
+#E S1341 Autotransporte
+#E S1326 Productividad industrial
+#E S1309 Asistente y protesista dental
+#E S1334 Expresión gráfica digital
+#E S1331 Terapia respiratoria
+#E S1338 Fuentes alternas de energía
+#E S1321 Metalmecánica
+#E S1333 Seguridad e higiene y protección civil
+#E S1323 Plásticos
+#E S4082 Técnico en comunicación
+#E S4044 Técnico en enfermería general
+#E S4038 Técnico en edificación
+#E A3397 Agricultura digital y de precisión
+#E S4084 Técnico en electrónica
+#E S4092 Técnico en autotrónica
+#E S1324 Procesamiento industrial de alimentos
+#E S4054 Técnico en manufactura del vestido
+#E S5055 Técnico en trabajo social
+#E S5060 Técnico en mecatrónica
+#E S5104 Técnico en ciberseguridad
+#E S4086 Técnico en logística
+#E S5025 Técnico en máquinas - herramienta
+#E S4095 Técnico en expresión gráfica digital
+#E S5020 Técnico en laboratorista clínico
+#E A3361 Inteligencia de negocios
+0 CONALEP VENUSTIANO CARRANZA I 0 19.41221 -99.12626 0 0 C126 303,306,317,312 Prol. Yunque núm. 33, Col. Artes Gráficas C.P. 15830
+0 CONALEP IZTAPALAPA III 1 19.33450 -99.07923 0 0 C117 328,316,303 Calle Nautla esq. Ciruelos s/n, Col. San Juan Xalpa. C.P. 09850
+1 CONALEP ECATEPEC III 2 19.62523 -99.06174 1 0 S139 306,320,336,341 Av. Venustiano Carranza esq. Francisco Villa s/n, Col. Guadalupe Victoria, C.P. 55010
+0 CONALEP AZTAHUACAN 1 19.35730 -99.03210 0 0 C113 322,306,312,315 Av. Plan de Ayala núm. 395, Col. Ejidos de Santa María Aztahuacan. C.P. 09500
+0 CONALEP ING. JOSÉ ANTONIO PADILLA SEGURA III (ANTES TICOMÁN) 3 19.52175 -99.14618 0 0 C111 327,303,335,310 Calle de la Borrasca s/n y Av. Acueducto de Guadalupe, Unidad Acueducto de Guadalupe. C.P. 07270
+2 CETIS 8 4 19.43871 -99.18219 1 0 D426 357,366,393,345,378,304,335 Lago Alberto núm. 431, (Sólo opera el turno vespertino), Col. Anáhuac. C.P. 11320
+0 CONALEP GUSTAVO A. MADERO II 3 19.50599 -99.08629 0 0 C110 316,304,311,303 Av. Eduardo Molina s/n, Col. Juan González Romero. C.P. 07410
+3 EPO NÚM. 211 2 19.63634 -99.06511 0 0 S772 Calle Niños Heroes s/n. Esq. Felipe Carrillo Puerto, Col. Luis Donaldo Colosio. C.P. 55029
+0 CONALEP IZTAPALAPA V 1 19.37270 -99.00635 0 0 C114 317,316,306 Ahuehuetes s/n entre Encinos y Pirules, Santa Martha Acatitla. C.P. 09530
+0 CONALEP COMERCIO Y FOMENTO INDUSTRIAL (SECOFI) 5 19.30562 -99.26734 0 0 C119 303,301 Av. Ojo de Agua s/n, Col. Huayatla. C.P. 10350
+0 CONALEP IZTAPALAPA I 1 19.36135 -99.01399 0 0 C115 307,320,310,303 Av. Yucatán núm. 25, Col. San Sebastián Tecoloxtitlán. C.P. 09520
+2 CETIS 50 1 19.30739 -99.07652 1 0 D422 373,385,396,345 Av. Las Torres núm. 300, Barrio de San Antonio, Col. San Lorenzo Tezonco. C.P. 09900
+3 EPO NÚM. 198 6 19.26464 -98.82482 0 0 S729 Carr. San Martín - Huexoculco s/n, Col. Lomas de Calhuanco, Santa María Huexoculco. C.P. 56646
+4 CBT NÚM. 1 "DR. JORGE JIMÉNEZ CANTÚ", TECÁMAC 7 19.67501 -99.03670 1 0 S476 077,083,066,071,036,046 Calle Paseo de las Carretas s/n, Col. Jardines Ojo de Agua. C.P. 55770
+2 CETIS 52 8 19.32644 -99.27946 1 0 D402 306,360,369,345,387 Carretera al Desierto de los Leones Km. 25, Col. San Bartolo Ameyalco. C.P. 01800
+4 CBT NÚM. 2 "LIC. CARLOS PICHARDO", TECÁMAC 7 19.74391 -98.97184 0 0 S477 035,066,077,070,079,039,046 Km. 40 Carr. Fed. México-Pachuca, San Pedro Pozohuacán. C.P. 55740
+0 CONALEP CENTRO MÉXICO-CANADÁ 9 19.48398 -99.21528 0 0 C104 316,343,317,306 Calle Macario Gaxiola s/n, Col. San Pedro Xalpa. C.P. 02710
+2 CETIS 56 3 19.45858 -99.10130 1 0 D415 346,368,353,345,365,349,305 Av. Oriente 95 núm. 4312 esq. Norte 84, Col. Nueva Tenochtitlán. C.P. 07830
+2 CETIS 31 10 19.38723 -99.09392 1 0 D418 306,386,345,373 Andador Puente de Santa Ana núm. 50, Col. Cuchilla Gabriel Ramos Millán. C.P. 08030
+2 CETIS 13 11 19.42897 -99.15068 1 0 D411 380,306,386,369 Enrico Martínez núm. 25, (Sólo opera el turno vespertino), Col. Centro. C.P. 06000
+2 CETIS 4 9 19.47699 -99.17496 1 0 D403 396,373,347,306,356,386 Av. de las Granjas núm. 283, Col. Jardín Azpeitia. C.P. 02530
+2 CETIS 7 3 19.53477 -99.15646 1 0 D417 345,350,349,373 Av. Luis Espinoza s/n entre Av. Benito Juárez y Solidaridad (Antiguo Museo del Drenaje Profundo), Col. Solidaridad Nacional. C.P. 07268
+2 CETIS 55 3 19.50748 -99.10286 1 0 D414 360,304,345,347,357 Av. Periférico s/n, Unidad Habitacional C.T.M. Atzacoalco, Col. Gabriel Hernández. C.P. 07090
+3 EPO NÚM. 333 12 19.63923 -99.29372 0 0 S829 Allende s/n, Col. Ejido Azotlán. C.P. 54417
+2 CETIS 33 9 19.50361 -99.20713 1 0 D404 394,304,346,347,345 Hacienda Narvarte núm. 84, Col. Prados del Rosario. C.P. 02420
+3 EPO NÚM. 267 13 19.38963 -99.02520 1 0 S817 Ex convento de Churubusco s/n, Col. Metropolitana 2ª sección. C.P. 57710
+0 CONALEP AEROPUERTO 0 19.42420 -99.05730 0 0 C125 330,318,332,329 Av. Acolhuacan s/n, esq. Aztecas, Col. Arenal 3ª sección. C.P. 15600
+2 CETIS 39 14 19.26242 -99.12695 1 0 D433 345,377,306,356,349 Av. Acueducto núm. 5511, Col. Ampliación Tepepan. C.P. 16020
+2 CETIS 32 0 19.42231 -99.06841 1 0 D431 386,396,364,345,372 Antiguo Lecho del Río Churubusco s/n esq. Javier Barros Sierra, Col. Adolfo López Mateos. C.P. 15670
+2 CETIS 51 0 19.43205 -99.06216 1 0 D432 360,345,382,369,349 Xocoyote y Xamimilulco s/n, Col. Arenal 4a. sección. C.P. 15600
+0 CONALEP IZTACALCO I 10 19.40307 -99.06616 0 0 C112 303,315,311 Calz. Ignacio Zaragoza núm. 1060, Col. Agrícola Pantitlán. C.P. 08100
+2 CBTIS 202 2 19.59357 -98.99547 1 0 D441 386,349,373,364,365 Av. Jardines de Morelos s/n, Fracc. Jardines de Morelos. C.P. 55070
+2 CETIS 153 1 19.37871 -99.06097 1 0 D425 345,352,335,373,350,378 Av. Leyes de Reforma y 25 de septiembre de 1873, Col. Leyes de Reforma. C.P. 09310
+2 CETIS 42 1 19.34679 -99.00014 1 0 D421 386,361,306,377,345,373 Av. México s/n esq. Calle Lima, Col. Ixtlahuacan. C.P. 09690
+0 CONALEP AZCAPOTZALCO 9 19.48750 -99.17614 0 0 C103 333,304,301 Cda. Cecati núm. 13, Col. Santa Catarina. Azcapotzalco la Villa. C.P. 02250
+0 CONALEP ARAGÓN 3 19.45082 -99.07102 0 0 C108 316,312,310,343,334 Av. 599 esq. Av. 604, s/n, Unidad Habitacional San Juan de Aragón 3ª sección. C.P. 07970
+5 IZTAPALAPA IV - JOSÉ EMILIO PACHECO 1 19.35623 -99.11169 1 0 E061 Eje 3 Oriente s/n esq. Ermita Iztapalapa , Col. Progreso del Sur. C.P. 09810
+3 EPO NÚM. 55 15 19.40265 -98.92632 0 0 S735 Francisco I. Madero Mz. 20, Col. Revolución. C.P. 56370
+6 TBC NÚM. 343, BARRIO HOJALATEROS 16 19.40871 -98.96203 0 0 S259 Manzana 030, Xochiaca Parte Alta. C.P. 56350
+2 CETIS 95 17 19.62713 -99.15663 1 0 D451 347,386,345,373 Alcanfores s/n, Col. Lázaro Cárdenas. C.P. 54916
+2 CETIS 119 2 19.51325 -99.02978 1 0 D443 373,370,352,361 Av. Ignacio Pichardo Pagaza s/n, Col. Fuentes de Aragón. C.P. 55210
+2 CETIS 65 2 19.61409 -99.02141 1 0 D442 386,356,358,306,345,313 Carr. México-Pachuca Km. 2.5, Col. Santo Tomás Chiconautla. C.P. 55050
+2 CBTIS 295 2 19.62788 -98.99063 0 0 D454 389,347,361,382 Predio Caballerizas México Nuevo. C.P. 55066
+2 CETIS 165 18 19.51223 -99.16652 1 0 D447 347,385,381,350,345,354 Periodistas núm. 190, Col. Prensa Nacional. C.P. 54170
+5 ÁLVARO OBREGÓN II - VASCO DE QUIROGA 8 19.34555 -99.22313 1 0 E034 Av. Río Guadalupe s/n esq. Tecalcapa, Col. El Mirador. C.P. 01740
+2 CBTIS 289 7 19.65037 -98.98456 0 0 D452 363,313,374,376 Malta Mz. 2, Lt. 1, Conjunto Urbano "Los Héroes San Pablo III". C.P. 55765
+4 CBT NÚM. 3, TECÁMAC 7 19.68562 -98.99910 0 0 S478 046,076,070 Calle Maravillas s/n, Col. Santa María Ozumbilla. C.P. 55760
+2 CBTIS 50 18 19.56025 -99.20030 1 0 D448 366,378,306,349,363,358,345 Av. Fco. Márquez núm. 5, Col. Tequesquináhuac. C.P. 54020
+2 CETIS 1 19 19.29323 -98.99785 1 0 D429 335,349,373,304,361,356,378,396,357 Eje 10 Sur esq. Estanislao Ramírez Ruíz s/n, Col. Selene. C.P. 13420
+2 CETIS 6 1 19.34535 -99.10602 1 0 D420 345,349,366,383,394,356 Av. Tláhuac esq. Av. Cuitláhuac núm. 50, Col. Los Reyes Culhuacán. C.P. 09840
+4 CBT NÚM. 4, TEXCOCO 20 19.44235 -98.89510 1 0 S483 066,070,082,069 Parcela Escolar San Pedro s/n, Col. Santiago Cuautlalpan. C.P. 56255
+5 MIGUEL HIDALGO - CARMEN SERDÁN 4 19.45364 -99.20065 1 0 E067 Calle Lago Ximilpa núm. 88, Col. Argentina Antigua. C.P. 11270
+4 CBT NÚM. 4, TECÁMAC 7 19.63203 -99.02739 0 0 S479 066,079,070,046 Bosques de Francia Mza. 1, Lt. 3, Zona VI, Sección Bosques, Loc. Los Héroes Tecámac II. C.P. 55764
+5 MILPA ALTA - EMILIANO ZAPATA 21 19.17594 -98.99180 1 0 E069 Cerrada Francisco I. Madero s/n, Col. Barrio La Lupita. Pueblo de Santa Ana Tlacotenco. C.P. 12910
+3 EPO NÚM. 335 22 19.42626 -99.26966 0 0 S788 Camino nuevo a Huixquilucan s/n, Col. Las Canteras. C.P. 52774
+2 CBTIS 6 13 19.38843 -98.98063 1 0 D445 358,366,363,306 Final Oriente de Avenida Chimalhuacán s/n, Col. Esperanza. C.P. 57800
+5 IZTAPALAPA II - BENITO JUÁREZ 1 19.31479 -99.06507 1 0 E057 Av. Zacatlán, esquina Cempasúchitl s/n, Col. Lomas de San Lorenzo Tezonco. C.P. 09790
+3 EPO NÚM. 284 16 19.39472 -98.94369 1 0 S759 Cda. de Violetas esq. con calle Otoño Mz.1, Lt 1, Col. Copalera. C.P. 56337
+7 CBTA 35 23 19.33135 -98.95494 1 0 A301 103,098,100,102,101,087,099,088 Carr. Fed. México-Puebla km. 22.5, Col. San Juan Tlalpizáhuac. C.P. 56618
+4 CBT "DR. EDUARDO SUÁREZ A.", TEXCOCO 20 19.52245 -98.90078 1 0 S480 046,069,039 Calle Pino Suárez s/n, Loc. San Miguel Tocuila. C.P. 56208
+4 CBT NÚM. 5, TEXCOCO 20 19.54425 -98.81251 0 0 S484 076,081,039,070 Av. Diego de Betanzos s/n, Loc. San Juan Tezontla, Col. Centro. C.P. 56243
+5 VENUSTIANO CARRANZA II - ALAMEDA ORIENTE 0 19.43288 -99.05288 1 0 E080 Av. Bordo de Xochiaca s/n, Col. Arenal Cuarta Sección. C.P. 15640
+1 CONALEP ECATEPEC II 2 19.50661 -99.02933 0 0 S138 316,301,306,317 Av. Manuel Ávila Camacho s/n esq. Plan de Iguala y Alhóndiga de Granaditas, Col. México Independiente. C.P. 55245
+8 COBAEM PLANTEL 43 TEXCOCO 20 19.43630 -98.86262 1 0 S068 Prolongación 5 de Febrero s/n, camino a la Ex Hacienda de Tepetitlán. San Miguel Coatlinchan. C.P. 56250
+9 CEB 10/8 23 19.29790 -98.96332 0 0 G217 Calle Violeta, San Miguel las Tablas. C.P. 56610
+1 CONALEP DEL SOL 13 19.42925 -99.03069 0 0 S145 317,335,305,333 Av. Aureliano Ramos s/n esq. Av. Víctor, Col. El Sol. C.P. 57200
+1 CONALEP VALLE DE ARAGÓN 2 19.49879 -99.05466 0 0 S140 306,308,320,335 Prolongación Miguel Alemán 117-A entre Durango y Av. Adolfo López Mateos, Col. Chamizal. C.P. 55270
+3 EPO NÚM. 15 15 19.41986 -98.90289 0 0 S734 Allende núm. 35, Col. San Vicente. C.P. 56370
+9 CEB 10/5 23 19.30221 -98.95200 0 0 G216 Calle Arquitectos s/n, Col. Santiago. C.P. 56615
+5 TLALPAN I - GRAL. FRANCISCO J. MÚGICA 24 19.26707 -99.22629 1 0 E075 Prolongación Yobaín núm. 105, Col. Belvedere. C.P. 14720
+4 CBT NÚM. 3, TEXCOCO 20 19.50125 -98.85875 0 0 S482 071,069,082,070 2ª Cerrada de Empedradillo s/n, Col. San Diego. C.P. 56200
+9 CEB 9/12 25 19.32756 -98.88357 0 0 G206 Calle Jesús María, Col. Geovillas de Jesus María. C.P. 56586
+1 CONALEP NEZAHUALCÓYOTL II 13 19.40132 -98.98593 0 0 S147 315,336 Circuito Rey Neza y 4ta. Avenida s/n, Col. Benito Juárez. C.P. 57000
+1 CONALEP ATIZAPÁN II 26 19.60669 -99.23147 1 0 S130 330,311,317 Calle del Toril y Rodeo s/n, Cd. López Mateos, Fracc. Villas de la Hacienda. C.P. 52929.
+4 CBT "JUAN DE DIOS BÁTIZ", VALLE DE CHALCO SOLIDARIDAD 23 19.28296 -98.94699 1 0 S487 046 Calle Poniente núm. 6 esq. Av. Anáhuac, Col. Niños Héroes. C.P. 56610
+1 CONALEP CIUDAD AZTECA 2 19.54868 -99.03129 0 0 S136 328,310,327,321 Av. Fuego Nuevo s/n y Blvd. Tonatiuh, Cd. Azteca 2ª sección. C.P. 55120
+4 CBT, TULTITLÁN 17 19.58456 -99.17442 0 0 S486 069,076,046 Calle Hidalgo s/n, Col. Ampliación Buenavista. C.P. 54955
+9 CEB 9/11 16 19.44416 -98.97359 0 0 G205 Calle Zafiro, Barrio Transportistas. C.P. 56363
+3 EPO NÚM. 82 13 19.38303 -99.00484 1 0 S812 Calle Santa Rosa s/n, Col. Ampliación Vicente Villada Oriente. C.P. 57710
+6 TBC NÚM. 127, LOMAS DE SAN ISIDRO 27 19.35070 -98.94204 0 0 S281 Loma de San Isidro 346, Lomas de San Isidro. C.P. 56370
+1 CONALEP TLALNEPANTLA II 18 19.53784 -99.11229 1 0 S155 315,343,336,324 Alpino Tláloc s/n, 3ª. sección, Col. Lázaro Cárdenas antes La Presa (cerca de San Juanico - San Juan Ixhuatepec y la autopista México - Pachuca). C.P. 54189
+6 TBC NÚM. 342, SAN AGUSTÍN ATLAPULCO 16 19.37582 -98.95783 0 0 S258 Belisario Domínguez 366, San Sebastián, San Sebastián Chimalpa. C.P. 56520
+6 TBC NÚM. 109, GRAL. ÁVILA CAMACHO 25 19.32270 -98.76366 1 0 S269 Galeana Manuel Ávila Camacho a dos calles de la Carr. Federal México-Puebla, Col. Manuel Ávila Camacho. C.P. 56599
+6 TBC NÚM. 241, GUADALUPE AMANALCO 20 19.51531 -98.72406 1 0 S287 Calle Emiliano Zapata s/n, Col. Guadalupe Amanalco. C.P. 56248
+6 TBC NÚM. 242, SAN DIEGUITO XOCHIMANCA 20 19.48894 -98.82632 0 0 S288 C. Nuevo León s/n, San Dieguito Xochimanca. C.P. 56246
+6 TBC NÚM. 110, EL MOLINO 25 19.29843 -98.92243 1 0 S270 Jazmín s/n, Col. El Molino. C.P. 56553
+6 TBC NÚM. 74, REPÚBLICA MEXICANA 28 19.65433 -99.10666 0 0 S253 Calle Felipe de Jesús, Los Héroes, Col. San Francisco, Coacalco. C.P.55712
+6 TBC NÚM. 350, SANTA MARÍA DE GUADALUPE LA QUEBRADA 29 19.58967 -99.19325 1 0 S255 C. Betunia 269, Sta María Guadalupe. C.P. 54769
+1 CONALEP GUSTAVO BAZ - TLALNEPANTLA 18 19.56628 -99.20349 0 0 S153 316,327,326,308 Vía Gustavo Baz esq. Jacarandas s/n, Fracc. Valle Hermoso. C.P. 54010
+6 TBC NÚM. 94, CORONEL JOSÉ ANTONIO TORRES 2 19.55445 -99.01624 1 0 S260 Miguel Alemán Manzana 039, Sagitario 8. C.P. 55117
+1 CONALEP TLALNEPANTLA I 18 19.51179 -99.16492 0 0 S154 316,343,311,335 Av. Exhacienda de Enmedio y Río de los Remedios, Col. Prado Vallejo. C.P. 54170
+8 COBAEM PLANTEL 15 NICOLÁS ROMERO 12 19.66004 -99.36970 1 0 S065 Prolongación Morelos s/n, Ejido El Tizar, San José el Vidrio. C.P. 54449
+4 CBT, TULTEPEC 30 19.70073 -99.12180 0 0 S488 066,044,046,086 Cerrada Jazmines s/n, Col. La Cañada. C.P. 54965
+6 TBC NÚM. 469, HOGAR OBRERO 18 19.57091 -99.19086 1 0 S290 Manzana 005, Hogar Obrero. C.P. 54110
+6 TBC NÚM. 107, VALLE VERDE 25 19.31785 -98.91301 1 0 S267 Manzana 035, Cerro del Tejolote. C.P. 56567
+10 CECyTEM PLANTEL COACALCO 28 19.62153 -99.10116 0 0 S551 087,106,085 Enrique Rébsamen s/n, Col. El Gigante. C.P. 55709
+6 TBC NÚM. 250, EL PUERTO 18 19.54802 -99.16247 1 0 S289 Diagonal 2, El Puerto. C.P. 54140
+6 TBC NÚM. 103, EL OLIVO 22 19.38772 -99.27803 1 0 S263 Pino Manzana 019, El Olivo. C.P. 52789
+6 TBC NÚM. 187, SANTO DOMINGO AJOLOAPAN 7 19.76156 -98.94706 1 0 S284 Calle Peñón s/n, Santo Domingo Ajoloapan. C.P. 55754
+1 CONALEP TULTITLÁN 17 19.62660 -99.15742 0 0 S157 322,336,335 Cipreses s/n, Vía José López Portillo Km. 6, Col. Lázaro Cárdenas, Zona de los Hornos. C.P. 54916
+6 TBC NÚM. 371, DR. JORGE JIMÉNEZ CANTÚ 27 19.37436 -98.93036 1 0 S283 Primavera Cda. 22 s/n, Lomas de San Sebastián. C.P. 56515
+6 TBC NÚM. 146, TRANSFIGURACIÓN 12 19.57763 -99.41409 0 0 S274 Avenida principal s/n, Transfiguración. C.P. 54439
+6 TBC NÚM. 104, IGNACIO ALLENDE 22 19.34521 -99.36108 0 0 S264 Potrero s/n, Av. Río San Joaquín, Col. Ignacio Allende. C.P. 52767
+10 CECyTEM PLANTEL CUAUTITLÁN IZCALLI 29 19.62767 -99.21972 0 0 S553 021,086,348,087 Torre Satélite s/n esq. Torre Frontera, Col. Santa María Guadalupe Las Torres 1ª sección. C.P. 54760
+4 CBT NÚM. 1 "LIC. AGUSTÍN REYES PONCE", CHIMALHUACÁN 16 19.42939 -98.98593 0 0 S464 046,081,044 Calle Quetzalli s/n, Col. Nueva Guadalupe, Barrio Orfebres. C.P. 56356
+4 CBT NÚM. 3 "SR. MAX SHEIN HEISLER", CHALCO 6 19.21474 -98.92219 0 0 S459 039,046,066 Carr. Chalco - Maseca s/n, Loc. Santa Catarina Ayotzingo. C.P. 56623
+4 CBT NÚM. 2 "ISAAC GUZMÁN VALDIVIA", CHIMALHUACÁN 16 19.44385 -98.96664 0 0 S465 083,053,036,046 Calle Ameyalco s/n, Barrio Labradores. C.P. 56368
+4 CBT NÚM. 2, TEXCOCO 20 19.49058 -98.90511 0 0 S481 070,046,036,069 Prolongación Venustiano Carranza núm. 2, Loc. Boyeros. C.P. 56263
+10 CECyTEM PLANTEL CHICOLOAPAN 15 19.40763 -98.89900 0 0 S555 027,106,090 Av. Zapata o Camino a Coatepec, paraje "La Campana", Col. Santa Rosa. C.P. 56370
+4 CBT NÚM. 2 "DR. MAXIMILIANO RUIZ CASTAÑEDA", NEZAHUALCÓYOTL 13 19.40347 -99.02162 1 0 S474 083,036,046 Calle 3ª Avenida núm. 27, Col. Evolución. C.P. 57700
+3 EPO NÚM. 107 31 19.64081 -98.90339 1 0 S701 Av. del Progreso s/n, Col. 1 de Septiembre. C.P. 55870
+10 CECyTEM PLANTEL ECATEPEC II 2 19.50638 -99.03422 0 0 S559 097,086,087,055 Calle Moctezuma s/n esq. Felipe Ángeles, Col. Hacienda de Aragón. C.P. 55243
+6 TBC NÚM. 519, BENITO JUÁREZ 18 19.56333 -99.21469 1 0 S297 Emilio Portes Gil s/n, Benito Juárez(Tequex). C.P. 54020
+4 CBT NÚM. 2 "GUILLERMO GONZÁLEZ CAMARENA", IXTAPALUCA 25 19.29725 -98.90496 1 0 S470 046,084 Av. Colibrí s/n, Col. Alfredo del Mazo. C.P. 56570
+4 CBT, HUIXQUILUCAN 22 19.39042 -99.38229 0 0 S468 036,039 Domicilio conocido, Camino a la Glorieta, s/n, Col. Santa Cruz Ayotuxco. C.P. 52795
+10 CECyTEM PLANTEL CUAUTITLÁN 32 19.68470 -99.16260 0 0 S552 105,087,086,348 Camino Viejo a Melchor Ocampo s/n, Conjunto Urbano Paseos del Bosque, Col. Ex - Hacienda Xaltipa. C.P. 54850
+3 EPO NÚM. 227 16 19.39756 -98.97128 0 0 S749 Misterios s/n, Col. Cerro de las Palomas. C.P. 56340
+1 CONALEP NEZAHUALCÓYOTL III 13 19.39916 -99.01338 1 0 S148 316,302,342 Calle San Bartolo núm. 149, Col. Ampliación José Vicente Villada. C.P. 57760
+3 EPO NÚM. 238 16 19.41812 -98.98603 1 0 S756 Av. Gregorio Melero esq. s/n, Bo. Jugueteros. C.P. 56356
+3 EPO NÚM. 224 16 19.39633 -98.91901 1 0 S746 Cuchilla San Isidro esq. Palma, Col. Ejidos de Santa María Chimalhuacán. C.P. 56330
+3 EPO NÚM. 222 16 19.40677 -98.94248 1 0 S745 Baja California s/n esq. Cancún, Col. Santo Domingo. C.P. 56330
+3 EPO NÚM. 48 2 19.64252 -99.00880 0 0 S764 Priv. del Rosario s/n, Col. Santo Tomás Chiconautla. C.P. 55069
+3 EPO NÚM. 342 6 19.21602 -98.81967 0 0 S731 Carretera Chalco-San Mateo Tezoquiapan s/n Miraflores, Loc. San Mateo Tezoquiapan. Callejón de la Paz. Llano Grande. C.P. 56645
+3 EPO NÚM. 312 6 19.28170 -98.89986 1 0 S730 Calle Educación s/n, Col. Nueva San Isidro. C.P. 56605
+3 EPO NÚM. 338 16 19.44480 -98.95923 1 0 S761 Pochteca Mz. 57, Lt. 7, Col. Barrio Cesteros. C.P. 56336
+3 EPO NÚM. 278 16 19.44579 -98.92815 1 0 S758 Calle Encinos s/n, Col. Arboledas. C.P. 56335
+3 EPO NÚM. 226 16 19.43321 -98.96669 1 0 S748 Capulín s/n esq. Sindicalismo, Barrio Alfareros. C.P. 56330
+3 EPO NÚM. 240 16 19.39376 -98.94085 1 0 S757 Camino Viejo a Texcoco s/n, Col. Arenitas. C.P. 56337
+3 EPO NÚM. 237 16 19.40720 -98.93537 1 0 S755 Callejón del Centenario s/n, Col. Santa María Nativitas. C.P. 56335
+3 EPO NÚM. 339 16 19.42334 -98.93555 1 0 S762 Mariano Abasolo s/n esq. Vicente Guerrero, Col. San Miguel Acuitlapilco. C.P. 56335
+3 EPO NÚM. 127 6 19.23308 -98.92452 1 0 S728 Calle Álvaro Obregón s/n esq. calle Capitán De la Rosa, Barrio San Miguel, San Mateo Huitzilzingo. C.P. 56625
+3 EPO NÚM. 260 2 19.61906 -99.01205 0 0 S779 7ª. Cerrada de Nuestra Señora de Lago Mz. 103, Lt. 1, Col. Fracc. La Guadalupana. C.P. 55060
+10 CECyTEM PLANTEL NEZAHUALCÓYOTL 13 19.48880 -99.05328 1 0 S564 091,096,055 Valle del Maíz s/n esq. Valle del Yukón, Col. Valle de Aragón 1ª sección. C.P. 57100
+3 EPO NÚM. 328 16 19.42665 -98.97896 1 0 S760 Calle Plutarco González Pliego s/n, Barrio Plateros. C.P. 56356
+10 CECyTEM PLANTEL CHIMALHUACÁN II 16 19.44305 -98.97387 0 0 S557 094,087,104 C. Bugambilias s/n, Barrio Transportistas, C.P. 56363
+10 CECyTEM PLANTEL ECATEPEC 2 19.59850 -99.05545 0 0 S558 086,096,087 Sor Juana Inés de la Cruz s/n esq. José Revueltas, Col. Tierra Blanca. C.P. 55020
+3 EPO NÚM. 288 13 19.41070 -99.00097 0 0 S819 Mariquita Linda núm. 329, Col. Benito Juárez. C.P. 57000
+3 EPO NÚM. 184 27 19.34688 -98.93727 1 0 S833 Av. Tejolote s/n esq. Ameyal, Col. Tecomatlán. C.P. 56516
+3 EPO NÚM. 320 20 19.50450 -98.79563 0 0 S852 Camino a Santa María Tecuanulco s/n, Col. San Miguel Tlaixpan. C.P. 56247
+3 EPO NÚM. 225 16 19.38153 -98.97729 1 0 S747 Jorge Jiménez Cantú esq. Emiliano Zapata s/n, Col. Ejidos de San Agustín Atlapulco. C.P. 56360
+3 EPO NÚM. 96 23 19.28740 -98.95585 1 0 S869 Sur 3, Lote 2, Manzana 11, Col. Niños Héroes 2ª sección. C.P. 56610
+2 CETIS 36 17 19.61268 -99.17913 1 0 D450 366,349,382,304,361,306 Av. Margarita Maza de Juárez esq. Vía López Portillo, Col. San Francisco Chilpan. C.P. 54940
+3 EPO NÚM. 295 13 19.48618 -99.03485 1 0 S820 Av. San Marcos s/n, Col. Plazas de Aragón. C.P. 57139
+3 EPO NÚM. 86 13 19.39955 -99.04275 0 0 S813 Mariano Azuela núm. 55, Col. México. C.P. 57620
+3 EPO NÚM. 79 20 19.52273 -98.77387 1 0 S847 Calle Tezontepec s/n, San Jerónimo Amanalco. C.P. 56244
+3 EPO NÚM. 95 13 19.42900 -99.04801 0 0 S814 Av. Bordo de Xochiaca s/n, Col. Estado de México. C.P. 57210
+3 EPO NÚM. 306 30 19.65591 -99.14307 1 0 S861 Lázaro Cárdenas s/n, Col. 10 de junio, Santiago Teyahualco. C.P. 54986
+3 EPO NÚM. 280 13 19.46042 -99.05005 1 0 S818 Av. Taxímetros esq. Lago Onega núm. 74, Col. Cd. Lago. C.P. 57180
+10 CECyTEM PLANTEL ECATEPEC III 2 19.61932 -98.98772 0 0 S560 087,097 Carretera Lechería-Texcoco s/n, Pueblo de San Isidro Atlautenco (Auditorio del Pueblo, a un km. de la central de Abastos de Ecatepec) C.P. 55064
+3 EPO NÚM. 265 27 19.35971 -98.94631 1 0 S834 Circuito Cuauhtémoc Cárdenas s/n, Col. Unidad Hab. Uprez. C.P. 56514
+3 EPO NÚM. 135 25 19.35072 -98.67499 1 0 S792 Vista Hermosa s/n, Carr. Federal México-Puebla Km. 55 (en los límites con el estado de Puebla), Col. Río Frío de Juárez, C.P. 56590
+3 EPO NÚM. 341 20 19.48338 -98.77322 0 0 S853 Circuito Principal s/n, Santa Catarina del Monte. C.P. 56245
+3 EPO NÚM. 347 2 19.60858 -99.04264 0 0 S785 Circuito Zapata Vive s/n, Unidad Habitacional Sergio Méndez Arceo. C.P. 55000
+3 EPO NÚM. 168 13 19.38505 -99.00982 1 0 S816 Malinche s/n, Col. Vicente Villada. C.P. 57710
+3 EPO NÚM. 124 25 19.32275 -98.91209 1 0 S791 Av. Unión s/n esq. Fraternidad, Col. Cerro del Tejolote. C.P. 56567
+3 EPO NÚM. 103 18 19.54499 -99.17021 1 0 S857 Av. Sta. Cecilia esq. Cipreses s/n, Col. Valle del Tenayo. C.P. 54147
+10 CECyTEM PLANTEL HUIXQUILUCAN 22 19.37809 -99.33298 0 0 S561 087,097 Camino Vecinal s/n L5, Paraje el Moral, Loc. San Ramón. C.P. 52760
+3 EPO NÚM. 357 23 19.25445 -98.93880 0 0 S882 Calle Rosario s/n, Col. San Martin Xico la Laguna. C.P. 56614
+3 EPO NÚM. 300 23 19.27151 -98.92342 1 0 S873 Calle Sur 6 s/n, entre Av. Lázaro Cárdenas y Adolfo Ruíz. Col. Guadalupana 2ª sección. C.P. 56616
+3 MÓDULO SAN JUAN DE DIOS ADSCRITO A LA EPO NÚM. 382 6 19.32260 -98.92400 0 0 S897 Camino Viejo a Zula y Yucatán s/n, Llanos de San Juan. C.P. 56600
+3 MÓDULO CUAUTLALPAN ADSCRITO A LA ESCUELA EPO NÚM. 330 13 19.43953 -98.90700 0 0 S900 Ampuero núm. 15, Col. Fraccionamiento El Tejocote, Cuautlalpan. C.P. 57150
+3 MÓDULO MTRA. ELISA NAVA ADSCRITO A LA EPO NÚM. 345 13 19.39804 -98.99725 0 0 S901 Marieta núm. 107, Benito Juárez. C.P. 57000
+3 EPO NÚM. 348 23 19.29436 -98.96273 1 0 S881 Calle Palma esq. Tulipán s/n, Col. San Miguel Tablas. C.P. 56610
+3 MÓDULO LA ERA ADSCRITO A LA EPO NÚM. 74 25 19.32261 -98.88529 0 0 S899 Av. Tezontle s/n, Col. La Era C.P. 56530
+10 CECyTEM PLANTEL IXTAPALUCA 25 19.32354 -98.87772 0 0 S562 090,015 Camino Jesús María, Manzana V y VI, Lotes 4 y 5, Unidad Habitacional Los Héroes. C.P. 56530
+3 EPO NÚM. 340 23 19.27918 -98.95741 1 0 S875 Av. Tezozomoc Núm. 1009, Col. San Miguel Xico 3ª sección. C.P. 56613
+3 EPO NÚM. 350 25 19.33237 -98.93613 1 0 S878 Av. Tehuacán s/n, Col. Rey Izcoatl, Citlamina. C.P. 56576
+3 MÓDULO XICO ADSCRITO A LA EPO NÚM. 374 6 19.26884 -98.95145 0 0 S896 Poniente 9, Manzana 109, Lote 50, San Miguel Xico. C.P. 56613
+3 MÓDULO SIMÓN BOLÍVAR ADSCRITO A LA ESCUELA EPO NÚM. 82 6 19.38293 -99.00485 0 0 S889 Calle Nacional s/n, San Marcos Huixtoco, C.P. 56643
+3 EPO NÚM. 349 25 19.30422 -98.84566 1 0 S877 C. Humberto Gutiérrez s/n, Col. Tecomatlán. C.P. 56589
+3 EPO NÚM. 353 7 19.62375 -99.03883 1 0 S880 Arrayanes esq. Av. Cipreses, Fracc. Los Héroes Tecámac, Sección Bosques. C.P. 55749
+3 EPO NÚM. 378 25 19.33036 -98.89964 0 0 S898 Calle Pirules Núm. 9, Col. Plutarco Elías Calles, Chocolines. C.P. 56585
+3 EPO NÚM. 383 7 19.76528 -98.97000 0 0 S902 Av. Reforma s/n, Santa María Ajoloapan. C.P. 55750
+3 EPO NÚM. 274 27 19.35213 -98.94988 1 0 S835 Av. Francisco Villa núm. 20, Col. Ejidal "El Pino". C.P. 56507
+3 EPO NÚM. 377 6 19.27617 -98.89836 0 0 S892 Calle Lirio s/n, Col. Nva San Miguel. C.P. 56604
+3 EPO NÚM. 220 23 19.27485 -98.93583 1 0 S871 Av. López Mateos s/n, Col. San Miguel Xico 2ª. secc. C.P. 56613
+3 MÓDULO REYES ACOZAC "JAIME RELLO" ADSCRITO A LA EPO NÚM. 179 7 19.76925 -98.98143 0 0 S903 Calle Tlalzompa Núm. 5, Reyes Acozac. C.P. 55755
+3 EPO NÚM. 351 27 19.37588 -98.95776 1 0 S879 Calle Unión s/n, Col. Atlazalpa, La Magdalena Atlicpac. Los Reyes Acaquilpan. C.P. 56525
+3 MÓDULO TEPOTZOTLÁN ADSCRITO A LA EPO NÚM. 296 33 19.68439 -99.28533 0 0 S905 Juárez núm. 3, Santiago Cuautlalpan. C.P. 54650
+3 MÓDULO LOMAS DE TECÁMAC ADSCRITO A LA ESCUELA EPO NÚM. 295 7 19.65516 -98.99694 0 0 S904 Av. Estado de México esq. con calle Teotihuacán, Lomas De Tecámac. C.P. 55765
+3 EPO NÚM. 121 13 19.41844 -99.00708 1 0 S815 Camellón Bordo de Xochiaca s/n. Esq. Av. Sor Juana Inés de la Cruz, Col. Benito Juárez. C.P. 57000
+3 EPO NÚM. 259 2 19.52650 -99.04120 0 0 S778 Av. San Agustín núm. 4, Col. Nuevo Paseo de San Agustín 1ª. secc. C.P. 55130
+3 EPO NÚM. 70 6 19.20731 -98.90127 0 0 S727 Antiguo Camino a Tenango s/n, Col. San José Axalco, Loc. San Pablo Atlazalpan. C.P. 56620
+1 CONALEP "ING. BERNARDO QUINTANA ARRIOJA" CUAUTITLÁN 29 19.67550 -99.21042 0 0 S133 320,335,316,306 Av. Doctor Jorge Jiménez Cantú núm. 1000, Col. San Juan Atlamica. C.P. 54729
+8 COBAEM PLANTEL 25 TULTITLÁN 17 19.60192 -99.14818 1 0 S069 Calle Tlazala de Fabela s/n, Col. Solidaridad tercera sección. C.P. 54948
+2 CETIS 30 3 19.49957 -99.12369 1 0 D412 373,306,356,366,345,349 Av. Cienfuegos núm. 1017 esq. Ticomán, Col. San Pedro Zacatenco. C.P. 07360
+5 GUSTAVO A. MADERO II - SALVADOR ALLENDE 3 19.48362 -99.10372 1 0 E048 Av. Ferrocarril Hidalgo núm. 1129, Col. Constitución de la República. C.P. 07469
+10 CECyTEM PLANTEL IXTAPALUCA II 25 19.29563 -98.83222 0 0 S563 009,094,087 Calle Cielo Mz. 53, Lt. 221, Unidad Habitacional Ara Cuatro Vientos. C.P. 56530
+1 CONALEP TECÁMAC 7 19.69614 -98.97729 0 0 S151 327,335 Temascalcingo s/n, Col. San José Hueyotenco. C.P. 55740
+10 CECyTEM PLANTEL NEZAHUALCÓYOTL II 13 19.42050 -99.01266 0 0 S565 094,087 Av. Bordo de Xochiaca s/n entre Av. Adolfo López Mateos y Sor Juana Inés de la Cruz, Col. Benito Juárez. C.P. 57000
+3 EPO NÚM. 16 16 19.44093 -98.94328 1 0 S737 Av. Arenal s/n, El Tepalcate. C.P. 56334
+5 TLALPAN II - OTILIO MONTAÑO 24 19.20284 -99.14913 1 0 E076 Av. Cruz Blanca núm. 321, Col. Pueblo San Miguel Topilejo. C.P. 14500
+2 CETIS 9 11 19.43889 -99.14045 1 0 D409 370,352,396,345,360 Mina núm. 1 esq. Riva Palacio, Col. Guerrero. C.P. 06300
+3 EPO NÚM. 122 25 19.28990 -98.90391 1 0 S790 Calle Emiliano Zapata Núm. 4100, Col. 20 de noviembre, Tlapacoya, autopista México -Puebla KM. 30. C.P. 56579
+9 CEB 10/1 24 19.24178 -99.17395 0 0 G213 Calle los Cipreses s/n, Km 23.5 de la Carretera Federal| San Andrés Totoltepec. C.P. 14400
+3 EPO NÚM. 326 23 19.29428 -98.93388 1 0 S874 Av. Hermenegildo Galeana y Oriente 8 s/n, Col. Santa Cruz. C.P. 56617
+9 CEB 4/2 "LIC. JESÚS REYES HEROLES" 8 19.35945 -99.17450 0 0 G201 Progreso núm. 23, Col. Axotla. C.P. 01030
+7 CBTA No. 35 EXTENSIÓN DE MILPA ALTA 21 19.17732 -99.00306 0 0 A302 098,100 Casa de la Cultura Santa Ana Tlacotenco, Prolongación Olímpica s/n, Santa Ana Tlacotenco. C.P. 12900
+7 CBTA No. 35 EXTENSIÓN DE TLÁHUAC 19 19.24316 -98.99444 0 0 A303 100,098 Casa de Mujer Campesina, Emiliano Zapata 15, Barrio de la Asunción San Juan Ixtayopan. C.P. 13000
+3 EPO NÚM. 115 2 19.51773 -99.02197 1 0 S769 Av. Plutarco Elías Calles s/n, Col. Polígono III. C.P. 55230
+3 EPO NÚM. 12 13 19.49380 -99.06329 0 0 S809 Valle de Bardagi s/n, Col. Unidad Habitacional Valle de Aragón 1ª. sección. C.P. 57100
+7 CBTA No. 35 EXTENSIÓN MAGDALENA CONTRERAS 5 19.28194 -99.27333 0 0 A304 098 Instalaciones de la Primaria Exgambia Segundo Dinamo, Ejido de la Magdalena Atlitic. C.P. 10930
+2 CETIS 3 11 19.41522 -99.13218 1 0 D408 345,373,386,379,347 Xocongo núm. 26, Col. Tránsito. C.P. 06820
+1 CONALEP ATIZAPÁN I 26 19.55229 -99.26688 1 0 S129 301,336,316,343,335 Av. Adolfo Ruíz Cortines s/n esq. Teotihuacán, Col. Lomas de Atizapán. C.P. 52977
+5 AZCAPOTZALCO I - MELCHOR OCAMPO 9 19.49556 -99.17631 1 0 E037 Calle Rosario s/n esq. Av. Hidalgo. Pueblo de Santa Catarina. C.P. 02250
+3 EPO NÚM. 301 2 19.61481 -98.99403 0 0 S783 Av. de las Torres Lt. C1, Col. Llano de los Baez. C.P. 55055
+5 IZTAPALAPA III - MIRAVALLE 1 19.33393 -98.99851 1 0 E059 Av. Valle de México s/n, Mz. 461, entre Zapote y Mirador, Col. Miravalle. C.P. 09696
+3 EPO NÚM. 62 16 19.41759 -98.96501 1 0 S738 Av. Miramar s/n, Col. Barrio Xochitenco. C.P. 56334
+7 CBTA 330 20 19.47883 -98.87150 0 0 A309 347,390,391 Avenidad Morelos San Nicolás Huexotla. C.P. 56227
+7 CBTA 329 6 19.23879 -98.89533 0 0 A308 369,365,372 Avenida Santidad Paseos de Chalco. C.P. 56600
+2 CETIS 37 13 19.40194 -98.98794 1 0 D444 368,306,361,351,363 Av. Lázaro Cárdenas s/n entre Gustavo Baz y 4ª. Avenida, Col. Benito Juárez. C.P. 57000
+5 ÁLVARO OBREGÓN I - GRAL. LÁZARO CÁRDENAS DEL RÍO 8 19.37015 -99.24170 1 0 E032 Av. Jalalpa Norte núm. 120, entre Atzacán y Fortín, Col. Jalalpa El Grande. C.P. 01377
+3 EPO NÚM. 170 28 19.61331 -99.09397 1 0 S713 Calle Lomas de Murcia s/n, Col. Bosques de Coacalco. C.P. 55736
+11 PLANTEL 5, "SATÉLITE" 18 19.52759 -99.23452 1 0 B005 Circuito Museos Norte, 1 bis, Col. Bellavista Satélite. C.P. 54080
+3 EPO NÚM. 18 13 19.40783 -99.05166 1 0 S810 Av. Juárez y Cofre de Perote s/n, Col. Los Volcanes. C.P. 57440
+10 CECyTEM PLANTEL NICOLÁS ROMERO I 12 19.60276 -99.27676 0 0 S566 087,106 Boulevard Ignacio Zaragoza núm. 26, Col. Granjas Guadalupe, la Colmena. C.P. 54475
+10 CECyTEM PLANTEL NICOLÁS ROMERO III 12 19.69021 -99.38222 0 0 S568 087 Zona 1, Manzana 38, Ejido de San Francisco Magú. C.P. 54440
+10 CECyTEM PLANTEL LA PAZ 27 19.37522 -98.94915 0 0 S569 022,087 Cerrada Santos Degollado s/n, Pueblo La Magdalena Atlicpac. C.P. 56525
+10 CECyTEM PLANTEL TECÁMAC 7 19.72428 -98.97122 0 0 S570 087,097,025,086,104,091 Carretera Federal México-Pachuca, Km. 38.5, Col. Ex Rancho San Agustín, El Llano. C.P. 55740
+3 EPO NÚM. 75 16 19.40864 -98.97375 1 0 S739 Calle de la Cruz s/n, Col. San Lorenzo Chimalco. C.P. 56340
+3 EPO NÚM. 332 25 19.33589 -98.86556 1 0 S800 Acceso a la Rosa de San Francisco s/n, Col. Rosa de San Francisco. C.P. 56580
+5 IZTACALCO - FELIPE CARRILLO PUERTO 10 19.40539 -99.07380 1 0 E053 Oriente 237 núm. 21, Col. Agrícola Oriental, C.P. 08500
+10 CECyTEM PLANTEL TEPOTZOTLÁN 33 19.71968 -99.20361 1 0 S571 009,087,086 Calle Río Chiquito s/n, Fraccionamiento El Trébol. C.P. 54614
+10 CECyTEM PLANTEL TULTEPEC 30 19.66414 -99.10780 0 0 S573 013,348,087,086,097 Circuito Norte Calle 16, Col. Unidad CTM. C.P. 54985
+3 EPO NÚM. 229 7 19.62474 -99.03905 1 0 S842 Av. Cedros Mz. 62, Lt. 1, Fracc. Los Héroes Tecámac Secc. Bosques. C.P. 55674
+1 CONALEP IXTAPALUCA 25 19.31921 -98.93310 1 0 S142 327,316,315 Vicente Guerrero núm. 2, Col. Ayotla. C.P. 56560
+2 CETIS 57 1 19.38553 -99.05376 1 0 D424 364,313,363,374 Av. Central s/n esq. Constitución de Apatzingán, Unidad Habitacional Ejército Constitucionalista. C.P. 09220
+5 GUSTAVO A. MADERO I - BELISARIO DOMÍNGUEZ 3 19.55861 -99.14056 1 0 E046 Av. La Corona núm. 436, Col. Loma de la Palma. C.P. 07160
+5 ÁLVARO OBREGÓN III - ROSARIO IBARRA DE PIEDRA 8 19.39346 -99.18936 0 0 E036 Grutas s/n, Col. 8 de Agosto. C.P. 01180
+11 PLANTEL 13, XOCHIMILCO TEPEPAN "QUIRINO MENDOZA Y CORTÉS" 14 19.26184 -99.12589 1 0 B013 Antiguo Camino a Xochimilco esquina Acueducto s/n, Col. Ampliación Tepepan. C.P. 16020
+9 CEB 9/28 12 19.61340 -99.35428 0 0 G211 Cerrada sin nombre, Col. Veintidos de febrero. C.P. 54435
+2 CETIS 166 3 19.51878 -99.14815 1 0 D416 360,369,345,347 Av. Río de los Remedios núm. 454, Col. Guadalupe Proletaria. C.P. 07670
+5 TLÁHUAC II 19 19.21984 -98.96976 1 0 E073 Av. Emiliano Zapata s/n, entre calles Convento y Canal Del Norte, Col. Tepantitlamilco. C.P. 13700
+2 CETIS 54 3 19.46337 -99.06093 1 0 D413 306,387,347,373 Calle 608 y Av. 412 s/n, Col. San Juan de Aragón. C.P. 07470
+3 EPO NÚM. 382 6 19.28174 -98.85634 0 0 S893 Calle Laguna de Pátzcuaro Mza. 21 Lt. 1, U.H. Los Héroes Iii B. C.P. 56644
+11 PLANTEL 14, MILPA ALTA "FIDENCIO VILLANUEVA ROJAS" 21 19.19193 -99.02149 1 0 B014 Av. Jalisco Oriente núm. 49, entre Avenida Jalisco Oriente y Constitución, Poblado Villa Milpa Alta. C.P. 12000
+0 CONALEP ÁLVARO OBREGÓN II 8 19.35414 -99.21370 0 0 C102 306,316,303 Av. Rómulo O'Farril s/n esq. Calzada de las Águilas. Col. Las Águilas. C.P. 01710
+8 COBAEM PLANTEL 18 IXTAPALUCA 25 19.30197 -98.86335 1 0 S061 Colinas de la Concordia esq. Paseo de las Colinas, Mz. 8, Lt. 1, 3ª sección, Unidad Habitacional San Buenaventura. C.P. 56530
+11 PLANTEL 20, DEL VALLE "MATÍAS ROMERO" 34 19.38039 -99.16496 1 0 B020 Matías Romero núm. 422, entre Gabriel Mancera y Nicolás San Juan, Col. Del Valle. C.P. 03100

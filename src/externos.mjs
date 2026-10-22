@@ -41,6 +41,7 @@ export const POR_PAGINA = {
   "/escuelas/cch-unam/": ["diag", "simulador", "guia"],
   "/escuelas/vocacionales-ipn/": ["diag", "simulador", "habmat"],
   "/escuelas/sin-examen/": ["beca", "convocatoria"],
+  ...Object.fromEntries(["conalep", "colegio-de-bachilleres", "cetis-cbtis", "iems", "cecytem", "cobaem", "preparatorias-oficiales-edomex", "cbt-edomex", "telebachillerato-comunitario", "ceb-dgb", "cbta"].map((s) => [`/escuelas/${s}/`, ["beca", "convocatoria"]])),
   "/calculadora/": ["diag", "percentil", "simulador"],
   "/prepas-cerca-de-mi/": ["diag", "simulador"],
   "/comparador/": ["diag", "simulador"],
