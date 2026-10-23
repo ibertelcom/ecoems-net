@@ -193,6 +193,9 @@ ${script}`;
 <meta property="og:description" content="${descripcion}">
 <meta property="og:url" content="${canonica}">
 <meta property="og:image" content="${SITIO.dominio}${og}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${titulo}">
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","${GA_ID}");</script>

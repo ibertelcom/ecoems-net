@@ -677,3 +677,33 @@
   if (!r || !c || r.scrollWidth <= r.clientWidth) return;
   r.scrollLeft = c.offsetLeft - r.clientWidth / 2 + c.offsetWidth / 2;
 })();
+
+// Compartir: copiar enlace, menú nativo del celular y medición en GA4.
+(() => {
+  const ev = (red, url) => { try { window.gtag && gtag("event", "share", { method: red, content_type: "pagina", item_id: location.pathname }); } catch (e) {} };
+  document.querySelectorAll("[data-compartir]").forEach((caja) => {
+    const nativo = caja.querySelector('[data-red="nativo"]');
+    if (nativo && navigator.share) {
+      nativo.hidden = false;
+      nativo.addEventListener("click", () => {
+        navigator.share({ title: document.title, text: caja.dataset.texto, url: caja.dataset.url }).then(() => ev("nativo")).catch(() => {});
+      });
+    }
+    caja.querySelectorAll("a[data-red]").forEach((a) => a.addEventListener("click", () => ev(a.dataset.red)));
+    const copiar = caja.querySelector("[data-copiar]");
+    copiar?.addEventListener("click", async () => {
+      const txt = copiar.querySelector("span");
+      try {
+        await navigator.clipboard.writeText(copiar.dataset.copiar);
+      } catch (e) {
+        const t = document.createElement("textarea");
+        t.value = copiar.dataset.copiar; document.body.appendChild(t); t.select();
+        try { document.execCommand("copy"); } catch (e2) {}
+        t.remove();
+      }
+      ev("copiar");
+      copiar.classList.add("ok"); txt.textContent = "¡Enlace copiado!";
+      setTimeout(() => { copiar.classList.remove("ok"); txt.textContent = "Copiar enlace"; }, 2500);
+    });
+  });
+})();

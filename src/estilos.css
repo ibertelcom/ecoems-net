@@ -837,3 +837,18 @@ li[id]:target .tarjeta-escuela { border-color: var(--verde); box-shadow: 0 0 0 3
 .mega-in:has(.mega-col:nth-of-type(3)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grupo-cabeza[data-linea="sin"] { --c: var(--verde); }
 .nota-licencia{font-size:.85rem;color:var(--texto-suave,#5b6475);margin-top:.5rem}
+/* Compartir */
+.compartir { padding: 22px 0; border-top: 1px solid var(--linea); }
+.compartir .contenedor { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; }
+.compartir-titulo { margin: 0; color: var(--suave); }
+.compartir-titulo b { color: var(--tinta); }
+.compartir-botones { display: flex; flex-wrap: wrap; gap: 8px; }
+.compartir-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--borde-control); background: var(--superficie); color: var(--tinta); font: 700 .95rem/1 var(--f-texto); text-decoration: none; cursor: pointer; }
+.compartir-btn .ico { width: 20px; height: 20px; flex: none; }
+.compartir-btn:hover { border-color: var(--verde); color: var(--verde); }
+.compartir-wa { background: #25D366; border-color: #25D366; color: #06301A; }
+.compartir-wa:hover { background: #1EBE5B; border-color: #1EBE5B; color: #06301A; }
+.compartir-fb { background: #1565D8; border-color: #1565D8; color: #fff; }
+.compartir-fb:hover { background: #0F52B5; border-color: #0F52B5; color: #fff; }
+.compartir-btn.ok { border-color: var(--verde); color: var(--verde); }
+@media (max-width: 560px) { .compartir-botones { width: 100%; } .compartir-btn { flex: 1 1 calc(50% - 8px); justify-content: center; } }

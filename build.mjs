@@ -1,4 +1,5 @@
 // Genera el sitio estático de ecoems.net en dist/ y una vista previa autocontenida en vista-previa/.
+import { compartir } from "./src/compartir.mjs";
 import { mkdirSync, writeFileSync, readFileSync, rmSync, existsSync, cpSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { documento, SITIO } from "./src/plantilla.mjs";
@@ -43,7 +44,8 @@ for (const p of PAGINAS) {
   const rel = relacionadas(p.META.ruta);
   const crudo = p.cuerpo();
   const iFaq = crudo.indexOf('<section class="seccion seccion-faq"');
-  const cuerpoHtml = !rel ? crudo : iFaq >= 0 ? crudo.slice(0, iFaq) + rel + "\n" + crudo.slice(iFaq) : crudo + rel;
+  const extra = compartir(p.META.ruta, p.META.titulo) + (rel || "");
+  const cuerpoHtml = !extra ? crudo : iFaq >= 0 ? crudo.slice(0, iFaq) + extra + "\n" + crudo.slice(iFaq) : crudo + extra;
   // Imagen para compartir (Open Graph): la del hero de la página si ya existe su versión JPG.
   const heroM = /class="cabecera-fig"><img [^>]*src="\/img\/([^"]+)\.webp"/.exec(cuerpoHtml) ?? (p.META.ruta === "/" ? [null, "portada-papa-e-hija-revisan-aciertos"] : null);
   const og = heroM && existsSync(`src/img/og/${heroM[1]}.jpg`) ? `/img/og/${heroM[1]}.jpg` : undefined;
