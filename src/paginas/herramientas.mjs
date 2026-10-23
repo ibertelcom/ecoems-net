@@ -401,10 +401,10 @@ function aviso() {
     migas: migas([["Inicio", "/"], ["Aviso de privacidad", ruta]]),
   };
   const cuerpo = `
-${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Versión del 21 de octubre de 2026." })}
+${cabeceraPagina({ migasHtml: d.migas.html, h1: "Aviso de privacidad", lead: "Versión del 22 de octubre de 2026." })}
 <section class="seccion"><div class="contenedor contenedor-angosto prosa">
   <h2>Responsable</h2>
-  <p>Ibertelcom Digital (Victor Hugo Gutierrez Silva, persona física con actividad empresarial), con domicilio en Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Contacto: contacto@ecoems.net.</p>
+  <p>Ibertelcom Digital, persona física con actividad empresarial, con domicilio en Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Contacto: contacto@ecoems.net.</p>
   <h2>Qué datos usamos</h2>
   <p>ecoems.net es un sitio informativo. No te pedimos registro ni datos personales. Las herramientas (calculadora, comparador, armar opciones) funcionan en tu navegador; lo que escribes en ellas no se envía a nuestros servidores. "Armar mis opciones" guarda tu lista solo en tu propio navegador para que no la pierdas.</p>
   <h2>Cookies y servicios de terceros</h2>
@@ -481,7 +481,7 @@ ${cabeceraPagina({ img: "contacto-ecoems-net", migasHtml: d.migas.html, h1: "Con
     <li><b>Fechas verificadas:</b> si una fecha del año en curso no se ha publicado, lo decimos y mostramos la del año anterior como referencia.</li>
     <li><b>Correcciones:</b> si nos reportas un error, lo revisamos y actualizamos la página.</li>
   </ul>
-  <p class="actualizado">Responsable: Ibertelcom Digital (Victor Hugo Gutierrez Silva), Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Consulta nuestro <a href="/aviso-de-privacidad/">aviso de privacidad</a>.</p>
+  <p class="actualizado">Responsable: Ibertelcom Digital, Arrayanes 7, Col. San Francisco, Coacalco de Berriozábal, Estado de México, C.P. 55712. Consulta nuestro <a href="/aviso-de-privacidad/">aviso de privacidad</a>.</p>
 </div></section>
 ${faqBloque(faq, "Preguntas sobre el contacto")}`;
   const org = {
