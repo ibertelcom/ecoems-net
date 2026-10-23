@@ -836,3 +836,4 @@ li[id]:target .tarjeta-escuela { border-color: var(--verde); box-shadow: 0 0 0 3
 .cm-sin-lista small { color: var(--suave); font-size: .85rem; }
 .mega-in:has(.mega-col:nth-of-type(3)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grupo-cabeza[data-linea="sin"] { --c: var(--verde); }
+.nota-licencia{font-size:.85rem;color:var(--texto-suave,#5b6475);margin-top:.5rem}

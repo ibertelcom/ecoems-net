@@ -59,7 +59,8 @@ function dataset(ruta, nombre, descripcion) {
     dateModified: ACTUALIZADO.iso,
     temporalCoverage: "2024/2026",
     spatialCoverage: "Zona Metropolitana del Valle de México",
-    creator: { "@type": "Organization", name: "ecoems.net" },
+    creator: { "@type": "Organization", name: "ecoems.net", url: SITIO.dominio },
+    license: "https://creativecommons.org/licenses/by/4.0/",
     isAccessibleForFree: true,
     variableMeasured: ["Aciertos mínimos de asignación 2024", "Aciertos mínimos de asignación 2025", "Aciertos mínimos de asignación 2026", "Meta Tepo 2027"],
   };
@@ -103,6 +104,7 @@ ${cabeceraPagina({
     <h2 id="t-tabla" class="visualmente-oculto">Tabla de aciertos por escuela</h2>
     ${tabla(ESCUELAS, true)}
     <p class="nota-tabla">${icono("aviso", "ico")}<span>Los aciertos no son una calificación mínima fija: son los del último alumno asignado a cada escuela. Cambian cada año según cuántos aspirantes la eligen.</span></p>
+    <p class="nota-licencia">Puedes usar o compartir esta tabla citando a ecoems.net como fuente (licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license noopener" target="_blank">CC BY 4.0</a>).</p>
   </div>
 </section>
 <section class="seccion seccion-blanca" aria-labelledby="t-leer">
