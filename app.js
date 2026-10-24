@@ -45,12 +45,22 @@
   // ---------- Cajón (móvil) ----------
   const hamburguesa = document.querySelector(".menu-movil");
   const cajon = document.getElementById("cajon");
-  hamburguesa?.addEventListener("click", () => {
-    const abrirlo = hamburguesa.getAttribute("aria-expanded") !== "true";
+  const fondo = document.querySelector(".cajon-fondo");
+  const icoMenu = hamburguesa?.innerHTML;
+  const icoCerrar = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  function menu(abrirlo) {
+    if (!hamburguesa || !cajon) return;
     hamburguesa.setAttribute("aria-expanded", String(abrirlo));
     hamburguesa.setAttribute("aria-label", abrirlo ? "Cerrar menú" : "Abrir menú");
+    hamburguesa.innerHTML = abrirlo ? icoCerrar : icoMenu;
     cajon.hidden = !abrirlo;
-  });
+    if (fondo) fondo.hidden = !abrirlo;
+    document.documentElement.style.overflow = abrirlo ? "hidden" : "";
+  }
+  hamburguesa?.addEventListener("click", () => menu(hamburguesa.getAttribute("aria-expanded") !== "true"));
+  fondo?.addEventListener("click", () => menu(false));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && hamburguesa?.getAttribute("aria-expanded") === "true") { menu(false); hamburguesa.focus(); } });
+  cajon?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => menu(false)));
 
   // ---------- Ruta del proceso: se dibuja una vez al entrar en pantalla ----------
   const ruta = document.getElementById("ruta");
