@@ -128,7 +128,8 @@ export function encabezado(actual = "") {
       <a class="boton boton-bloque" href="${utm(SITIO.app, "menu-movil")}">Diagnóstico gratis en ecoems.app</a>
     </div>
   </div>
-</header>`;
+</header>
+<div class="cajon-fondo" hidden></div>`;
 }
 
 export function pie() {

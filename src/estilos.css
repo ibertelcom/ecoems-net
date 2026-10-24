@@ -125,15 +125,22 @@ p { margin: 0 0 1em; }
 
 .menu-movil { display: none; margin-left: auto; width: 44px; height: 44px; border: 1px solid var(--linea); border-radius: 12px; background: var(--superficie); color: var(--tinta); cursor: pointer; }
 .menu-movil .ico { width: 22px; height: 22px; margin: auto; }
-.cajon { border-top: 1px solid var(--linea); background: var(--superficie); max-height: calc(100dvh - 70px); overflow-y: auto; }
-.cajon-in { padding: 12px 20px 24px; display: grid; gap: 4px; }
-.cajon-grupo summary { list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 14px 4px; font: 700 1.05rem/1 var(--f-texto); cursor: pointer; border-bottom: 1px solid var(--linea); }
+.cajon { position: absolute; left: 0; right: 0; top: 100%; z-index: 2; background: var(--tablero); color: var(--tablero-texto); border-top: 4px solid var(--verde); max-height: calc(100dvh - 70px); overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 18px 40px rgba(0, 0, 0, .35); }
+.cajon-fondo { position: fixed; inset: 0; z-index: 40; background: rgba(8, 14, 26, .55); backdrop-filter: blur(2px); }
+.cajon-in { padding: 14px max(16px, env(safe-area-inset-left, 0px)) 22px; display: grid; gap: 10px; }
+.cajon-grupo { background: var(--tablero-2); border: 1px solid rgba(255, 255, 255, .08); border-radius: var(--radio); overflow: hidden; }
+.cajon-grupo summary { list-style: none; display: flex; justify-content: space-between; align-items: center; min-height: 54px; padding: 0 16px; font: 700 1.08rem/1.2 var(--f-titulo); color: #fff; cursor: pointer; }
 .cajon-grupo summary::-webkit-details-marker { display: none; }
+.cajon-grupo summary .ico { width: 22px; height: 22px; color: var(--sol); transition: transform .2s; }
+.cajon-grupo[open] summary { background: rgba(255, 255, 255, .06); border-bottom: 1px solid rgba(255, 255, 255, .1); }
 .cajon-grupo[open] summary .ico { transform: rotate(180deg); }
-.cajon-grupo ul { list-style: none; margin: 6px 0 10px; padding: 0; }
-.cajon-grupo a, .cajon-suelto { display: flex; gap: 12px; align-items: center; padding: 11px 6px; color: var(--tinta); text-decoration: none; border-radius: 10px; }
-.cajon-grupo a .ico, .cajon-suelto .ico { color: var(--verde); }
-.cajon-suelto { font-weight: 700; margin: 6px 0 14px; }
+.cajon-grupo ul { list-style: none; margin: 0; padding: 6px; }
+.cajon-grupo a, .cajon-suelto { display: flex; gap: 12px; align-items: center; min-height: 48px; padding: 8px 10px; color: var(--tablero-texto); text-decoration: none; border-radius: 10px; font-weight: 600; }
+.cajon-grupo a:hover, .cajon-grupo a:focus-visible, .cajon-suelto:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+.cajon-grupo a .ico, .cajon-suelto .ico { flex: none; width: 34px; height: 34px; padding: 7px; border-radius: 9px; background: var(--verde-claro); color: var(--verde); }
+.cajon-suelto { background: var(--tablero-2); border: 1px solid rgba(255, 255, 255, .08); border-radius: var(--radio); padding: 8px 12px; font-weight: 700; color: #fff; }
+.cajon .boton-bloque { margin-top: 4px; }
+.menu-movil[aria-expanded="true"] { background: var(--verde); border-color: var(--verde); color: var(--sobre-verde); }
 
 @media (max-width: 1023px) {
   .nav, .boton-cabecera { display: none; }
