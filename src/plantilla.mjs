@@ -149,7 +149,7 @@ export function pie() {
   </div>
   <div class="pie-legal">
     <p>© ${anio} ecoems.net · Ibertelcom Digital</p>
-    <p><a href="/contacto/">Contacto</a><a href="/aviso-de-privacidad/">Aviso de privacidad</a><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></p>
+    <p><a href="/contacto/#t-quienes">Quiénes somos</a><a href="/contacto/">Contacto</a><a href="/aviso-de-privacidad/">Aviso de privacidad</a><a href="/preguntas-frecuentes/">Preguntas frecuentes</a></p>
   </div>
 </footer>`;
 }

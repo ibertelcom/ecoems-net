@@ -3,7 +3,7 @@ import { ESCUELAS, GRUPOS, PREGUNTAS_EXAMEN, MARGEN_TEPO } from "../datos.mjs";
 import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
-import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "../componentes.mjs";
+import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO, EQUIPO, personaLd } from "../componentes.mjs";
 import { SISTEMAS, POR_SISTEMA, PLANTELES } from "../sinexamen.mjs";
 import { miniMapa, SISTEMAS_ORDEN } from "./sinexamen.mjs";
 
@@ -474,6 +474,11 @@ ${cabeceraPagina({ img: "contacto-ecoems-net", migasHtml: d.migas.html, h1: "Con
   <h2 id="t-quienes">Quiénes hacemos ecoems.net</h2>
   <p>ecoems.net es un proyecto de <b>Ibertelcom Digital</b>, de Coacalco de Berriozábal, Estado de México. Nació de la experiencia de un papá que acompañó a su hijo en el proceso ECOEMS 2026 y se dio cuenta de lo difícil que era entender el proceso y encontrar los aciertos de cada escuela en un solo lugar.</p>
   <p>Por eso este sitio reúne, en lenguaje sencillo, cómo funciona Mi Derecho, Mi Lugar, los aciertos oficiales de cada prepa, CCH y vocacional, y herramientas para decidir. Todos los datos los tomamos de fuentes oficiales y en cada página indicamos la fecha de actualización.</p>
+  <h3>Nuestro equipo</h3>
+  <ul class="modalidades">
+    ${EQUIPO.map((p) => `<li><b>${p.nombre}</b> · ${p.puesto}. ${p.formacion}. ${p.texto}</li>`).join("\n    ")}
+  </ul>
+  <p>Conoce al equipo completo, con la trayectoria de cada integrante, en <a href="${utm(`${SITIO.lat}/nosotros/`, "contacto")}">examenes.lat/nosotros</a>.</p>
   <p>Somos el mismo equipo detrás de <a href="${utm(`${SITIO.lat}/`, "contacto")}">examenes.lat</a>, el portal de exámenes simuladores y guías de estudio para exámenes de admisión, y de <a href="${utm(SITIO.app, "contacto")}">ecoems.app</a>, la app para que papás y mamás sigan el avance de sus hijos rumbo al ECOEMS.</p>
   <h3>Cómo cuidamos la información</h3>
   <ul class="modalidades">
@@ -490,6 +495,8 @@ ${faqBloque(faq, "Preguntas sobre el contacto")}`;
     parentOrganization: { "@type": "Organization", name: "Ibertelcom Digital", url: "https://ibertelcom.com" },
     address: { "@type": "PostalAddress", streetAddress: "Arrayanes 7, Col. San Francisco", addressLocality: "Coacalco de Berriozábal", addressRegion: "Estado de México", postalCode: "55712", addressCountry: "MX" },
     sameAs: [`${SITIO.lat}/`, SITIO.app],
+    founder: personaLd(EQUIPO[0]),
+    employee: EQUIPO.map(personaLd),
   };
   const r = hecha(ruta, d, cuerpo, faq, [org]);
   const base = r.jsonld;

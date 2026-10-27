@@ -3,6 +3,7 @@ import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { imagen } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
+import { REVISADO } from "../componentes.mjs";
 
 export const ACTUALIZADO = { iso: "2026-10-15", texto: "15 de octubre de 2026" };
 
@@ -204,7 +205,7 @@ function faq() {
     <div class="faq">
       ${PREGUNTAS.map(([p, r]) => `<details class="faq-item"><summary>${p}${icono("abajo", "ico")}</summary><p>${r}</p></details>`).join("")}
     </div>
-    <p class="actualizado">Actualizado el <time datetime="${ACTUALIZADO.iso}">${ACTUALIZADO.texto}</time>. Aciertos tomados de los resultados oficiales publicados por el proceso de asignación (COMIPEMS hasta 2024 y Mi Derecho, Mi Lugar desde 2025). ecoems.net no es un sitio oficial.</p>
+    <p class="actualizado">Actualizado el <time datetime="${ACTUALIZADO.iso}">${ACTUALIZADO.texto}</time>. Aciertos tomados de los resultados oficiales publicados por el proceso de asignación (COMIPEMS hasta 2024 y Mi Derecho, Mi Lugar desde 2025). ${REVISADO} ecoems.net no es un sitio oficial.</p>
   </div>
 </section>`;
 }
