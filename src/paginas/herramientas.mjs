@@ -19,7 +19,7 @@ function app(campana) {
   return `
 <section class="seccion seccion-estudiar" aria-labelledby="t-app-${campana}">
   <div class="contenedor contenedor-angosto">
-    <h2 id="t-app-${campana}">¿No sabes cuántos aciertos lleva?</h2>
+    <h2 id="t-app-${campana}">¿No sabes a cuántos aciertos llega con sus conocimientos?</h2>
     ${caminosExternos(`/${campana}/`, campana)}
   </div>
 </section>`;
