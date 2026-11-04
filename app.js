@@ -787,3 +787,124 @@
     if (e.currentTarget.getAttribute("aria-expanded") === "true") ev("menu_abrir", { menu: "menu_movil", ubicacion: "menu_movil" });
   });
 })();
+
+// ---------- Resultados por folio (Gaceta de ECOEMS) ----------
+(() => {
+  const form = document.getElementById("folio-form");
+  if (!form) return;
+  const anio = form.dataset.anio;
+  const caja = document.getElementById("folio-resultado");
+  const input = document.getElementById("folio-num");
+  const base = `/datos/resultados/${anio}/`;
+  const fmt = new Intl.NumberFormat("es-MX");
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  let meta = null, metaProm = null;
+  const paquetes = {};
+  const cargarMeta = () => (metaProm ??= fetch(base + "meta.json").then((r) => { if (!r.ok) throw 0; return r.json(); }).then((d) => (meta = d)).catch((e) => { metaProm = null; throw e; }));
+  input.addEventListener("focus", () => { cargarMeta().catch(() => {}); }, { once: true });
+  input.addEventListener("input", () => { input.value = input.value.replace(/\D/g, "").slice(0, 9); });
+
+  const MODALIDAD = {
+    1: "Modalidad 1: eligió solo escuelas sin examen.",
+    2: "Modalidad 2: eligió solo escuelas con examen (UNAM o IPN).",
+    3: "Modalidad 3: eligió escuelas con examen y también sin examen.",
+  };
+  const EXPLICA = {
+    PI: ["Puntaje insuficiente", "Sus aciertos fueron menos que los que pidieron todas sus opciones con examen."],
+    NP: ["No presentó el examen", "No hay registro de que haya presentado el examen."],
+    SC: ["Sin certificado", "No se verificaron sus antecedentes de secundaria (no concluyó o no hay reporte de su certificado)."],
+    "<7": ["Promedio menor a 7", "Su promedio final de secundaria fue menor a 7, el mínimo que piden la UNAM y el IPN."],
+    BI: ["Baja por irregularidad", "Fue dado de baja por una irregularidad comprobada durante el examen."],
+  };
+
+  function percentil(a) {
+    if (!a) return null;
+    const menor = meta.p[Math.min(a, meta.p.length - 1)];
+    return Math.round(menor);
+  }
+
+  function tarjetaEscuela(clave, titulo) {
+    const c = meta.cat[clave];
+    const inst = meta.inst[clave[0]] ?? "";
+    if (!c) return `<div class="fr-escuela"><span class="fr-etq">${titulo}</span><b>Clave ${esc(clave)}</b><p>Esta clave no aparece en el listado de opciones de la gaceta. Consulta tu resultado en el portal oficial.</p></div>`;
+    const [nombre, dir, esp, url] = c;
+    return `<div class="fr-escuela"><span class="fr-etq">${titulo}</span>
+      <b class="fr-nombre">${esc(nombre)}</b>
+      <span class="fr-inst">${esc(inst)} · clave ${esc(clave)}</span>
+      ${esp ? `<p class="fr-esp"><span>${clave[0] === "I" ? "Carreras técnicas del plantel" : "Opción"}:</span> ${esc(esp)}</p>` : ""}
+      ${dir ? `<p class="fr-dir">${esc(dir)}</p>` : ""}
+      ${url ? `<a class="fr-link" href="${esc(url)}">Ver la ficha de la escuela →</a>` : ""}</div>`;
+  }
+
+  function claveDesconocida(clave) {
+    // Clave que no viene en el listado oficial: se muestra el plantel por sus primeros 4 caracteres.
+    const k = Object.keys(meta.cat).find((x) => x.slice(0, 4) === clave.slice(0, 4));
+    if (!k) return tarjetaEscuela(clave, "Escuela asignada");
+    const [nombre, dir, , url] = meta.cat[k];
+    return `<div class="fr-escuela"><span class="fr-etq">Escuela asignada</span><b class="fr-nombre">${esc(nombre)}</b>
+      <span class="fr-inst">${esc(meta.inst[clave[0]] ?? "")} · clave ${esc(clave)}</span>
+      <p class="fr-esp">La especialidad de esta clave no aparece en el listado de opciones de la gaceta; confírmala con el plantel.</p>
+      ${dir ? `<p class="fr-dir">${esc(dir)}</p>` : ""}${url ? `<a class="fr-link" href="${esc(url)}">Ver la ficha de la escuela →</a>` : ""}</div>`;
+  }
+
+  function pintar(folio, r) {
+    const [mod, clave, aciertos, expl] = r;
+    const conExamen = clave && (clave[0] === "U" || clave[0] === "I");
+    const asignado = !!clave;
+    let estado, tono;
+    if (asignado && conExamen) { estado = "Obtuvo lugar en la UNAM o el IPN"; tono = "ok"; }
+    else if (asignado) { estado = mod === 1 ? "Obtuvo lugar (sin examen)" : "Obtuvo lugar en una opción sin examen"; tono = "ok"; }
+    else { estado = "No obtuvo lugar en sus opciones"; tono = "no"; }
+    const pc = percentil(aciertos);
+    const corte = conExamen ? meta.cortes[clave] : null;
+    const ex = EXPLICA[expl];
+    const partes = [];
+    partes.push(`<div class="fr-cabeza fr-${tono}"><span class="fr-folio">Folio ${esc(folio)}</span><b>${estado}</b><small>${MODALIDAD[mod]}</small></div>`);
+    if (asignado) partes.push(meta.cat[clave] ? tarjetaEscuela(clave, "Escuela asignada") : claveDesconocida(clave));
+    if (aciertos != null) {
+      partes.push(`<div class="fr-cifras">
+        <div><span>Aciertos</span><b>${aciertos}</b><small>de 128 preguntas</small></div>
+        ${pc != null ? `<div><span>Percentil</span><b>${pc} %</b><small>superó a ese porcentaje de los ${fmt.format(meta.sustentantes)} que presentaron</small></div>` : ""}
+        ${corte ? `<div><span>Corte de su escuela</span><b>${corte[0]}</b><small>${aciertos - corte[0] > 0 ? `${aciertos - corte[0]} aciertos más que el último asignado` : aciertos === corte[0] ? "los mismos aciertos que el último asignado" : "aciertos del último asignado"}</small></div>` : ""}
+      </div>`);
+    } else if (mod > 1) {
+      partes.push(`<p class="fr-nota">La gaceta no registra aciertos para este folio.</p>`);
+    }
+    if (ex) partes.push(`<div class="fr-explica"><span class="fr-etq">Qué significa «${esc(expl)}»</span><b>${ex[0]}</b><p>${ex[1]}${mod === 3 && asignado ? " Por eso se le asignó una de sus opciones sin examen." : ""}</p></div>`);
+    else if (expl === "ASI") partes.push(`<div class="fr-explica"><span class="fr-etq">Qué significa «ASI»</span><b>Asignado</b><p>Obtuvo lugar en la opción que se muestra arriba.</p></div>`);
+    const sigue = asignado
+      ? `<li>La inscripción se hace en las fechas y con los requisitos que marca la <b>cuarta sección de la gaceta</b> para esa institución. Si no se inscribe a tiempo, pierde el lugar.</li><li>Revisa la ficha de la escuela para ver ubicación, carreras y cómo llegar.</li>`
+      : `<li>Puede pedir un lugar en las opciones que quedaron con cupo (en ${anio} fueron ${fmt.format(meta.disp.length)} opciones, sobre todo sin examen). <a href="/no-quede/">Qué hacer si no quedó</a>.</li><li>Busca <a href="/escuelas/sin-examen/">escuelas sin examen</a> o <a href="/prepas-cerca-de-mi/">prepas cerca de tu casa</a>.</li>${expl === "SC" ? "<li>Si ya tiene su certificado, revisa el trámite de extemporáneos en el portal oficial con Llave MX.</li>" : ""}`;
+    partes.push(`<div class="fr-sigue"><span class="fr-etq">Qué sigue</span><ul>${sigue}</ul><p class="fr-nota">El proceso ${anio} ya cerró: las fechas de inscripción de la gaceta ${anio} ya pasaron. Para el proceso 2027, revisa las <a href="/fechas/">fechas</a>.</p></div>`);
+    caja.innerHTML = `<article class="fr-tarjeta">${partes.join("")}</article>`;
+    try { window.gtag && gtag("event", "consulta_folio", { resultado: asignado ? (conExamen ? "lugar_con_examen" : "lugar_sin_examen") : "sin_lugar", institucion: clave ? clave[0] : "-", explicacion: expl || "-", modalidad: mod, anio }); } catch (e) {}
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const folio = input.value.trim();
+    if (!/^\d{9}$/.test(folio)) {
+      caja.innerHTML = `<p class="fr-aviso">Escribe los <b>9 dígitos</b> del folio, sin espacios ni guiones.</p>`;
+      return;
+    }
+    caja.innerHTML = `<p class="fr-cargando">Buscando en la gaceta ${anio}…</p>`;
+    try {
+      await cargarMeta();
+      const g = folio.slice(0, 6);
+      if (!(g in paquetes)) {
+        const r = await fetch(`${base}f/${g}.json`);
+        paquetes[g] = r.ok ? await r.json() : {};
+      }
+      const reg = paquetes[g][folio.slice(6)];
+      if (!reg) {
+        caja.innerHTML = `<p class="fr-aviso">No encontramos el folio <b>${esc(folio)}</b> en la gaceta ${anio}. Revisa los 9 dígitos en tu comprobante de registro. Si tu folio es de otro año, esta búsqueda solo incluye ${anio}.</p>`;
+        try { window.gtag && gtag("event", "consulta_folio", { resultado: "no_encontrado", anio }); } catch (x) {}
+        return;
+      }
+      pintar(folio, reg);
+      caja.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
+    } catch (err) {
+      caja.innerHTML = `<p class="fr-aviso">No pudimos cargar la gaceta. Revisa tu conexión e inténtalo de nuevo.</p>`;
+    }
+  });
+})();
