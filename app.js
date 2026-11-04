@@ -213,7 +213,7 @@
   const LINEA = { enp: "Prepas UNAM", cch: "CCH UNAM", voca: "Vocacionales IPN" };
   const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const tipo = (ac, e) => (ac >= e.m ? "alcanza" : ac >= e.a[2] ? "orilla" : "reto");
-  const ETQ = { alcanza: "Segura", orilla: "Alcanzable", reto: "Retadora" };
+  const ETQ = { alcanza: "Le alcanza con margen", orilla: "Justo le alcanza", reto: "Le faltan aciertos" };
 
   // Calculadora
   const ac = document.getElementById("calc-aciertos");
@@ -238,7 +238,7 @@
           ? g[k].map((e) => `<li data-linea="${e.l}"><a href="/escuelas/${e.s}/">${esc(e.n)}</a><span>${k === "reto" ? `le faltan ${e.a[2] - a128}` : k === "orilla" ? `faltan ${e.m - a128} para la meta` : `meta ${e.m}`}</span></li>`).join("")
           : `<li class="vacia">Ninguna escuela en este grupo.</li>`;
       }
-      resumen.innerHTML = `<b>${a128}</b><span>aciertos de 128</span><p>Le alcanzan <b>${g.alcanza.length}</b> con margen, <b>${g.orilla.length}</b> están en la orilla y <b>${g.reto.length}</b> son retadoras.</p>`;
+      resumen.innerHTML = `<b>${a128}</b><span>aciertos de 128</span><p>Le alcanzan <b>${g.alcanza.length}</b> con margen, <b>${g.orilla.length}</b> justo le alcanzan y en <b>${g.reto.length}</b> todavía le faltan aciertos.</p>`;
     }
     ac.addEventListener("input", () => calcular("num"));
     total.addEventListener("input", () => calcular("num"));
@@ -288,10 +288,10 @@
       }).join("") || `<li class="vacia">Tu lista está vacía. Agrega escuelas desde el selector.</li>`;
       const tipos = orden.map((s) => tipo(a, por[s]));
       diag.textContent = !orden.length ? "" : !tipos.includes("alcanza")
-        ? "Ojo: con esos aciertos ninguna escuela de tu lista es segura. Agrega al menos una o dos con menos aciertos, o considera la modalidad 3 con opciones sin examen."
+        ? "Ojo: con esos aciertos no hay ninguna escuela de tu lista a la que le alcance con margen. Agrega al menos una o dos con menos aciertos, o considera la modalidad 3 con opciones sin examen."
         : tipos.indexOf("alcanza") < tipos.lastIndexOf("reto")
-        ? "Revisa el orden: tienes escuelas retadoras debajo de una segura. Si llega a la segura, ya no se revisan las de abajo."
-        : "La lista tiene escuelas seguras para esos aciertos. Revisa que el orden sea de la que más quiere a la que menos.";
+        ? "Revisa el orden: tienes escuelas donde le faltan aciertos debajo de una a la que ya le alcanza con margen. Si se queda en esa, ya no se revisan las de abajo."
+        : "La lista tiene escuelas a las que le alcanza con margen con esos aciertos. Revisa que el orden sea de la que más quiere a la que menos.";
       guardar();
     }
     document.getElementById("armar-agregar").addEventListener("click", () => {
@@ -328,7 +328,7 @@
   const AREA = { ing: "Ciencias Físico-Matemáticas", salud: "Ciencias Médico-Biológicas", soc: "Ciencias Sociales y Administrativas" };
   const AREA_CORTA = { "Ciencias Físico-Matemáticas": "Físico-Matemáticas", "Ciencias Médico-Biológicas": "Médico-Biológicas", "Ciencias Sociales y Administrativas": "Sociales y Administrativas" };
   const CUPO = { arriesgado: { reto: 4, orilla: 4, alcanza: 2 }, equilibrado: { reto: 2, orilla: 5, alcanza: 3 }, seguro: { reto: 1, orilla: 4, alcanza: 5 } };
-  const ETQ = { reto: "Reto", orilla: "Alcanzable", alcanza: "Segura" };
+  const ETQ = { reto: "Le faltan aciertos", orilla: "Justo le alcanza", alcanza: "Le alcanza con margen" };
   const RETO_MAX = 8;
   let casa = null; // { lat, lon, texto, aprox }
   let cps = null;
@@ -405,7 +405,7 @@
     const ORDEN = { reto: 0, orilla: 1, alcanza: 2 };
     elegido.sort((x, y) => ORDEN[x.t] - ORDEN[y.t] || y.a[2] - x.a[2]);
 
-    if (!elegido.some((e) => e.t === "alcanza")) avisos.push(`Ninguna escuela de la lista es segura con ${A} aciertos. Agrega opciones con menos demanda, amplía la distancia o considera la <a href="/modalidades/">modalidad 3</a>, que suma escuelas <a href="/escuelas/sin-examen/">sin examen</a>.`);
+    if (!elegido.some((e) => e.t === "alcanza")) avisos.push(`Con ${A} aciertos no hay ninguna escuela en la lista a la que le alcance con margen. Agrega opciones con menos demanda, amplía la distancia o considera la <a href="/modalidades/">modalidad 3</a>, que suma escuelas <a href="/escuelas/sin-examen/">sin examen</a>.`);
     if (area === "hum" && quiereIpn) avisos.push("Para humanidades, arte o derecho el IPN no tiene vocacionales de esa área, por eso solo te sugerimos escuelas de la UNAM.");
     else if (AREA[area] && fueraArea) avisos.push(`Dejamos fuera ${fueraArea} vocacionales que no son del área ${AREA_CORTA[AREA[area]]}: en el IPN el área se elige desde la voca.`);
     if (area === "nose" && elegido.some((e) => e.i === "IPN")) avisos.push("Si elige una vocacional, revisa su área: en el IPN define el tipo de carreras para las que se prepara. Si aún no sabe qué estudiar, la UNAM le da más tiempo para decidir.");
@@ -434,7 +434,7 @@
     lista = elegido;
     const n = { reto: 0, orilla: 0, alcanza: 0 };
     elegido.forEach((e) => n[e.t]++);
-    $("cm-resumen").innerHTML = `<b>${elegido.length}</b><span>escuelas sugeridas${casa ? ` cerca de ${esc(casa.texto)}` : ""}</span><p>Con <b>${A}</b> aciertos: ${n.reto} reto, ${n.orilla} alcanzables y ${n.alcanza} seguras. Regístralas en este orden.</p>`;
+    $("cm-resumen").innerHTML = `<b>${elegido.length}</b><span>escuelas sugeridas${casa ? ` cerca de ${esc(casa.texto)}` : ""}</span><p>Con <b>${A}</b> aciertos: en ${n.reto} le faltan aciertos, a ${n.orilla} justo le alcanza y a ${n.alcanza} le alcanza con margen. Regístralas en este orden.</p>`;
     $("cm-lista").innerHTML = elegido.length ? elegido.map((e, i) => {
       const destino = e.g ? `${e.g[0]},${e.g[1]}` : encodeURIComponent(e.n);
       const ruta = `https://www.google.com/maps/dir/?api=1${casa ? `&origin=${casa.lat},${casa.lon}` : ""}&destination=${destino}`;
