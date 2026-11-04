@@ -14,9 +14,9 @@ const CONVOCATORIA_LAT = `${SITIO.lat}/noticias/mx/convocatorias/convocatoria-ec
 const of = (t = "miderechomilugar.gob.mx") => `<a href="${OFICIAL}" rel="noopener" target="_blank">${t}</a>`;
 // Bloque de botones hacia las herramientas que ayudan con el paso.
 const HERR = {
-  armar: ["/armar-opciones/", "opciones", "Arma y ordena tus opciones", "Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas y revisa en cuáles le faltan aciertos y en cuáles ya le alcanza."],
+  armar: ["/armar-opciones/", "opciones", "Arma y ordena tus opciones", "Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas y revisa en cuáles le faltan aciertos y a cuáles ya le alcanza con lo que sabe hoy."],
   cerca: ["/prepas-cerca-de-mi/", "mapa", "Prepas cerca de mí", "Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ya ordenada."],
-  calc: ["/calculadora/", "calculadora", "Calculadora de aciertos", "Escribe sus aciertos y ve qué escuelas le alcanzan con margen, cuáles están en la orilla y cuáles son reto."],
+  calc: ["/calculadora/", "calculadora", "Calculadora de aciertos", "Escribe sus aciertos y ve a qué escuelas le alcanza con lo que sabe hoy, cuáles están en la orilla y en cuáles le falta prepararse más."],
 };
 function ctaHerramientas([titulo, claves]) {
   return `
@@ -307,7 +307,7 @@ const PAGINAS = [
   {
     slug: "como-elegir-opciones", miga: "Cómo elegir opciones", nombreCorto: "Elegir opciones ECOEMS",
     titulo: "Cómo elegir opciones en el ECOEMS: el orden que conviene | ecoems.net",
-    descripcion: "Cómo ordenar las escuelas en el registro de Mi Derecho, Mi Lugar: cuáles piden más aciertos, cuáles justo le alcanzan y cuáles le alcanzan con margen, según los aciertos del ECOEMS de cada escuela.",
+    descripcion: "Cómo ordenar las escuelas en el registro de Mi Derecho, Mi Lugar: cuáles piden más aciertos de los que saca hoy, cuáles justo le alcanzan y cuáles le alcanzan con margen con lo que sabe ahora.",
     h1: "Cómo elegir y ordenar las opciones del ECOEMS",
     lead: "El orden de las escuelas decide tanto como los aciertos. Una forma sencilla de armar la lista con datos.",
     img: { id: "elegir-opciones-lista", alt: "Aspirante ordena en una lista las escuelas que quiere para el ECOEMS", title: "Cómo elegir opciones", desc: "Un adolescente con una libreta escribe una lista numerada mientras ve un mapa de la ciudad en la computadora." },
@@ -316,9 +316,9 @@ const PAGINAS = [
         <p>Eso significa dos cosas: poner primero la escuela que <b>más quiere</b> (aunque sea difícil) no le quita nada, y poner al final escuelas que <b>no quiere</b> puede dejarlo en una que no le gusta.</p>`],
       ["Una regla sencilla: compara aciertos escuela por escuela", `<p>Compara sus aciertos de hoy (por ejemplo, de un simulacro) con los <a href="/aciertos/">aciertos 2026 de cada escuela</a>:</p>
         <ul class="modalidades">
-          <li><b>Le faltan aciertos:</b> piden más aciertos de los que lleva. Van primero, si de verdad las quiere.</li>
-          <li><b>Justo le alcanza:</b> piden más o menos lo que lleva, con la meta Tepo (aciertos 2026 + ${MARGEN_TEPO}) como referencia.</li>
-          <li><b>Le alcanza con margen:</b> piden varios aciertos menos. Van al final de las opciones con examen.</li></ul>
+          <li><b>Hoy le faltan aciertos:</b> piden más aciertos de los que saca con lo que sabe hoy. Van primero, si de verdad las quiere.</li>
+          <li><b>Hoy justo le alcanza:</b> piden más o menos lo que lleva, con la meta Tepo (aciertos 2026 + ${MARGEN_TEPO}) como referencia.</li>
+          <li><b>Hoy le alcanza con margen:</b> piden varios aciertos menos. Van al final de las opciones con examen.</li></ul>
         <p>En la modalidad 3, después van las opciones sin examen, también en orden de preferencia.</p>
         <p><a class="boton" href="/armar-opciones/">Arma y ordena tus opciones</a></p>`],
       ["Más cosas que pesar además de los aciertos", `<ul class="modalidades">

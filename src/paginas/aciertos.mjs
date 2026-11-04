@@ -115,7 +115,7 @@ ${cabeceraPagina({
       <p>Por eso los <b>puntajes del ECOEMS</b> de cada escuela son el resultado de la demanda de ese año. Una prepa muy pedida, como la ${RESUMEN.mayor.doble}, sube; una con más lugares o menos demanda, baja.</p>
       <h3>Qué meta conviene para 2027</h3>
       <p>Sugerimos la <b>meta Tepo</b>: los aciertos de 2026 más ${MARGEN_TEPO}. De un año a otro casi todas las escuelas se movieron entre 0 y 6 aciertos; ir un poco arriba del último dato reduce el riesgo de quedar fuera por poco.</p>
-      <p>Si quieres ver cuántos aciertos lleva tu hijo o hija hoy, usa la <a href="/calculadora/">calculadora de aciertos</a> o empieza por uno de los caminos de abajo.</p>
+      <p>Si quieres ver a cuántos aciertos llega tu hijo o hija con lo que sabe hoy, usa la <a href="/calculadora/">calculadora de aciertos</a> o empieza por uno de los caminos de abajo.</p>
     </div>
     <div class="resumen-lineas">
       ${GRUPOS.map((g) => {
@@ -127,7 +127,7 @@ ${cabeceraPagina({
 </section>
 <section class="seccion seccion-estudiar" aria-labelledby="t-alcanza">
   <div class="contenedor contenedor-angosto">
-    <h2 id="t-alcanza">¿Cuántos aciertos lleva tu hijo o hija hoy?</h2>
+    <h2 id="t-alcanza">¿A cuántos aciertos llega tu hijo o hija con lo que sabe hoy?</h2>
     <p>La tabla te dice a dónde hay que llegar. Para saber dónde está ahora, empieza gratis:</p>
     ${caminos("/aciertos/", "aciertos")}
   </div>
@@ -220,7 +220,7 @@ ${cabeceraPagina({ migasHtml: m.html, linea: g.clave, h1: h.h1, lead: h.lead, im
 </section>
 <section class="seccion seccion-estudiar" aria-labelledby="t-alcanza">
   <div class="contenedor contenedor-angosto">
-    <h2 id="t-alcanza">¿Le alcanza para ${g.clave === "cch" ? "un CCH" : g.clave === "enp" ? "una prepa de la UNAM" : "una vocacional"}?</h2>
+    <h2 id="t-alcanza">¿Le alcanza para ${g.clave === "cch" ? "un CCH" : g.clave === "enp" ? "una prepa de la UNAM" : "una vocacional"} con lo que sabe hoy?</h2>
     ${caminos(ruta, `hub-${g.clave}`)}
   </div>
 </section>

@@ -47,12 +47,12 @@ const MAPA = {
   "/examen/": [
     ["/fechas/", "cuándo es el examen ECOEMS", "las fechas del registro y del examen."],
     ["/aciertos/", "cuántos aciertos pide cada escuela", "para saber a qué puntaje apuntar."],
-    ["/calculadora/", "calculadora de aciertos del ECOEMS", "qué escuelas le alcanzan con sus aciertos de hoy."],
+    ["/calculadora/", "calculadora de aciertos del ECOEMS", "a qué escuelas le alcanza con lo que sabe hoy."],
     ["/resultados/", "resultados del ECOEMS", "cuándo y cómo se publican."],
   ],
   "/modalidades/": [
     ["/escuelas/sin-examen/", "prepas sin examen de admisión", "las opciones de la modalidad 1."],
-    ["/como-elegir-opciones/", "cómo ordenar las opciones del ECOEMS", "cuáles piden más aciertos y cuáles ya le alcanzan."],
+    ["/como-elegir-opciones/", "cómo ordenar las opciones del ECOEMS", "cuáles piden más aciertos y a cuáles ya le alcanza con lo que sabe hoy."],
     ["/aciertos/", "aciertos que pide cada escuela", "para la modalidad con examen."],
   ],
   "/como-elegir-opciones/": [
@@ -81,7 +81,7 @@ const MAPA = {
     ["/escuelas/prepas-unam/", "prepas UNAM", "las 9 de la Escuela Nacional Preparatoria."],
     ["/escuelas/cch-unam/", "CCH UNAM", "los 5 planteles del Colegio de Ciencias y Humanidades."],
     ["/escuelas/vocacionales-ipn/", "vocacionales IPN", "las 16 vocas y el CET 1."],
-    ["/calculadora/", "calculadora de aciertos", "qué escuelas le alcanzan con sus aciertos."],
+    ["/calculadora/", "calculadora de aciertos", "a qué escuelas le alcanza con lo que sabe hoy."],
     ["/comparador/", "comparador de escuelas", "compara aciertos y ubicación."],
   ],
   "/escuelas/": [
@@ -130,7 +130,7 @@ const MAPA = {
     ["/como-elegir-opciones/", "cómo elegir y ordenar las opciones", "compara aciertos escuela por escuela."],
     ["/prepas-cerca-de-mi/", "prepas cerca de mí", "te armamos la lista por cercanía y aciertos."],
     ["/comparador/", "comparador de escuelas", "para decidir entre dos o tres."],
-    ["/calculadora/", "calculadora de aciertos", "qué escuelas le alcanzan hoy."],
+    ["/calculadora/", "calculadora de aciertos", "a qué escuelas le alcanza con lo que sabe hoy."],
   ],
   "/mapa/": [
     ["/prepas-cerca-de-mi/", "prepas cerca de mí", "cuáles le convienen según sus aciertos."],

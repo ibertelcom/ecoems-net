@@ -153,17 +153,17 @@ function queEs() {
 
 function herramientas() {
   const h = [
-    ["calculadora", "herramienta-calculadora-aciertos", "/calculadora/", "Calculadora de aciertos", "Escribe los aciertos de su último simulacro y ve qué escuelas le alcanzan, cuáles están en la orilla y cuáles necesitan más estudio."],
+    ["calculadora", "herramienta-calculadora-aciertos", "/calculadora/", "Calculadora de aciertos", "Escribe los aciertos de su último simulacro y ve a qué escuelas le alcanza con lo que sabe hoy, cuáles están en la orilla y cuáles necesitan más estudio."],
     ["mapa", "herramienta-mapa-escuelas", "/mapa/", "Mapa de escuelas", "Ubica las prepas, CCH y vocacionales cerca de tu casa y calcula cuánto tardaría en llegar."],
     ["comparar", "herramienta-comparador-escuelas", "/comparador/", "Comparador de escuelas", "Pon dos o tres escuelas lado a lado: aciertos de tres años, ubicación y tipo de bachillerato."],
-    ["opciones", "herramienta-armar-opciones", "/armar-opciones/", "Armar mis opciones", "Ve en qué escuelas le faltan aciertos y en cuáles ya le alcanza, y descarga la lista para el registro."],
+    ["opciones", "herramienta-armar-opciones", "/armar-opciones/", "Armar mis opciones", "Ve en qué escuelas le faltan aciertos y a cuáles ya le alcanza con lo que sabe hoy, y descarga la lista para el registro."],
   ];
   return `
 <section class="seccion seccion-herramientas" aria-labelledby="t-herr">
   <div class="contenedor">
     <div class="encabezado-seccion">
       <h2 id="t-herr">Herramientas para decidir antes del registro</h2>
-      <p>Lo que ninguna tabla en PDF te dice: si le alcanza, qué le queda cerca y en qué orden poner las escuelas.</p>
+      <p>Lo que ninguna tabla en PDF te dice: si le alcanza con lo que sabe hoy, qué le queda cerca y en qué orden poner las escuelas.</p>
     </div>
     <a class="herramienta-destacada" href="/prepas-cerca-de-mi/">${icono("mapa", "ico")}<span><b>Prepas cerca de mí: ¿cuál le conviene?</b><span>Con sus aciertos, tu código postal y lo que quiere estudiar, te armamos la lista ordenada para el registro.</span></span><em>Probar ahora →</em></a>
     <ul class="herramientas">
@@ -189,7 +189,7 @@ function estudiar() {
   <div class="contenedor rejilla-media rejilla-invertida">
     <figure class="figura">${imagen("estudiar-simulador-examenes-lat", { tamanos: "(min-width: 960px) 45vw, 100vw" })}</figure>
     <div class="prosa">
-      <h2 id="t-estudiar">¿Le alcanza? ¿Qué le falta estudiar?</h2>
+      <h2 id="t-estudiar">¿Le alcanza con lo que sabe hoy? ¿Qué le falta estudiar?</h2>
       <p>Saber los aciertos de la escuela es la mitad. La otra mitad es saber dónde está tu hijo o hija hoy. Para eso hay dos caminos, los dos gratis para empezar:</p>
       ${caminosExternos("/", "portada-estudiar")}
     </div>

@@ -161,8 +161,8 @@ ${cercaSin.length ? `<section class="seccion seccion-blanca" aria-labelledby="t-
 
 <section class="seccion seccion-estudiar" aria-labelledby="t-alcanza">
   <div class="contenedor contenedor-angosto">
-    <h2 id="t-alcanza">¿Le alcanza para ${articulo(e)} ${e.comun}?</h2>
-    <p>Para saberlo hay que comparar sus aciertos de hoy con los ${e.meta} de la meta. Puedes empezar gratis por cualquiera de estos dos caminos:</p>
+    <h2 id="t-alcanza">¿Le alcanza para ${articulo(e)} ${e.comun} con lo que sabe hoy?</h2>
+    <p>Para saberlo hay que comparar los aciertos que saca hoy, con lo que sabe, contra los ${e.meta} de la meta. Puedes empezar gratis por cualquiera de estos dos caminos:</p>
     ${caminosExternos(ruta, `escuela-${e.slug}`, { diag: `Al terminar ves sus aciertos estimados contra ${articulo(e)} ${e.comun} y cuántos le faltan para la meta de ${e.meta}.`, simulador: `Simuladores por materia para subir los aciertos que pide ${articulo(e)} ${e.comun}.` })}
   </div>
 </section>

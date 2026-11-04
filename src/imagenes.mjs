@@ -26,7 +26,7 @@ export const IMAGENES = {
   "herramienta-calculadora-aciertos": {
     archivo: "herramienta-calculadora-aciertos.webp",
     ancho: 800, alto: 600,
-    alt: "Calculadora de aciertos del ECOEMS: escribe los aciertos de un simulacro y ve qué escuelas le alcanzan",
+    alt: "Calculadora de aciertos del ECOEMS: escribe los aciertos de un simulacro y ve a qué escuelas le alcanza con lo que sabe hoy",
     title: "Calculadora de aciertos ECOEMS",
     descripcion: "Ilustración plana de un celular con una barra de aciertos y tres escuelas marcadas como alcanzables.",
     prompt: "Ilustración plana y limpia, formato 4:3, fondo blanco grisáceo. Un celular muestra una barra horizontal de progreso y debajo tres tarjetas de escuela con una palomita verde, una con signo de igual ámbar y una con flecha. Colores: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40. Sin texto legible, sin años.",

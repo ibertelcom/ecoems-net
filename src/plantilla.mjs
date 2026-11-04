@@ -70,7 +70,7 @@ export const MENU = [
     columnas: [
       [
         ["mapa", "/prepas-cerca-de-mi/", "Prepas cerca de mí", "¿Qué escuela le conviene?"],
-        ["calculadora", "/calculadora/", "Calculadora de aciertos", "¿Qué escuelas le alcanzan?"],
+        ["calculadora", "/calculadora/", "Calculadora de aciertos", "¿A qué escuelas llega con lo que sabe hoy?"],
         ["escuela", "/mapa/", "Escuelas por alcaldía", "Prepas, CCH y vocas por zona"],
       ],
       [

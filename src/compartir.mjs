@@ -9,7 +9,7 @@ const SIN_COMPARTIR = new Set(["/contacto/", "/aviso-de-privacidad/", "/404.html
 const TEXTOS = {
   "/": "Guía para papás sobre el examen ECOEMS y Mi Derecho, Mi Lugar, explicada paso a paso",
   "/aciertos/": "Cuántos aciertos pidió cada prepa, CCH y vocacional de la UNAM y el IPN en 2024, 2025 y 2026",
-  "/calculadora/": "Calcula cuántos aciertos lleva tu hijo o hija en el ECOEMS y a qué escuelas le alcanza",
+  "/calculadora/": "Calcula a cuántos aciertos llega tu hijo o hija en el ECOEMS con lo que sabe hoy y a qué escuelas le alcanza",
   "/prepas-cerca-de-mi/": "Pon tu código postal y ve las prepas más cercanas a tu casa: UNAM, IPN y sin examen",
   "/mapa/": "Mapa de las prepas UNAM, IPN y escuelas sin examen de la CDMX y el Edomex",
   "/escuelas/sin-examen/": "Las escuelas de bachillerato a las que se entra sin examen en la CDMX y el Edomex",
