@@ -1,3 +1,24 @@
+// ---------- Tema claro / oscuro (botón en la cabecera y en el menú del celular) ----------
+(() => {
+  const raiz = document.documentElement;
+  const medio = matchMedia("(prefers-color-scheme: dark)");
+  window.esTemaOscuro = () => (raiz.dataset.theme ? raiz.dataset.theme === "dark" : medio.matches);
+  function pintar() {
+    const oscuro = window.esTemaOscuro();
+    document.querySelectorAll("[data-tema-alternar]").forEach((b) => b.setAttribute("aria-label", oscuro ? "Cambiar a tema claro" : "Cambiar a tema oscuro"));
+    document.querySelectorAll("[data-tema]").forEach((b) => b.setAttribute("aria-pressed", String((b.dataset.tema === "dark") === oscuro)));
+  }
+  function poner(t) {
+    raiz.dataset.theme = t;
+    try { localStorage.setItem("tema", t); } catch (e) {}
+    pintar();
+    try { window.gtag && gtag("event", "cambiar_tema", { tema: t }); } catch (e) {}
+  }
+  document.querySelectorAll("[data-tema-alternar]").forEach((b) => b.addEventListener("click", () => poner(window.esTemaOscuro() ? "light" : "dark")));
+  document.querySelectorAll("[data-tema]").forEach((b) => b.addEventListener("click", () => poner(b.dataset.tema)));
+  medio.addEventListener?.("change", pintar);
+  pintar();
+})();
 // ecoems.net · comportamiento del sitio (sin dependencias)
 (() => {
   document.documentElement.classList.add("js");
@@ -556,7 +577,7 @@
     try { await cargar(); } catch (e) { caja.innerHTML = `<p class="mp-cargando">No se pudo cargar el mapa. Abajo tienes todas las escuelas por alcaldía.</p>`; return; }
     L = window.L;
     caja.innerHTML = "";
-    const oscuro = matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light";
+    const oscuro = window.esTemaOscuro ? window.esTemaOscuro() : matchMedia("(prefers-color-scheme: dark)").matches;
     mapa = L.map(caja, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
@@ -626,7 +647,7 @@
     caja.innerHTML = "";
     const mapa = L.map(caja, { scrollWheelZoom: false, preferCanvas: puntos.length > 60 });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(mapa);
-    if (matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light") caja.classList.add("mp-oscuro");
+    if (window.esTemaOscuro ? window.esTemaOscuro() : matchMedia("(prefers-color-scheme: dark)").matches) caja.classList.add("mp-oscuro");
     const capas = [];
     for (const [la, lo, n, url, tipo, principal, linea] of puntos) {
       const c = L.circleMarker([la, lo], { radius: principal ? 11 : puntos.length > 60 ? 6 : 8, color: "#fff", weight: principal ? 3 : 2, fillColor: color(linea), fillOpacity: 1 })
