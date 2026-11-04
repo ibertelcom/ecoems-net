@@ -52,7 +52,7 @@ const MAPA = {
   ],
   "/modalidades/": [
     ["/escuelas/sin-examen/", "prepas sin examen de admisión", "las opciones de la modalidad 1."],
-    ["/como-elegir-opciones/", "cómo ordenar las opciones del ECOEMS", "retadoras, alcanzables y seguras."],
+    ["/como-elegir-opciones/", "cómo ordenar las opciones del ECOEMS", "cuáles piden más aciertos y cuáles ya le alcanzan."],
     ["/aciertos/", "aciertos que pide cada escuela", "para la modalidad con examen."],
   ],
   "/como-elegir-opciones/": [
@@ -127,7 +127,7 @@ const MAPA = {
     ["/armar-opciones/", "arma y ordena tus opciones", "decide el orden del registro."],
   ],
   "/armar-opciones/": [
-    ["/como-elegir-opciones/", "cómo elegir y ordenar las opciones", "la regla de retadoras, alcanzables y seguras."],
+    ["/como-elegir-opciones/", "cómo elegir y ordenar las opciones", "compara aciertos escuela por escuela."],
     ["/prepas-cerca-de-mi/", "prepas cerca de mí", "te armamos la lista por cercanía y aciertos."],
     ["/comparador/", "comparador de escuelas", "para decidir entre dos o tres."],
     ["/calculadora/", "calculadora de aciertos", "qué escuelas le alcanzan hoy."],

@@ -156,7 +156,7 @@ function herramientas() {
     ["calculadora", "herramienta-calculadora-aciertos", "/calculadora/", "Calculadora de aciertos", "Escribe los aciertos de su último simulacro y ve qué escuelas le alcanzan, cuáles están en la orilla y cuáles necesitan más estudio."],
     ["mapa", "herramienta-mapa-escuelas", "/mapa/", "Mapa de escuelas", "Ubica las prepas, CCH y vocacionales cerca de tu casa y calcula cuánto tardaría en llegar."],
     ["comparar", "herramienta-comparador-escuelas", "/comparador/", "Comparador de escuelas", "Pon dos o tres escuelas lado a lado: aciertos de tres años, ubicación y tipo de bachillerato."],
-    ["opciones", "herramienta-armar-opciones", "/armar-opciones/", "Armar mis opciones", "Ordena las escuelas en retadoras, alcanzables y seguras, y descarga la lista para el registro."],
+    ["opciones", "herramienta-armar-opciones", "/armar-opciones/", "Armar mis opciones", "Ve en qué escuelas le faltan aciertos y en cuáles ya le alcanza, y descarga la lista para el registro."],
   ];
   return `
 <section class="seccion seccion-herramientas" aria-labelledby="t-herr">

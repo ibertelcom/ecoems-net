@@ -674,7 +674,7 @@ p { margin: 0 0 1em; }
 .lo-num { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--superficie-2); font: 800 .95rem var(--f-titulo); }
 .lo-nombre a { font-weight: 700; color: var(--tinta); text-decoration: none; }
 .lo-nombre small { display: block; color: var(--suave); font-size: .82rem; }
-.lo-etq { padding: 4px 10px; border-radius: 999px; font-size: .8rem; font-weight: 700; background: var(--superficie-2); }
+.lo-etq { padding: 4px 10px; border-radius: 999px; font-size: .8rem; font-weight: 700; background: var(--superficie-2); white-space: nowrap; }
 .lo-etq[data-tipo="alcanza"] { background: var(--verde-claro); color: var(--verde-hover); }
 .lo-etq[data-tipo="orilla"] { background: var(--sol); color: #2B1F00; }
 .lo-etq[data-tipo="reto"] { background: color-mix(in srgb, var(--voca) 16%, var(--superficie)); color: var(--voca); }

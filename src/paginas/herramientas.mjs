@@ -48,7 +48,7 @@ function calculadora() {
     migas: migas([["Inicio", "/"], ["Herramientas", "/calculadora/"], ["Calculadora de aciertos", ruta]].filter((_, i) => i !== 1)),
   };
   const faq = [
-    ["¿Cómo funciona la calculadora de aciertos?", `Compara los aciertos que escribes con los aciertos 2026 de cada escuela y con la meta Tepo (2026 + ${MARGEN_TEPO}). Si llega a la meta, la escuela le alcanza con margen; si queda entre los aciertos 2026 y la meta, está en la orilla; si queda abajo, es retadora.`],
+    ["¿Cómo funciona la calculadora de aciertos?", `Compara los aciertos que escribes con los aciertos 2026 de cada escuela y con la meta Tepo (2026 + ${MARGEN_TEPO}). Si llega a la meta, la escuela le alcanza con margen; si queda entre los aciertos 2026 y la meta, justo le alcanza; si queda abajo, todavía le faltan aciertos.`],
     ["¿Es una garantía de lugar?", "No. Los aciertos de cada escuela cambian cada año y el examen real puede salir distinto a un simulacro. Úsala como referencia para estudiar y ordenar opciones."],
     ["¿De dónde saco sus aciertos?", "De un simulacro completo reciente. Si el simulacro tiene menos de 128 preguntas, la calculadora puede convertir el resultado a la escala de 128."],
   ];
@@ -71,8 +71,8 @@ ${cabeceraPagina({ img: "herramienta-calculadora-aciertos", migasHtml: d.migas.h
     </form>
     <div class="calc-grupos">
       <div class="calc-grupo" data-tipo="alcanza"><h2>${icono("sin_examen", "ico")}Le alcanza con margen</h2><p>Llega a la meta Tepo 2027 o más.</p><ul id="lista-alcanza"></ul></div>
-      <div class="calc-grupo" data-tipo="orilla"><h2>${icono("aviso", "ico")}En la orilla</h2><p>Llega a los aciertos de 2026, pero no a la meta.</p><ul id="lista-orilla"></ul></div>
-      <div class="calc-grupo" data-tipo="reto"><h2>${icono("aciertos", "ico")}Retadoras</h2><p>Todavía le faltan aciertos.</p><ul id="lista-reto"></ul></div>
+      <div class="calc-grupo" data-tipo="orilla"><h2>${icono("aviso", "ico")}Justo le alcanza</h2><p>Llega a los aciertos de 2026, pero no a la meta.</p><ul id="lista-orilla"></ul></div>
+      <div class="calc-grupo" data-tipo="reto"><h2>${icono("aciertos", "ico")}Le faltan aciertos</h2><p>Todavía le faltan aciertos.</p><ul id="lista-reto"></ul></div>
     </div>
     <p class="nota-tabla">${icono("aviso", "ico")}<span>Es una referencia, no una garantía. Los aciertos de cada escuela cambian cada año. Datos: aciertos mínimos de asignación 2026; <a href="/aciertos/">ver tabla completa</a>. ¿Quieres filtrar por cercanía y por lo que quiere estudiar? Usa <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>.</span></p>
   </div>
@@ -97,7 +97,7 @@ function cercaDeMi() {
     ["Si quiero estudiar medicina, ¿qué prepa me conviene?", "En la UNAM puede ser cualquier prepa o CCH: la carrera se decide al final del bachillerato y el pase reglamentado depende del promedio. En el IPN conviene una vocacional del área Médico-Biológica, como la Voca 6 o la Voca 15, porque su plan de estudios y su carrera técnica van hacia la salud. Medicina es de las carreras más pedidas, así que el promedio pesa mucho."],
     ["¿Las vocacionales del IPN tienen pase directo a la universidad?", "No. En el IPN no existe el pase directo: quien termina una vocacional presenta el examen de admisión de nivel superior como cualquier aspirante, eligiendo un área y dos carreras de esa misma área. Elegir una voca del área que le interesa sí ayuda, porque estudia los temas y la carrera técnica de esa área."],
     ["¿Cómo funciona el pase reglamentado de la UNAM?", "Quien termina la prepa o el CCH de la UNAM en cuatro años o menos con promedio mínimo de 7 tiene derecho al pase reglamentado; con promedio de 9 o más en tres años tiene además preferencia en carrera y plantel. No es automático: la UNAM asigna según promedio, cupo y demanda de cada carrera."],
-    ["¿En qué orden pongo las escuelas en el registro?", "De la que más quiere a la que menos. El sistema asigna la primera opción de la lista a la que le alcanzan sus aciertos y ya no revisa las de abajo. Por eso la lista que te damos empieza con las retadoras, sigue con las alcanzables y termina con las seguras."],
+    ["¿En qué orden pongo las escuelas en el registro?", "De la que más quiere a la que menos. El sistema asigna la primera opción de la lista a la que le alcanzan sus aciertos y ya no revisa las de abajo. Por eso la lista que te damos empieza con las que piden más aciertos, sigue con las que justo le alcanzan y termina con las que le alcanzan con margen."],
     ["¿La distancia es exacta?", "Es aproximada: se mide en línea recta desde el centro de tu código postal (o desde tu ubicación si la compartes) hasta el plantel. El tiempo real depende del transporte; en cada escuela tienes un botón «Cómo llegar» que abre la ruta en Google Maps."],
   ];
   const radio = (name, v, t, checked, sub = "") => `<label class="cm-op"><input type="radio" name="${name}" value="${v}"${checked ? " checked" : ""}><span><b>${t}</b>${sub ? `<small>${sub}</small>` : ""}</span></label>`;
@@ -130,7 +130,8 @@ ${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: 
       </fieldset>
       <fieldset class="cm-paso">
         <legend><span class="cm-n">3</span>¿Dónde viven?</legend>
-        <div class="calc-fila"><input id="cm-cp" class="cm-cp" type="text" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" value="07300" aria-label="Código postal" autocomplete="postal-code"><button class="boton boton-secundario" type="button" id="cm-gps">${icono("mapa", "ico")}Usar mi ubicación</button></div>
+        <label for="cm-cp">Código postal:</label>
+        <div class="calc-fila"><input id="cm-cp" class="cm-cp" type="text" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" value="07300" autocomplete="postal-code" aria-describedby="cm-donde"><button class="boton boton-secundario" type="button" id="cm-gps">${icono("mapa", "ico")}Usar mi ubicación</button></div>
         <p class="calc-ayuda" id="cm-donde" aria-live="polite">Ejemplo: 07300, Gustavo A. Madero.</p>
         <label for="cm-dist">¿Hasta qué distancia puede viajar?</label>
         <select id="cm-dist" class="select-grande">
@@ -138,11 +139,11 @@ ${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: 
         </select>
       </fieldset>
       <fieldset class="cm-paso">
-        <legend><span class="cm-n">4</span>¿Qué tan seguro quiere ir?</legend>
+        <legend><span class="cm-n">4</span>¿Qué escuelas quiere en la lista, según sus aciertos?</legend>
         <div class="cm-ops cm-ops-3">
-          ${radio("cm-estilo", "arriesgado", "Arriesgado", false, "Más escuelas reto")}
-          ${radio("cm-estilo", "equilibrado", "Equilibrado", true, "Reto, alcanzables y seguras")}
-          ${radio("cm-estilo", "seguro", "Seguro", false, "Más escuelas seguras")}
+          ${radio("cm-estilo", "arriesgado", "Apuntar alto", false, "Más escuelas que hoy le piden más aciertos")}
+          ${radio("cm-estilo", "equilibrado", "De todo un poco", true, "Unas que piden más, otras justas y otras donde ya le alcanza")}
+          ${radio("cm-estilo", "seguro", "Lo que ya le alcanza", false, "Más escuelas donde sus aciertos ya llegan con margen")}
         </div>
         <div class="cm-inst"><label class="cm-check"><input type="checkbox" id="cm-unam" checked> UNAM</label><label class="cm-check"><input type="checkbox" id="cm-ipn" checked> IPN</label></div>
       </fieldset>
@@ -180,9 +181,9 @@ ${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: 
     <p>En el IPN <b>no hay pase directo</b>: al terminar la voca presenta el examen de nivel superior como cualquier aspirante, eligiendo un área y dos carreras de esa misma área. Elegir una voca del área que le interesa le da ventaja, porque llega preparado en esos temas y con experiencia técnica. Por eso la herramienta solo te sugiere vocacionales del área que elegiste.</p>
     <h3>Cómo arma la lista esta herramienta</h3>
     <ul>
-      <li><b>Reto:</b> le faltan hasta 8 aciertos para lo que pidió la escuela en 2026.</li>
-      <li><b>Alcanzable:</b> llega a los aciertos de 2026, pero todavía no a la meta Tepo.</li>
-      <li><b>Segura:</b> llega a la meta Tepo (aciertos 2026 + ${MARGEN_TEPO}) o más.</li>
+      <li><b>Le faltan aciertos:</b> le faltan hasta 8 aciertos para lo que pidió la escuela en 2026.</li>
+      <li><b>Justo le alcanza:</b> llega a los aciertos de 2026, pero todavía no a la meta Tepo.</li>
+      <li><b>Le alcanza con margen:</b> llega a la meta Tepo (aciertos 2026 + ${MARGEN_TEPO}) o más.</li>
     </ul>
     <p>Respeta el límite de hasta 5 escuelas de la UNAM y 5 del IPN, descarta las que quedan fuera de la distancia que elegiste y ordena la lista de la más pedida a la menos pedida, que es como conviene registrarla. Luego puedes moverla a tu gusto en <a href="/armar-opciones/">Armar mis opciones</a> o revisar cada escuela en la <a href="/aciertos/">tabla de aciertos</a>.</p>
   </div>
@@ -221,12 +222,12 @@ function armar() {
   const ruta = "/armar-opciones/";
   const d = {
     titulo: "Armar mis opciones del ECOEMS: ordena tu lista | ecoems.net",
-    descripcion: "Arma y ordena la lista de escuelas de la UNAM y el IPN para el registro de Mi Derecho, Mi Lugar, con sus aciertos y una etiqueta de retadora, alcanzable o segura.",
+    descripcion: "Arma y ordena la lista de escuelas de la UNAM y el IPN para el registro de Mi Derecho, Mi Lugar, con sus aciertos y una etiqueta que dice si le faltan aciertos, si justo le alcanza o si le alcanza con margen.",
     nombreCorto: "Armar mis opciones",
     migas: migas([["Inicio", "/"], ["Armar mis opciones", ruta]]),
   };
   const cuerpo = `
-${cabeceraPagina({ img: "herramienta-armar-opciones", migasHtml: d.migas.html, h1: "Arma y ordena tus opciones del ECOEMS", lead: "Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas de la que más quiere a la que menos y revisa si la lista tiene escuelas seguras." })}
+${cabeceraPagina({ img: "herramienta-armar-opciones", migasHtml: d.migas.html, h1: "Arma y ordena tus opciones del ECOEMS", lead: "Agrega hasta 5 escuelas de la UNAM y 5 del IPN, ordénalas de la que más quiere a la que menos y revisa si en la lista hay escuelas a las que ya le alcanzan sus aciertos." })}
 <section class="seccion herramienta-seccion" aria-label="Armar opciones">
   <div class="contenedor armar">
     <div class="armar-panel">
