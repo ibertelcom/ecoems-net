@@ -76,11 +76,23 @@ writeFileSync(
 // IndexNow (Bing, Yandex, Seznam…): archivo de clave en la raíz.
 export const INDEXNOW_KEY = "6573ccf8a71e37569db6b94154a2a6e4";
 writeFileSync(`dist/${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
-writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITIO.dominio}/sitemap.xml\n`);
+writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITIO.dominio}/sitemap.xml\nSitemap: ${SITIO.dominio}/sitemap-indice.xml\n`);
 writeFileSync(
   "dist/sitemap.xml",
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${PAGINAS.map((p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${p.ACTUALIZADO?.iso ?? new Date().toISOString().slice(0, 10)}</lastmod>${(imgsDePagina[p.META.ruta] ?? []).map((f) => `<image:image><image:loc>${SITIO.dominio}/img/${f}</image:loc></image:image>`).join("")}</url>`).join("\n")}\n</urlset>\n`,
 );
+
+// Sitemaps divididos (guía y herramientas / escuelas) con índice: segunda vía de descubrimiento para Search Console.
+{
+  const hoy = new Date().toISOString().slice(0, 10);
+  const urlXml = (p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${p.ACTUALIZADO?.iso ?? hoy}</lastmod></url>`;
+  const set = (lista) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${lista.map(urlXml).join("\n")}\n</urlset>\n`;
+  const esc = PAGINAS.filter((p) => p.META.ruta.startsWith("/escuelas/"));
+  const gen = PAGINAS.filter((p) => !p.META.ruta.startsWith("/escuelas/"));
+  writeFileSync("dist/sitemap-guia.xml", set(gen));
+  writeFileSync("dist/sitemap-escuelas.xml", set(esc));
+  writeFileSync("dist/sitemap-indice.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${["guia", "escuelas"].map((n) => `  <sitemap><loc>${SITIO.dominio}/sitemap-${n}.xml</loc><lastmod>${hoy}</lastmod></sitemap>`).join("\n")}\n</sitemapindex>\n`);
+}
 
 // Listado de imágenes para que Victor las genere.
 const md = [
