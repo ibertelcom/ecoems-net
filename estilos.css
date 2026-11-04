@@ -45,17 +45,6 @@
 --radio-lg: 22px;
 color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-:root:not([data-theme="light"]) {
---papel: #0F1828; --superficie: #17223A; --superficie-2: #1F2C47; --tinta: #EEF2F7; --suave: #A9B5C8;
---linea: #2A3958; --borde-control: #7D8AA6; --verde: #3FBF96; --verde-hover: #64D3AE; --verde-claro: #143A31;
---sobre-verde: #08261E; --enp: #7FA6FF; --cch: #F2C24D; --cch-texto: #F2C24D; --voca: #E8789B;
---tablero: #0A1220; --tablero-2: #15213A; --sombra: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
---cajon-bg: #0B3B33; --cajon-tarjeta: #12503F; --cajon-borde: rgba(255, 255, 255, .14); --cajon-texto: #EAF7F2; --cajon-flecha: #F4B400; --cajon-ico-bg: #DDF0E8; --cajon-ico: #0B7A60;
---hero-bg: linear-gradient(180deg, var(--superficie) 0%, var(--papel) 100%); --hero-tinta: var(--tinta); --hero-suave: var(--suave); --hero-enlace: var(--verde); --hero-borde: var(--linea); --hero-insignia-bg: var(--verde-claro); --hero-insignia: var(--verde); --hero-dato: var(--verde); --hero-raya: var(--sol);
-color-scheme: dark;
-}
-}
 :root[data-theme="dark"] {
 --papel: #0F1828; --superficie: #17223A; --superficie-2: #1F2C47; --tinta: #EEF2F7; --suave: #A9B5C8;
 --linea: #2A3958; --borde-control: #7D8AA6; --verde: #3FBF96; --verde-hover: #64D3AE; --verde-claro: #143A31;
@@ -803,7 +792,6 @@ li[id]:target .tarjeta-escuela { border-color: var(--verde); box-shadow: 0 0 0 3
 .tema-btn .ico { width: 21px; height: 21px; }
 .tema-btn .ico-sol, :root[data-theme="dark"] .tema-btn .ico-luna { display: none; }
 :root[data-theme="dark"] .tema-btn .ico-sol { display: block; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tema-btn .ico-luna { display: none; } :root:not([data-theme="light"]) .tema-btn .ico-sol { display: block; } }
 .cajon-tema { display: grid; grid-template-columns: auto 1fr 1fr; align-items: center; gap: 8px; padding: 10px 12px; border-radius: var(--radio); background: var(--cajon-tarjeta); border: 1px solid var(--cajon-borde); }
 .cajon-tema span { font: 700 .95rem/1 var(--f-titulo); color: var(--cajon-texto); padding-right: 4px; }
 .cajon-tema button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; border-radius: 10px; border: 1px solid var(--cajon-borde); background: transparent; color: var(--cajon-texto); font: 700 .92rem/1 var(--f-texto); cursor: pointer; }
