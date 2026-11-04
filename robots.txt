@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ecoems.net/sitemap.xml
+Sitemap: https://ecoems.net/sitemap-indice.xml
