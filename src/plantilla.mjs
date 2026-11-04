@@ -106,12 +106,13 @@ export function encabezado(actual = "") {
 <header class="cabecera">
   <div class="cabecera-in">
     <a class="logo" href="/" aria-label="ecoems.net, inicio">
-      <svg class="logo-marca" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="var(--verde)"/><path d="M9 26h22" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="13" cy="26" r="3.6" fill="#fff"/><circle cx="20" cy="26" r="3.6" fill="var(--sol)" stroke="#fff" stroke-width="2"/><circle cx="27" cy="26" r="3.6" fill="#fff"/><path d="M13 15h14" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"/></svg>
+      <svg class="logo-marca" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="#0B7A60"/><path d="M16.21 28.56Q13.26 28.56 11.11 27.64Q8.95 26.73 7.79 24.84Q6.63 22.94 6.63 20Q6.63 17.12 7.77 15.23Q8.92 13.33 10.98 12.39Q13.04 11.44 15.83 11.44Q18.78 11.44 20.84 12.36Q22.9 13.27 23.99 15.16Q25.07 17.05 25.07 20V21.05H12.8Q12.8 22.17 13.12 22.98Q13.45 23.78 14.18 24.2Q14.9 24.62 16.08 24.62Q16.92 24.62 17.49 24.43Q18.07 24.25 18.42 23.92Q18.78 23.6 18.93 23.16Q19.09 22.73 19.09 22.23H25.07Q25.07 23.69 24.51 24.87Q23.96 26.04 22.84 26.87Q21.72 27.69 20.07 28.12Q18.41 28.56 16.21 28.56ZM12.83 18.14H18.84Q18.84 17.49 18.66 16.98Q18.47 16.47 18.11 16.11Q17.76 15.75 17.25 15.57Q16.73 15.38 16.08 15.38Q15.06 15.38 14.38 15.72Q13.7 16.06 13.32 16.67Q12.95 17.27 12.83 18.14Z" fill="#fff"/><circle cx="29.67" cy="24.86" r="3.7" fill="#F4B400"/></svg>
       <span class="logo-texto">ecoems<span>.net</span></span>
     </a>
     <nav class="nav" aria-label="Principal">
       <ul class="nav-lista">${items}<li class="nav-item"><a class="nav-btn" href="/preguntas-frecuentes/">Preguntas</a></li></ul>
     </nav>
+    <button class="tema-btn" type="button" data-tema-alternar aria-label="Cambiar a tema oscuro" title="Cambiar tema claro / oscuro"><svg class="ico ico-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg><svg class="ico ico-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
     <a class="boton boton-cabecera" href="${utm(SITIO.app, "cabecera")}">Diagnóstico gratis</a>
     <button class="menu-movil" type="button" aria-expanded="false" aria-controls="cajon" aria-label="Abrir menú">${icono("menu")}</button>
   </div>
@@ -124,6 +125,7 @@ export function encabezado(actual = "") {
             .map(([ic, href, t]) => `<li><a href="${href}">${icono(ic)}<span>${t}</span></a></li>`)
             .join("")}</ul></details>`,
       ).join("")}
+      <div class="cajon-tema" role="group" aria-label="Apariencia"><span>Apariencia</span><button type="button" data-tema="light" aria-pressed="false"><svg class="ico ico-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>Claro</button><button type="button" data-tema="dark" aria-pressed="false"><svg class="ico ico-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>Oscuro</button></div>
       <a class="cajon-suelto" href="/preguntas-frecuentes/">${icono("pregunta")}<span>Preguntas frecuentes</span></a>
       <a class="boton boton-bloque" href="${utm(SITIO.app, "menu-movil")}">Diagnóstico gratis en ecoems.app</a>
     </div>
@@ -166,7 +168,7 @@ export function documento({ titulo, descripcion, ruta, cuerpo, jsonld = [], og =
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("tema");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 ${estilos}
 ${ld}
 ${encabezado(seccion)}
@@ -180,13 +182,14 @@ ${script}`;
 <html lang="es-MX">
 <head>
 <meta charset="utf-8">
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("tema");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${titulo}</title>
 <meta name="description" content="${descripcion}">
 <link rel="canonical" href="${canonica}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#0B7A60">
+<meta name="theme-color" content="#9D2449" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1828" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="ecoems.net">
