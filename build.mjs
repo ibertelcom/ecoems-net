@@ -1,5 +1,6 @@
 // Genera el sitio estático de ecoems.net en dist/ y una vista previa autocontenida en vista-previa/.
 import { compartir } from "./src/compartir.mjs";
+import { ANIOS_RESULTADOS, metaResultados } from "./src/resultados.mjs";
 import { mkdirSync, writeFileSync, readFileSync, rmSync, existsSync, cpSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { documento, SITIO } from "./src/plantilla.mjs";
@@ -76,11 +77,20 @@ writeFileSync(
 // IndexNow (Bing, Yandex, Seznam…): archivo de clave en la raíz.
 export const INDEXNOW_KEY = "6573ccf8a71e37569db6b94154a2a6e4";
 writeFileSync(`dist/${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
-writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITIO.dominio}/sitemap.xml\nSitemap: ${SITIO.dominio}/sitemap-indice.xml\n`);
+writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\nDisallow: /datos/resultados/\n\nSitemap: ${SITIO.dominio}/sitemap.xml\nSitemap: ${SITIO.dominio}/sitemap-indice.xml\n`);
 writeFileSync(
   "dist/sitemap.xml",
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${PAGINAS.map((p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${p.ACTUALIZADO?.iso ?? new Date().toISOString().slice(0, 10)}</lastmod>${(imgsDePagina[p.META.ruta] ?? []).map((f) => `<image:image><image:loc>${SITIO.dominio}/img/${f}</image:loc></image:image>`).join("")}</url>`).join("\n")}\n</urlset>\n`,
 );
+
+// Resultados por folio (Gaceta de ECOEMS): paquetes por prefijo + catálogo de claves para el buscador de /resultados/.
+for (const { anio } of ANIOS_RESULTADOS) {
+  const meta = metaResultados(anio);
+  if (!meta) continue;
+  mkdirSync(`dist/datos/resultados/${anio}`, { recursive: true });
+  cpSync(`src/datos/resultados/${anio}/f`, `dist/datos/resultados/${anio}/f`, { recursive: true });
+  writeFileSync(`dist/datos/resultados/${anio}/meta.json`, JSON.stringify(meta));
+}
 
 // Sitemaps divididos (guía y herramientas / escuelas) con índice: segunda vía de descubrimiento para Search Console.
 {

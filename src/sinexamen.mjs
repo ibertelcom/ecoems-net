@@ -164,7 +164,7 @@ function leer() {
     const mun = M[+mu];
     const esp = (cod ? cod.split(",") : []).map((c) => ({ clave: base + c, nombre: (E[pre + c] || "").replace(/^Técnico (en )?/i, "").replace(/\s*\((s|S)ólo se oferta[^)]*\)/, "") , nota: /turno (matutino|vespertino)/i.exec(E[pre + c] || "")?.[0] ?? null })).filter((x) => x.nombre);
     out.push({
-      sis, inst: I[+i], crudo: n, ...nombres(sis, n),
+      sis, inst: I[+i], crudo: n, base, ...nombres(sis, n),
       municipio: bonito(mun), entidad: ALCALDIAS.has(mun) ? "CDMX" : "Estado de México",
       coord: [+la, +lo], acc: acc === "1",
       // Clave de opción cuando el plantel tiene una sola opción (sin especialidades); IEMS tiene una por modalidad.

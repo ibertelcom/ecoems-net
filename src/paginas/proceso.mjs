@@ -7,6 +7,7 @@ import { icono } from "../iconos.mjs";
 import { imagen, registrar } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
 import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "../componentes.mjs";
+import { herramientaResultados } from "../resultados.mjs";
 
 const OFICIAL = "https://www.miderechomilugar.gob.mx/";
 const CONVOCATORIA_LAT = `${SITIO.lat}/noticias/mx/convocatorias/convocatoria-ecoems/`;
@@ -102,6 +103,7 @@ function pagina(d) {
   const cuerpo = `
 ${cabeceraPagina({ migasHtml: m.html, h1: d.h1, lead: d.lead, img })}
 <nav class="ruta-banda" aria-label="Paradas del proceso Mi Derecho, Mi Lugar"><div class="contenedor">${miniRuta(d.slug)}</div></nav>
+${d.antes ? d.antes() : ""}
 ${secciones}
 ${d.cta ? ctaHerramientas(d.cta) : ""}
 ${anteriorSiguiente(d.slug)}
@@ -390,10 +392,11 @@ const PAGINAS = [
   },
   {
     slug: "resultados", miga: "Resultados", nombreCorto: "Resultados ECOEMS",
-    titulo: "Resultados ECOEMS 2027: cuándo salen y cómo consultarlos | ecoems.net",
-    descripcion: "Cuándo salen los resultados del ECOEMS y Mi Derecho, Mi Lugar, cómo consultar la Gaceta Electrónica de Resultados, cómo leer los aciertos y qué hacer después.",
-    h1: "Resultados del ECOEMS: cuándo salen y cómo leerlos",
-    lead: "Dónde se publican, qué dice el resultado individual y qué hacer en los días siguientes.",
+    titulo: "Resultados ECOEMS por folio: escuela asignada y aciertos | ecoems.net",
+    descripcion: "Busca tu folio y entiende tu resultado del ECOEMS: escuela asignada, aciertos, percentil y qué sigue, según la Gaceta de Resultados 2026. Y cuándo salen los de 2027.",
+    h1: "Resultados del ECOEMS: busca tu folio y entiende tu resultado",
+    lead: "Escribe tu folio y te traducimos la Gaceta de Resultados: en qué escuela quedó, cuántos aciertos sacó y qué hacer después. Abajo, cuándo salen y cómo leerlos.",
+    antes: herramientaResultados,
     img: { id: "resultados-familia-celebra", alt: "Familia revisa en la computadora los resultados del ECOEMS y celebra", title: "Resultados del ECOEMS", desc: "Una familia frente a la computadora de casa; la hija sonríe y el papá le pone la mano en el hombro." },
     secciones: [
       ["Cuándo salen los resultados", `<p>En 2026 los resultados se publicaron el <b>martes 18 de agosto</b> en la <b>Gaceta Electrónica de Resultados</b>, en ${of()}. Es el único documento oficial de resultados; desconfía de listas en redes sociales.</p>${aviso2027}`],
@@ -406,6 +409,8 @@ const PAGINAS = [
     faq: [
       ["¿Cuándo salen los resultados del ECOEMS 2027?", "Aún no hay fecha. En 2026 salieron el martes 18 de agosto."],
       ["¿Dónde veo los resultados del ECOEMS?", "En la Gaceta Electrónica de Resultados, en miderechomilugar.gob.mx."],
+      ["¿Cómo busco mi resultado del ECOEMS por folio?", "Escribe los 9 dígitos del folio de tu comprobante de registro en el buscador de esta página. Te mostramos la escuela asignada, los aciertos y qué significa la explicación (ASI, PI, NP, SC, <7 o BI), tal como vienen en la Gaceta de Resultados."],
+      ["¿Qué significan PI, NP, SC y ASI en la gaceta?", "ASI: obtuvo lugar. PI: puntaje insuficiente para sus opciones con examen. NP: no presentó el examen. SC: sin certificado de secundaria verificado. <7: promedio menor a 7. BI: baja por irregularidad en el examen."],
       ["¿Qué significa 'sin examen' en los resultados?", "Que el aspirante fue asignado a una escuela que no pide examen (modalidad 1, o modalidad 3 cuando no alcanzó lugar en la UNAM o el IPN)."],
     ],
   },
