@@ -188,8 +188,7 @@ ${script}`;
 <meta name="description" content="${descripcion}">
 <link rel="canonical" href="${canonica}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#9D2449" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1828" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#9D2449">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="ecoems.net">
@@ -202,7 +201,7 @@ ${script}`;
 <meta property="og:image:alt" content="${titulo}">
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","${GA_ID}");</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());(function(){var r=document.documentElement,o="predeterminado";try{if(localStorage.getItem("tema"))o="elegido"}catch(e){}gtag("set","user_properties",{tema_preferido:r.dataset.theme==="dark"?"oscuro":"claro",tema_origen:o,tema_sistema:matchMedia("(prefers-color-scheme: dark)").matches?"oscuro":"claro"})})();gtag("config","${GA_ID}");</script>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">

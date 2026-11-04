@@ -2,21 +2,27 @@
 (() => {
   const raiz = document.documentElement;
   const medio = matchMedia("(prefers-color-scheme: dark)");
-  window.esTemaOscuro = () => (raiz.dataset.theme ? raiz.dataset.theme === "dark" : medio.matches);
+  window.esTemaOscuro = () => raiz.dataset.theme === "dark";
   function pintar() {
     const oscuro = window.esTemaOscuro();
     document.querySelectorAll("[data-tema-alternar]").forEach((b) => b.setAttribute("aria-label", oscuro ? "Cambiar a tema claro" : "Cambiar a tema oscuro"));
     document.querySelectorAll("[data-tema]").forEach((b) => b.setAttribute("aria-pressed", String((b.dataset.tema === "dark") === oscuro)));
   }
-  function poner(t) {
-    raiz.dataset.theme = t;
+  const nombre = (t) => (t === "dark" ? "oscuro" : "claro");
+  function poner(t, ubicacion) {
+    const antes = window.esTemaOscuro() ? "dark" : "light";
+    if (t === "light") delete raiz.dataset.theme; else raiz.dataset.theme = t;
     try { localStorage.setItem("tema", t); } catch (e) {}
     pintar();
-    try { window.gtag && gtag("event", "cambiar_tema", { tema: t }); } catch (e) {}
+    try {
+      if (window.gtag && antes !== t) {
+        gtag("set", "user_properties", { tema_preferido: nombre(t), tema_origen: "elegido" });
+        gtag("event", "cambiar_tema", { tema_nuevo: nombre(t), tema_anterior: nombre(antes), ubicacion, tema_sistema: medio.matches ? "oscuro" : "claro" });
+      }
+    } catch (e) {}
   }
-  document.querySelectorAll("[data-tema-alternar]").forEach((b) => b.addEventListener("click", () => poner(window.esTemaOscuro() ? "light" : "dark")));
-  document.querySelectorAll("[data-tema]").forEach((b) => b.addEventListener("click", () => poner(b.dataset.tema)));
-  medio.addEventListener?.("change", pintar);
+  document.querySelectorAll("[data-tema-alternar]").forEach((b) => b.addEventListener("click", () => poner(window.esTemaOscuro() ? "light" : "dark", "cabecera")));
+  document.querySelectorAll("[data-tema]").forEach((b) => b.addEventListener("click", () => poner(b.dataset.tema, "menu_movil")));
   pintar();
 })();
 // ecoems.net · comportamiento del sitio (sin dependencias)
@@ -736,5 +742,48 @@
       copiar.classList.add("ok"); txt.textContent = "¡Enlace copiado!";
       setTimeout(() => { copiar.classList.remove("ok"); txt.textContent = "Copiar enlace"; }, 2500);
     });
+  });
+})();
+
+// ---------- Medición (GA4): salidas, lectura, preguntas frecuentes y menús ----------
+(() => {
+  const ev = (n, p) => { try { window.gtag && gtag("event", n, p); } catch (e) {} };
+  const zona = (el) => el.closest(".cabecera") ? "cabecera" : el.closest(".cajon") ? "menu_movil" : el.closest(".portada, .cabecera-pagina") ? "hero"
+    : el.closest(".caminos") ? "caminos" : el.closest(".compartir") ? "compartir" : el.closest(".relacionadas") ? "relacionadas" : el.closest(".pie") ? "pie" : "contenido";
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[href]");
+    if (!a) return;
+    let u; try { u = new URL(a.href, location.href); } catch (x) { return; }
+    const ubicacion = zona(a);
+    const texto = (a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 90);
+    if (u.hostname === location.hostname) { if (ubicacion === "relacionadas" || ubicacion === "hero") ev("clic_interno", { destino_ruta: u.pathname, ubicacion, texto_enlace: texto }); return; }
+    if (!/^https?:$/.test(u.protocol)) return;
+    const destino = u.hostname.replace(/^www\./, "");
+    const p = { destino, destino_ruta: u.pathname, ubicacion, texto_enlace: texto };
+    ev("clic_salida", p);
+    if (destino.endsWith("ecoems.app")) ev("clic_ecoems_app", p);
+    else if (destino.endsWith("examenes.lat")) ev("clic_examenes_lat", p);
+    else if (destino.endsWith(".gob.mx") || destino.endsWith("unam.mx") || destino.endsWith("ipn.mx")) ev("clic_oficial", p);
+  }, { capture: true });
+  // Profundidad de lectura: 25, 50 y 75 % (el 90 % ya lo mide la medición mejorada de GA4)
+  const marcas = [25, 50, 75]; let hecho = 0;
+  const leer = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    if (h <= 0) return;
+    const pct = (scrollY / h) * 100;
+    while (hecho < marcas.length && pct >= marcas[hecho]) { ev("lectura", { porcentaje: marcas[hecho] }); hecho++; }
+    if (hecho >= marcas.length) removeEventListener("scroll", leer);
+  };
+  addEventListener("scroll", leer, { passive: true });
+  // Preguntas frecuentes que se abren
+  document.querySelectorAll(".faq-item").forEach((d) => d.addEventListener("toggle", () => {
+    if (d.open) ev("faq_abrir", { pregunta: (d.querySelector("summary")?.textContent || "").trim().slice(0, 100) });
+  }));
+  // Menús
+  document.querySelectorAll(".nav-btn[aria-controls]").forEach((b) => b.addEventListener("click", () => {
+    if (b.getAttribute("aria-expanded") === "true") ev("menu_abrir", { menu: b.textContent.trim(), ubicacion: "cabecera" });
+  }));
+  document.querySelector(".menu-movil")?.addEventListener("click", (e) => {
+    if (e.currentTarget.getAttribute("aria-expanded") === "true") ev("menu_abrir", { menu: "menu_movil", ubicacion: "menu_movil" });
   });
 })();
