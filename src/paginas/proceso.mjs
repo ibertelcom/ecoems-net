@@ -111,7 +111,7 @@ ${d.sinCaminos ? "" : caminos(d.slug)}
 <div class="anuncio" data-anuncio="proceso-${d.slug}" hidden></div>
 ${d.faq?.length ? faqBloque(d.faq, d.faqTitulo ?? "Preguntas frecuentes") : ""}`;
   return {
-    META: { ruta, titulo: d.titulo, descripcion: d.descripcion }, ACTUALIZADO, nombreCorto: d.nombreCorto, seccion: "proceso",
+    META: { ruta, titulo: d.titulo, descripcion: d.descripcion }, ACTUALIZADO: d.actualizado ?? ACTUALIZADO, nombreCorto: d.nombreCorto, seccion: "proceso",
     cuerpo: () => cuerpo,
     jsonld: () => [paginaLd({ titulo: d.titulo, ruta, descripcion: d.descripcion, tipo: d.tipo ?? "WebPage" }), m.ld, ...(d.faq?.length ? [faqLd(d.faq)] : []), ...(d.ldExtra ?? [])],
   };
@@ -219,7 +219,7 @@ const PAGINAS = [
       ["¿Cuándo es el examen ECOEMS 2027?", "Aún no se publica. En 2026 el examen en línea fue del 20 al 28 de junio, con un simulador oficial del 16 al 19 de junio."],
       ["¿Cuándo es el registro de Mi Derecho, Mi Lugar 2027?", "Aún no se publica. En 2026 el registro fue del 17 de marzo al 14 de abril."],
       ["¿Cuándo salen los resultados del ECOEMS?", "En 2026 la Gaceta Electrónica de Resultados se publicó el martes 18 de agosto en miderechomilugar.gob.mx."],
-      ["¿Cuándo son las preinscripciones para la prepa?", "En la CDMX y el Estado de México no hay preinscripción aparte: el registro de Mi Derecho, Mi Lugar es la preinscripción. La inscripción a la escuela asignada se hace después de los resultados, en las fechas que marca la Gaceta."],
+      ["¿Cuándo son las preinscripciones para la prepa?", "En la CDMX y el Estado de México no hay preinscripción aparte: el registro de Mi Derecho, Mi Lugar es la preinscripción. La inscripción a la escuela asignada se hace después de los resultados, en las fechas que marca la Gaceta. Más detalle en <a href=\"/preinscripciones/\">preinscripciones a la prepa 2027</a>."],
     ],
   },
   {
@@ -432,6 +432,48 @@ const PAGINAS = [
       ["¿Qué pasa si no quedé en la UNAM ni en el IPN?", "En modalidad 3 se asigna una opción sin examen de tu lista. En modalidad 2 puedes registrarte en el periodo extemporáneo y elegir una escuela sin examen con lugares."],
       ["¿Hay segunda vuelta en el ECOEMS?", "No hay una segunda vuelta de examen. Después de resultados hay registro extemporáneo para escuelas sin examen y lugares disponibles que cada institución ofrece por su cuenta."],
       ["¿Cuándo es el registro extemporáneo?", "En 2026 fue del 19 al 26 de agosto. Consulta las fechas 2027 cuando salga la convocatoria."],
+    ],
+  },
+  {
+    slug: "preinscripciones", miga: "Preinscripciones 2027", nombreCorto: "Preinscripciones prepa 2027",
+    actualizado: { iso: "2026-11-06", texto: "6 de noviembre de 2026" },
+    titulo: "Preinscripciones prepa 2027 en CDMX y Edomex: cuándo y cómo | ecoems.net",
+    descripcion: "¿Cuándo son las preinscripciones para la prepa 2027 en la CDMX y el Estado de México? Cómo funcionan con Mi Derecho, Mi Lugar, qué escuelas incluyen y qué preparar desde hoy.",
+    h1: "Preinscripciones a la prepa 2027 en la CDMX y el Estado de México",
+    lead: "En la Ciudad de México y la zona metropolitana del Estado de México no hay una preinscripción por escuela: el registro de Mi Derecho, Mi Lugar es la preinscripción. Aquí te explicamos cuándo fue en 2026, qué escuelas entran y qué conviene tener listo antes de que salga la convocatoria 2027.",
+    secciones: [
+      ["¿Cuándo son las preinscripciones para la prepa 2027?", `${aviso2027}
+        <p>Al 6 de noviembre de 2026 todavía <b>no hay fecha oficial</b> para 2027. Como referencia, en 2026 el registro de Mi Derecho, Mi Lugar, que funciona como preinscripción para todas las escuelas públicas del proceso, fue del <b>17 de marzo al 14 de abril</b>, en línea y con Llave MX.</p>
+        <p>Es decir: si tu hijo o hija está en tercero de secundaria, la preinscripción a la prepa se hace <b>una sola vez</b>, en ${of()}, y ahí se eligen y ordenan las escuelas. No hay que ir plantel por plantel.</p>
+        <div class="tabla-envoltura"><table class="tabla-fechas"><caption>Fechas clave de 2026 (referencia para 2027)</caption><thead><tr><th scope="col">Fecha 2026</th><th scope="col">Qué pasa</th></tr></thead><tbody>
+        ${CALENDARIO_2026.filter(([, q]) => /Registro en línea|Conclusión|Examen ECOEMS|Gaceta|extemporáneo/.test(q)).map(([f, q, h]) => `<tr><th scope="row">${f}</th><td><a href="${h}">${q}</a></td></tr>`).join("")}
+        </tbody></table></div>
+        <p class="fuente">Fuente: Convocatoria Mi Derecho, Mi Lugar 2026, publicada en ${of()}. El calendario completo está en <a href="/fechas/">fechas del ECOEMS</a>.</p>`],
+      ["Qué escuelas entran con ese registro", `<p>En el mismo registro se pueden elegir escuelas <b>con examen</b> y <b>sin examen</b>:</p>
+        <ul class="modalidades">
+          <li><b>Con examen ECOEMS:</b> las <a href="/escuelas/prepas-unam/">Prepas de la UNAM</a>, los <a href="/escuelas/cch-unam/">CCH</a> y las <a href="/escuelas/vocacionales-ipn/">vocacionales del IPN</a>. Revisa <a href="/aciertos/">cuántos aciertos pide cada escuela</a>.</li>
+          <li><b>Sin examen, en la CDMX:</b> <a href="/escuelas/colegio-de-bachilleres/">Colegio de Bachilleres</a>, <a href="/escuelas/conalep/">CONALEP</a>, <a href="/escuelas/cetis-cbtis/">CETIS y CBTIS</a>, <a href="/escuelas/iems/">prepas del IEMS</a> y otros bachilleratos federales.</li>
+          <li><b>Sin examen, en el Estado de México:</b> <a href="/escuelas/preparatorias-oficiales-edomex/">Preparatorias Oficiales (EPO)</a>, <a href="/escuelas/cecytem/">CECyTEM</a>, <a href="/escuelas/cobaem/">COBAEM</a>, <a href="/escuelas/cbt-edomex/">CBT</a> y <a href="/escuelas/telebachillerato-comunitario/">Telebachillerato Comunitario</a>, además de planteles de CONALEP y DGETI.</li>
+        </ul>
+        <p>Todas las opciones sin examen están en <a href="/escuelas/sin-examen/">prepas sin examen en CDMX y Edomex</a>. Para ver cuáles quedan cerca de casa, usa <a href="/prepas-cerca-de-mi/">prepas cerca de mí</a>.</p>`],
+      ["Preinscripciones en el Estado de México", `<p>Las preparatorias públicas de los municipios del Estado de México que participan en Mi Derecho, Mi Lugar (Preparatorias Oficiales, CECyTEM, COBAEM, CBT y las demás de la lista anterior) <b>no tienen preinscripción aparte</b>: se eligen en el mismo registro que las escuelas de la CDMX. Si tu escuela de interés no aparece en <a href="/mapa/">el mapa de escuelas</a>, consulta directamente con la institución.</p>
+        <p>La <b>Universidad Autónoma del Estado de México (UAEMéx)</b> es la excepción más buscada: publica su propia convocatoria, con examen, para los planteles de su Escuela Preparatoria. En 2026 la preinscripción por internet fue del <b>6 al 20 de febrero</b>, por grupos según la letra inicial de la CURP (<a href="https://www.uaemex.mx/images/2026/aspirantes/ingreso/ConvocatoriaNuevoIngresoNMS26B.pdf" rel="noopener" target="_blank">convocatoria UAEMéx 2026</a>).</p>`],
+      ["Qué hacer ahora, antes de la convocatoria", `<ul class="modalidades">
+          <li><b>Revisar la CURP</b> del aspirante, letra por letra.</li>
+          <li><b>Preparar la <a href="/llave-mx/">Llave MX</a></b> a nombre del aspirante: sin ella no se puede hacer el registro.</li>
+          <li><b>Elegir un <a href="/correo/">correo para el registro</a></b> que la familia revise seguido.</li>
+          <li><b>Decidir la modalidad</b>: solo sin examen, solo UNAM o IPN, o ambas. Lee <a href="/modalidades/">modalidades con y sin examen</a>.</li>
+          <li><b>Hacer una lista de escuelas</b> y ordenarla. Te ayuda <a href="/como-elegir-opciones/">cómo elegir y ordenar las opciones</a>.</li></ul>
+        <p>Cuando salga la convocatoria 2027 la publicamos en examenes.lat (<a href="${utm(CONVOCATORIA_LAT, "preinscripciones")}">convocatoria ECOEMS 2027</a>) y actualizamos esta página.</p>`],
+      ["Después de la preinscripción: la inscripción", `<p>La preinscripción (el registro) no es la inscripción. Primero sale la <a href="/resultados/">Gaceta de resultados</a> con la escuela asignada; en 2026 fue el <b>18 de agosto</b>. Después hay que <b>inscribirse en la escuela</b> en las fechas que marca la Gaceta, con el certificado de secundaria. Si no hubo lugar, revisa <a href="/no-quede/">qué hacer si no quedó</a>.</p>`],
+    ],
+    cta: ["Para armar la lista desde hoy", ["cerca", "armar"]],
+    faq: [
+      ["¿Cuándo son las preinscripciones para la prepa 2027?", "Todavía no hay fecha oficial. En la CDMX y la zona metropolitana del Edomex la preinscripción es el registro de Mi Derecho, Mi Lugar, que en 2026 fue del 17 de marzo al 14 de abril."],
+      ["¿Hay que preinscribirse en cada prepa?", "No, para las escuelas que participan en Mi Derecho, Mi Lugar. Se hace un solo registro en miderechomilugar.gob.mx y ahí se eligen y ordenan las escuelas, con y sin examen."],
+      ["¿Las preparatorias oficiales del Estado de México tienen preinscripción aparte?", "No. Las Preparatorias Oficiales que participan en Mi Derecho, Mi Lugar se eligen en el mismo registro, sin examen."],
+      ["¿Cuándo es la preinscripción de la UAEMéx?", "La UAEMéx tiene convocatoria propia. En 2026 la preinscripción por internet fue del 6 al 20 de febrero, según la letra inicial de la CURP."],
+      ["¿La preinscripción tiene costo?", "El registro de Mi Derecho, Mi Lugar es gratuito. Solo quien va por la UNAM o el IPN paga el derecho a examen al concluir su registro."],
     ],
   },
 ];

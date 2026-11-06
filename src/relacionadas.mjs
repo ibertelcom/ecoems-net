@@ -16,13 +16,21 @@ const MAPA = {
     ["/preguntas-frecuentes/", "preguntas frecuentes del ECOEMS", "todas las dudas del proceso en un lugar."],
   ],
   "/mi-derecho-mi-lugar/": [
+    ["/preinscripciones/", "preinscripciones prepa 2027", "el registro es la preinscripción en CDMX y Edomex."],
     ["/registro/", "registro de Mi Derecho, Mi Lugar", "qué datos y documentos piden."],
     ["/modalidades/", "modalidades con examen y sin examen", "cuál conviene según sus aciertos."],
     ["/escuelas/sin-examen/", "prepas sin examen", "las opciones que no piden ECOEMS."],
     ["/resultados/", "resultados del ECOEMS", "cuándo salen y cómo se leen."],
     ["/preguntas-frecuentes/", "preguntas frecuentes de Mi Derecho, Mi Lugar", "respuestas cortas a las dudas más comunes."],
   ],
+  "/preinscripciones/": [
+    ["/registro/", "registro de Mi Derecho, Mi Lugar paso a paso", "la preinscripción, pantalla por pantalla."],
+    ["/fechas/", "calendario de Mi Derecho, Mi Lugar", "todas las fechas del proceso."],
+    ["/escuelas/sin-examen/", "prepas sin examen en CDMX y Edomex", "las opciones que no piden ECOEMS."],
+    ["/escuelas/preparatorias-oficiales-edomex/", "Preparatorias Oficiales del Estado de México", "planteles y cómo elegirlos sin examen."],
+  ],
   "/fechas/": [
+    ["/preinscripciones/", "preinscripciones a la prepa 2027", "cuándo y cómo en la CDMX y el Edomex."],
     ["/registro/", "registro de Mi Derecho, Mi Lugar", "el primer paso del calendario."],
     ["/examen/", "examen ECOEMS en línea", "qué pasa el día del examen."],
     ["/resultados/", "resultados del ECOEMS", "la última fecha del proceso."],
@@ -109,6 +117,7 @@ const MAPA = {
     ["/prepas-cerca-de-mi/", "vocacionales cerca de mí", "filtradas por el área que quiere estudiar."],
   ],
   "/escuelas/sin-examen/": [
+    ["/preinscripciones/", "preinscripciones a la prepa 2027 en CDMX y Edomex", "cuándo y cómo se eligen estas escuelas."],
     ["/escuelas/conalep/", "CONALEP CDMX y Edomex", "planteles y carreras de profesional técnico."],
     ["/escuelas/colegio-de-bachilleres/", "Colegio de Bachilleres", "los 20 planteles con dirección y mapa."],
     ["/escuelas/cetis-cbtis/", "CETIS y CBTIS", "bachillerato tecnológico de la DGETI."],
@@ -167,6 +176,7 @@ function deSinExamen(ruta) {
       ["/prepas-cerca-de-mi/", "prepas cerca de mí", "con y sin examen, según tu código postal."],
       ["/modalidades/", "modalidad 1 y modalidad 3", "cómo elegir escuelas sin examen en el registro."],
       ["/mapa/", "mapa de escuelas", "todas las escuelas del proceso en un mapa."],
+      ["/preinscripciones/", "preinscripciones prepa 2027", "el registro de Mi Derecho, Mi Lugar es la preinscripción."],
     ];
   }
   const p = PLANTELES.find((x) => x.ficha && x.url === ruta);
