@@ -131,7 +131,10 @@ export function imagen(id, { clase = "", prioridad = false, tamanos = "100vw" } 
   const real = existsSync(new URL(`./img/${im.archivo}`, import.meta.url));
   if (real) {
     const chica = im.archivo.replace(/\.webp$/, "-600.webp");
-    const srcset = existsSync(new URL(`./img/${chica}`, import.meta.url)) ? ` srcset="/img/${chica} 600w, /img/${im.archivo} ${im.ancho}w"` : "";
+    const media = im.archivo.replace(/\.webp$/, "-900.webp");
+    const hay = (a) => existsSync(new URL(`./img/${a}`, import.meta.url));
+    const fuentes = [hay(chica) && `/img/${chica} 600w`, hay(media) && `/img/${media} 900w`, `/img/${im.archivo} ${im.ancho}w`].filter(Boolean);
+    const srcset = fuentes.length > 1 ? ` srcset="${fuentes.join(", ")}"` : "";
     return `<img class="img ${clase}" src="/img/${im.archivo}"${srcset} width="${im.ancho}" height="${im.alto}" alt="${im.alt}" title="${im.title}" ${prioridad ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" sizes="${tamanos}">`;
   }
   return `<div class="img img-pendiente ${clase}" style="aspect-ratio:${ratio}" role="img" aria-label="${im.alt}" title="${im.title}" data-archivo="${im.archivo}"><span>${im.archivo}<small>${im.ancho}×${im.alto}</small></span></div>`;

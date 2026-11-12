@@ -27,7 +27,11 @@ mkdirSync("dist", { recursive: true });
 mkdirSync("vista-previa", { recursive: true });
 
 writeFileSync("dist/estilos.css", min(css));
-writeFileSync("dist/app.js", js);
+// app.js minificado con esbuild si está instalado (npm i); si no, se publica tal cual.
+let jsMin = js;
+try { const { transformSync } = await import("esbuild"); jsMin = transformSync(js, { minify: true, target: "es2019" }).code; } catch { console.log("Aviso: esbuild no instalado; app.js sin minificar."); }
+writeFileSync("dist/app.js", jsMin);
+if (existsSync("src/fuentes")) cpSync("src/fuentes", "dist/fuentes", { recursive: true });
 if (existsSync("src/img")) cpSync("src/img", "dist/img", { recursive: true });
 if (existsSync("src/vendor")) cpSync("src/vendor", "dist/vendor", { recursive: true });
 // Códigos postales de la ZMVM con coordenadas aproximadas (GeoNames, CC BY 4.0) para "Prepas cerca de mí".

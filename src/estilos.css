@@ -1,3 +1,7 @@
+@font-face { font-family: "Archivo"; font-style: normal; font-weight: 500 800; font-stretch: 100% 125%; font-display: swap; src: url(/fuentes/archivo.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 400; font-display: swap; src: url(/fuentes/atkinson-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 700; font-display: swap; src: url(/fuentes/atkinson-700-normal.woff2) format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 400; font-display: swap; src: url(/fuentes/atkinson-400-italic.woff2) format("woff2"); }
 /* ecoems.net · hoja única de estilos
    Identidad: lenguaje de línea de metro. Cada paso del proceso es una parada; cada tipo de escuela, una línea:
    Prepas UNAM (azul), CCH (ámbar), Vocacionales IPN (vino). Verde = acción y ruta del proceso. */
@@ -103,6 +107,7 @@ p { margin: 0 0 1em; }
 .logo-marca { width: clamp(46px, 2.4rem + 1vw, 54px); height: clamp(46px, 2.4rem + 1vw, 54px); }
 .logo-texto { font: 800 clamp(1.6rem, 1.15rem + 1vw, 2.05rem)/1 var(--f-titulo); font-stretch: 118%; letter-spacing: -.02em; }
 .logo-texto span { color: var(--verde); }
+.logo-pie .logo-texto span { color: var(--sol); }
 .nav { margin-left: auto; }
 .nav-lista { list-style: none; margin: 0; padding: 0; display: flex; gap: 2px; }
 .nav-item { position: relative; }
@@ -355,6 +360,8 @@ p { margin: 0 0 1em; }
 .pie-aviso { display: flex; gap: 10px; padding: 12px 14px; border-radius: var(--radio); background: rgba(255, 255, 255, .06); }
 .pie-aviso .ico { color: var(--sol); margin-top: 3px; }
 .pie-aviso b { color: var(--tablero-texto); }
+.pie-aviso span { color: var(--tablero-texto); }
+.pie-aviso a { text-decoration: underline; text-underline-offset: 2px; }
 .pie-titulo { font: 700 .95rem/1 var(--f-texto); color: var(--tablero-texto); margin: 6px 0 14px; }
 .pie-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: .95rem; }
 .pie-legal { max-width: var(--ancho); margin: 0 auto; padding: 18px 20px 26px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid rgba(255, 255, 255, .1); font-size: .88rem; }
@@ -907,14 +914,9 @@ li[id]:target .tarjeta-escuela { border-color: var(--verde); box-shadow: 0 0 0 3
 .portada::before, .cabecera-pagina::before { content: ""; position: absolute; inset: -40% -20% auto auto; width: 60%; height: 140%; z-index: -1; pointer-events: none;
   background: radial-gradient(closest-side, rgba(255, 255, 255, .10), rgba(255, 255, 255, 0)); animation: hero-brillo 14s ease-in-out infinite alternate; }
 @keyframes hero-brillo { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-35%, 18%, 0); } }
-/* Entrada: el texto sube en cascada y la imagen aparece con un leve zoom */
+/* Entrada: el texto aparece de inmediato (mejor velocidad percibida); solo la imagen y las cifras entran con movimiento */
 @keyframes hero-sube { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-@keyframes hero-imagen { from { opacity: 0; transform: scale(.96) translateY(10px); } to { opacity: 1; transform: none; } }
-.portada-texto > *, .cabecera-pagina .contenedor:not(.cabecera-rejilla) > *, .cabecera-texto > * { animation: hero-sube .7s cubic-bezier(.2, .7, .2, 1) both; }
-.portada-texto > :nth-child(2), .cabecera-pagina .contenedor > :nth-child(2), .cabecera-texto > :nth-child(2) { animation-delay: .08s; }
-.portada-texto > :nth-child(3), .cabecera-pagina .contenedor > :nth-child(3), .cabecera-texto > :nth-child(3) { animation-delay: .16s; }
-.portada-texto > :nth-child(4), .cabecera-pagina .contenedor > :nth-child(4), .cabecera-texto > :nth-child(4) { animation-delay: .24s; }
-.portada-texto > :nth-child(n+5), .cabecera-pagina .contenedor > :nth-child(n+5), .cabecera-texto > :nth-child(n+5) { animation-delay: .32s; }
+@keyframes hero-imagen { from { transform: scale(.97) translateY(8px); } to { transform: none; } }
 .portada-figura, .cabecera-fig { animation: hero-imagen .9s .15s cubic-bezier(.2, .7, .2, 1) both; }
 .ficha-cifra { animation: hero-sube .6s cubic-bezier(.2, .7, .2, 1) both; }
 .ficha-cifra:nth-child(2) { animation-delay: .38s; } .ficha-cifra:nth-child(3) { animation-delay: .46s; } .ficha-cifra:nth-child(4) { animation-delay: .54s; }
