@@ -162,8 +162,8 @@ const PAGINAS = [
   },
   {
     slug: "mi-derecho-mi-lugar", miga: "Mi Derecho, Mi Lugar", nombreCorto: "Mi Derecho, Mi Lugar",
-    titulo: "Mi Derecho, Mi Lugar 2027: qué es y cómo funciona el ECOEMS | ecoems.net",
-    descripcion: "Qué es Mi Derecho, Mi Lugar, quién puede registrarse, qué escuelas participan con y sin examen y cómo se asigna el lugar en la prepa. Guía para papás 2027.",
+    titulo: "Mi Derecho, Mi Lugar 2027: guía del registro, fechas y modalidades | ecoems.net",
+    descripcion: "Mi Derecho, Mi Lugar 2027 (miderechomilugar.gob.mx) explicado para papás: registro con Llave MX, fechas, escuelas con y sin examen y asignación.",
     h1: "Mi Derecho, Mi Lugar: cómo funciona el proceso para entrar a la prepa",
     lead: "El sistema de registro y asignación del bachillerato público en la Ciudad de México y el Estado de México, paso por paso y en palabras sencillas.",
     img: { id: "mi-derecho-mi-lugar-familia", alt: "Familia revisando en la computadora el registro de Mi Derecho, Mi Lugar", title: "Mi Derecho, Mi Lugar", desc: "Mamá, papá e hijo de secundaria frente a una computadora en casa, revisando juntos una lista de escuelas." },
