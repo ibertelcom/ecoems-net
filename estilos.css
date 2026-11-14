@@ -1,4 +1,4 @@
-@font-face { font-family: "Archivo"; font-style: normal; font-weight: 500 800; font-stretch: 100% 125%; font-display: swap; src: url(/fuentes/archivo.woff2) format("woff2"); }
+@font-face { font-family: "Archivo"; font-style: normal; font-weight: 500 800; font-stretch: 100% 125%; font-display: optional; src: url(/fuentes/archivo.woff2) format("woff2"); }
 @font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 400; font-display: swap; src: url(/fuentes/atkinson-400-normal.woff2) format("woff2"); }
 @font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 700; font-display: swap; src: url(/fuentes/atkinson-700-normal.woff2) format("woff2"); }
 @font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 400; font-display: swap; src: url(/fuentes/atkinson-400-italic.woff2) format("woff2"); }
@@ -822,12 +822,12 @@ li[id]:target .tarjeta-escuela { border-color: var(--verde); box-shadow: 0 0 0 3
 .portada-figura::after { border-color: var(--hero-raya); }
 .cabecera-fig { border-color: var(--hero-borde); box-shadow: 0 18px 50px rgba(0, 0, 0, .28); }
 .portada::before, .cabecera-pagina::before { content: ""; position: absolute; inset: -40% -20% auto auto; width: 60%; height: 140%; z-index: -1; pointer-events: none;
-background: radial-gradient(closest-side, rgba(255, 255, 255, .10), rgba(255, 255, 255, 0)); animation: hero-brillo 14s ease-in-out infinite alternate; }
+background: radial-gradient(closest-side, rgba(255, 255, 255, .10), rgba(255, 255, 255, 0)); animation: hero-brillo 14s ease-in-out 6s infinite alternate; }
 @keyframes hero-brillo { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-35%, 18%, 0); } }
 @keyframes hero-sube { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes hero-imagen { from { transform: scale(.97) translateY(8px); } to { transform: none; } }
 .portada-figura, .cabecera-fig { animation: hero-imagen .9s .15s cubic-bezier(.2, .7, .2, 1) both; }
-.ficha-cifra { animation: hero-sube .6s cubic-bezier(.2, .7, .2, 1) both; }
+.ficha-cifra { animation: hero-imagen .6s cubic-bezier(.2, .7, .2, 1) both; }
 .ficha-cifra:nth-child(2) { animation-delay: .38s; } .ficha-cifra:nth-child(3) { animation-delay: .46s; } .ficha-cifra:nth-child(4) { animation-delay: .54s; }
 .ficha-cifra:first-child { animation-delay: .3s; }
 @media (prefers-reduced-motion: reduce) {
