@@ -166,6 +166,7 @@ export function documento({ titulo, descripcion, ruta, cuerpo, jsonld = [], og =
     return `<title>${nombreCorto}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preload" href="/fuentes/atkinson-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fuentes/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("tema");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 ${estilos}
 ${ld}
@@ -205,6 +206,7 @@ ${script}`;
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/fuentes/atkinson-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fuentes/archivo.woff2" as="font" type="font/woff2" crossorigin>
 ${estilos}
 ${ld}
 </head>
