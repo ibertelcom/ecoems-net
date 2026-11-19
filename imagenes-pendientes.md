@@ -93,7 +93,7 @@ Formato .webp, sin año ni fecha en la imagen ni en el nombre. Guardar en `src/i
 ## preguntas-frecuentes-ecoems.webp
 - Tamaño: 1200 × 800 px
 - Dónde va: Hero · Preguntas frecuentes
-- Title: Preguntas frecuentes del ECOEMS
+- Title: Preguntas frecuentes del ECOEMS 2027
 - Alt: Papá e hijo resuelven sus dudas sobre el examen ECOEMS y el registro de Mi Derecho, Mi Lugar
 - Descripción: Ilustración de papá e hijo rodeados de globos de diálogo con las dudas más comunes del proceso.
 - Prompt: Ilustración vectorial plana y moderna, formas redondeadas, sombras suaves, mucho aire, estilo de app educativa premium. Un papá y su hijo adolescente sentados en una mesa con una laptop y una libreta, rodeados de globos de diálogo flotantes con los textos "¿Cuándo es el examen?", "¿Cuántos aciertos necesito?", "¿Qué es la Llave MX?" y "¿Cuándo salen los resultados?". Algunos globos tienen una palomita verde de pregunta resuelta. Formato horizontal 3:2, fondo claro. Paleta de marca: verde #0B7A60, azul #2457C5, ámbar #E2A400, vino #8C1D40 y amarillo sol #F4B400 sobre blancos cálidos. Todo texto debe ir en español, escrito exactamente como se indica entre comillas, con acentos correctos y tipografía sans serif limpia y legible; no agregues ningún otro texto, ni años, ni fechas, ni números de aciertos.

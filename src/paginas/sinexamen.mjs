@@ -215,13 +215,13 @@ const ACTUALIZADO_SIN = { iso: "2026-10-22", texto: "22 de octubre de 2026" };
 
 // ---------- Página de cada institución ----------
 const TITULOS = {
-  conalep: ["CONALEP CDMX y Edomex: planteles, carreras y cómo entrar", "CONALEP en la Ciudad de México y el Estado de México"],
-  bachilleres: ["Colegio de Bachilleres: los 20 planteles y cómo entrar", "Colegio de Bachilleres: los 20 planteles y cómo entrar"],
-  dgeti: ["CETIS y CBTIS en CDMX y Edomex: planteles y carreras", "CETIS y CBTIS en la Ciudad de México y el Estado de México"],
-  iems: ["IEMS: las prepas del Gobierno de la CDMX y cómo entrar", "IEMS: las preparatorias del Gobierno de la Ciudad de México"],
+  conalep: ["CONALEP CDMX y Edomex 2027: planteles, carreras e inscripción", "CONALEP en la Ciudad de México y el Estado de México"],
+  bachilleres: ["Colegio de Bachilleres 2027: los 20 planteles y cómo entrar", "Colegio de Bachilleres: los 20 planteles y cómo entrar"],
+  dgeti: ["CETIS y CBTIS 2027 en CDMX y Edomex: planteles y carreras", "CETIS y CBTIS en la Ciudad de México y el Estado de México"],
+  iems: ["IEMS 2027: las prepas del Gobierno de la CDMX y cómo entrar", "IEMS: las preparatorias del Gobierno de la Ciudad de México"],
   cecytem: ["CECyTEM: planteles y carreras en el Valle de México", "CECyTEM: planteles y carreras técnicas en el Valle de México"],
   cobaem: ["COBAEM: planteles del Colegio de Bachilleres del Edomex", "COBAEM: Colegio de Bachilleres del Estado de México"],
-  epo: ["Preparatorias Oficiales del Edomex (EPO) sin examen", "Preparatorias Oficiales del Estado de México sin examen"],
+  epo: ["Preparatorias Oficiales del Edomex (EPO) 2027: cómo entrar sin examen", "Preparatorias Oficiales del Estado de México sin examen"],
   cbt: ["CBT Estado de México: planteles y carreras técnicas", "CBT del Estado de México: planteles y carreras técnicas"],
   tbc: ["Telebachillerato Comunitario en el Valle de México", "Telebachillerato Comunitario en el Valle de México"],
   ceb: ["CEB: Centros de Estudios de Bachillerato (DGB)", "Centros de Estudios de Bachillerato (CEB) de la DGB"],

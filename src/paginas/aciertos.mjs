@@ -6,7 +6,7 @@ import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { imagen, registrar } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
-import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "../componentes.mjs";
+import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO, avisoConvocatoria } from "../componentes.mjs";
 
 const HUB = { enp: "/escuelas/prepas-unam/", cch: "/escuelas/cch-unam/", voca: "/escuelas/vocacionales-ipn/" };
 
@@ -73,7 +73,7 @@ function caminos(ruta, campana) {
 // ---------- /aciertos/ ----------
 function paginaAciertos() {
   const ruta = "/aciertos/";
-  const titulo = "Aciertos ECOEMS 2026 por escuela: cuántos pide la UNAM y el IPN | ecoems.net";
+  const titulo = "Aciertos ECOEMS 2027 por escuela: lo que pidió la UNAM y el IPN en 2026 | ecoems.net";
   const descripcion = "Cuántos aciertos pide cada prepa, CCH y vocacional en el ECOEMS: tabla 2024, 2025 y 2026 de las 31 escuelas de la UNAM y el IPN, con la meta para 2027.";
   const m = migas([["Inicio", "/"], ["Aciertos por escuela", ruta]]);
   const cch = GRUPOS[1].escuelas.map((e) => e.a2026);
@@ -96,7 +96,7 @@ function paginaAciertos() {
 ${cabeceraPagina({
   img: "aciertos-por-escuela-ecoems",
   migasHtml: m.html,
-  h1: "Cuántos aciertos pide cada escuela en el ECOEMS",
+  h1: "Cuántos aciertos pide cada escuela en el ECOEMS 2027",
   lead: `Tabla con los aciertos de 2024, 2025 y 2026 de las ${ESCUELAS.length} prepas, CCH y vocacionales de la UNAM y el IPN, y la meta Tepo sugerida para el ECOEMS 2027. Ordénala por año o filtra por tipo de escuela.`,
 })}
 <section class="seccion seccion-tabla" aria-labelledby="t-tabla">
@@ -127,6 +127,7 @@ ${cabeceraPagina({
 </section>
 <section class="seccion" aria-labelledby="t-unam-ipn">
   <div class="contenedor contenedor-angosto prosa">
+    ${avisoConvocatoria("aviso_convocatoria_aciertos")}
     <h2 id="t-unam-ipn">Aciertos UNAM 2026</h2>
     <p>En el ECOEMS 2026 las ${GRUPOS[0].escuelas.length} prepas de la UNAM pidieron de ${rango(enp)} aciertos y los ${GRUPOS[1].escuelas.length} CCH, de ${rango(cch)}:</p>
     <ul class="lista-aciertos">${[...GRUPOS[0].escuelas, ...GRUPOS[1].escuelas].sort((a, b) => b.a2026 - a.a2026).map((e) => `<li><a href="/escuelas/${e.slug}/">${e.comun}</a>: <b>${e.a2026}</b> aciertos</li>`).join("")}</ul>
@@ -156,21 +157,21 @@ ${faqBloque(preg, "Preguntas sobre los aciertos del ECOEMS")}`;
 // ---------- Hubs por línea ----------
 const HUBS = {
   enp: {
-    titulo: "Prepas de la UNAM: cuántas hay, aciertos y planteles de la ENP | ecoems.net",
+    titulo: "Prepas de la UNAM 2027: cuántas hay, aciertos y planteles de la ENP | ecoems.net",
     h1: "Prepas de la UNAM: los 9 planteles de la ENP y sus aciertos",
     lead: "La UNAM tiene 9 prepas de la Escuela Nacional Preparatoria, todas en la Ciudad de México. Aquí ves cuántos aciertos pidió cada una en el ECOEMS, dónde está cada plantel de la Escuela Nacional Preparatoria y qué meta conviene para 2027.",
     intro: "La Escuela Nacional Preparatoria (ENP) es el bachillerato más antiguo de la UNAM. Tiene nueve planteles en la Ciudad de México, que todos conocen como Prepa 1 a Prepa 9. El plan es anual, dura tres años y en sexto año el alumno elige el área de la carrera que le interesa. Quien termina con buen promedio puede seguir a una licenciatura de la UNAM por pase reglamentado.",
     img: ["prepas-unam-estudiantes", "Estudiantes de una prepa de la UNAM en el patio del plantel", "Prepas de la UNAM", "Estudiantes de bachillerato conversando en el patio de un plantel de la Escuela Nacional Preparatoria."],
   },
   cch: {
-    titulo: "CCH UNAM: cuántos hay, aciertos y cuál elegir de los 5 planteles | ecoems.net",
+    titulo: "CCH UNAM 2027: cuántos hay, aciertos y cuál elegir de los 5 planteles | ecoems.net",
     h1: "CCH de la UNAM: los 5 planteles y sus aciertos",
     lead: "Hay 5 CCH de la UNAM: cuatro en la Ciudad de México (Azcapotzalco, Oriente, Sur y Vallejo) y uno en Naucalpan. Aquí ves cuántos aciertos pidió cada uno en el ECOEMS, dónde está y qué meta conviene para 2027.",
     intro: "El Colegio de Ciencias y Humanidades (CCH) es el otro bachillerato de la UNAM. Tiene cinco planteles: cuatro en la Ciudad de México y uno en Naucalpan, Estado de México. Dura seis semestres y su modelo da mucho peso a investigar, leer y escribir. Igual que en la Prepa, quien termina con buen promedio puede seguir a una licenciatura de la UNAM por pase reglamentado.",
     img: ["cch-unam-estudiantes", "Estudiantes de un CCH de la UNAM trabajando en equipo", "CCH de la UNAM", "Estudiantes de bachillerato trabajando en equipo en una explanada con jardineras."],
   },
   voca: {
-    titulo: "Vocacionales IPN: cuántas hay, aciertos y carreras de los CECyT | ecoems.net",
+    titulo: "Vocacionales IPN 2027: cuántas hay, aciertos y carreras de los CECyT | ecoems.net",
     h1: "Vocacionales del IPN: aciertos de cada CECyT y del CET 1",
     lead: "Cuántos aciertos pidió cada vocacional del IPN en el ECOEMS, su área de conocimiento, sus carreras técnicas y la meta que conviene para 2027.",
     intro: "Las vocacionales del Instituto Politécnico Nacional son los CECyT (Centros de Estudios Científicos y Tecnológicos) y el CET 1. Son bachilleratos bivalentes de tres años: al terminar, el alumno tiene su certificado de bachillerato y además una carrera técnica. Cada una pertenece a un área (Físico-Matemáticas, Médico-Biológicas o Sociales y Administrativas) que orienta hacia las licenciaturas del IPN.",
@@ -258,7 +259,7 @@ ${faqBloque(preg, `Preguntas sobre ${g.titulo}`)}`;
 // ---------- /escuelas/ ----------
 function paginaEscuelas() {
   const ruta = "/escuelas/";
-  const titulo = "Escuelas del ECOEMS: prepas, CCH y vocacionales | ecoems.net";
+  const titulo = "Escuelas del ECOEMS 2027: prepas, CCH y vocacionales | ecoems.net";
   const descripcion = `Listado de las ${ESCUELAS.length} escuelas de la UNAM y el IPN que asignan lugar con el examen ECOEMS: prepas, CCH y vocacionales, con sus aciertos y ubicación.`;
   const m = migas([["Inicio", "/"], ["Escuelas", ruta]]);
   const cuerpo = `

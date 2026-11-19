@@ -3,7 +3,7 @@ import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { imagen } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
-import { REVISADO } from "../componentes.mjs";
+import { REVISADO, avisoConvocatoria } from "../componentes.mjs";
 
 export const ACTUALIZADO = { iso: "2026-10-15", texto: "15 de octubre de 2026" };
 
@@ -16,6 +16,7 @@ export const META = {
 
 // Paradas del proceso. Fechas de 2026 como referencia (convocatoria 2026); 2027 aún no se publica.
 const RUTA = [
+  { ic: "calendario", t: "Convocatoria", d: "Se publica la convocatoria con las fechas y las escuelas participantes. La 2027 aún no sale.", ref: "2026: 13 de febrero", href: "/fechas/" },
   { ic: "llave", t: "Llave MX y registro", d: "Se crea la Llave MX y se llena el registro en miderechomilugar.gob.mx.", ref: "2026: del 17 de marzo al 14 de abril", href: "/registro/" },
   { ic: "opciones", t: "Elegir opciones", d: "Se elige la modalidad y se ordenan las escuelas, de la más deseada a la menos.", ref: "Durante el registro", href: "/como-elegir-opciones/" },
   { ic: "registro", t: "Concluir registro y pagar", d: "Quien va por UNAM o IPN termina su registro para examen y paga el derecho.", ref: "2026: del 18 al 22 de mayo", href: "/registro/" },
@@ -28,7 +29,7 @@ export const PREGUNTAS = [
   ["¿Qué es el ECOEMS?",
     "Es el examen de admisión que aplican la UNAM y el IPN para asignar lugar en sus prepas, CCH y vocacionales de la Ciudad de México y el Estado de México. Forma parte del proceso Mi Derecho, Mi Lugar, que desde 2025 sustituye al antiguo concurso COMIPEMS."],
   ["¿Cuándo es el examen ECOEMS 2027?",
-    "La convocatoria 2027 todavía no se publica. Como referencia, en 2026 el registro fue del 17 de marzo al 14 de abril y el examen en línea del 20 al 28 de junio. En cuanto salga la convocatoria oficial actualizamos el calendario."],
+    "La convocatoria 2027 todavía no se publica: la de 2026 salió el 13 de febrero, así que se espera para mediados de febrero de 2027 (estimado). Como referencia, en 2026 el registro fue del 17 de marzo al 14 de abril y el examen en línea del 20 al 28 de junio. En cuanto salga la convocatoria oficial actualizamos el calendario."],
   ["¿Cuántas preguntas tiene el examen ECOEMS?",
     `${PREGUNTAS_EXAMEN} preguntas de opción múltiple. Los aciertos de cada aspirante se comparan con los de los demás para asignar los lugares de cada escuela.`],
   ["¿Cuántos aciertos pide la UNAM?",
@@ -84,7 +85,8 @@ function ruta() {
       <p>Así avanza Mi Derecho, Mi Lugar desde que creas la Llave MX hasta que tu hijo o hija se inscribe. Toca cada parada para ver el paso completo.</p>
     </div>
     <ol class="ruta" id="ruta">${paradas}</ol>
-    <p class="nota-ruta">${icono("calendario", "ico")}<span>Las fechas del ECOEMS 2027 aún no se publican. Mostramos las de 2026 como referencia y actualizamos el calendario en cuanto salga la convocatoria oficial. <a href="/fechas/">Ver el calendario completo</a>.</span></p>
+    ${avisoConvocatoria("aviso_convocatoria_inicio")}
+    <p class="nota-ruta"><a href="/fechas/">Ver el calendario completo</a></p>
   </div>
 </section>`;
 }

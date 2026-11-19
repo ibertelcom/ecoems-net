@@ -108,7 +108,7 @@ export const IMAGENES = {
     archivo: "preguntas-frecuentes-ecoems.webp",
     ancho: 1200, alto: 800,
     alt: "Papá e hijo resuelven sus dudas sobre el examen ECOEMS y el registro de Mi Derecho, Mi Lugar",
-    title: "Preguntas frecuentes del ECOEMS",
+    title: "Preguntas frecuentes del ECOEMS 2027",
     descripcion: "Ilustración de papá e hijo rodeados de globos de diálogo con las dudas más comunes del proceso.",
     prompt: "",
     uso: "Hero · Preguntas frecuentes",

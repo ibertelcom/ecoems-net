@@ -42,7 +42,7 @@ const herramientaLd = (nombre, ruta, desc) => ({
 function calculadora() {
   const ruta = "/calculadora/";
   const d = {
-    titulo: "Calculadora de aciertos ECOEMS: ¿a qué escuelas llega con lo que sabe hoy? | ecoems.net",
+    titulo: "Calculadora de aciertos ECOEMS 2027: ¿a qué escuelas llega con lo que sabe hoy? | ecoems.net",
     descripcion: "Escribe los aciertos de su último simulacro y ve a qué prepas, CCH y vocacionales le alcanza con lo que sabe hoy, cuáles están en la orilla y cuáles necesitan más estudio. Gratis.",
     nombreCorto: "Calculadora de aciertos",
     migas: migas([["Inicio", "/"], ["Herramientas", "/calculadora/"], ["Calculadora de aciertos", ruta]].filter((_, i) => i !== 1)),
@@ -53,7 +53,7 @@ function calculadora() {
     ["¿De dónde saco sus aciertos?", "De un simulacro completo reciente. Si el simulacro tiene menos de 128 preguntas, la calculadora puede convertir el resultado a la escala de 128."],
   ];
   const cuerpo = `
-${cabeceraPagina({ img: "herramienta-calculadora-aciertos", migasHtml: d.migas.html, h1: "Calculadora de aciertos del ECOEMS", lead: "Escribe cuántos aciertos sacó tu hijo o hija en su último simulacro y mira, escuela por escuela, si con lo que sabe hoy le alcanza para la UNAM y el IPN." })}
+${cabeceraPagina({ img: "herramienta-calculadora-aciertos", migasHtml: d.migas.html, h1: "Calculadora de aciertos del ECOEMS 2027", lead: "Escribe cuántos aciertos sacó tu hijo o hija en su último simulacro y mira, escuela por escuela, si con lo que sabe hoy le alcanza para la UNAM y el IPN." })}
 <section class="seccion herramienta-seccion" aria-label="Calculadora">
   <div class="contenedor">
     <form class="calc" id="calc" novalidate>
@@ -199,7 +199,7 @@ ${datosJson()}`;
 function comparador() {
   const ruta = "/comparador/";
   const d = {
-    titulo: "Comparador de escuelas ECOEMS: prepas, CCH y vocacionales | ecoems.net",
+    titulo: "Comparador de escuelas ECOEMS 2027: prepas, CCH y vocacionales | ecoems.net",
     descripcion: "Compara dos o tres escuelas del ECOEMS lado a lado: aciertos 2024, 2025 y 2026, meta 2027, tipo de bachillerato y ubicación.",
     nombreCorto: "Comparador de escuelas",
     migas: migas([["Inicio", "/"], ["Comparador de escuelas", ruta]]),
@@ -222,7 +222,7 @@ ${datosJson()}`;
 function armar() {
   const ruta = "/armar-opciones/";
   const d = {
-    titulo: "Armar mis opciones del ECOEMS: ordena tu lista | ecoems.net",
+    titulo: "Armar mis opciones del ECOEMS 2027: ordena tu lista | ecoems.net",
     descripcion: "Arma y ordena la lista de escuelas de la UNAM y el IPN para el registro de Mi Derecho, Mi Lugar, con sus aciertos y una etiqueta que dice si, con lo que sabe hoy, le faltan aciertos, justo le alcanza o le alcanza con margen.",
     nombreCorto: "Armar mis opciones",
     migas: migas([["Inicio", "/"], ["Armar mis opciones", ruta]]),
@@ -345,7 +345,7 @@ function sinExamen() {
   const ruta = "/escuelas/sin-examen/";
   const total = PLANTELES.length;
   const d = {
-    titulo: "Prepas sin examen en CDMX y Edomex: las 521 opciones | ecoems.net",
+    titulo: "Prepas sin examen 2027 en CDMX y Edomex: las 521 opciones | ecoems.net",
     descripcion: `Las ${total} prepas sin examen de Mi Derecho, Mi Lugar: CONALEP, Colegio de Bachilleres, CETIS, CBTIS, IEMS, CECyTEM, COBAEM, Preparatorias Oficiales y más, con mapa y cómo entrar.`,
     nombreCorto: "Escuelas sin examen",
     seccion: "escuelas",

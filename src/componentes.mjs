@@ -1,6 +1,6 @@
 import { imagen } from "./imagenes.mjs";
 import { icono } from "./iconos.mjs";
-import { SITIO } from "./plantilla.mjs";
+import { SITIO, utm } from "./plantilla.mjs";
 
 export const ACTUALIZADO = { iso: "2026-10-15", texto: "15 de octubre de 2026" };
 
@@ -102,4 +102,17 @@ export function cambio(a, b) {
   const d = b - a;
   if (d === 0) return { d, texto: "igual", signo: "=" };
   return { d, texto: d > 0 ? `${d} más` : `${-d} menos`, signo: d > 0 ? `+${d}` : `${d}` };
+}
+
+// Convocatoria 2027: aún no sale. La de 2026 se publicó el 13 de febrero de 2026 (N+, 13-feb-2026); la 2027 se espera
+// a mediados de febrero de 2027 (ESTIMADO, no oficial). El formulario de examenes.lat promete «Aviso cuando salga la nueva convocatoria».
+export const CONV = { estado: "pendiente", ref2026: "13 de febrero de 2026", estimado: "mediados de febrero de 2027" };
+export const URL_AVISO = "https://examenes.lat/mx/comipems/#guia-ecoems-gratis";
+export function avisoConvocatoria(campana = "aviso_convocatoria") {
+  return `<div class="aviso-conv" role="note">
+  <p class="aviso-conv-t">${icono("calendario", "ico")}<b>La convocatoria ECOEMS 2027 aún no sale.</b></p>
+  <p>La de 2026 se publicó el <b>${CONV.ref2026}</b>, así que se espera para <b>${CONV.estimado}</b> (fecha estimada, no oficial). Mientras tanto, las fechas que ves aquí son las de 2026 como referencia; en cuanto se publique la convocatoria 2027 las actualizamos.</p>
+  <a class="boton aviso-conv-boton" href="${utm(URL_AVISO, campana)}">${icono("correo", "ico")}Avísame cuando salga la convocatoria</a>
+  <small>Te llevamos al formulario de examenes.lat: te avisan por correo y te mandan gratis la guía ECOEMS.</small>
+</div>`;
 }

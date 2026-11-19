@@ -6,7 +6,7 @@ import { caminosExternos } from "../externos.mjs";
 import { icono } from "../iconos.mjs";
 import { imagen, registrar } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
-import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO } from "../componentes.mjs";
+import { migas, cabeceraPagina, faqBloque, faqLd, paginaLd, ACTUALIZADO, avisoConvocatoria } from "../componentes.mjs";
 import { herramientaResultados } from "../resultados.mjs";
 
 const OFICIAL = "https://www.miderechomilugar.gob.mx/";
@@ -28,7 +28,7 @@ function ctaHerramientas([titulo, claves]) {
 </section>`;
 }
 
-const aviso2027 = `<p class="nota-ruta">${icono("calendario", "ico")}<span>La convocatoria 2027 aún no se publica. Las fechas de esta página son las de <b>2026</b>, como referencia; las actualizamos en cuanto salga la oficial.</span></p>`;
+const aviso2027 = avisoConvocatoria();
 
 // Orden de la ruta (para la mini ruta y los botones anterior/siguiente)
 // [slug, etiqueta corta de la mini ruta, nombre completo con la palabra clave (para títulos y anterior/siguiente)]
@@ -123,6 +123,7 @@ const voca = GRUPOS[2].escuelas.map((e) => e.a2026);
 const rango = (a) => `${Math.min(...a)} a ${Math.max(...a)}`;
 
 const CALENDARIO_2026 = [
+  ["13 de febrero", "Publicación de la convocatoria de Mi Derecho, Mi Lugar (la 2027 se espera a mediados de febrero)", "/mi-derecho-mi-lugar/"],
   ["17 de marzo – 14 de abril", "Registro en línea en Mi Derecho, Mi Lugar, con Llave MX", "/registro/"],
   ["Durante el registro", "Elección de modalidad y orden de opciones", "/como-elegir-opciones/"],
   ["Según la cita del Documento A", "Toma de fotografía presencial (solo quien va por UNAM o IPN)", "/examen/"],
@@ -138,7 +139,7 @@ const CALENDARIO_2026 = [
 const PAGINAS = [
   {
     slug: "que-es-ecoems", miga: "Qué es el ECOEMS", nombreCorto: "Qué es el ECOEMS",
-    titulo: "¿Qué es el ECOEMS? Significado y cómo funciona el examen | ecoems.net",
+    titulo: "¿Qué es el ECOEMS? Significado y cómo funciona el examen 2027 | ecoems.net",
     descripcion: "Qué es el ECOEMS, qué significa, para qué escuelas cuenta y en qué se diferencia del antiguo examen COMIPEMS. Explicado para papás y aspirantes.",
     h1: "¿Qué es el ECOEMS y para qué sirve?",
     lead: "El examen con el que la UNAM y el IPN asignan lugar en sus prepas, CCH y vocacionales de la Ciudad de México y el Estado de México, explicado sin tecnicismos.",
@@ -164,7 +165,7 @@ const PAGINAS = [
     slug: "mi-derecho-mi-lugar", miga: "Mi Derecho, Mi Lugar", nombreCorto: "Mi Derecho, Mi Lugar",
     titulo: "Mi Derecho, Mi Lugar 2027: guía del registro, fechas y modalidades | ecoems.net",
     descripcion: "Mi Derecho, Mi Lugar 2027 (miderechomilugar.gob.mx) explicado para papás: registro con Llave MX, fechas, escuelas con y sin examen y asignación.",
-    h1: "Mi Derecho, Mi Lugar: cómo funciona el proceso para entrar a la prepa",
+    h1: "Mi Derecho, Mi Lugar 2027: cómo funciona el proceso para entrar a la prepa",
     lead: "El sistema de registro y asignación del bachillerato público en la Ciudad de México y el Estado de México, paso por paso y en palabras sencillas.",
     img: { id: "mi-derecho-mi-lugar-familia", alt: "Familia revisando en la computadora el registro de Mi Derecho, Mi Lugar", title: "Mi Derecho, Mi Lugar", desc: "Mamá, papá e hijo de secundaria frente a una computadora en casa, revisando juntos una lista de escuelas." },
     secciones: [
@@ -199,7 +200,7 @@ const PAGINAS = [
     img: { id: "fechas-calendario-ecoems", alt: "Mamá e hijo marcan en un calendario las fechas del registro, el examen ECOEMS y los resultados", title: "Fechas y calendario del ECOEMS", desc: "Mamá e hijo de secundaria frente a un calendario de pared marcando con plumón las etapas del proceso." },
     titulo: "Fechas ECOEMS 2027: registro, examen y resultados | ecoems.net",
     descripcion: "Calendario del ECOEMS y Mi Derecho, Mi Lugar: cuándo es el registro, el examen y los resultados. Fechas 2026 como referencia mientras sale la convocatoria 2027.",
-    h1: "Fechas del ECOEMS: cuándo es el registro, el examen y los resultados",
+    h1: "Fechas del ECOEMS 2027: cuándo es el registro, el examen y los resultados",
     lead: "El calendario completo del proceso, parada por parada. Te avisamos aquí en cuanto salga la convocatoria oficial 2027.",
     secciones: [
       ["Calendario del proceso (referencia 2026)", `${aviso2027}
@@ -207,7 +208,7 @@ const PAGINAS = [
         ${CALENDARIO_2026.map(([f, q, h]) => `<tr><th scope="row">${f}</th><td><a href="${h}">${q}</a></td></tr>`).join("")}
         </tbody></table></div>
         <p class="fuente">Fuente: Convocatoria Mi Derecho, Mi Lugar 2026 e instructivo IPN-UNAM 2026, publicados en ${of()}.</p>`],
-      ["¿Cuándo sale la convocatoria 2027?", `<p>Todavía no hay fecha oficial. En 2026 los materiales informativos y el registro abrieron el <b>17 de marzo</b>, así que es razonable esperar la convocatoria 2027 a inicios de año. En cuanto salga publicamos la <a href="${utm(CONVOCATORIA_LAT, "fechas")}">convocatoria ECOEMS 2027</a> en examenes.lat.</p>
+      ["¿Cuándo sale la convocatoria ECOEMS 2027?", `<p>Todavía no sale. La convocatoria de Mi Derecho, Mi Lugar 2026 se publicó el <b>13 de febrero de 2026</b> y el registro abrió el 17 de marzo, así que la 2027 se espera para <b>mediados de febrero de 2027</b> (fecha estimada, no oficial). Si quieres que te avisen el día que salga, <a href="${utm("https://examenes.lat/mx/comipems/#guia-ecoems-gratis", "faq_convocatoria")}">déjanos tu correo en examenes.lat</a>; cuando se publique la subimos como <a href="${utm(CONVOCATORIA_LAT, "fechas")}">convocatoria ECOEMS 2027</a>.</p>
         <p>Si tu hijo o hija está en tercero de secundaria, el mejor uso de los meses antes del registro es estudiar y decidir qué escuelas quiere: revisa los <a href="/aciertos/">aciertos de cada escuela</a> y prueba la <a href="/calculadora/">calculadora</a>.</p>`],
       ["Las fechas que no se pueden pasar", `<ul class="modalidades">
         <li><b>Cierre del registro.</b> Sin registro no hay lugar en el proceso ordinario.</li>
@@ -224,7 +225,7 @@ const PAGINAS = [
   },
   {
     slug: "llave-mx", miga: "Llave MX", nombreCorto: "Llave MX",
-    titulo: "Llave MX (cuenta Llave) para Mi Derecho, Mi Lugar: qué es y cómo crearla | ecoems.net",
+    titulo: "Llave MX (cuenta Llave) para Mi Derecho, Mi Lugar 2027: qué es y cómo crearla | ecoems.net",
     descripcion: "Para registrarse en Mi Derecho, Mi Lugar (ECOEMS) se necesita Llave MX. Qué es, qué datos pide, a nombre de quién se crea y errores comunes.",
     h1: "Llave MX para el registro de Mi Derecho, Mi Lugar",
     lead: "La cuenta del gobierno con la que se entra al registro del ECOEMS. Qué es, qué necesitas tener a la mano y cómo evitar los errores más comunes.",
@@ -257,7 +258,7 @@ const PAGINAS = [
     slug: "registro", miga: "Registro paso a paso", nombreCorto: "Registro ECOEMS",
     titulo: "Registro Mi Derecho, Mi Lugar 2027 paso a paso (ECOEMS) | ecoems.net",
     descripcion: "Cómo hacer el registro de Mi Derecho, Mi Lugar para el ECOEMS: requisitos, documentos, pasos, comprobante de registro, toma de fotografía y pago del examen.",
-    h1: "Registro de Mi Derecho, Mi Lugar paso a paso",
+    h1: "Registro de Mi Derecho, Mi Lugar 2027 paso a paso",
     lead: "Qué se necesita, qué se llena y qué documento te tienes que llevar al final. Con las fechas de 2026 como referencia.",
     img: { id: "registro-comprobante", alt: "Papá revisa el comprobante de registro de Mi Derecho, Mi Lugar de su hija", title: "Registro de Mi Derecho, Mi Lugar", desc: "Papá revisando una hoja impresa con una lista ordenada de escuelas mientras su hija señala una de ellas." },
     secciones: [
@@ -287,9 +288,9 @@ const PAGINAS = [
   {
     slug: "modalidades", miga: "Modalidades", nombreCorto: "Modalidades ECOEMS",
     img: { id: "modalidades-ecoems-con-sin-examen", alt: "Tres caminos para elegir modalidad en Mi Derecho, Mi Lugar: sin examen, con examen o ambas", title: "Modalidades de Mi Derecho, Mi Lugar", desc: "Ilustración de tres caminos que salen de una misma estación hacia tres tipos de bachillerato." },
-    titulo: "Modalidades ECOEMS: modalidad 1, 2 y 3 de Mi Derecho, Mi Lugar | ecoems.net",
+    titulo: "Modalidades ECOEMS 2027: modalidad 1, 2 y 3 de Mi Derecho, Mi Lugar | ecoems.net",
     descripcion: "Diferencias entre la modalidad 1, 2 y 3 de Mi Derecho, Mi Lugar: cuántas opciones se eligen, quién presenta el examen ECOEMS y qué pasa si no alcanza lugar.",
-    h1: "Modalidades de Mi Derecho, Mi Lugar: ¿1, 2 o 3?",
+    h1: "Modalidades de Mi Derecho, Mi Lugar 2027: ¿1, 2 o 3?",
     lead: "La decisión más importante del registro. Qué permite cada modalidad, cuántas escuelas se eligen y qué pasa si no alcanza lugar.",
     secciones: [
       ["Las tres modalidades", `<div class="tres-modalidades">
@@ -311,7 +312,7 @@ const PAGINAS = [
   },
   {
     slug: "como-elegir-opciones", miga: "Cómo elegir opciones", nombreCorto: "Elegir opciones ECOEMS",
-    titulo: "Cómo elegir opciones en el ECOEMS: el orden que conviene | ecoems.net",
+    titulo: "Cómo elegir opciones en el ECOEMS 2027: el orden que conviene | ecoems.net",
     descripcion: "Cómo ordenar las escuelas en el registro de Mi Derecho, Mi Lugar: cuáles piden más aciertos de los que saca hoy, cuáles justo le alcanzan y cuáles le alcanzan con margen con lo que sabe ahora.",
     h1: "Cómo elegir y ordenar las opciones del ECOEMS",
     lead: "El orden de las escuelas decide tanto como los aciertos. Una forma sencilla de armar la lista con datos.",
@@ -342,7 +343,7 @@ const PAGINAS = [
   {
     slug: "correo", miga: "Correo del registro", nombreCorto: "Correo Mi Derecho, Mi Lugar",
     img: { id: "correo-registro-mi-derecho-mi-lugar", alt: "Papá revisa en el celular los correos del registro de Mi Derecho, Mi Lugar de su hija", title: "Correo del registro ECOEMS", desc: "Papá y su hija revisan en el celular la bandeja de entrada con los avisos del registro." },
-    titulo: "Correo de Mi Derecho, Mi Lugar: avisos y cómo no perderlos | ecoems.net",
+    titulo: "Correo de Mi Derecho, Mi Lugar 2027: avisos y cómo no perderlos | ecoems.net",
     descripcion: "Qué correo usar en el registro de Mi Derecho, Mi Lugar (ECOEMS), qué avisos llegan, qué hacer si no llegan y el contacto oficial de Educatel.",
     h1: "El correo del registro de Mi Derecho, Mi Lugar",
     lead: "Un correo bien elegido evita sustos. Qué cuenta usar, qué revisar y a quién escribir si algo falla.",
@@ -367,9 +368,9 @@ const PAGINAS = [
   },
   {
     slug: "examen", miga: "El día del examen", nombreCorto: "Examen ECOEMS en línea",
-    titulo: "Examen ECOEMS en línea: navegador seguro, cámara y foto | ecoems.net",
+    titulo: "Examen ECOEMS 2027 en línea: navegador seguro, cámara y foto | ecoems.net",
     descripcion: "Cómo es el examen ECOEMS en línea: 128 preguntas, navegador seguro, cámara y micrófono, toma de fotografía, simulador oficial y recomendaciones para el día del examen.",
-    h1: "El examen ECOEMS en línea: cómo prepararse para el día",
+    h1: "El examen ECOEMS 2027 en línea: cómo prepararse para el día",
     lead: `${PREGUNTAS_EXAMEN} preguntas desde casa, con cámara encendida y navegador seguro. Lo que hay que preparar antes para que nada falle.`,
     img: { id: "examen-en-linea-casa", alt: "Aspirante presenta el examen ECOEMS en línea desde su casa con cámara encendida", title: "Examen ECOEMS en línea", desc: "Adolescente en un escritorio ordenado frente a una laptop con cámara, cuarto bien iluminado y sin otras personas." },
     secciones: [
@@ -397,9 +398,9 @@ const PAGINAS = [
   },
   {
     slug: "resultados", miga: "Resultados", nombreCorto: "Resultados ECOEMS",
-    titulo: "Resultados ECOEMS por folio: escuela asignada y aciertos | ecoems.net",
+    titulo: "Resultados ECOEMS 2027: cuándo salen y buscador por folio | ecoems.net",
     descripcion: "Busca tu folio y entiende tu resultado del ECOEMS: escuela asignada, aciertos, percentil y qué sigue, según la Gaceta de Resultados 2026. Y cuándo salen los de 2027.",
-    h1: "Resultados del ECOEMS: busca tu folio y entiende tu resultado",
+    h1: "Resultados del ECOEMS 2027: cuándo salen, busca tu folio y entiende tu resultado",
     lead: "Escribe tu folio y te traducimos la Gaceta de Resultados: en qué escuela quedó, cuántos aciertos sacó y qué hacer después. Abajo, cuándo salen y cómo leerlos.",
     antes: herramientaResultados,
     img: { id: "resultados-familia-celebra", alt: "Familia revisa en la computadora los resultados del ECOEMS y celebra", title: "Resultados del ECOEMS", desc: "Una familia frente a la computadora de casa; la hija sonríe y el papá le pone la mano en el hombro." },
@@ -422,7 +423,7 @@ const PAGINAS = [
   },
   {
     slug: "no-quede", miga: "Si no quedó", nombreCorto: "No quedé en el ECOEMS",
-    titulo: "No quedé en el ECOEMS: extemporáneos y lugares libres | ecoems.net",
+    titulo: "No quedé en el ECOEMS: extemporáneos 2027 y lugares libres | ecoems.net",
     descripcion: "Qué hacer si tu hijo o hija no quedó en el ECOEMS o Mi Derecho, Mi Lugar: registro extemporáneo, lugares disponibles y opciones para no perder el año.",
     h1: "No quedó en el ECOEMS: qué hacer ahora",
     lead: "Respira: hay opciones para no perder el año. Qué dice la convocatoria y en qué orden moverse.",
@@ -478,7 +479,7 @@ const PAGINAS = [
     faq: [
       ["¿Cuándo son las preinscripciones para la prepa 2027?", "Todavía no hay fecha oficial. En la CDMX y la zona metropolitana del Edomex la preinscripción es el registro de Mi Derecho, Mi Lugar, que en 2026 fue del 17 de marzo al 14 de abril."],
       ["¿Hay que preinscribirse en cada prepa?", "No, para las escuelas que participan en Mi Derecho, Mi Lugar. Se hace un solo registro en miderechomilugar.gob.mx y ahí se eligen y ordenan las escuelas, con y sin examen."],
-      ["¿Cuál es la convocatoria para preparatoria en la CDMX y el Edomex?", "La de Mi Derecho, Mi Lugar: una sola convocatoria para las prepas públicas con examen (UNAM e IPN) y sin examen de la zona metropolitana. La de 2027 todavía no tiene fecha oficial; cuando se publique actualizamos esta página y el <a href=\"/fechas/\">calendario</a>."],
+      ["¿Cuál es la convocatoria para preparatoria en la CDMX y el Edomex?", "La de Mi Derecho, Mi Lugar: una sola convocatoria para las prepas públicas con examen (UNAM e IPN) y sin examen de la zona metropolitana. La de 2027 todavía no sale: la de 2026 se publicó el 13 de febrero, así que se espera para mediados de febrero de 2027 (estimado). Cuando se publique actualizamos esta página y el <a href=\"/fechas/\">calendario</a>."],
       ["¿Las preparatorias oficiales del Estado de México tienen preinscripción aparte?", "No. Las Preparatorias Oficiales que participan en Mi Derecho, Mi Lugar se eligen en el mismo registro, sin examen."],
       ["¿Cuándo es la preinscripción de la UAEMéx?", "La UAEMéx tiene convocatoria propia. En 2026 la preinscripción por internet fue del 6 al 20 de febrero, según la letra inicial de la CURP."],
       ["¿La preinscripción tiene costo?", "El registro de Mi Derecho, Mi Lugar es gratuito. Solo quien va por la UNAM o el IPN paga el derecho a examen al concluir su registro."],
@@ -489,13 +490,13 @@ const PAGINAS = [
 // ---------- Preguntas frecuentes (todas juntas) ----------
 function paginaFaq(paginas) {
   const ruta = "/preguntas-frecuentes/";
-  const titulo = "Preguntas frecuentes del ECOEMS y Mi Derecho, Mi Lugar | ecoems.net";
+  const titulo = "Preguntas frecuentes del ECOEMS 2027 y Mi Derecho, Mi Lugar | ecoems.net";
   const descripcion = "Respuestas claras a las dudas más comunes del ECOEMS y Mi Derecho, Mi Lugar: registro, Llave MX, modalidades, examen en línea, aciertos y resultados.";
   const m = migas([["Inicio", "/"], ["Preguntas frecuentes", ruta]]);
   const grupos = paginas.map((d) => [d.miga, d.slug, d.faq]);
   const todas = grupos.flatMap(([, , f]) => f);
   const cuerpo = `
-${cabeceraPagina({ img: "preguntas-frecuentes-ecoems", migasHtml: m.html, h1: "Preguntas frecuentes del ECOEMS", lead: "Todas las dudas del proceso en un solo lugar, ordenadas por parada. Cada tema tiene su página con más detalle." })}
+${cabeceraPagina({ img: "preguntas-frecuentes-ecoems", migasHtml: m.html, h1: "Preguntas frecuentes del ECOEMS 2027", lead: "Todas las dudas del proceso en un solo lugar, ordenadas por parada. Cada tema tiene su página con más detalle." })}
 <section class="seccion"><div class="contenedor contenedor-angosto">
   ${grupos.map(([t, s, f]) => `
   <div class="faq-grupo">

@@ -103,6 +103,7 @@ export function encabezado(actual = "") {
   ).join("");
   return `
 <a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="franja-instalar"><div class="contenedor franja-instalar-cont"><p><span aria-hidden="true">📲</span> <b><span class="franja-instalar-extra">Descarga e instala</span><span class="franja-instalar-corto">Instala</span> ECOEMS.app en tu celular</b> <span class="franja-instalar-extra">· gratis, sin tienda de apps</span></p><a class="franja-instalar-boton" href="${utm(SITIO.app + "#instalar", "franja_instalar")}">Instalar la app</a></div></div>
 <header class="cabecera">
   <div class="cabecera-in">
     <a class="logo" href="/" aria-label="ecoems.net, inicio">
