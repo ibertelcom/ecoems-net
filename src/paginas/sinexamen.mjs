@@ -239,7 +239,7 @@ function extraHub(k, lista) {
   let html = "";
   const zonasTop = Object.entries(lista.reduce((a, p) => ((a[p.municipio] = (a[p.municipio] ?? 0) + 1), a), {})).sort((a, b) => b[1] - a[1]).slice(0, 6);
   if (CERCA[k]) {
-    const kwCerca = { dgeti: "CBTIS y CETIS", epo: "Preparatoria Oficial" }[k] ?? s.corto;
+    const kwCerca = { dgeti: "CBTIS y CETIS", epo: "EPO y Preparatoria Oficial" }[k] ?? s.corto;
     html += `
 <section class="seccion seccion-blanca" aria-labelledby="t-cerca-de-mi">
   <div class="contenedor contenedor-angosto prosa">
