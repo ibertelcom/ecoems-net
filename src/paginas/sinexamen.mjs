@@ -69,12 +69,22 @@ function ficha(p) {
   const cercaExamen = cercanas(p.coord, p.url, 3, (x) => x.examen);
   const nombre = p.nombre;
   const quien = p.comun;
-  const titulo = `${nombre}: ${tecnica ? "carreras, " : ""}dirección y cómo entrar sin examen | ecoems.net`;
-  const descripcion = `${nombre} en ${p.municipio}: ${tecnica ? `${pl(p.esp.length, "carrera técnica", "carreras técnicas")} (${p.esp.slice(0, 3).map((e) => e.nombre).join(", ")})` : TIPO[s.tipo]}, dirección, mapa y cómo elegirlo sin examen en Mi Derecho, Mi Lugar.`;
+  // Con artículo para la prosa: «la Preparatoria Oficial 110», «el Módulo Xico (EPO 374)».
+  const qa = p.sis === "epo" ? `${p.modulo ? "el" : "la"} ${quien}` : quien;
+  const alias = p.alias;
+  const padre = p.padre ? PLANTELES.find((x) => x.slug === p.padre) : null;
+  // Title con la forma en que la gente lo busca: «Preparatoria Oficial 110 (EPO 110)», «Colegio de Bachilleres Plantel 4 (Bacho 4)».
+  const munCorto = { "Valle de Chalco Solidaridad": "Valle de Chalco", "Cuautitlán Izcalli": "Cuautitlán Izcalli", "La Paz": "La Paz" }[p.municipio] ?? p.municipio.replace(/ de (Morelos|Zaragoza|Berriozábal|Juárez|Baz)$/, "");
+  const nTitulo = p.sis === "epo" && !p.modulo ? `${p.comun}${alias && !alias.includes("Anexa") ? ` (${alias})` : ""}, ${munCorto}` : `${nombre}${alias ? ` (${alias})` : ""}`;
+  const titulo = `${nTitulo}: ${tecnica ? "carreras, " : ""}dirección y cómo entrar${p.sis === "epo" ? "" : " sin examen"} | ecoems.net`;
+  const descripcion = `${nombre}${alias ? ` (${alias})` : ""} en ${p.municipio}: ${tecnica ? `${pl(p.esp.length, "carrera técnica", "carreras técnicas")} (${p.esp.slice(0, 3).map((e) => e.nombre).join(", ")})` : TIPO[s.tipo]}, dirección, mapa y cómo elegirlo sin examen en Mi Derecho, Mi Lugar.`;
   const m = migas([["Inicio", "/"], ["Escuelas", "/escuelas/"], [s.corto, s.ruta], [quien, ruta]]);
-  const faq = [
+  const faq = [];
+  if (alias) faq.push([`¿${alias} y ${quien} son la misma escuela?`, `Sí. ${nombre} se conoce también como ${quien} o ${alias}${p.hon ? ` y lleva el nombre «${p.hon}»` : ""}. En el buscador de Mi Derecho, Mi Lugar aparece como «${p.crudo.replace(/"/g, "")}».`]);
+  if (padre) faq.push([`¿${quien} es parte de otra preparatoria?`, `Sí. Es un módulo que depende de la <a href="${padre.url}">${padre.comun}</a>: comparte la dirección escolar, pero da clases en otra ubicación y en el registro tiene su propia clave de opción.`]);
+  faq.push(
     [`¿${quien} pide examen?`, `No. ${quien} asigna lugar sin examen dentro de Mi Derecho, Mi Lugar. Se puede elegir en la modalidad 1 (solo escuelas sin examen) o en la modalidad 3 (junto con escuelas de la UNAM o el IPN). El lugar se asigna según el orden de tus opciones y los lugares disponibles.`],
-  ];
+  );
   if (tecnica) faq.push([`¿Qué carreras técnicas tiene ${quien}?`, `En el proceso 2026 ofreció ${pl(p.esp.length, "carrera", "carreras")}: ${p.esp.map((e) => e.nombre).join(", ")}.`]);
   faq.push([`¿Dónde está ${quien}?`, `En ${p.dirLimpia}, ${lugar(p)}.${p.turno ? ` Solo opera el turno ${p.turno}.` : ""}`]);
   if (tecnica) faq.push([`¿Qué clave tiene ${quien} en el registro?`, `En Mi Derecho, Mi Lugar cada carrera es una opción con su propia clave. En 2026: ${p.esp.map((e) => `${e.nombre} (${e.clave})`).join(", ")}. Las claves pueden cambiar: confírmalas en el buscador oficial antes de registrarte.`]);
@@ -87,8 +97,8 @@ ${cabeceraPagina({
   img,
   migasHtml: m.html,
   linea: "sin",
-  h1: `${nombre}: ${tecnica ? "carreras, " : ""}dirección y cómo entrar`,
-  lead: `${p.hon ? `${p.hon}. ` : ""}${TIPO[s.tipo].charAt(0).toUpperCase() + TIPO[s.tipo].slice(1)} ${s.largo ? `del ${s.largo}` : `de ${s.nombre}`} en ${p.municipio}. No pide examen: se elige en el registro de Mi Derecho, Mi Lugar.`,
+  h1: `${nombre}${alias ? ` (${alias})` : ""}: ${tecnica ? "carreras, " : ""}dirección y cómo entrar`,
+  lead: `${p.hon ? `${p.hon}. ` : ""}${TIPO[s.tipo].charAt(0).toUpperCase() + TIPO[s.tipo].slice(1)} ${s.largo ? `del ${s.largo}` : `de ${s.nombre}`} en ${p.municipio}${alias ? `, conocida como ${quien} o ${alias}` : ""}${padre ? `. Es un módulo de la <a href="${padre.url}">${padre.comun}</a>` : ""}. No pide examen: se elige en el registro de Mi Derecho, Mi Lugar.`,
   extra: `
     <div class="ficha">
       <div class="ficha-cifra ficha-meta"><span>Examen</span><b class="ficha-texto">No pide</b><small>Modalidad 1 o 3</small></div>
@@ -100,16 +110,16 @@ ${cabeceraPagina({
 
 <section class="seccion seccion-blanca" aria-labelledby="t-como-es">
   <div class="contenedor contenedor-angosto prosa">
-    <h2 id="t-como-es">Cómo es ${quien}</h2>
+    <h2 id="t-como-es">Cómo es ${qa}</h2>
     <p>${s.desc}</p>
-    ${tecnica ? `<h3>Carreras técnicas de ${quien}</h3>${chips(p.esp)}<p>Cada carrera es una opción distinta en el registro, con su propia clave. Si le interesan dos carreras del mismo plantel, puede poner las dos en su lista.</p>` : `<p>En ${quien} todos los alumnos llevan el mismo plan de bachillerato general, que prepara para seguir a cualquier licenciatura.</p>`}
+    ${tecnica ? `<h3>Carreras técnicas de ${quien}</h3>${chips(p.esp)}<p>Cada carrera es una opción distinta en el registro, con su propia clave. Si le interesan dos carreras del mismo plantel, puede poner las dos en su lista.</p>` : `<p>En ${qa} todos los alumnos llevan el mismo plan de bachillerato general, que prepara para seguir a cualquier licenciatura.</p>`}
   </div>
 </section>
 
 <section class="seccion" aria-labelledby="t-donde">
   <div class="contenedor rejilla-media">
     <div class="prosa">
-      <h2 id="t-donde">Dónde está ${quien}</h2>
+      <h2 id="t-donde">Dónde está ${qa}</h2>
       <p class="direccion">${icono("mapa", "ico")}<span>${p.dirLimpia}, ${lugar(p)}.</span></p>
       ${p.turno ? `<p>Según el buscador oficial, este plantel solo opera el turno ${p.turno}.</p>` : ""}
       <p class="acciones-escuela"><a class="boton boton-secundario" href="${comoLlegar(p)}" rel="noopener" target="_blank">${icono("mapa", "ico")}Cómo llegar</a><a class="boton boton-secundario" href="/prepas-cerca-de-mi/">${icono("mapa", "ico")}Prepas cerca de mí</a></p>
@@ -120,11 +130,11 @@ ${cabeceraPagina({
 
 <section class="seccion seccion-blanca" aria-labelledby="t-registro">
   <div class="contenedor contenedor-angosto prosa">
-    <h2 id="t-registro">Cómo elegir ${quien} en Mi Derecho, Mi Lugar</h2>
-    <p>${quien} no pide examen: asigna lugar por el orden de las opciones de tu registro y los lugares disponibles. Tienes dos caminos:</p>
+    <h2 id="t-registro">Cómo elegir ${qa} en Mi Derecho, Mi Lugar</h2>
+    <p>${qa.charAt(0).toUpperCase() + qa.slice(1)} no pide examen: asigna lugar por el orden de las opciones de tu registro y los lugares disponibles. Tienes dos caminos:</p>
     <ul>
-      <li><b>Modalidad 1:</b> solo escuelas sin examen. Pones ${quien} y otras opciones sin examen en el orden que prefieras.</li>
-      <li><b>Modalidad 3:</b> combinas escuelas de la UNAM o el IPN (con examen) con escuelas sin examen como ${quien}. Si no alcanza lugar en las de examen, sigue en las sin examen de su lista.</li>
+      <li><b>Modalidad 1:</b> solo escuelas sin examen. Pones ${qa} y otras opciones sin examen en el orden que prefieras.</li>
+      <li><b>Modalidad 3:</b> combinas escuelas de la UNAM o el IPN (con examen) con escuelas sin examen como ${qa}. Si no alcanza lugar en las de examen, sigue en las sin examen de su lista.</li>
     </ul>
     <p>Revisa las <a href="/modalidades/">modalidades con examen y sin examen</a> y <a href="/como-elegir-opciones/">cómo elegir y ordenar las opciones del ECOEMS</a> antes de llenar el registro.</p>
     ${tecnica ? `<div class="tabla-envoltura"><table class="tabla-simple"><caption>Claves de opción de ${quien} en 2026</caption><thead><tr><th scope="col">Carrera técnica</th><th scope="col">Clave</th></tr></thead><tbody>${p.esp.map((e) => `<tr><td>${e.nombre}</td><td><code>${e.clave}</code></td></tr>`).join("")}</tbody></table></div>` : p.clave ? `<p>Clave de opción en 2026: <code>${p.clave}</code>.</p>` : ""}
@@ -136,7 +146,7 @@ ${cabeceraPagina({
   <div class="contenedor">
     <div class="encabezado-seccion">
       <h2 id="t-hermanos">Otros planteles de ${s.corto} cerca</h2>
-      <p>Los planteles de ${s.corto} más cercanos a ${quien}. Puedes poner varios en tu registro.</p>
+      <p>Los planteles de ${s.corto} más cercanos a ${qa}. Puedes poner varios en tu registro.</p>
     </div>
     <ul class="tarjetas-escuela">${hermanos.map((x) => `
       <li><div class="tarjeta-escuela tarjeta-enlace" data-linea="sin">
@@ -145,13 +155,14 @@ ${cabeceraPagina({
       </div></li>`).join("")}
     </ul>
     <p><a href="${s.ruta}">Ver todos los planteles de ${s.corto}</a></p>
+    ${(() => { const l = POR_SISTEMA[p.sis]; const i = l.indexOf(p); const a = l[(i - 1 + l.length) % l.length], b = l[(i + 1) % l.length]; return `<nav class="ant-sig" aria-label="Otros planteles de ${s.corto}"><a href="${a.url}">← ${a.alias && /^(EPO|Bacho) \d/.test(a.alias) ? a.alias : a.comun}</a><a href="${b.url}">${b.alias && /^(EPO|Bacho) \d/.test(b.alias) ? b.alias : b.comun} →</a></nav>`; })()}
   </div>
 </section>
 
 <section class="seccion seccion-blanca" aria-labelledby="t-cerca">
   <div class="contenedor">
     <div class="encabezado-seccion">
-      <h2 id="t-cerca">Escuelas cerca de ${quien}</h2>
+      <h2 id="t-cerca">Escuelas cerca de ${qa}</h2>
       <p>Para armar la lista del registro conviene tener varias opciones cercanas. Estas son las más próximas, con y sin examen.</p>
     </div>
     <ul class="tarjetas-escuela">${[...cercaSin, ...cercaExamen].map((x) => `
@@ -166,7 +177,7 @@ ${cabeceraPagina({
 
 <section class="seccion seccion-estudiar" aria-labelledby="t-externos">
   <div class="contenedor contenedor-angosto">
-    <h2 id="t-externos">Antes de inscribirse en ${quien}</h2>
+    <h2 id="t-externos">Antes de inscribirse en ${qa}</h2>
     ${caminosExternos(s.ruta, `sin-${p.slug}`)}
   </div>
 </section>
@@ -217,6 +228,96 @@ const TITULOS = {
   cbta: ["CBTA y Centro del Mar: bachillerato agropecuario", "CBTA y Centro del Mar: bachillerato tecnológico agropecuario"],
 };
 
+
+// Secciones propias por institución para las búsquedas «X cerca de mí» y dudas frecuentes (Ubersuggest MX, nov-2026):
+// conalep cerca de mí 40.5K, colegio de bachilleres cerca de mí 9.9K, cbtis cerca de mí 9.9K, iems cerca de mí 1K,
+// qué significa conalep 5.4K, bacho N 2.4–3.6K c/u, preparatoria oficial N ~1K c/u, preparatorias anexas a la normal 720.
+const CERCA = { conalep: "un CONALEP", bachilleres: "un Colegio de Bachilleres", dgeti: "un CBTIS o CETIS", iems: "un IEMS", cecytem: "un CECyTEM", cobaem: "un COBAEM", epo: "una Preparatoria Oficial" };
+function extraHub(k, lista) {
+  const s = SISTEMAS[k];
+  const faq = [];
+  let html = "";
+  const zonasTop = Object.entries(lista.reduce((a, p) => ((a[p.municipio] = (a[p.municipio] ?? 0) + 1), a), {})).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  if (CERCA[k]) {
+    const kwCerca = { dgeti: "CBTIS y CETIS", epo: "Preparatoria Oficial" }[k] ?? s.corto;
+    html += `
+<section class="seccion seccion-blanca" aria-labelledby="t-cerca-de-mi">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-cerca-de-mi">${kwCerca} cerca de mí: cómo encontrar el plantel más cercano</h2>
+    <p>Para encontrar ${CERCA[k]} cerca de tu casa tienes tres caminos en ecoems.net:</p>
+    <ol>
+      <li><b>Por código postal:</b> en <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a> escribes tu código postal y ves las escuelas más cercanas, con y sin examen, ordenadas por distancia.</li>
+      <li><b>Por alcaldía o municipio:</b> en la <a href="#t-planteles">lista de planteles</a> de esta página eliges tu alcaldía o municipio y aparecen solo los de tu zona.</li>
+      <li><b>En el mapa:</b> el <a href="#t-mapa-sis">mapa de ${s.corto}</a> muestra todos los planteles; cada ficha trae el botón «Cómo llegar».</li>
+    </ol>
+    <p>Donde hay más planteles de ${s.corto}: ${zonasTop.map(([z, n]) => `${z} (${n})`).join(", ")}.</p>
+  </div>
+</section>`;
+    faq.push([`¿Cómo encuentro ${CERCA[k]} cerca de mí?`, `Escribe tu código postal en <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a> o elige tu alcaldía o municipio en la lista de esta página. Las zonas con más planteles son ${zonasTop.slice(0, 3).map(([z]) => z).join(", ")}.`]);
+  }
+  if (k === "conalep") {
+    html += `
+<section class="seccion" aria-labelledby="t-significa">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-significa">¿Qué significa CONALEP?</h2>
+    <p>CONALEP significa <b>Colegio Nacional de Educación Profesional Técnica</b>. Es un bachillerato con carrera: al terminar los seis semestres el alumno recibe su certificado de bachillerato y el título de <b>profesional técnico bachiller</b> en la carrera que estudió, así que puede seguir a la universidad o empezar a trabajar.</p>
+    <h3>Inscripción al CONALEP en CDMX y Edomex</h3>
+    <p>En la Ciudad de México y en los municipios del Estado de México que participan, el CONALEP no tiene inscripción por separado para primer semestre: se elige en el registro de <a href="/mi-derecho-mi-lugar/">Mi Derecho, Mi Lugar</a>, que funciona como la <a href="/preinscripciones/">preinscripción a la prepa</a>. Cada carrera de cada plantel es una opción con su propia clave. Las fechas del registro están en el <a href="/fechas/">calendario del proceso</a>.</p>
+  </div>
+</section>`;
+    faq.push(["¿Qué significa CONALEP?", "Colegio Nacional de Educación Profesional Técnica. Da bachillerato y, al mismo tiempo, una carrera de profesional técnico bachiller."]);
+    faq.push(["¿Cómo es la inscripción al CONALEP?", `En CDMX y Edomex el ingreso a primer semestre se hace en el registro de <a href="/registro/">Mi Derecho, Mi Lugar</a>: se elige la carrera y el plantel como una opción sin examen.`]);
+  }
+  if (k === "bachilleres") {
+    html += `
+<section class="seccion" aria-labelledby="t-bacho">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-bacho">Bacho: los 20 planteles del Colegio de Bachilleres</h2>
+    <p>Al Colegio de Bachilleres se le dice «Bacho». Cada plantel se conoce por su número:</p>
+    <ul class="chips chips-enlace">${lista.map((p) => `<li><a href="${p.url}">${p.alias}</a></li>`).join("")}</ul>
+  </div>
+</section>`;
+    faq.push(["¿Qué es el Bacho?", `Es como se le dice al Colegio de Bachilleres. «Bacho 4», por ejemplo, es el <a href="${lista.find((p) => p.num === 4)?.url ?? s.ruta}">Colegio de Bachilleres Plantel 4</a>.`]);
+  }
+  if (k === "dgeti") {
+    html += `
+<section class="seccion" aria-labelledby="t-diferencia">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-diferencia">¿CBTIS y CETIS es lo mismo?</h2>
+    <p>Casi. Los dos son planteles de la DGETI (SEP) y dan <b>bachillerato tecnológico</b>: el alumno estudia el bachillerato y una carrera técnica al mismo tiempo. Los nombres vienen de su origen:</p>
+    <ul>
+      <li><b>CBTIS:</b> Centro de Bachillerato Tecnológico industrial y de servicios.</li>
+      <li><b>CETIS:</b> Centro de Estudios Tecnológicos industrial y de servicios.</li>
+    </ul>
+    <p>Para elegir, lo que cambia de un plantel a otro son las <b>carreras técnicas</b> y la ubicación, no si es CETIS o CBTIS. Revisa las carreras en la ficha de cada plantel.</p>
+  </div>
+</section>`;
+    faq.push(["¿CBTIS y CETIS es lo mismo?", "Los dos son de la DGETI y dan bachillerato tecnológico con carrera técnica. CBTIS es Centro de Bachillerato Tecnológico industrial y de servicios y CETIS es Centro de Estudios Tecnológicos industrial y de servicios; lo que cambia entre planteles son las carreras."]);
+  }
+  if (k === "epo") {
+    const anexas = lista.filter((p) => /Anexa/.test(p.nombre));
+    const numeradas = lista.filter((p) => p.alias && /^EPO \d+$/.test(p.alias));
+    html += `
+<section class="seccion" aria-labelledby="t-anexas">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-anexas">Preparatorias anexas a la normal</h2>
+    <p>Las preparatorias anexas a la normal son Preparatorias Oficiales que funcionan junto a una escuela normal (formadora de maestros). Dan el mismo bachillerato general y también se eligen sin examen. En el proceso 2026 participaron ${anexas.length}:</p>
+    <ul>${anexas.map((p) => `<li><a href="${p.url}">${p.comun}</a>, ${p.municipio}</li>`).join("")}</ul>
+  </div>
+</section>
+<section class="seccion seccion-blanca" aria-labelledby="t-numeros">
+  <div class="contenedor">
+    <h2 id="t-numeros">Preparatorias Oficiales por número (EPO)</h2>
+    <p>Busca tu EPO por su número:</p>
+    <ul class="chips chips-enlace">${numeradas.map((p) => `<li><a href="${p.url}">${p.alias}</a></li>`).join("")}</ul>
+  </div>
+</section>`;
+    faq.push(["¿Qué es una preparatoria anexa a la normal?", "Es una Preparatoria Oficial del Estado de México que funciona junto a una escuela normal. Da bachillerato general y se elige sin examen en Mi Derecho, Mi Lugar."]);
+    faq.push(["¿EPO y Preparatoria Oficial es lo mismo?", "Sí. EPO significa Escuela Preparatoria Oficial: «EPO 110» y «Preparatoria Oficial 110» son la misma escuela."]);
+  }
+  return { html, faq };
+}
+
 function hub(k) {
   const s = SISTEMAS[k];
   const lista = POR_SISTEMA[k];
@@ -238,7 +339,9 @@ function hub(k) {
     [`¿Qué tipo de bachillerato da ${s.corto}?`, s.desc],
   ];
   if (carreras.length) faq.push([`¿Qué carreras técnicas tiene ${s.corto}?`, `Entre todos sus planteles ofrecieron ${carreras.length} carreras en 2026, entre ellas ${carreras.slice(0, 8).join(", ")}. Cada plantel tiene las suyas; revísalas en la lista.`]);
-  faq.push([`¿Cómo encuentro el ${s.corto} más cercano a mi casa?`, `Usa el mapa de esta página o la herramienta <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>: escribe tu código postal y te muestra las escuelas con y sin examen más cercanas.`]);
+  const ex = extraHub(k, lista);
+  if (ex.faq.length) faq.push(...ex.faq);
+  else faq.push([`¿Cómo encuentro el ${s.corto} más cercano a mi casa?`, `Usa el mapa de esta página o la herramienta <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>: escribe tu código postal y te muestra las escuelas con y sin examen más cercanas.`]);
 
   const tarjeta = (p) => `
         <li id="${p.slug}"><div class="tarjeta-escuela tarjeta-zona" data-linea="sin">
@@ -276,6 +379,7 @@ ${cabeceraPagina({
     ${carreras.length ? `<h3>Carreras técnicas de ${s.corto}</h3>${chips(carreras)}` : ""}
   </div>
 </section>
+${ex.html}
 
 <section class="seccion" aria-labelledby="t-mapa-sis">
   <div class="contenedor">

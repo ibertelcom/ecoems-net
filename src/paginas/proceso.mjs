@@ -224,7 +224,7 @@ const PAGINAS = [
   },
   {
     slug: "llave-mx", miga: "Llave MX", nombreCorto: "Llave MX",
-    titulo: "Llave MX para Mi Derecho, Mi Lugar: qué es y cómo crearla | ecoems.net",
+    titulo: "Llave MX (cuenta Llave) para Mi Derecho, Mi Lugar: qué es y cómo crearla | ecoems.net",
     descripcion: "Para registrarse en Mi Derecho, Mi Lugar (ECOEMS) se necesita Llave MX. Qué es, qué datos pide, a nombre de quién se crea y errores comunes.",
     h1: "Llave MX para el registro de Mi Derecho, Mi Lugar",
     lead: "La cuenta del gobierno con la que se entra al registro del ECOEMS. Qué es, qué necesitas tener a la mano y cómo evitar los errores más comunes.",
@@ -248,6 +248,9 @@ const PAGINAS = [
       ["¿Es obligatoria la Llave MX para el ECOEMS?", "Sí. La convocatoria 2026 pide generar la Llave MX para hacer el registro en Mi Derecho, Mi Lugar."],
       ["¿Dónde se crea la Llave MX?", "En llave.gob.mx, el sitio oficial del gobierno de México. Es gratuita."],
       ["¿La Llave MX va a nombre del papá o del aspirante?", "Del aspirante, con su CURP. El papá o la mamá pueden ayudar a crearla, pero los datos son los del alumno."],
+      ["¿Qué es la llave del aspirante?", "Así le dicen muchas familias a la Llave MX que el aspirante crea con su propia CURP para entrar al registro de Mi Derecho, Mi Lugar. No es otra cuenta: es la misma Llave MX."],
+      ["¿Qué es la cuenta Llave?", "Es la Llave MX, la cuenta única del gobierno de México para trámites en línea. Con ella se inicia sesión en el registro del ECOEMS."],
+      ["¿Qué hago si olvidé la contraseña de mi Llave MX?", "Recupérala en llave.gob.mx con la opción para restablecer la contraseña; te piden el correo o el celular con que la creaste. Por eso conviene usar datos que la familia revise."],
     ],
   },
   {
@@ -277,6 +280,8 @@ const PAGINAS = [
       ["¿Qué es el comprobante de registro?", "El documento que descargas al final del registro con el orden de tus opciones. Es la base para la asignación en las escuelas sin examen."],
       ["¿Puedo cambiar mis opciones después?", "Solo mientras el registro esté abierto y según lo que permita la plataforma. Revisa bien el orden antes de descargar el comprobante."],
       ["¿Cuánto cuesta el examen ECOEMS?", "El registro es gratuito. Quien va por la UNAM o el IPN paga el derecho a examen al concluir su registro; consulta el monto vigente en el instructivo oficial."],
+      ["¿Qué es el pre registro del ECOEMS?", "No hay un pre registro aparte: lo que muchos llaman pre registro es el mismo registro de Mi Derecho, Mi Lugar, donde se crean los datos del aspirante y se eligen las escuelas. Para la UNAM y el IPN, después se concluye el registro con la foto y el pago del examen."],
+      ["¿Cómo inicio sesión en Mi Derecho, Mi Lugar?", "En miderechomilugar.gob.mx, con la <a href=\"/llave-mx/\">Llave MX</a> del aspirante. Si olvidaste la contraseña, recupérala en llave.gob.mx antes de intentar de nuevo."],
     ],
   },
   {
@@ -409,6 +414,7 @@ const PAGINAS = [
     faq: [
       ["¿Cuándo salen los resultados del ECOEMS 2027?", "Aún no hay fecha. En 2026 salieron el martes 18 de agosto."],
       ["¿Dónde veo los resultados del ECOEMS?", "En la Gaceta Electrónica de Resultados, en miderechomilugar.gob.mx."],
+      ["¿Cómo saber en qué prepa quedé?", "Con el folio de tu comprobante de registro: búscalo en la Gaceta de Resultados de miderechomilugar.gob.mx o en el buscador por folio de esta página, que te dice la escuela asignada y tus aciertos."],
       ["¿Cómo busco mi resultado del ECOEMS por folio?", "Escribe los 9 dígitos del folio de tu comprobante de registro en el buscador de esta página. Te mostramos la escuela asignada, los aciertos y qué significa la explicación (ASI, PI, NP, SC, <7 o BI), tal como vienen en la Gaceta de Resultados."],
       ["¿Qué significan PI, NP, SC y ASI en la gaceta?", "ASI: obtuvo lugar. PI: puntaje insuficiente para sus opciones con examen. NP: no presentó el examen. SC: sin certificado de secundaria verificado. <7: promedio menor a 7. BI: baja por irregularidad en el examen."],
       ["¿Qué significa 'sin examen' en los resultados?", "Que el aspirante fue asignado a una escuela que no pide examen (modalidad 1, o modalidad 3 cuando no alcanzó lugar en la UNAM o el IPN)."],
@@ -432,6 +438,7 @@ const PAGINAS = [
       ["¿Qué pasa si no quedé en la UNAM ni en el IPN?", "En modalidad 3 se asigna una opción sin examen de tu lista. En modalidad 2 puedes registrarte en el periodo extemporáneo y elegir una escuela sin examen con lugares."],
       ["¿Hay segunda vuelta en el ECOEMS?", "No hay una segunda vuelta de examen. Después de resultados hay registro extemporáneo para escuelas sin examen y lugares disponibles que cada institución ofrece por su cuenta."],
       ["¿Cuándo es el registro extemporáneo?", "En 2026 fue del 19 al 26 de agosto. Consulta las fechas 2027 cuando salga la convocatoria."],
+      ["¿Qué son los extemporáneos del ECOEMS?", "Es el registro extemporáneo de Mi Derecho, Mi Lugar: un periodo después de los resultados para quienes no quedaron asignados, en el que se elige una escuela sin examen con lugares disponibles. Revisa las <a href=\"/escuelas/sin-examen/\">escuelas sin examen</a> cercanas."],
     ],
   },
   {
@@ -471,6 +478,7 @@ const PAGINAS = [
     faq: [
       ["¿Cuándo son las preinscripciones para la prepa 2027?", "Todavía no hay fecha oficial. En la CDMX y la zona metropolitana del Edomex la preinscripción es el registro de Mi Derecho, Mi Lugar, que en 2026 fue del 17 de marzo al 14 de abril."],
       ["¿Hay que preinscribirse en cada prepa?", "No, para las escuelas que participan en Mi Derecho, Mi Lugar. Se hace un solo registro en miderechomilugar.gob.mx y ahí se eligen y ordenan las escuelas, con y sin examen."],
+      ["¿Cuál es la convocatoria para preparatoria en la CDMX y el Edomex?", "La de Mi Derecho, Mi Lugar: una sola convocatoria para las prepas públicas con examen (UNAM e IPN) y sin examen de la zona metropolitana. La de 2027 todavía no tiene fecha oficial; cuando se publique actualizamos esta página y el <a href=\"/fechas/\">calendario</a>."],
       ["¿Las preparatorias oficiales del Estado de México tienen preinscripción aparte?", "No. Las Preparatorias Oficiales que participan en Mi Derecho, Mi Lugar se eligen en el mismo registro, sin examen."],
       ["¿Cuándo es la preinscripción de la UAEMéx?", "La UAEMéx tiene convocatoria propia. En 2026 la preinscripción por internet fue del 6 al 20 de febrero, según la letra inicial de la CURP."],
       ["¿La preinscripción tiene costo?", "El registro de Mi Derecho, Mi Lugar es gratuito. Solo quien va por la UNAM o el IPN paga el derecho a examen al concluir su registro."],

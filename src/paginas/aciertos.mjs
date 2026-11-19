@@ -73,7 +73,7 @@ function caminos(ruta, campana) {
 // ---------- /aciertos/ ----------
 function paginaAciertos() {
   const ruta = "/aciertos/";
-  const titulo = "Aciertos ECOEMS 2026 por escuela: UNAM e IPN | ecoems.net";
+  const titulo = "Aciertos ECOEMS 2026 por escuela: cuántos pide la UNAM y el IPN | ecoems.net";
   const descripcion = "Cuántos aciertos pide cada prepa, CCH y vocacional en el ECOEMS: tabla 2024, 2025 y 2026 de las 31 escuelas de la UNAM y el IPN, con la meta para 2027.";
   const m = migas([["Inicio", "/"], ["Aciertos por escuela", ruta]]);
   const cch = GRUPOS[1].escuelas.map((e) => e.a2026);
@@ -125,6 +125,18 @@ ${cabeceraPagina({
     </div>
   </div>
 </section>
+<section class="seccion" aria-labelledby="t-unam-ipn">
+  <div class="contenedor contenedor-angosto prosa">
+    <h2 id="t-unam-ipn">Aciertos UNAM 2026</h2>
+    <p>En el ECOEMS 2026 las ${GRUPOS[0].escuelas.length} prepas de la UNAM pidieron de ${rango(enp)} aciertos y los ${GRUPOS[1].escuelas.length} CCH, de ${rango(cch)}:</p>
+    <ul class="lista-aciertos">${[...GRUPOS[0].escuelas, ...GRUPOS[1].escuelas].sort((a, b) => b.a2026 - a.a2026).map((e) => `<li><a href="/escuelas/${e.slug}/">${e.comun}</a>: <b>${e.a2026}</b> aciertos</li>`).join("")}</ul>
+    <h2 id="t-ipn-2026">Aciertos IPN 2026</h2>
+    <p>Las ${GRUPOS[2].escuelas.length} vocacionales del IPN pidieron de ${rango(voca)} aciertos:</p>
+    <ul class="lista-aciertos">${[...GRUPOS[2].escuelas].sort((a, b) => b.a2026 - a.a2026).map((e) => `<li><a href="/escuelas/${e.slug}/">${e.comun}</a>: <b>${e.a2026}</b> aciertos</li>`).join("")}</ul>
+    <h2 id="t-2025">Aciertos ECOEMS 2025 y 2024</h2>
+    <p>Para ver cómo se movieron: en 2025 las prepas de la UNAM pidieron de ${rango(GRUPOS[0].escuelas.map((e) => e.a2025))}, los CCH de ${rango(GRUPOS[1].escuelas.map((e) => e.a2025))} y las vocacionales de ${rango(GRUPOS[2].escuelas.map((e) => e.a2025))}. En 2024, de ${rango(GRUPOS[0].escuelas.map((e) => e.a2024))}, ${rango(GRUPOS[1].escuelas.map((e) => e.a2024))} y ${rango(GRUPOS[2].escuelas.map((e) => e.a2024))}. Los tres años de cada escuela están en la <a href="#t-tabla">tabla de arriba</a>.</p>
+  </div>
+</section>
 <section class="seccion seccion-estudiar" aria-labelledby="t-alcanza">
   <div class="contenedor contenedor-angosto">
     <h2 id="t-alcanza">¿A cuántos aciertos llega tu hijo o hija con lo que sabe hoy?</h2>
@@ -144,21 +156,21 @@ ${faqBloque(preg, "Preguntas sobre los aciertos del ECOEMS")}`;
 // ---------- Hubs por línea ----------
 const HUBS = {
   enp: {
-    titulo: "Prepas UNAM: aciertos y planteles de la ENP | ecoems.net",
+    titulo: "Prepas de la UNAM: cuántas hay, aciertos y planteles de la ENP | ecoems.net",
     h1: "Prepas de la UNAM: los 9 planteles de la ENP y sus aciertos",
-    lead: "Cuántos aciertos pidió cada prepa de la UNAM en el ECOEMS, dónde está cada plantel de la Escuela Nacional Preparatoria y qué meta conviene para 2027.",
+    lead: "La UNAM tiene 9 prepas de la Escuela Nacional Preparatoria, todas en la Ciudad de México. Aquí ves cuántos aciertos pidió cada una en el ECOEMS, dónde está cada plantel de la Escuela Nacional Preparatoria y qué meta conviene para 2027.",
     intro: "La Escuela Nacional Preparatoria (ENP) es el bachillerato más antiguo de la UNAM. Tiene nueve planteles en la Ciudad de México, que todos conocen como Prepa 1 a Prepa 9. El plan es anual, dura tres años y en sexto año el alumno elige el área de la carrera que le interesa. Quien termina con buen promedio puede seguir a una licenciatura de la UNAM por pase reglamentado.",
     img: ["prepas-unam-estudiantes", "Estudiantes de una prepa de la UNAM en el patio del plantel", "Prepas de la UNAM", "Estudiantes de bachillerato conversando en el patio de un plantel de la Escuela Nacional Preparatoria."],
   },
   cch: {
-    titulo: "CCH UNAM: aciertos de los 5 planteles | ecoems.net",
+    titulo: "CCH UNAM: cuántos hay, aciertos y cuál elegir de los 5 planteles | ecoems.net",
     h1: "CCH de la UNAM: los 5 planteles y sus aciertos",
-    lead: "Cuántos aciertos pidió cada CCH en el ECOEMS (Azcapotzalco, Naucalpan, Oriente, Sur y Vallejo), dónde está cada uno y qué meta conviene para 2027.",
+    lead: "Hay 5 CCH de la UNAM: cuatro en la Ciudad de México (Azcapotzalco, Oriente, Sur y Vallejo) y uno en Naucalpan. Aquí ves cuántos aciertos pidió cada uno en el ECOEMS, dónde está y qué meta conviene para 2027.",
     intro: "El Colegio de Ciencias y Humanidades (CCH) es el otro bachillerato de la UNAM. Tiene cinco planteles: cuatro en la Ciudad de México y uno en Naucalpan, Estado de México. Dura seis semestres y su modelo da mucho peso a investigar, leer y escribir. Igual que en la Prepa, quien termina con buen promedio puede seguir a una licenciatura de la UNAM por pase reglamentado.",
     img: ["cch-unam-estudiantes", "Estudiantes de un CCH de la UNAM trabajando en equipo", "CCH de la UNAM", "Estudiantes de bachillerato trabajando en equipo en una explanada con jardineras."],
   },
   voca: {
-    titulo: "Vocacionales IPN: aciertos de los CECyT | ecoems.net",
+    titulo: "Vocacionales IPN: cuántas hay, aciertos y carreras de los CECyT | ecoems.net",
     h1: "Vocacionales del IPN: aciertos de cada CECyT y del CET 1",
     lead: "Cuántos aciertos pidió cada vocacional del IPN en el ECOEMS, su área de conocimiento, sus carreras técnicas y la meta que conviene para 2027.",
     intro: "Las vocacionales del Instituto Politécnico Nacional son los CECyT (Centros de Estudios Científicos y Tecnológicos) y el CET 1. Son bachilleratos bivalentes de tres años: al terminar, el alumno tiene su certificado de bachillerato y además una carrera técnica. Cada una pertenece a un área (Físico-Matemáticas, Médico-Biológicas o Sociales y Administrativas) que orienta hacia las licenciaturas del IPN.",
@@ -179,7 +191,18 @@ function paginaHub(g) {
     prompt: `Fotografía realista panorámica 16:9. ${h.img[3]} Ciudad de México, luz de mañana. Sin texto legible, sin escudos ni logotipos, sin fechas ni años.`,
     uso: `Hub · ${g.titulo}`,
   });
+  const nombres = (l) => l.map((e) => e.comun).join(", ");
+  const cdmxN = g.escuelas.filter((e) => !/Naucalpan|Edomex|Estado de México/i.test(e.alcaldia ?? "")).length;
+  const CUANTAS = {
+    enp: [["¿Cuántas prepas de la UNAM hay?", `La UNAM tiene ${g.escuelas.length} prepas de la Escuela Nacional Preparatoria, todas en la Ciudad de México: ${nombres(g.escuelas)}. Con los 5 CCH suma 14 planteles de bachillerato.`],
+      ["¿Cuál es la mejor prepa de la UNAM?", `Todas tienen el mismo plan de estudios y el mismo pase reglamentado a la UNAM. La más pedida por aciertos es ${mayor.doble} (${mayor.a2026} en 2026). La que más conviene es la que le queda cerca y a la que le alcanza con lo que sabe hoy: revísalo en <a href="/prepas-cerca-de-mi/">Prepas cerca de mí</a>.`]],
+    cch: [["¿Cuántos CCH hay en la Ciudad de México?", `La UNAM tiene ${g.escuelas.length} CCH: ${cdmxN} en la Ciudad de México y 1 en Naucalpan, Estado de México. Son ${nombres(g.escuelas)}.`],
+      ["¿Cuál es el mejor CCH?", `Los ${g.escuelas.length} CCH tienen el mismo plan de estudios y el mismo pase reglamentado a la UNAM. El más pedido por aciertos es ${mayor.doble} (${mayor.a2026} en 2026) y el que pidió menos fue ${menor.doble} (${menor.a2026}). El mejor para tu hijo es el que le queda cerca y le alcanza con lo que sabe hoy.`]],
+    voca: [["¿Cuántas vocacionales tiene el IPN?", `El IPN tiene ${g.escuelas.length} escuelas de nivel medio superior en el ECOEMS: los CECyT (vocacionales) y el CET 1. Cada una pertenece a un área: Físico-Matemáticas, Médico-Biológicas o Sociales y Administrativas.`],
+      ["¿Cuál es la mejor vocacional del IPN?", `Por aciertos, la más pedida es ${mayor.doble} (${mayor.a2026} en 2026). Pero conviene elegir por el área y la carrera técnica que quiere estudiar, y por la distancia: compáralas en el <a href="/comparador/">comparador de escuelas</a>.`]],
+  };
   const preg = [
+    ...CUANTAS[g.clave],
     [`¿Cuántos aciertos piden ${g.clave === "voca" ? "las vocacionales del IPN" : g.clave === "cch" ? "los CCH" : "las prepas de la UNAM"}?`,
       `En 2026 pidieron de ${Math.min(...v)} a ${Math.max(...v)} aciertos. La más alta fue ${mayor.doble}, con ${mayor.a2026}, y la más baja ${menor.doble}, con ${menor.a2026}.`],
     [`¿Cuál es ${g.clave === "cch" ? "el CCH" : "la escuela"} más ${g.clave === "voca" ? "pedida del IPN" : "pedida"}?`,

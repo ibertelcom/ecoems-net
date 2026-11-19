@@ -187,6 +187,7 @@ function deSinExamen(ruta) {
     ["/escuelas/sin-examen/", "prepas sin examen", "las demás instituciones que no piden examen."],
     ["/prepas-cerca-de-mi/", "prepas cerca de mí", `otras escuelas cerca de ${p.comun}.`],
     ["/modalidades/", "modalidades con examen y sin examen", "cómo combinarla con la UNAM y el IPN."],
+    ...(p.entidad === "CDMX" ? [] : [["/preinscripciones/", "preinscripciones a la prepa 2027 en el Edomex", "el mismo registro sirve para las escuelas del Estado de México."]]),
   ];
 }
 

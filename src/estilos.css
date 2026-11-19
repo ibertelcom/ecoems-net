@@ -968,3 +968,8 @@ li[id]:target .tarjeta-escuela { border-color: var(--verde); box-shadow: 0 0 0 3
 .fr-explica p, .fr-sigue p { margin: 0; }
 .fr-sigue ul { margin: 4px 0 6px; padding-left: 1.2em; display: grid; gap: 6px; }
 .fr-nota { font-size: .88rem; color: var(--suave); margin: 0; }
+.chips-enlace li { padding: 0; }
+.chips-enlace a { display: inline-block; padding: 8px 14px; min-height: 24px; border-radius: 999px; text-decoration: none; color: var(--tinta); font-weight: 600; }
+.chips-enlace a:hover, .chips-enlace a:focus-visible { background: var(--verde-claro); }
+.lista-aciertos { columns: 2 220px; padding-left: 1.2em; } .lista-aciertos li { break-inside: avoid; margin-bottom: .3em; }
+.ant-sig { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 1em; } .ant-sig a { padding: 8px 0; font-weight: 600; }

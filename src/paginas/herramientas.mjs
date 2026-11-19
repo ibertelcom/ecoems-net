@@ -87,12 +87,13 @@ ${datosJson()}`;
 function cercaDeMi() {
   const ruta = "/prepas-cerca-de-mi/";
   const d = {
-    titulo: "Prepas cerca de mí: ¿qué escuela te conviene en el ECOEMS? | ecoems.net",
-    descripcion: "Encuentra las prepas, CCH y vocacionales públicas cerca de tu ubicación que le convienen a tu hijo según sus aciertos y lo que quiere estudiar. Te damos la lista ordenada para el registro.",
+    titulo: "Preparatorias cerca de mí: prepas públicas por código postal o ubicación | ecoems.net",
+    descripcion: "Preparatorias cerca de mí: encuentra las prepas, CCH, vocacionales y escuelas sin examen cerca de tu ubicación o código postal que le convienen a tu hijo según sus aciertos y lo que quiere estudiar. Te damos la lista ordenada para el registro.",
     nombreCorto: "Prepas cerca de mí",
     migas: migas([["Inicio", "/"], ["Prepas cerca de mí", ruta]]),
   };
   const faq = [
+    ["¿Cómo encuentro preparatorias cerca de mí?", "Escribe tu código postal o toca «Usar mi ubicación». Te mostramos las preparatorias públicas más cercanas: las de la UNAM y el IPN (con examen) y las que no piden examen, como <a href=\"/escuelas/conalep/\">CONALEP</a>, <a href=\"/escuelas/colegio-de-bachilleres/\">Colegio de Bachilleres</a>, <a href=\"/escuelas/cetis-cbtis/\">CETIS y CBTIS</a>, <a href=\"/escuelas/iems/\">IEMS</a> y las <a href=\"/escuelas/preparatorias-oficiales-edomex/\">Preparatorias Oficiales del Edomex</a>."],
     ["¿Cómo encuentro prepas públicas cerca de mi ubicación?", "Escribe tu código postal o toca «Usar mi ubicación» y elige cuántos kilómetros puede viajar. La herramienta mide la distancia en línea recta a las 31 escuelas de la UNAM y el IPN que asignan lugar con el examen ECOEMS y te muestra solo las que quedan dentro de ese rango. Abajo de la lista te mostramos también las escuelas sin examen más cercanas (CONALEP, Colegio de Bachilleres, CETIS, CBTIS, IEMS y otras)."],
     ["Si quiero estudiar medicina, ¿qué prepa me conviene?", "En la UNAM puede ser cualquier prepa o CCH: la carrera se decide al final del bachillerato y el pase reglamentado depende del promedio. En el IPN conviene una vocacional del área Médico-Biológica, como la Voca 6 o la Voca 15, porque su plan de estudios y su carrera técnica van hacia la salud. Medicina es de las carreras más pedidas, así que el promedio pesa mucho."],
     ["¿Las vocacionales del IPN tienen pase directo a la universidad?", "No. En el IPN no existe el pase directo: quien termina una vocacional presenta el examen de admisión de nivel superior como cualquier aspirante, eligiendo un área y dos carreras de esa misma área. Elegir una voca del área que le interesa sí ayuda, porque estudia los temas y la carrera técnica de esa área."],
@@ -102,7 +103,7 @@ function cercaDeMi() {
   ];
   const radio = (name, v, t, checked, sub = "") => `<label class="cm-op"><input type="radio" name="${name}" value="${v}"${checked ? " checked" : ""}><span><b>${t}</b>${sub ? `<small>${sub}</small>` : ""}</span></label>`;
   const cuerpo = `
-${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: "Prepas cerca de mí: ¿qué escuela le conviene?", lead: "Contesta cuatro preguntas y te armamos la lista de prepas, CCH y vocacionales públicas cerca de tu casa, en el orden en que conviene registrarlas en Mi Derecho, Mi Lugar." })}
+${cabeceraPagina({ img: "prepas-cerca-de-mi-mapa", migasHtml: d.migas.html, h1: "Preparatorias cerca de mí: ¿qué prepa le conviene?", lead: "Busca preparatorias cerca de tu ubicación o de tu código postal. Contesta cuatro preguntas y te armamos la lista de prepas, CCH, vocacionales y escuelas sin examen cerca de tu casa, en el orden en que conviene registrarlas en Mi Derecho, Mi Lugar." })}
 <section class="seccion herramienta-seccion" aria-label="Buscador de escuelas">
   <div class="contenedor cm">
     <form class="cm-form" id="cm-form" novalidate>

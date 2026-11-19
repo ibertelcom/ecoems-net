@@ -45,7 +45,7 @@ export const SISTEMAS = {
     kw: "cobaem", vol: "18.1K",
   },
   epo: {
-    ruta: "/escuelas/preparatorias-oficiales-edomex/", nombre: "Preparatorias Oficiales del Estado de México", corto: "Preparatorias Oficiales", siglas: "EPO", ficha: false, tipo: "general",
+    ruta: "/escuelas/preparatorias-oficiales-edomex/", nombre: "Preparatorias Oficiales del Estado de México", corto: "Preparatorias Oficiales", siglas: "EPO", ficha: true, tipo: "general",
     desc: "Las Escuelas Preparatorias Oficiales (EPO) son el bachillerato general del Gobierno del Estado de México. Incluyen las preparatorias anexas a escuelas normales y los módulos adscritos a una preparatoria.",
     kw: "preparatoria oficial", vol: "4.4K",
   },
@@ -114,7 +114,7 @@ function nombres(sis, n) {
     const lugar = resto.replace(/"[^"]*"/, "").trim();
     const zona = bonito(lugar || comillas || "");
     const hon = lugar && comillas ? bonito(comillas) : null;
-    return { nombre: `Colegio de Bachilleres Plantel ${num} ${zona}`.trim(), comun: `Bachilleres ${num}`, slug: `colegio-de-bachilleres-plantel-${num}`, hon, num: +num };
+    return { nombre: `Colegio de Bachilleres Plantel ${num} ${zona}`.trim(), comun: `Bachilleres ${num}`, alias: `Bacho ${num}`, slug: `colegio-de-bachilleres-plantel-${num}`, hon, num: +num };
   }
   if (sis === "iems") {
     const [base, hon] = n.split(" - ");
@@ -140,6 +140,33 @@ function nombres(sis, n) {
   if (sis === "dgeti") {
     const nombre = bonito(n);
     return { nombre, comun: nombre, slug: slug(nombre) };
+  }
+  if (sis === "epo") {
+    // Escuelas Preparatorias Oficiales: la gente busca «preparatoria oficial 110» o «EPO 110».
+    const mod = /^MÓDULO (.*?)\s*(?:ADSCRITO A LA|DE LA) (?:ESCUELA )?EPO NÚM\. (\d+)/.exec(n);
+    if (mod) {
+      const lugarMod = bonito(mod[1].replace(/"/g, "")).trim();
+      const num = mod[2];
+      const nombre = lugarMod ? `Módulo ${lugarMod} de la Preparatoria Oficial ${num}` : `Módulo de la Preparatoria Oficial ${num}`;
+      return { nombre, comun: lugarMod ? `Módulo ${lugarMod} (EPO ${num})` : `Módulo de la EPO ${num}`, alias: null, padre: `preparatoria-oficial-${num}`, slug: slug(`preparatoria-oficial-${num}-modulo-${lugarMod}`), num: +num, modulo: true };
+    }
+    const anexaMod = /^MÓDULO (.*?) ADSCRITO A LA ESCUELA EPO ANEXA A LA NORMAL DE (.+)$/.exec(n);
+    if (anexaMod) {
+      const nombre = `Módulo ${bonito(anexaMod[1])} de la Preparatoria Anexa a la Normal de ${bonito(anexaMod[2])}`;
+      return { nombre, comun: `Módulo ${bonito(anexaMod[1])} (Anexa a la Normal de ${bonito(anexaMod[2])})`, alias: null, padre: slug(`preparatoria-anexa-a-la-normal-de-${anexaMod[2]}`), slug: slug(nombre), modulo: true };
+    }
+    const anexa = /^EPO ANEXA A LA NORMAL (?:NÚM\. (\d+) )?DE (.+)$/.exec(n);
+    if (anexa) {
+      const lugarA = bonito(anexa[2]);
+      const comun = `Preparatoria Anexa a la Normal ${anexa[1] ? `núm. ${anexa[1]} ` : ""}de ${lugarA}`;
+      return { nombre: `Escuela ${comun.replace("Preparatoria", "Preparatoria Oficial")}`, comun, alias: `EPO Anexa a la Normal ${anexa[1] ? `${anexa[1]} ` : ""}de ${lugarA}`, slug: slug(comun) };
+    }
+    const m = /^EPO NÚM\. (\d+)\s*(.*)$/.exec(n);
+    if (m) {
+      const num = m[1];
+      const hon = m[2] ? bonito(m[2].replace(/"/g, "")) : null;
+      return { nombre: `Escuela Preparatoria Oficial núm. ${num}`, comun: `Preparatoria Oficial ${num}`, alias: `EPO ${num}`, slug: `preparatoria-oficial-${num}`, hon, num: +num };
+    }
   }
   if (sis === "uaemex") return { nombre: "UAEMéx Plantel Texcoco", comun: "UAEMéx Plantel Texcoco", slug: "uaemex-plantel-texcoco", hon: "Escuela Preparatoria de la UAEMéx" };
   const nombre = bonito(n);
