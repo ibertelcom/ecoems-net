@@ -880,3 +880,19 @@ background: radial-gradient(closest-side, rgba(255, 255, 255, .10), rgba(255, 25
 .chips-enlace a:hover, .chips-enlace a:focus-visible { background: var(--verde-claro); }
 .lista-aciertos { columns: 2 220px; padding-left: 1.2em; } .lista-aciertos li { break-inside: avoid; margin-bottom: .3em; }
 .ant-sig { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 1em; } .ant-sig a { padding: 8px 0; font-weight: 600; }
+.franja-instalar { background: #FFD23F; color: #2B1D00; border-bottom: 2px solid #B88A00; }
+.franja-instalar-cont { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-top: 10px; padding-bottom: 10px; }
+.franja-instalar p { margin: 0; font-size: 16px; line-height: 22px; color: #2B1D00; }
+.franja-instalar-extra { white-space: nowrap; }
+.franja-instalar-corto { display: none; }
+.franja-instalar-boton { background: #2B1D00; color: #fff !important; text-decoration: none; border-radius: 999px; min-height: 44px; padding: 0 18px; font-weight: 800; display: inline-flex; align-items: center; animation: latido-instalar 2.4s ease-in-out 3; }
+.franja-instalar-boton:hover, .franja-instalar-boton:focus-visible { background: #4A3500; }
+@keyframes latido-instalar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) { .franja-instalar-boton { animation: none; } }
+@media (max-width: 560px) { .franja-instalar-cont { flex-wrap: nowrap; } .franja-instalar p { font-size: 14px; line-height: 19px; } .franja-instalar-extra { display: none; } .franja-instalar-corto { display: inline; } .franja-instalar-boton { flex: none; padding: 0 14px; } }
+.aviso-conv { margin: 1.2em 0; padding: 18px 20px; border-radius: 16px; border: 2px solid var(--dorado, #BC955C); background: var(--superficie, #fff); display: grid; gap: 10px; }
+.aviso-conv p { margin: 0; }
+.aviso-conv-t { display: flex; gap: 8px; align-items: center; font-size: 18px; }
+.aviso-conv-boton { justify-self: start; display: inline-flex; gap: 8px; align-items: center; background: #FFD23F; color: #2B1D00 !important; font-weight: 800; border-radius: 999px; padding: 10px 18px; min-height: 44px; text-decoration: none; box-shadow: 0 3px 0 #B88A00; }
+.aviso-conv-boton:hover, .aviso-conv-boton:focus-visible { background: #FFDD66; }
+.aviso-conv small { color: var(--suave); }
