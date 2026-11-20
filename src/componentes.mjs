@@ -2,7 +2,7 @@ import { imagen } from "./imagenes.mjs";
 import { icono } from "./iconos.mjs";
 import { SITIO, utm } from "./plantilla.mjs";
 
-export const ACTUALIZADO = { iso: "2026-10-15", texto: "15 de octubre de 2026" };
+export const ACTUALIZADO = { iso: "2026-11-19", texto: "19 de noviembre de 2026" };
 
 // Equipo detrás de ecoems.net (E-E-A-T). Fuente única: la usan /contacto/, la línea "Revisado por" y el JSON-LD.
 // Equipo completo y biografías: https://examenes.lat/nosotros/

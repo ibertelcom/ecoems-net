@@ -5,7 +5,7 @@ import { imagen } from "../imagenes.mjs";
 import { SITIO, utm } from "../plantilla.mjs";
 import { REVISADO, avisoConvocatoria } from "../componentes.mjs";
 
-export const ACTUALIZADO = { iso: "2026-10-15", texto: "15 de octubre de 2026" };
+export const ACTUALIZADO = { iso: "2026-11-19", texto: "19 de noviembre de 2026" };
 
 export const META = {
   ruta: "/",

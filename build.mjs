@@ -44,6 +44,12 @@ if (existsSync("src/vendor")) cpSync("src/vendor", "dist/vendor", { recursive: t
 }
 
 const imgsDePagina = {};
+// lastmod real por página: huella del contenido; si cambia, la fecha pasa a hoy (hora de CDMX). Se guarda en src/datos/lastmod.json.
+const HOY_MX = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Mexico_City" }).format(new Date());
+const RUTA_LASTMOD = "src/datos/lastmod.json";
+const lastmodPrev = existsSync(RUTA_LASTMOD) ? JSON.parse(readFileSync(RUTA_LASTMOD, "utf8")) : {};
+const lastmod = {};
+const huella = (t) => createHash("sha1").update(t.replace(/<time [^>]*>[^<]*<\/time>/g, "").replace(/\?v=[\w.-]+/g, "")).digest("hex").slice(0, 16);
 for (const p of PAGINAS) {
   // Enlaces relacionados con anchor de palabra clave, antes de las preguntas frecuentes (o al final).
   const rel = relacionadas(p.META.ruta);
@@ -54,6 +60,11 @@ for (const p of PAGINAS) {
   // Imagen para compartir (Open Graph): la del hero de la página si ya existe su versión JPG.
   const heroM = /class="cabecera-fig"><img [^>]*src="\/img\/([^"]+)\.webp"/.exec(cuerpoHtml) ?? (p.META.ruta === "/" ? [null, "portada-papa-e-hija-revisan-aciertos"] : null);
   const og = heroM && existsSync(`src/img/og/${heroM[1]}.jpg`) ? `/img/og/${heroM[1]}.jpg` : undefined;
+  {
+    const h = huella(p.META.titulo + "|" + p.META.descripcion + "|" + cuerpoHtml);
+    const ant = lastmodPrev[p.META.ruta];
+    lastmod[p.META.ruta] = ant && ant.h === h ? ant : { h, iso: HOY_MX };
+  }
   const comun = { titulo: p.META.titulo, descripcion: p.META.descripcion, ruta: p.META.ruta, cuerpo: cuerpoHtml, jsonld: p.jsonld(), seccion: p.seccion, og };
   const destino = p.META.ruta === "/" ? "dist/index.html" : `dist${p.META.ruta}index.html`;
   mkdirSync(destino.replace(/index\.html$/, ""), { recursive: true });
@@ -84,7 +95,7 @@ writeFileSync(`dist/${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\nDisallow: /datos/resultados/\n\nSitemap: ${SITIO.dominio}/sitemap.xml\nSitemap: ${SITIO.dominio}/sitemap-indice.xml\n`);
 writeFileSync(
   "dist/sitemap.xml",
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${PAGINAS.map((p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${p.ACTUALIZADO?.iso ?? new Date().toISOString().slice(0, 10)}</lastmod>${(imgsDePagina[p.META.ruta] ?? []).map((f) => `<image:image><image:loc>${SITIO.dominio}/img/${f}</image:loc></image:image>`).join("")}</url>`).join("\n")}\n</urlset>\n`,
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${PAGINAS.map((p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${lastmod[p.META.ruta].iso}</lastmod>${(imgsDePagina[p.META.ruta] ?? []).map((f) => `<image:image><image:loc>${SITIO.dominio}/img/${f}</image:loc></image:image>`).join("")}</url>`).join("\n")}\n</urlset>\n`,
 );
 
 // Resultados por folio (Gaceta de ECOEMS): paquetes por prefijo + catálogo de claves para el buscador de /resultados/.
@@ -99,13 +110,14 @@ for (const { anio } of ANIOS_RESULTADOS) {
 // Sitemaps divididos (guía y herramientas / escuelas) con índice: segunda vía de descubrimiento para Search Console.
 {
   const hoy = new Date().toISOString().slice(0, 10);
-  const urlXml = (p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${p.ACTUALIZADO?.iso ?? hoy}</lastmod></url>`;
+  const urlXml = (p) => `  <url><loc>${SITIO.dominio}${p.META.ruta}</loc><lastmod>${lastmod[p.META.ruta].iso}</lastmod></url>`;
   const set = (lista) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${lista.map(urlXml).join("\n")}\n</urlset>\n`;
   const esc = PAGINAS.filter((p) => p.META.ruta.startsWith("/escuelas/"));
   const gen = PAGINAS.filter((p) => !p.META.ruta.startsWith("/escuelas/"));
   writeFileSync("dist/sitemap-guia.xml", set(gen));
   writeFileSync("dist/sitemap-escuelas.xml", set(esc));
-  writeFileSync("dist/sitemap-indice.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${["guia", "escuelas"].map((n) => `  <sitemap><loc>${SITIO.dominio}/sitemap-${n}.xml</loc><lastmod>${hoy}</lastmod></sitemap>`).join("\n")}\n</sitemapindex>\n`);
+  writeFileSync(RUTA_LASTMOD, JSON.stringify(Object.fromEntries(Object.entries(lastmod).sort()), null, 0).replace(/},"/g, '},\n"') + "\n");
+  writeFileSync("dist/sitemap-indice.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[["guia", gen], ["escuelas", esc]].map(([n, l]) => `  <sitemap><loc>${SITIO.dominio}/sitemap-${n}.xml</loc><lastmod>${l.map((p) => lastmod[p.META.ruta].iso).sort().at(-1)}</lastmod></sitemap>`).join("\n")}\n</sitemapindex>\n`);
 }
 
 // Listado de imágenes para que Victor las genere.
