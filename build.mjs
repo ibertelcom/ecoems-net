@@ -77,6 +77,8 @@ for (const p of PAGINAS) {
 
 // Favicons para Google (múltiplo de 48 px), navegadores e iOS.
 cpSync("src/favicon", "dist", { recursive: true });
+// Archivos que van tal cual en la raíz (p. ej. sitemap-prueba.xml, generado por Victor con una app externa para probar en Search Console).
+if (existsSync("src/raiz")) cpSync("src/raiz", "dist", { recursive: true });
 writeFileSync("dist/site.webmanifest", JSON.stringify({ name: "ecoems.net", short_name: "ecoems.net", icons: [{ src: "/favicon-192x192.png", sizes: "192x192", type: "image/png" }, { src: "/favicon-512x512.png", sizes: "512x512", type: "image/png" }], theme_color: "#0B7A60", background_color: "#ffffff", display: "browser" }));
 // favicon.svg (opción A: «e» con punto amarillo, trazos de Archivo Black) vive en src/favicon/.
 writeFileSync("dist/.htaccess", readFileSync("src/htaccess.txt", "utf8"));
