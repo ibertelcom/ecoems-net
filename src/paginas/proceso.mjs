@@ -163,10 +163,10 @@ const PAGINAS = [
   },
   {
     slug: "mi-derecho-mi-lugar", miga: "Mi Derecho, Mi Lugar", nombreCorto: "Mi Derecho, Mi Lugar",
-    titulo: "Mi Derecho, Mi Lugar 2027: guía del registro, fechas y modalidades | ecoems.net",
-    descripcion: "Mi Derecho, Mi Lugar 2027 (miderechomilugar.gob.mx) explicado para papás: registro con Llave MX, fechas, escuelas con y sin examen y asignación.",
+    titulo: "Mi Derecho, Mi Lugar 2027: enlace oficial, registro y fechas | ecoems.net",
+    descripcion: "¿Buscas miderechomilugar.gob.mx? Aquí está el enlace oficial y la guía para papás del registro 2027: Llave MX, fechas, modalidades y qué hacer si no puedes entrar.",
     h1: "Mi Derecho, Mi Lugar 2027: cómo funciona el proceso para entrar a la prepa",
-    lead: "El sistema de registro y asignación del bachillerato público en la Ciudad de México y el Estado de México, paso por paso y en palabras sencillas.",
+    lead: `El sistema de registro y asignación del bachillerato público en la Ciudad de México y el Estado de México, paso por paso y en palabras sencillas. <b>Sitio oficial:</b> ${of("miderechomilugar.gob.mx")} (ecoems.net es una guía, no el sitio oficial).`,
     img: { id: "mi-derecho-mi-lugar-familia", alt: "Familia revisando en la computadora el registro de Mi Derecho, Mi Lugar", title: "Mi Derecho, Mi Lugar", desc: "Mamá, papá e hijo de secundaria frente a una computadora en casa, revisando juntos una lista de escuelas." },
     secciones: [
       ["¿Qué es Mi Derecho, Mi Lugar?", `<p><b>Mi Derecho, Mi Lugar</b> es el proceso oficial para conseguir lugar en el bachillerato público de la Zona Metropolitana del Valle de México. Sustituyó al concurso COMIPEMS desde 2025 y se hace en el sitio ${of()}.</p>
@@ -189,6 +189,8 @@ const PAGINAS = [
         <p>Las fechas de cada paso están en el <a href="/fechas/">calendario</a>.</p>`],
     ],
     faq: [
+      ["¿Cuál es la página oficial de Mi Derecho, Mi Lugar?", `Es ${of()}. Ahí se hace el registro con la <a href="/llave-mx/">Llave MX</a> del aspirante y se consultan los resultados. ecoems.net es una guía independiente: explica el proceso, pero el trámite siempre se hace en el sitio oficial.`],
+      ["¿Qué hago si no puedo entrar a Mi Derecho, Mi Lugar?", `Revisa tres cosas: que estés en las fechas de registro (la convocatoria 2027 aún no sale; consulta el <a href="/fechas/">calendario</a>), que la contraseña de la Llave MX sea la correcta (se recupera en llave.gob.mx) y prueba con otro navegador o en otro horario, porque los primeros días el sitio se satura.`],
       ["¿Mi Derecho, Mi Lugar es lo mismo que el ECOEMS?", "No. Mi Derecho, Mi Lugar es todo el proceso de registro y asignación. El ECOEMS es el examen que forma parte de ese proceso y solo cuenta para la UNAM y el IPN."],
       ["¿Cuál es la página oficial de Mi Derecho, Mi Lugar?", "miderechomilugar.gob.mx. Desconfía de cualquier otro sitio que te pida datos o pagos para registrarte."],
       ["¿Mi Derecho, Mi Lugar tiene costo?", "El registro es gratuito. Quien va por la UNAM o el IPN paga el derecho a examen al concluir su registro; en 2026 el procedimiento fue del 18 al 22 de mayo."],
@@ -226,9 +228,9 @@ const PAGINAS = [
   {
     slug: "llave-mx", miga: "Llave MX", nombreCorto: "Llave MX",
     titulo: "Llave MX (cuenta Llave) para Mi Derecho, Mi Lugar 2027: qué es y cómo crearla | ecoems.net",
-    descripcion: "Para registrarse en Mi Derecho, Mi Lugar (ECOEMS) se necesita Llave MX. Qué es, qué datos pide, a nombre de quién se crea y errores comunes.",
+    descripcion: "¿Qué es la llave del aspirante? Es la Llave MX (cuenta Llave) con la que se entra a Mi Derecho, Mi Lugar 2027. Cómo crearla, qué datos pide y errores comunes.",
     h1: "Llave MX para el registro de Mi Derecho, Mi Lugar",
-    lead: "La cuenta del gobierno con la que se entra al registro del ECOEMS. Qué es, qué necesitas tener a la mano y cómo evitar los errores más comunes.",
+    lead: "La Llave MX (también llamada cuenta Llave o «llave del aspirante») es la cuenta gratuita del gobierno con la que el aspirante entra al registro de Mi Derecho, Mi Lugar. Se crea en llave.gob.mx con su CURP, un correo y un celular. Aquí ves qué tener a la mano y cómo evitar los errores más comunes.",
     img: { id: "llave-mx-celular", alt: "Mamá crea en el celular la Llave MX de su hijo para el registro del ECOEMS", title: "Llave MX para el ECOEMS", desc: "Mamá y su hijo adolescente sentados juntos; ella sostiene un celular y él tiene en la mano su comprobante de CURP impreso." },
     secciones: [
       ["¿Qué es la Llave MX?", `<p>La <b>Llave MX</b> es la cuenta única del gobierno de México para hacer trámites en línea. En Mi Derecho, Mi Lugar se usa para entrar al registro: el aspirante genera su Llave MX y con ella valida su <b>CURP, domicilio, teléfono y correo electrónico</b>.</p>

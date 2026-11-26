@@ -215,7 +215,7 @@ const ACTUALIZADO_SIN = { iso: "2026-10-22", texto: "22 de octubre de 2026" };
 
 // ---------- Página de cada institución ----------
 const TITULOS = {
-  conalep: ["CONALEP CDMX y Edomex 2027: planteles, carreras e inscripción", "CONALEP en la Ciudad de México y el Estado de México"],
+  conalep: ["CONALEP 2027: planteles y carreras en CDMX y Edomex, e inscripción", "CONALEP en la Ciudad de México y el Estado de México"],
   bachilleres: ["Colegio de Bachilleres 2027: los 20 planteles y cómo entrar", "Colegio de Bachilleres: los 20 planteles y cómo entrar"],
   dgeti: ["CETIS y CBTIS 2027 en CDMX y Edomex: planteles y carreras", "CETIS y CBTIS en la Ciudad de México y el Estado de México"],
   iems: ["IEMS 2027: las prepas del Gobierno de la CDMX y cómo entrar", "IEMS: las preparatorias del Gobierno de la Ciudad de México"],
@@ -330,7 +330,7 @@ function hub(k) {
   const [tCorto, h1] = TITULOS[k];
   const titulo = `${tCorto} | ecoems.net`;
   const donde = cdmx && edomex ? `${pl(cdmx, "en la Ciudad de México", "en la Ciudad de México")} y ${edomex} en el Estado de México` : cdmx ? "todos en la Ciudad de México" : "todos en el Estado de México";
-  const descripcion = `Los ${lista.length} planteles de ${s.nombre} en Mi Derecho, Mi Lugar (${donde}): dirección, mapa${carreras.length ? ", carreras técnicas" : ""} y cómo entrar sin examen.`;
+  const descripcion = k === "conalep" ? `Los ${lista.length} planteles del CONALEP en CDMX y Edomex y sus ${carreras.length} carreras: dirección, mapa, qué significa CONALEP y cómo es la inscripción 2027.` : `Los ${lista.length} planteles de ${s.nombre} en Mi Derecho, Mi Lugar (${donde}): dirección, mapa${carreras.length ? ", carreras técnicas" : ""} y cómo entrar sin examen.`;
   const m = migas([["Inicio", "/"], ["Escuelas", "/escuelas/"], ["Sin examen", "/escuelas/sin-examen/"], [s.corto, ruta]]);
   const ejemplo = lista[0];
   const faq = [

@@ -74,7 +74,8 @@ function caminos(ruta, campana) {
 function paginaAciertos() {
   const ruta = "/aciertos/";
   const titulo = "Aciertos ECOEMS 2027 por escuela: lo que pidió la UNAM y el IPN en 2026 | ecoems.net";
-  const descripcion = "Cuántos aciertos pide cada prepa, CCH y vocacional en el ECOEMS: tabla 2024, 2025 y 2026 de las 31 escuelas de la UNAM y el IPN, con la meta para 2027.";
+  const rango2026 = (l) => { const v = ESCUELAS.filter((e) => e.linea === l).map((e) => e.a2026); return `${Math.min(...v)} a ${Math.max(...v)}`; };
+  const descripcion = `ECOEMS 2026: las prepas UNAM pidieron de ${rango2026("enp")} aciertos, los CCH de ${rango2026("cch")} y las vocacionales IPN de ${rango2026("voca")}. Tabla 2024–2026 de las ${ESCUELAS.length} escuelas y meta 2027.`;
   const m = migas([["Inicio", "/"], ["Aciertos por escuela", ruta]]);
   const cch = GRUPOS[1].escuelas.map((e) => e.a2026);
   const voca = GRUPOS[2].escuelas.map((e) => e.a2026);
